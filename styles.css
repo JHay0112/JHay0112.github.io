@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: gainsboro;
+}
+
+.content {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-left: 1px solid RGBA(0, 0, 0, 0.8);
+    border-right: 1px solid RGBA(0, 0, 0, 0.8);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 20px;
+}
+
+p, h1, h2, h3, h4, h5, h6, a {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.clear {
+    color: RGBA(0, 0, 0, 0);
+}
