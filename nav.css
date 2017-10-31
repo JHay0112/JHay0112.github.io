@@ -35,10 +35,10 @@ nav a:hover {
 }
 
 .active {
-    background: orangered;
+    background: blue;
 }
 
 .active:hover {
-    background-color: orangered;
+    background-color: blue;
     cursor: default;
 }
