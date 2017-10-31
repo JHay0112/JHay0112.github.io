@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-color: gainsboro;
+    background-color: white;
 }
 
 .content {
@@ -11,12 +11,14 @@ body {
     margin-top: 70px;
     margin-left: 70px;
     margin-right: 70px;
+    margin-bottom: 70px;
     border-left: 1px solid RGBA(0, 0, 0, 0.8);
     border-right: 1px solid RGBA(0, 0, 0, 0.8);
+    float: left;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 p {
@@ -35,4 +37,34 @@ a {
 
 .clear {
     color: RGBA(0, 0, 0, 0);
+}
+
+.blue {
+    max-width: 300px;
+    background: blue;
+    color: white;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+
+.grey {
+    max-width: 300px;
+    background: gray;
+    color: white;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+
+.black {
+    max-width: 300px;
+    background: RGBA(0, 0, 0, 0.8);
+    color: white;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    float: left;
 }
