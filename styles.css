@@ -71,3 +71,12 @@ a {
     float: left;
     display: block;
 }
+
+input {
+    max-width: 300px;
+}
+
+textarea {
+    max-width: 300px;
+    max-height: 100px;
+}
