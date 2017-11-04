@@ -73,10 +73,5 @@ a {
 }
 
 input {
-    max-width: 300px;
-}
-
-textarea {
-    max-width: 300px;
-    max-height: 100px;
+    margin-bottom: 5px;
 }
