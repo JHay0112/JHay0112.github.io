@@ -74,6 +74,10 @@ a {
 
 input, textarea {
     margin-bottom: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    font-family: sans-serif;
 }
 
 #message {
