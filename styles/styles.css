@@ -72,6 +72,26 @@ a {
     display: block;
 }
 
-input {
+input, textarea {
     margin-bottom: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+#message {
+    width: 250px;
+}
+
+#submit {
+    background: RGBA(0,0,0,0.8);
+    color: white;
+    border: 1px solid white;
+    font-size: 20px;
+    padding: 14px 16px;
+}
+
+#submit:hover {
+    background-color: gray;
 }
