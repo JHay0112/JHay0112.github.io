@@ -72,6 +72,10 @@ a {
     display: block;
 }
 
-input {
+input, textarea {
     margin-bottom: 5px;
+}
+
+#message {
+    width: 250px;
 }
