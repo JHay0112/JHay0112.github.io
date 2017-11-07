@@ -6,6 +6,26 @@
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="styles/nav.css">
         <link rel="icon" href="images/logo.png">
+        <script>
+                function searchFunction() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("searchInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("searchTable");
+                tr = table.getElementsByTagName("tr");
+
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    } 
+                }
+            }
+        </script>
 	</head>
 	<body>
         
@@ -15,7 +35,21 @@
         
         <nav>
             <a href="blog.html" class="active">Blog</a>
-            <a href="">Archives</a>
+            <div class="dropdown">
+                <button class="dropbtn">Find a Blog Post</button>
+                <div class="dropdown-content">
+                    <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for posts..">
+
+                    <table id="searchTable">
+                        <tr class="header">
+                            <th>Blog Title</th>
+                        </tr>
+                        <tr>
+                            <td><a href="blog.html">Version 1.0</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </nav>
 
         <div class="content2">
