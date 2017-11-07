@@ -28,6 +28,7 @@ nav a:hover {
 }
 
 .top {
+    background-color: RGBA(0, 0, 0, 0.9);
     padding-right: 70px;
     padding-left: 70px;
     right: 0px;
