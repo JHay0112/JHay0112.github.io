@@ -94,6 +94,18 @@ a {
     display: block;
 }
 
+.blue3 {
+    max-width: 300px;
+    background: blue;
+    color: white;
+    position: relative;
+    padding: 10px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
 .blog-title {
     background: blue;
     color: white;
