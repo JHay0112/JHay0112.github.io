@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Find Post</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="icon" href="images/logo.png">
+        <script>
+            function searchFunction() {
+                var input, filter, table, tr, td, i;
+                input = document.getElementById("searchInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("searchTable");
+                tr = table.getElementsByTagName("tr");
+
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    } 
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+        <div class="blog-title">
+            <h1>Development Blog</h1>
+        </div>
+
+        <nav>
+            <a href="blog.html">Blog</a>
+            <a href="findpost.html" class="active">Find a Blog Post</a>
+        </nav>
+
+        <div class="content2">
+            <div class="black">
+                <h2>Search for a blog post in the box to the right. To navigate to a post just click on the name of the post in the table below.</h2>
+            </div>
+                
+            <div class="blue">
+                <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for posts..">
+            </div>
+
+            <table id="searchTable">
+                <tr class="header">
+                    <th width="60%">Post Title</th>
+                    <th width ="40%">Date</th>
+                </tr>
+                <tr>
+                    <td><a href="blog.html">Version 1.0</a></td>
+                    <td>8/11/2017</td>
+                </tr>
+            </table>
+        </div>
+
+        <nav class="top">
+            <a href="index.html">Home</a>
+            <a href="blog.html" class="active">Dev Blog</a>
+        </nav>
+
+    </body>
+</html>

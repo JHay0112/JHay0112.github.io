@@ -22,7 +22,7 @@ body {
     padding-right: 10px;
     margin-left: 70px;
     margin-right: 70px;
-    margin-top: 10px;
+    margin-top: 80px;
     border-left: 1px solid RGBA(0, 0, 0, 0.8);
     border-right: 1px solid RGBA(0, 0, 0, 0.8);
 }
@@ -97,17 +97,45 @@ a {
     float: none;
 }
 
-input, textarea {
-    margin-bottom: 5px;
-    border: 1px solid black;
-    color: black;
-    background-color: white;
-    font-family: sans-serif;
-    padding: 5px;
+#searchInput {
+    font-size: 17px;
+    padding: 14px 16px; 
+    border: 1px solid grey;
+    margin-bottom: 12px; 
+    margin-top: 12px;
 }
 
-#message {
-    width: 250px;
+#searchTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid grey;
+    font-size: 18px;
+}
+
+#searchTable th, #searchTable td {
+    text-align: left;
+    padding: 12px;
+    color: white;
+}
+
+#searchTable th {
+    background-color: RGBA(0,0,0,0.8);
+}
+
+#searchTable td {
+    background-color: blue;
+}
+
+#searchTable td a {
+    display: block;
+}
+
+#searchTable tr {
+    border-bottom: 1px solid grey; 
+}
+
+#searchTable a {
+    color: white;
 }
 
 #submit {
@@ -122,56 +150,6 @@ input, textarea {
     background-color: gray;
 }
 
-.dropbtn {
-    background-color: RGBA(0,0,0,0.8);
-    color: white;
-    padding: 14px 16px;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    margin: 5px;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    z-index: 998;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: grey;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: grey;
-}
-
-#searchTable {
-    border-collapse: collapse;
-    border: 1px solid grey;
-    width: 100%;
-}
-
 .header {
-    padding: 10px;
-    color: black;
-    font-size: 17px;
+    text-align: left;
 }
