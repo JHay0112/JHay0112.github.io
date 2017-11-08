@@ -119,7 +119,7 @@ a {
     border-collapse: collapse;
     border: 1px solid grey;
     font-size: 18px;
-    width: 73.4%;
+    max-width: 100%;
 }
 
 #searchTable th, #searchTable td {
