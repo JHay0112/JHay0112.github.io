@@ -209,3 +209,14 @@ textarea {
 .header {
     text-align: left;
 }
+
+.blog-post {
+    max-width: 10000px;
+    background: blue;
+    color: white;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    display: block;
+}
