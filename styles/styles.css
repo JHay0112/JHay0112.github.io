@@ -81,14 +81,13 @@ a {
 }
 
 .black2 {
-    max-width: 300px;
+    max-width: 1000px;
     background: RGBA(0, 0, 0, 0.8);
     color: white;
     position: relative;
     margin: 10px;
     padding: 10px;
-    float: none;
-    text-align: left;
+    float: left;
     display: block;
 }
 
