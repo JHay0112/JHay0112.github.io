@@ -126,60 +126,6 @@ a {
     margin-top: 70px;
 }
 
-.blog-title {
-    background: blue;
-    color: white;
-    text-align: center;
-    margin-top: 70px;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 10px;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    border-left: 1px solid RGBA(0, 0, 0, 0.8);
-    border-right: 1px solid RGBA(0, 0, 0, 0.8);
-    float: none;
-}
-
-#searchInput {
-    font-size: 17px;
-    padding: 14px 16px; 
-    border: 1px solid grey;
-}
-
-#searchTable {
-    border-collapse: collapse;
-    border: 1px solid grey;
-    font-size: 18px;
-    max-width: 100%;
-}
-
-#searchTable th, #searchTable td {
-    text-align: left;
-    padding: 12px;
-    color: white;
-}
-
-#searchTable th {
-    background-color: RGBA(0,0,0,0.8);
-}
-
-#searchTable td {
-    background-color: blue;
-}
-
-#searchTable td a {
-    display: block;
-}
-
-#searchTable tr {
-    border-bottom: 1px solid grey; 
-}
-
-#searchTable a {
-    color: white;
-}
-
 #submit {
     background: RGBA(0,0,0,0.8);
     color: white;
@@ -204,19 +150,4 @@ textarea {
 
 #submit:hover {
     background-color: gray;
-}
-
-.header {
-    text-align: left;
-}
-
-.blog-post {
-    max-width: 10000px;
-    background: blue;
-    color: white;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    display: block;
 }
