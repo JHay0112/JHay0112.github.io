@@ -1,5 +1,8 @@
 document.onkeydown = checkKey;
 
+var a = 0;
+var b = 0;
+var c = 0;
 var x = 0;
 var y = 0;
 var z = 0;
@@ -8,26 +11,37 @@ function checkKey(e) {
 
     e = e || window.event;
 
-    if (e.keyCode == '88') {
+    if (e.keyCode == '38') {
         x = x + 1;
     }
     
-    if (e.keyCode == '89') {
+    if (e.keyCode == '40') {
         y = y + 1;
     }
     
-    if (e.keyCode == '90') {
+    if (e.keyCode == '37') {
         z = z + 1;
     }
     
-    if (x == 5 && y == 5 && z == 5) {
+    if (e.keyCode == '39') {
+        a = a + 1;
+    }
+    
+    if (e.keyCode == '65') {
+        b = b + 1;
+    }
+    
+    if (e.keyCode == '66') {
+        c = c + 1;
+    }
+    
+    if (x == 2 && y == 2 && z == 2 && a == 2 && b == 1 && c == 1) {
         top.location.href="sites.html";
     }
 
 }
 
-function showDate()
-{
+function showDate() {
     var now = new Date();
     var days = new Array('Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday');
     var months = new Array('January','February','March','April','May','June','July','August','September','October','November','December');
