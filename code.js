@@ -23,9 +23,5 @@ function checkKey(e) {
     if (x == 5 && y == 5 && z == 5) {
         top.location.href="sites.html";
     }
-    
-    if (x > 5||y > 5||z > 5) {
-        top.location.href="index.html";
-    }
 
 }
