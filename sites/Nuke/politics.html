@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex">
+        <title>Politics</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="nav.css">
+        <link rel="icon" href="images/logo.ico">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {
+                'packages':['geochart'],
+                'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+            });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Colour'],
+                    ['USA', 0],
+                    ['Japan', 1]
+                ]);
+
+                var options = {
+                    colorAxis: {
+                        colors: ['blue', 'orange']
+                    },
+                    legend: 'none',
+                    datalessRegionColor: 'lightgray'
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById('usa_japan_div'));
+
+                chart.draw(data, options);
+            }
+        </script>
+        <script type="text/javascript">
+            google.charts.load('current', {
+                'packages':['geochart'],
+                'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+            });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Country', 'Colour'],
+                    ['USA', 'USA', 0],
+                    ['Russia', 'USSR', 1],
+                    ['Kazakhstan', 'USSR', 1],
+                    ['Armenia', 'USSR', 1],
+                    ['Azerbaijan', 'USSR', 1],
+                    ['Belarus', 'USSR', 1],
+                    ['Estonia', 'USSR', 1],
+                    ['Georgia', 'USSR', 1],
+                    ['Kyrgyzstan', 'USSR', 1],
+                    ['Latvia', 'USSR', 1],
+                    ['Lithuania', 'USSR', 1],
+                    ['Moldova', 'USSR', 1],
+                    ['Tajikistan', 'USSR', 1],
+                    ['Turkmenistan', 'USSR', 1],
+                    ['Ukraine', 'USSR', 1],
+                    ['Uzbekistan', 'USSR', 1]
+                ]);
+
+                var options = {
+                    colorAxis: {
+                        colors: ['blue', 'red']
+                    },
+                    legend: 'none',
+                    datalessRegionColor: 'lightgray'
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById('usa_ussr_div'));
+
+                chart.draw(data, options);
+            }
+        </script>
+        <script type="text/javascript">
+            google.charts.load('current', {
+                'packages':['geochart'],
+                'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+            });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Colour'],
+                    ['Pakistan', 0],
+                    ['India', 1]
+                ]);
+
+                var options = {
+                    colorAxis: {
+                        colors: ['green', 'orange']
+                    },
+                    legend: 'none',
+                    datalessRegionColor: 'lightgray',
+                    region: '034'
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById('pakistan_india_div'));
+
+                chart.draw(data, options);
+            }
+        </script>
+        <script type="text/javascript">
+            google.charts.load('current', {
+                'packages':['geochart'],
+                'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+            });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+
+            function drawRegionsMap() {
+                var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Colour'],
+                    ['USA', 0],
+                    ['North Korea', 1]
+                ]);
+
+                var options = {
+                    colorAxis: {
+                        colors: ['blue', 'red']
+                    },
+                    legend: 'none',
+                    datalessRegionColor: 'lightgray'
+                };
+
+                var chart = new google.visualization.GeoChart(document.getElementById('dprk_usa_div'));
+
+                chart.draw(data, options);
+            }
+        </script>
+	</head>
+	<body>
+          
+        <div class="content">
+            <h1>The Role of Nuclear Weapons in Politics</h1>
+            <br>
+            <p>Nuclear weapons play a major role in international politics as they carry a great advantage and tactical power. A country with a nuclear weapon is superior to any country without a nuclear weapon, this has been the drive behind most countries building a nuclear weapon and if this hasn’t been the reason for building a nuclear weapon, it’s been to defend itself from another country with nuclear weapons or to defend itself from a militarily superior country.</p><br>
+            
+            <div id="usa_japan_div" style="float: right; width: 17%;"  class="region"></div>
+            
+            <h2>Japan and USA</h2>
+            <p>The first country to develop nuclear weapons was the USA. It originally built nuclear weapons to use against Nazi Germany but, Nazi Germany fell before the new weapons were ready, the USA quickly turned it’s sights onto the war in the pacific. The USA wanted a quick and efficient end to the war, with as little American deaths as possible. The USA dropped two nuclear bombs on Japan, one on the city of Nagasaki and one on the city of Hiroshima. The Japanese quickly surrendered to the USA, ending WWII.</p><br>
+            
+            <h2>USSR and USA</h2>
+            
+            <div id="usa_ussr_div" style="float: right; width: 17%;" class="region"></div>
+            
+            <p>After WWII the USSR developed their own nuclear weapons to cancel out the nuclear threat from the USA. Tensions between the two countries quickly heated up and it stayed very tense right up until the fall of the USSR in 1991, ending the cold war. We now call this period of time the ‘Cold War’. During this time, the USA and the USSR had nuclear weapons ready to destroy the entire northern hemisphere, we were very lucky to have got through this time without any nuclear combat.</p><br>
+            
+            <h2>Pakistan and India</h2>
+            
+            <div id="pakistan_india_div" style="float: right; width: 17%;" class="region"></div>
+            
+            <p>India developed weapons 1974, taking the whole world by surprise especially its main threat, Pakistan. Pakistan soon set itself on the track of nuclear weapons to stop any nuclear threat from India, Pakistan successfully tested a nuclear weapon in 1998. Tensions have always been high between the two countries due to their opposing religious views, but the development of nuclear weapons caused tensions in the area to rise. The tensions between the countries seemed to have cooled down recently, but this may be just that tensions have been so high between North Korea and USA, so the media have paid less attention to Pakistan and India.</p><br>
+            
+            <h2>North Korea and USA</h2>
+            
+            <div id="dprk_usa_div" style="float: right; width: 17%" class="region"></div>
+            
+            <p>North Korea is an isolated communist country, in its early life as a country, the superpower of the USSR protected it from the USA/South Korea. When the USSR fell in 1991, it’s only ally was China, so concerned about attacks from South Korea or the USA, North Korea began developing nuclear weapons. North Korea successfully tested its first nuclear weapon in 2006. North Korea, at the time was a signatory of the NPT and had sanctions placed on them due to their development of a nuclear weapon. Tensions have increased in the region lately due to the provocative nature of Kim Jong-un and the standoffish nature of Donald Trump. North Korea doesn’t have the technology due launch a strike on mainland USA but could reach places like South Korea, Japan, and Guam. If North Korea attempted to fire a nuclear weapon at the USA or an ally, a nuclear strike would likely wipe the country off the map. The lack of negotiation and diplomacy between the two countries could easily lead to a situation like this.</p><br>
+            
+            <p>Any nuclear conflict, anywhere, would have devastating effects on innocent people and innocent countries and could even lead to further nuclear conflict. As Albert Einstein said “I do not know with what weapons World War III will be fought, but World War IV will be fought with sticks and stones!”. If a nuclear war was to be fought, it is likely it would escalate tensions everywhere, and could easily escalate into a much larger and devestating war. Maybe even to the point of the destruction of modern civilization.</p>
+        </div>
+        
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="politics.html" class="active">Politics</a>
+            <a href="environment.html">Environment/Biological</a>
+            <a href="ethics.html">Ethics</a>
+            <a href="history.html">History</a>
+        </nav>
+  
+	</body>
+</html>
