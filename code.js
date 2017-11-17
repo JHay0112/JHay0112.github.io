@@ -64,9 +64,3 @@ function showDate() {
 }
 
 setInterval("showDate()", 1000);
-
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'UA-109227996-1');
