@@ -3,8 +3,124 @@
     <head>
         <meta charset="UTF-8">
         <title>ERROR 404</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/nav.css">
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: white;
+            }
+
+            .content {
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-top: 70px;
+                margin-left: 70px;
+                margin-right: 70px;
+                margin-bottom: 70px;
+                border-left: 1px solid RGBA(0, 0, 0, 0.8);
+                border-right: 1px solid RGBA(0, 0, 0, 0.8);
+                float: left;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            p, h1, h2, h3, h4, h5, h6, a {
+                padding: 0;
+                margin: 0;
+            }
+            
+            .blue {
+                max-width: 300px;
+                background: blue;
+                color: white;
+                position: relative;
+                margin: 10px;
+                padding: 10px;
+                float: left;
+                display: block;
+            }
+
+            .grey {
+                max-width: 300px;
+                background: gray;
+                color: white;
+                position: relative;
+                margin: 10px;
+                padding: 10px;
+                float: left;
+                display: block;
+            }
+
+            .black {
+                max-width: 300px;
+                background: RGBA(0, 0, 0, 0.8);
+                color: white;
+                position: relative;
+                margin: 10px;
+                padding: 10px;
+                float: left;
+                display: block;
+            }
+            
+            nav {
+                background-color: RGBA(0, 0, 0, 0.9);
+                padding-right: 70px;
+                padding-left: 70px;
+                right: 0px;
+                left: 0px;
+                position: fixed;
+                top: 0;
+                margin: 0;
+                z-index: 998;
+                list-style-type: none;
+            }
+
+            nav a {
+                float: left;
+                padding: 5px 5px;
+                margin: 5px 5px;
+                cursor: pointer;
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            nav a:hover {
+                background-color: RGBA(128, 128, 128, 0.7);
+            }
+
+            .active:hover {
+                background-color: blue;
+                cursor: default;
+            }
+
+            .active {
+                background-color: blue;
+            }
+            
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        </style>
         <link rel="icon" href="images/logo.png">
         <script src="code.js"></script>
     </head>
