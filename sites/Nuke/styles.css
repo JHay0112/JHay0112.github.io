@@ -41,3 +41,8 @@ img {
 .region {
     padding: 10px
 }
+
+figcaption {
+    display: block;
+    text-align: center;
+}
