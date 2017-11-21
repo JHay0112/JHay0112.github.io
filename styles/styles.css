@@ -11,7 +11,7 @@ body {
     margin-top: 70px;
     margin-left: 70px;
     margin-right: 70px;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
     border-left: 1px solid RGBA(0, 0, 0, 0.8);
     border-right: 1px solid RGBA(0, 0, 0, 0.8);
     float: left;
@@ -37,6 +37,19 @@ a {
 
 .clear {
     color: RGBA(0, 0, 0, 0);
+}
+
+.top-button {
+    width: 30px;
+    font-size: 30px;
+    text-align: center;
+    background: blue;
+    color: white;
+    position: fixed;
+    margin: 10px;
+    padding: 10px;
+    right: 0;
+    bottom: 0;
 }
 
 .blue {
