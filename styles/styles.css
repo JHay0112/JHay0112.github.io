@@ -17,25 +17,6 @@ body {
     float: left;
 }
 
-.content2 {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-top: 80px;
-    border-left: 1px solid RGBA(0, 0, 0, 0.8);
-    border-right: 1px solid RGBA(0, 0, 0, 0.8);
-}
-
-.content3 {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 70px;
-    margin-right: 70px;
-    border-left: 1px solid RGBA(0, 0, 0, 0.8);
-    border-right: 1px solid RGBA(0, 0, 0, 0.8);
-}
-
 h1 {
     font-size: 40px;
 }
@@ -80,17 +61,6 @@ a {
     display: block;
 }
 
-.black2 {
-    max-width: 1000px;
-    background: RGBA(0, 0, 0, 0.8);
-    color: white;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    display: block;
-}
-
 .black {
     max-width: 300px;
     background: RGBA(0, 0, 0, 0.8);
@@ -100,30 +70,6 @@ a {
     padding: 10px;
     float: left;
     display: block;
-}
-
-.blue2 {
-    max-width: 300px;
-    background: blue;
-    color: white;
-    position: relative;
-    margin: 10px;
-    margin-top: 0;
-    padding: 10px;
-    float: left;
-    display: block;
-}
-
-.blue3 {
-    max-width: 300px;
-    background: blue;
-    color: white;
-    position: relative;
-    padding: 10px;
-    float: none;
-    display: block;
-    margin: 0 auto;
-    margin-top: 70px;
 }
 
 #submit {
