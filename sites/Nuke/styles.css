@@ -12,7 +12,7 @@ body {
     margin-top: 70px;
     margin-left: 100px;
     margin-right: 100px;
-    margin-bottom: 70px;
+    margin-bottom: 10px;
     border-left: 1px solid RGBA(0, 0, 0, 0.8);
     border-right: 1px solid RGBA(0, 0, 0, 0.8);
 }
@@ -47,4 +47,23 @@ figcaption {
     display: block;
     text-align: center;
     font-size: 10px;
+}
+
+.top-button {
+    width: 30px;
+    font-size: 30px;
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    position: fixed;
+    margin: 25px;
+    margin-bottom: 10px;
+    padding: 10px;
+    right: 0;
+    bottom: 0;
+    text-decoration: none;
+}
+
+.top-button:hover {
+    background: RGBA(0, 0, 0, 0.8);
 }
