@@ -139,6 +139,20 @@
 
             gtag('config', 'UA-109227996-1');
         </script>
+        <script src="jquery-3.2.1.slim.min.js"></script>
+        <script>
+            var isVisible = false;
+            $(window).scroll(function(){
+                var shouldBeVisible = $(window).scrollTop()>100;
+                if (shouldBeVisible && !isVisible) {
+                    isVisible = true;
+                    $('#top-button').show();
+                } else if (isVisible && !shouldBeVisible) {
+                    isVisible = false;
+                    $('#top-button').hide();
+                }
+            });
+        </script>
 	</head>
 	<body>
         
@@ -170,7 +184,7 @@
             
             <div id="dprk_usa_div" style="float: right; width: 17%" class="region"></div>
             
-            <p>North Korea is an isolated communist country, in its early life as a country, the superpower of the USSR protected it from the USA/South Korea. When the USSR fell in 1991, it’s only ally was China, so concerned about attacks from South Korea or the USA, North Korea began developing nuclear weapons. North Korea successfully tested its first nuclear weapon in 2006. North Korea, at the time was a signatory of the NPT and had sanctions placed on them due to their development of a nuclear weapon. Tensions have increased in the region lately due to the provocative nature of Kim Jong-un and the standoffish nature of Donald Trump. North Korea doesn’t have the technology due launch a strike on mainland USA but could reach places like South Korea, Japan, and Guam. If North Korea attempted to fire a nuclear weapon at the USA or an ally, a nuclear strike would likely wipe the country off the map. The lack of negotiation and diplomacy between the two countries could easily lead to a situation like this.</p><br>
+            <p>North Korea is an isolated communist country, in its early life as a country, the superpower of the USSR protected it from the USA/South Korea. When the USSR fell in 1991, it’s only ally was China, so concerned about attacks from South Korea or the USA, North Korea began developing nuclear weapons. North Korea successfully tested its first nuclear weapon in 2006. North Korea, at the time was a signatory of the NPT and had sanctions placed on them due to their development of a nuclear weapon. Tensions have increased in the region lately due to the provocative nature of Kim Jong-un and the standoffish nature of Donald Trump. North Korea doesn’t have the technology due launch a strike on mainland USA but could reach places like South Korea, Japan, and Guam. If North Korea attempted to fire a nuclear weapon at the USA or an ally, a nuclear strike would likely wipe North Kore off the map. The lack of negotiation and diplomacy between the two countries could easily lead to a situation like this.</p><br>
             
             <p>Any nuclear conflict, anywhere, would have devastating effects on innocent people and innocent countries and could even lead to further nuclear conflict. As Albert Einstein said “I do not know with what weapons World War III will be fought, but World War IV will be fought with sticks and stones!”. If a nuclear war was to be fought, it is likely it would escalate tensions everywhere, and could easily escalate into a much larger and devestating war. Maybe even to the point of the destruction of modern civilization.</p>
         </div>
@@ -184,7 +198,7 @@
             <a href="history.html">History</a>
         </nav>
         
-        <a class="top-button" href="#top" title="Back to the Top">&#8593;</a>
+        <a class="top-button" href="#top" title="Back to the Top" id="top-button">&#8593;</a>
   
 	</body>
 </html>

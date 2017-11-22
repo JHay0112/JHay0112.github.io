@@ -15,6 +15,20 @@
 
             gtag('config', 'UA-109227996-1');
         </script>
+        <script src="jquery-3.2.1.slim.min.js"></script>
+        <script>
+            var isVisible = false;
+            $(window).scroll(function(){
+                var shouldBeVisible = $(window).scrollTop()>100;
+                if (shouldBeVisible && !isVisible) {
+                    isVisible = true;
+                    $('#top-button').show();
+                } else if (isVisible && !shouldBeVisible) {
+                    isVisible = false;
+                    $('#top-button').hide();
+                }
+            });
+        </script>
 	</head>
 	<body>
         
@@ -55,7 +69,7 @@
             <a href="history.html">History</a>
         </nav>
         
-        <a class="top-button" href="#top" title="Back to the Top">&#8593;</a>
+        <a class="top-button" href="#top" title="Back to the Top" id="top-button">&#8593;</a>
   
 	</body>
 </html>
