@@ -90,7 +90,8 @@ a {
     color: white;
     border: 1px solid white;
     font-size: 20px;
-    padding: 14px 16px;
+    padding: 10px;
+    width: 50%;
 }
 
 input, textarea {
@@ -100,11 +101,11 @@ input, textarea {
 }
 
 input {
-    width: 180px;
+    width: 60%;
 }
 
 textarea {
-    width: 220px;
+    width: 80%;
 }
 
 #submit:hover {
