@@ -110,3 +110,12 @@ textarea {
 #submit:hover {
     background-color: gray;
 }
+
+#top {
+    position: relative;
+    top: -100px;
+}
+
+#top-button {
+    display: none;
+}
