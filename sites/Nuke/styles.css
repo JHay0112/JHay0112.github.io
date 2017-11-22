@@ -67,3 +67,12 @@ figcaption {
 .top-button:hover {
     background: RGBA(0, 0, 0, 0.8);
 }
+
+#top {
+    top: -100px;
+    position: relative;
+}
+
+#top-button {
+    display: none;
+}
