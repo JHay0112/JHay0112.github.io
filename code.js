@@ -64,3 +64,15 @@ function showDate() {
 }
 
 setInterval("showDate()", 1000);
+
+var facts = [
+    '"I need ideas for more facts."',
+    '"I really need more ideas for facts"',
+    '"I have no ideas for facts"',
+    '"This is a WIP (I have still have no ideas for facts)"'
+]
+
+function newFact() {
+    var factNumber = Math.floor(Math.random() * (facts.length));
+    document.getElementById('funFact').innerHTML = facts[factNumber];
+}

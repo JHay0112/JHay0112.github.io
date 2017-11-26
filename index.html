@@ -30,7 +30,7 @@
             });
         </script>
 	</head>
-	<body>
+	<body onload="newFact()">
         
         <p id="top"></p>
         
@@ -70,8 +70,7 @@
             <div class="grey">
                 <h2>Contact us here</h2>
                 <hr>
-                <form action="https://formspree.io/jhayweb@gmail.com"
-                      method="POST">
+                <form action="https://formspree.io/jhayweb@gmail.com" method="POST">
                     <input type="text" name="Name" placeholder="Your Name">
                     <input type="email" name="Reply to" placeholder="Your Email">
                     <textarea id="message" type="text" name="Message" placeholder="Your Message" rows="5"></textarea>
@@ -92,12 +91,28 @@
                 </figure>
             </a>
             
+            <div class="grey">
+                <h2>Join the Mailing list</h2>
+                <hr>
+                <form action="https://formspree.io/jhayweb@gmail.com" method="POST">
+                    <input type="text" name="Name" placeholder="Your Name">
+                    <input type="email" name="Reply to" placeholder="Your Email">
+                    <hr>
+                    <p>Tick the boxes of what you would like E-Mailed to you</p>
+                    <hr>
+                    <input type="checkbox" name="Updates" id="checkbox" value="">Updates of what's new on the website
+                    <br>
+                    <input type="checkbox" name="Special Offers" id="checkbox">Other Special Offers
+                    <br>
+                    <hr>
+                    <input id="submit" type="submit" value="Submit">
+                </form>
+            </div>
+            
             <div class="black">
-                <h2>Latest Feature Highlight</h2>
+                <h2>Random 'Fun Fact'</h2>
                 <hr>
-                <p>Error/Bug Report</p>
-                <hr>
-                <p>The error/bug report button is a new feature on the contact form, it is used to alert Jordan to someone contacting him about an error or bug.</p>
+                <p id="funFact"></p>
             </div>
             
         </div>

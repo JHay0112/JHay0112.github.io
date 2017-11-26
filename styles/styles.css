@@ -12,8 +12,8 @@ body {
 }
 
 .content {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
     margin-top: 70px;
     margin-left: 5%;
     margin-right: 5%;
@@ -59,7 +59,7 @@ a {
 }
 
 .blue {
-    max-width: 29%;
+    max-width: 29.9%;
     background: blue;
     color: white;
     position: relative;
@@ -70,7 +70,7 @@ a {
 }
 
 .grey {
-    max-width: 29%;
+    max-width: 29.9%;
     background: gray;
     color: white;
     position: relative;
@@ -81,7 +81,7 @@ a {
 }
 
 .black {
-    max-width: 29%;
+    max-width: 29.9%;
     background: RGBA(0, 0, 0, 0.8);
     color: white;
     position: relative;
