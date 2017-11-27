@@ -66,10 +66,11 @@ function showDate() {
 setInterval("showDate()", 1000);
 
 var facts = [
-    '"I need ideas for more facts."',
-    '"I really need more ideas for facts"',
-    '"I have no ideas for facts"',
-    '"This is a WIP (I have still have no ideas for facts)"'
+    'I need ideas for more facts',
+    'No trees were harmed in the making of this website. However, a large number of electrons were seriously inconvenienced',
+    'This website is \'skilfully\' crafted out of HTML, CSS and JS, no drag and drop website creators or Jekyll (Admittedly it would look better with drag and drop or Jeky)',
+    'Test!',
+    '<p class="clear">SECRET MESSAGE!</p>'
 ]
 
 function newFact() {
