@@ -133,6 +133,10 @@ textarea {
     display: none;
 }
 
+#christmas_div {
+    display: none;
+}
+
 #checkbox {
     width: 10px;
     margin-bottom: 10px;

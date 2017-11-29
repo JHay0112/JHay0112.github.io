@@ -29,6 +29,18 @@
                 }
             });
         </script>
+        <script>
+            var now = new Date();
+
+            var december1 = new Date("December 1, 2017");
+            var december25 = new Date("December 25, 2017");
+
+            if(now == december25) 
+            {
+                $('#christmas_div').show();
+            }
+
+        </script>
 	</head>
 	<body onload="newFact()">
         
@@ -41,6 +53,10 @@
                 <hr>
                 <p>to jhay0112.github.io</p>
             </a>
+            
+            <div class="black" id="christmas_div" style="background: red;">
+                <h2>Merry Christmas</h2>
+            </div>
             
             <div class="grey">
                 <h2>Hosted by Github Pages</h2>

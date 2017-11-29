@@ -68,9 +68,13 @@ setInterval("showDate()", 1000);
 var facts = [
     'I need ideas for more facts',
     'No trees were harmed in the making of this website. However, a large number of electrons were seriously inconvenienced',
-    'This website is \'skilfully\' crafted out of HTML, CSS and JS, no drag and drop website creators or Jekyll (Admittedly it would look better with drag and drop or Jeky)',
-    'Test!',
-    '<p class="clear">SECRET MESSAGE!</p>'
+    'This website is \'skilfully\' crafted out of HTML, CSS and JS, no drag and drop website creators or Jekyll (Admittedly it would look better with drag and drop or Jekyll)',
+    'If you click on the advertisments something secret will happen',
+    '<p class="clear">This is a secret message</p>',
+    'You can use anyone\'s email in the "Contact us here" section!',
+    'Please join the mailing list (I\'m desperate)',
+    '<a class="blue" href="tc.html" style="float: right;">Terms and Conditions</a>There are Terms and Conditions for this website, better go read them, just click on that button to the right',
+    'You can suggest more facts in the "Contact us here" section, don\'t worry I won\'t credit you for them!'
 ]
 
 function newFact() {
