@@ -29,34 +29,22 @@
                 }
             });
         </script>
-        <script>
-            var now = new Date();
-
-            var december1 = new Date("December 1, 2017");
-            var december25 = new Date("December 25, 2017");
-
-            if(now == december25) 
-            {
-                $('#christmas_div').show();
-            }
-
-        </script>
 	</head>
-	<body onload="newFact()">
+	<body onload="newFact()" onload="eventDiv()">
         
         <p id="top"></p>
         
-        <div class="content">
+        <img src="images/banner.JPG" class="banner" alt="Aoraki/Mt Cook - Jordan Hay (Own Work)" title="Aoraki/Mt Cook - Jordan Hay (Own Work)">
+        
+        <h1 style="color: white; position: absolute; top: 80px; left: 0; right: 0; text-align: center;">JHay0112.github.io</h1>
+        
+        <div class="content" style="margin-top: 10px;">
         
             <a href="tc.html" class="blue" title="T&C's">
                 <h2>Welcome</h2>
                 <hr>
                 <p>to jhay0112.github.io</p>
             </a>
-            
-            <div class="black" id="christmas_div" style="background: red;">
-                <h2>Merry Christmas</h2>
-            </div>
             
             <div class="grey">
                 <h2>Hosted by Github Pages</h2>
