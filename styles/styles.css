@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     background-color: white;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -41,6 +42,11 @@ a {
     color: white;
 }
 
+.banner {
+    max-width: 100%;
+    margin-top: 0px;
+}
+
 .clear {
     color: RGBA(0, 0, 0, 0);
     -webkit-touch-callout: ; text;
@@ -49,10 +55,12 @@ a {
     -moz-user-select: text;
     -ms-user-select: text;
     user-select: text;
+    
+    
 }
 
 .top-button {
-    width: 30px;
+    max-width: 30px;
     font-size: 30px;
     text-align: center;
     background: blue;
@@ -65,7 +73,7 @@ a {
 }
 
 .blue {
-    max-width: 29.9%;
+    max-width: 29%;
     background: blue;
     color: white;
     position: relative;
@@ -76,7 +84,7 @@ a {
 }
 
 .grey {
-    max-width: 29.9%;
+    max-width: 29%;
     background: gray;
     color: white;
     position: relative;
@@ -87,7 +95,7 @@ a {
 }
 
 .black {
-    max-width: 29.9%;
+    max-width: 29%;
     background: RGBA(0, 0, 0, 0.8);
     color: white;
     position: relative;
@@ -130,10 +138,6 @@ textarea {
 }
 
 #top-button {
-    display: none;
-}
-
-#christmas_div {
     display: none;
 }
 
