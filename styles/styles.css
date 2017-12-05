@@ -47,6 +47,11 @@ a {
     margin-top: 0px;
 }
 
+#banner {
+    max-width: 100%;
+    margin-top: 0px;
+}
+
 .clear {
     color: RGBA(0, 0, 0, 0);
     -webkit-touch-callout: ; text;
@@ -60,43 +65,30 @@ a {
 }
 
 .top-button {
-    max-width: 30px;
-    font-size: 30px;
+    max-width: 4%;
     text-align: center;
     background: blue;
     color: white;
     position: fixed;
-    margin: 10px;
+    margin-bottom: 10px;
     padding: 10px;
     right: 0;
     bottom: 0;
 }
 
+.section {
+    max-width: 29%;
+    color: white;
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    display: block;
+}
+
 .blue {
     max-width: 29%;
     background: blue;
-    color: white;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    display: block;
-}
-
-.grey {
-    max-width: 29%;
-    background: gray;
-    color: white;
-    position: relative;
-    margin: 10px;
-    padding: 10px;
-    float: left;
-    display: block;
-}
-
-.black {
-    max-width: 29%;
-    background: RGBA(0, 0, 0, 0.8);
     color: white;
     position: relative;
     margin: 10px;
