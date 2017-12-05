@@ -81,3 +81,14 @@ function newFact() {
     var factNumber = Math.floor(Math.random() * (facts.length));
     document.getElementById('funFact').innerHTML = facts[factNumber];
 }
+
+var banners = [
+    '<img src="images/banner1.JPG" class="banner" alt="Aoraki/Mt Cook - Jordan Hay (Own Work)" title="Aoraki/Mt Cook - Jordan Hay (Own Work)">',
+    '<img src="images/banner2.png" class="banner" alt="Hooker Valley - Jordan Hay (Own Work)" title="Hooker Valley - Jordan Hay (Own Work)">',
+    '<img src="images/banner3.png" class="banner" alt="Hooker Valley - Jordan Hay (Own Work)" title="Hooker Valley - Jordan Hay (Own Work)">'
+]
+
+function newBanner() {
+    var bannerNumber = Math.floor(Math.random() * (banners.length));
+    document.getElementById('banner').innerHTML = banners[bannerNumber];
+}
