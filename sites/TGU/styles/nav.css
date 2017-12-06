@@ -1,0 +1,38 @@
+nav {
+    background-color: RGBA(0, 0, 0, 0.8);
+    padding-right: 5%;
+    padding-left: 5%;
+    right: 0px;
+    left: 0px;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    z-index: 998;
+    list-style-type: none;
+}
+
+nav a {
+    float: left;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    background-color: RGBA(128, 128, 128, 0.7);
+}
+
+.active:hover {
+    background-color: red;
+    cursor: default;
+}
+
+.active {
+    background-color: red;
+}
