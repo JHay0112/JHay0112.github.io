@@ -13,9 +13,11 @@ body {
 }
 
 .content {
+    position: relative;
     padding-left: 1%;
     padding-right: 1%;
-    margin-top: 70px;
+    top: 70px;
+    margin-top: 0;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 10px;
@@ -45,6 +47,7 @@ a {
 .banner {
     max-width: 100%;
     margin-top: 0px;
+    margin-bottom: -70px;
 }
 
 #banner {
