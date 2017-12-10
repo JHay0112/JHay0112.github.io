@@ -21,6 +21,7 @@ body {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 10px;
+    margin-top: 10px;
     border-left: 1px solid RGBA(0, 0, 0, 0.8);
     border-right: 1px solid RGBA(0, 0, 0, 0.8);
     float: left;
@@ -80,22 +81,31 @@ a {
 }
 
 .section {
-    max-width: 29%;
+    width: 29%;
     color: white;
     position: relative;
-    margin: 10px;
-    padding: 10px;
+    margin: 1%;
+    padding: 1%;
+    float: left;
+    display: block;
+}
+
+.sec2 {
+    width: 29%;
+    color: white;
+    position: relative;
+    margin: 2%;
     float: left;
     display: block;
 }
 
 .blue {
-    max-width: 29%;
+    max-width: 100%;
     background: blue;
     color: white;
     position: relative;
-    margin: 10px;
-    padding: 10px;
+    margin: 1%;
+    padding: 1%;
     float: left;
     display: block;
 }
