@@ -30,6 +30,17 @@ h1 {
     font-size: 70px;
 }
 
+#brand-tab {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    background-color: blue;
+    color: white;
+    padding-bottom: 0;
+    padding: 5px;
+    text-decoration: none;
+}
+
 .fa {
     padding: 25px;
     width: 60px;
