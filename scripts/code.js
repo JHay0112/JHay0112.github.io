@@ -103,7 +103,8 @@ var banners = [
     '<img src="images/banner2.jpg" class="banner" alt="Hooker Valley - Jordan Hay (Own Work)" title="Hooker Valley - Jordan Hay (Own Work)">',
     '<img src="images/banner3.jpg" class="banner" alt="Hooker Valley - Jordan Hay (Own Work)" title="Hooker Valley - Jordan Hay (Own Work)">',
     '<img src="images/banner4.jpg" class="banner" alt="Mt Sefton & The Footstool - Jordan Hay (Own Work)" title="Mt Sefton & The Footstool - Jordan Hay (Own Work)">',
-    '<img src="images/banner5.jpg" class="banner" alt="Hooker Lake - Jordan Hay (Own Work)" title="Hooker Lake - Jordan Hay (Own Work)">'
+    '<img src="images/banner5.jpg" class="banner" alt="Hooker Lake - Jordan Hay (Own Work)" title="Hooker Lake - Jordan Hay (Own Work)">',
+    '<img src="images/banner6.jpg" class="banner" alt="Caterham 7 620 R (Lego) - Jordan Hay (Own Work)" title="Caterham 7 620 R (Lego) - Jordan Hay (Own Work)">'
 ]
 
 function newBanner() {
