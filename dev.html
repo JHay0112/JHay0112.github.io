@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dev Blog</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/nav.css">
+        <link rel="icon" href="images/logo.png">
+        <script src="code.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109227996-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+
+            gtag('config', 'UA-109227996-1');
+        </script>
+        <script src="jquery-3.2.1.slim.min.js"></script>
+        <script>
+            var isVisible = false;
+            $(window).scroll(function(){
+                var shouldBeVisible = $(window).scrollTop()>100;
+                if (shouldBeVisible && !isVisible) {
+                    isVisible = true;
+                    $('#top-button').show();
+                } else if (isVisible && !shouldBeVisible) {
+                    isVisible = false;
+                    $('#top-button').hide();
+                }
+            });
+        </script>
+    </head>
+    <body onload="newBanner()">
+
+        <p id="top"></p>
+
+        <div id="banner"></div>
+
+        <h1 style="color: white; position: absolute; top: 80px; left: 0; right: 0; text-align: center;">Dev Blog</h1>
+
+        <div class="content">
+            <div class="post">
+                <h2>Dev Blog Created (v2.1)</h2>
+                <p>11/12/2017</p>
+                <hr>
+                <p>This website has been updated and something relatively important has happened, a 'blog' of sorts has been created to highlight changes made on the website, much better than the version log on Github, which looks quite muddled, no thanks to me. Also, the photography section has temporarily disappeared while in development.</p>
+                <br>
+                <p>- Jordan</p>
+            </div>
+        </div>
+
+        <nav class="top">
+            <a href="index.html">Home</a>
+            <a href="dev.html" class="active">Dev Blog</a>
+        </nav>
+
+        <a class="top-button" href="#top" title="Back to the Top" id="top-button">
+            <img src="images/arrow.png" width="20px">
+        </a>
+
+    </body>
+</html>
