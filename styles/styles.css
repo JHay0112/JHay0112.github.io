@@ -99,6 +99,17 @@ a {
     display: block;
 }
 
+.post {
+    max-width: 100%;
+    background-color: RGBA(0, 0, 0, 0.8);
+    color: white;
+    position: relative;
+    margin: 1%;
+    padding: 1%;
+    float: left;
+    display: block;
+}
+
 .blue {
     max-width: 100%;
     background: blue;
