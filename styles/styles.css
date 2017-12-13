@@ -162,3 +162,41 @@ textarea {
     margin-bottom: 10px;
     padding: 10px;
 }
+
+#searchInput 
+    width: 100%;
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px;
+    border: 1px solid lightgray;
+    margin-bottom: 12px;
+}
+
+#searchTable {
+    border-collapse: collapse; 
+    width: 100%; 
+    border: 1px solid lightgray;
+    font-size: 18px;
+}
+
+#searchTable th, #searchTable td {
+    text-align: left;
+    padding: 12px;
+}
+
+#searchTable tr {
+    border-bottom: 1px solid dimgrey; 
+}
+
+#searchTable td:hover {
+    cursor: pointer; 
+}
+
+#searchTable tr.header, #searchTable tr:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.post-link {
+    position: relative;
+    top: 300px;
+}
