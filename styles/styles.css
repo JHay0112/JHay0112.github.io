@@ -203,3 +203,13 @@ textarea {
     position: relative;
     top: -100px;
 }
+
+#birthdayDiv {
+    display: none;
+    background-color: cornflowerblue;
+}
+
+#christmasDiv {
+    display: none;
+    background-color: green;
+}

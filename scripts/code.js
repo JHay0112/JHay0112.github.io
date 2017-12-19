@@ -132,3 +132,25 @@ function searchFunction() {
         } 
     }
 }
+
+function christmasDay() {
+    var now = new Date();
+    var christmasDay = new Date(2017, 12, 25);
+    
+    if(christmasDay = now) {
+        document.getElementById('christmasDiv').style.display = "block"; 
+    } else {
+        document.getElementById('christmasDiv').style.display = "none";
+    }
+}
+
+function birthDay() {
+    var now = newDate();
+    var birthDay = new Date(2018, 12, 25);
+    
+    if(birthDay = now) {
+        document.getElementById('birthdayDiv').style.display = "block"; 
+    } else {
+        document.getElementById('birthdayDiv').style.display = "none";
+    }
+}
