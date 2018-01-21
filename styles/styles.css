@@ -99,13 +99,24 @@ a {
 
 .post {
     max-width: 100%;
-    background-color: RGBA(0, 0, 0, 0.8);
-    color: white;
+    background-color: RGBA(0, 0, 0, 0.1);
+    color: black;
     position: relative;
     margin: 1%;
     padding: 1%;
     float: left;
     display: block;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.post a {
+    color: blue;
+    text-decoration: underline;
+}
+
+.post img {
+    color: black;
 }
 
 .blue {
