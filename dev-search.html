@@ -44,14 +44,7 @@
                 <a href="dev-search.html" class="nav2 section active" style="width: auto; padding: 14px 16px; margin: 5px 5px;">Search</a>
             </div>
             
-            <div class="section" style="background-color: RGBA(0, 0, 0, 0.8);  width: 96%;">
-                <h2>Search area for Dev Blog</h2>
-                <hr>
-                <h2>How to use the searchable table?</h2>
-                <p>Simply type in the title/version/date of a post into the area where it says 'Search for posts..'. To see a post click on the relevant table row.</p>
-            </div>
-            
-            <div class="section" style="background-color: grey; width: 96%;">
+            <div class="section" style="background-color: RGBA(0, 0, 0, 0); width: 96%;">
                 <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for posts.." style="width: auto;">
 
                 <table id="searchTable">
@@ -60,6 +53,15 @@
                         <th>Version</th>
                         <th>Date</th>
                         <th>Description</th>
+                    </tr>
+                    <tr onclick="location.href='dev.html#3.0.3'">
+                        <td>Dev Blog Search Overhaul 
+                            <p style="display: none;">v3.0.3</p>
+                            <p style="display: none;">22/01/2018</p>
+                        </td>
+                        <td>v3.0.3</td>
+                        <td>22/01/2018</td>
+                        <td>Title says it all</td>
                     </tr>
                     <tr onclick="location.href='dev.html#3.0.2'">
                         <td>Favicon and Dev Blog
