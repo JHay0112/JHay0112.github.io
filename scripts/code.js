@@ -36,7 +36,7 @@ function checkKey(e) {
     }
     
     if (d == 2 && f == 2 && g == 2 && a == 2 && b == 1 && c == 1) {
-        top.location.href="sites.html";
+        top.location.href="https://jhay0112.github.io/sites.html";
     }
 
 }
@@ -50,6 +50,17 @@ var banners = [
 function newBanner() {
     var bannerNumber = Math.floor(Math.random() * (banners.length));
     document.getElementById('banner').innerHTML = banners[bannerNumber];
+}
+
+var banners2 = [
+    '<img src="../images/banners/banner1.jpg" class="banner">',
+    '<img src="../images/banners/banner2.jpg" class="banner">',
+    '<img src="../images/banners/banner3.jpg" class="banner">'
+]
+
+function newBanner2() {
+    var bannerNumber2 = Math.floor(Math.random() * (banners2.length));
+    document.getElementById('banner').innerHTML = banners2[bannerNumber2];
 }
 
 function searchFunction() {

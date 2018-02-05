@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Photos - Search</title>
-        <link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/nav.css">
-        <link rel="icon" href="images/logo.png">
-        <script src="scripts/code.js"></script>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/nav.css">
+        <link rel="icon" href="../images/logo.png">
+        <script src="../scripts/code.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109227996-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -30,7 +30,7 @@
             });
         </script>
     </head>
-    <body onload="newBanner()">
+    <body onload="newBanner2()">
 
         <p id="top"></p>
 
@@ -40,8 +40,8 @@
 
         <div class="content">
             <div class="section" style="background-color: RGBA(0, 0, 0, 0.8); margin: 0; padding: 0; width: 100%;">
-                <a href="photo.html" class="section nav2" style=" width: auto; padding: 14px 16px; margin: 5px 5px;">Page 1</a>
-                <a href="photo-search.html" class="nav2 section active" style="width: auto; padding: 14px 16px; margin: 5px 5px;">Search</a>
+                <a href="page1.html" class="section nav2" style=" width: auto; padding: 14px 16px; margin: 5px 5px;">Page 1</a>
+                <a href="search.html" class="nav2 section active" style="width: auto; padding: 14px 16px; margin: 5px 5px;">Search</a>
             </div>
 
             <div class="section" style="background-color: RGBA(0, 0, 0, 0); width: 96%;">
@@ -60,14 +60,23 @@
                     <tr onclick="location.href='photo.html#img3'">
                         <td>Ferns</td>
                     </tr>
+                    <tr onclick="location.href='photo.html#img4'">
+                        <td>Lake Benmore</td>
+                    </tr>
+                    <tr onclick="location.href='photo.html#img5'">
+                        <td>Lake Waihola Sunset</td>
+                    </tr>
+                    <tr onclick="location.href='photo.html#img6'">
+                        <td>Lake Waihola Reflections</td>
+                    </tr>
                 </table>
             </div>
         </div>
 
         <nav class="top">
-            <a href="index.html">Home</a>
+            <a href="../index.html">Home</a>
             <a href="photo.html" class="active">Photography</a>
-            <a href="dev.html">Dev Blog</a>
+            <a href="../dev.html">Dev Blog</a>
         </nav>
 
         <a class="top-button" href="#top" title="Back to the Top" id="top-button">
