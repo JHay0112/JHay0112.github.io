@@ -44,12 +44,47 @@
                 <a href="search.html" class="nav2 section" style="width: auto; padding: 14px 16px; margin: 5px 5px;">Search</a>
             </div>
             <div class="post">
-                <div class="post-link clear" id="post1"></div>
-                <h2>Test Post</h2>
-                <p>12/02/2018</p>
+                <div class="post-link clear" id="post2"></div>
+                <h2>Random Facts!</h2>
+                <p>14/02/2018</p>
                 <hr>
-                <p>Test.</p>
+                <p>Anybody who saw some of the earlier versions of this website may remeber a section that chose a random fun fact everytime you reloaded the page.</p>
                 <br>
+                <p>The first step is simple, you just need to create an array in your section for scripts, like this one.</p>
+                <br />
+                <p class="snippet">
+                    <span style="color: cadetblue;">var</span>&nbsp;<span style="color: mediumpurple">facts</span> = [<br />
+                    <span style="color: orange">
+                        &emsp;'This is a Fact!',<br />
+                        &emsp;'Styling this tiny snippet was not easy',<br />
+                        &emsp;'HTML, CSS and JS are things'
+                    </span>
+                    <br />]
+                </p>
+                <br />
+                <p>That array is the simple part, it just holds values (in this case facts), that this next piece of script will randomly display every time the script is run.</p>
+                <br />
+                <p class="snippet">
+                    <span style="color: cadetblue;">function</span>&nbsp;<span style="color: mediumpurple;">newFact()</span> {<br />
+                    &emsp;<span style="color: cadetblue">var</span>&nbsp;<span style="color: mediumpurple">factNumber</span> = Math.<span style="color: mediumpurple">floor</span>(Math.<span style="color: mediumpurple">random</span>() * (facts.<span style="color: mediumpurple">length</span>));<br />
+                    &emsp;document.<span style="color: mediumpurple">getElementById</span>(<span style="color: orange">'factElement'</span>).<span style="color: mediumpurple">innerHTML</span> = facts[factNumber];<br />
+                    }
+                </p>
+                <br />
+                <p>Thirdly and lastly you need to add an two peices of HTML in your HTML on the page you would like the fact to display on. These two additions can be seen below.</p>
+                <br />
+                <p class="snippet">
+                    <span style="color: cadetblue">&lt;body</span> <span style="color: yellowgreen">onload</span>=<span style="color: orange;">"newFact()"</span><span style="color: cadetblue">></span>
+                </p>
+                <br />
+                <p>First of all an addition to the '&lt;body>' element, which runs the 'newFact()' function.</p>
+                <br />
+                <p class="snippet" id="">
+                    <span style="color: cadetblue">&lt;p</span>&nbsp;<span style="color: yellowgreen">id</span>=<span style="color: orange">"factElement"</span><span style="color: cadetblue">></span>
+                </p>
+                <br />
+                <p></p>
+                <br />
                 <p>- Jordan</p>
             </div>
             <div class="post">
