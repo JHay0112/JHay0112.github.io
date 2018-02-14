@@ -30,7 +30,7 @@
             });
         </script>
     </head>
-    <body onload="newBanner2()">
+    <body onload="newBanner2(), newFact()">
 
         <p id="top"></p>
 
@@ -46,9 +46,10 @@
             <div class="post">
                 <div class="post-link clear" id="post2"></div>
                 <h2>Random Facts!</h2>
+                <p>Javascript | HTML</p>
                 <p>14/02/2018</p>
                 <hr>
-                <p>Anybody who saw some of the earlier versions of this website may remeber a section that chose a random fun fact everytime you reloaded the page.</p>
+                <p>Anybody who saw some of the earlier versions of this website may remeber a section that chose a random fun fact everytime you reloaded the page. I've had some friends of mine beg me to bring that section back into the website somehow, so here's a post detailing the script behind the old 'Random Facts' section.</p>
                 <br>
                 <p>The first step is simple, you just need to create an array in your section for scripts, like this one.</p>
                 <br />
@@ -83,7 +84,28 @@
                     <span style="color: cadetblue">&lt;p</span>&nbsp;<span style="color: yellowgreen">id</span>=<span style="color: orange">"factElement"</span><span style="color: cadetblue">></span>
                 </p>
                 <br />
-                <p></p>
+                <p>And second of all a paragraph element with the ID 'fact Element'. Now I'm aware that this post does not go into any detail about how these things work and I'm hoping to do a follow up going into more depth about how all the script works. Oh and what would this post be if it didn't actually have a working example of this piece of script.</p>
+                <br />
+                <script>
+                    var facts = [
+                        'This is a Fact!',
+                        'Styling this tiny snippet was not easy',
+                        'HTML, CSS and JS are things'
+                    ]
+
+                    function newFact() {
+                        var factNumber = Math.floor(Math.random() * (facts.length));
+                        document.getElementById('factElement').innerHTML = facts[factNumber];
+                    }
+                </script>
+                <p id="factElement" class="snippet"></p>
+                <br />
+                <p>Those words above, were displayed out of a random selection when the page loaded. If you were to refresh the page you would hopefully be able to see a different phrase in that section above. If you want to download the source HTML and Javascript to look and experiment with the script yourself, just click the button below.</p>
+                <br />
+                <br />
+                <a style="text-decoration: none; color: white; padding: 14px 16px; background-color: blue; border-radius: 4px; width: 100%; text-align: center;" href="scripts/Random-Fact.zip" download>Download the Source Code</a>
+                <br />
+                <br />
                 <br />
                 <p>- Jordan</p>
             </div>
