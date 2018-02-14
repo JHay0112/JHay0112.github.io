@@ -99,7 +99,7 @@ a {
 
 .post {
     max-width: 100%;
-    background-color: RGBA(0, 0, 0, 0.1);
+    background-color: ghostwhite;
     color: black;
     position: relative;
     margin: 1%;
@@ -151,6 +151,17 @@ input {
 
 textarea {
     width: 80%;
+}
+
+.snippet {
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    user-select: text;
+    font-size: 15px;
+    padding: 10px;
+    width: auto;
+    height: auto;
 }
 
 #submit:hover {

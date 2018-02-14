@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../styles/styles.css">
         <link rel="stylesheet" href="../styles/nav.css">
         <link rel="icon" href="../images/logo.png">
-        <script src="scripts/code.js"></script>
+        <script src="../scripts/code.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109227996-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -30,7 +30,7 @@
             });
         </script>
     </head>
-    <body onload="newBanner2()">
+    <body onload="newBanner2(), newFact()">
 
         <p id="top"></p>
 
@@ -42,6 +42,72 @@
             <div class="section" style="background-color: RGBA(0, 0, 0, 0.8); margin: 0; padding: 0; width: 100%;">
                 <a href="home.html" class="section active nav2" style=" width: auto; padding: 14px 16px; margin: 5px 5px;">Home</a>
                 <a href="search.html" class="nav2 section" style="width: auto; padding: 14px 16px; margin: 5px 5px;">Search</a>
+            </div>
+            <div class="post">
+                <div class="post-link clear" id="post2"></div>
+                <h2>Random Facts!</h2>
+                <p>Javascript | HTML</p>
+                <p>14/02/2018</p>
+                <hr>
+                <p>Anybody who saw some of the earlier versions of this website may remeber a section that chose a random fun fact everytime you reloaded the page. I've had some friends of mine beg me to bring that section back into the website somehow, so here's a post detailing the script behind the old 'Random Facts' section.</p>
+                <br>
+                <p>The first step is simple, you just need to create an array in your section for scripts, like this one.</p>
+                <br />
+                <p class="snippet">
+                    <span style="color: cadetblue;">var</span>&nbsp;<span style="color: mediumpurple">facts</span> = [<br />
+                    <span style="color: orange">
+                        &emsp;'This is a Fact!',<br />
+                        &emsp;'Styling this tiny snippet was not easy',<br />
+                        &emsp;'HTML, CSS and JS are things'
+                    </span>
+                    <br />]
+                </p>
+                <br />
+                <p>That array is the simple part, it just holds values (in this case facts), that this next piece of script will randomly display every time the script is run.</p>
+                <br />
+                <p class="snippet">
+                    <span style="color: cadetblue;">function</span>&nbsp;<span style="color: mediumpurple;">newFact()</span> {<br />
+                    &emsp;<span style="color: cadetblue">var</span>&nbsp;<span style="color: mediumpurple">factNumber</span> = Math.<span style="color: mediumpurple">floor</span>(Math.<span style="color: mediumpurple">random</span>() * (facts.<span style="color: mediumpurple">length</span>));<br />
+                    &emsp;document.<span style="color: mediumpurple">getElementById</span>(<span style="color: orange">'factElement'</span>).<span style="color: mediumpurple">innerHTML</span> = facts[factNumber];<br />
+                    }
+                </p>
+                <br />
+                <p>Thirdly and lastly you need to add an two peices of HTML in your HTML on the page you would like the fact to display on. These two additions can be seen below.</p>
+                <br />
+                <p class="snippet">
+                    <span style="color: cadetblue">&lt;body</span> <span style="color: yellowgreen">onload</span>=<span style="color: orange;">"newFact()"</span><span style="color: cadetblue">></span>
+                </p>
+                <br />
+                <p>First of all an addition to the '&lt;body>' element, which runs the 'newFact()' function.</p>
+                <br />
+                <p class="snippet" id="">
+                    <span style="color: cadetblue">&lt;p</span>&nbsp;<span style="color: yellowgreen">id</span>=<span style="color: orange">"factElement"</span><span style="color: cadetblue">></span>
+                </p>
+                <br />
+                <p>And second of all a paragraph element with the ID 'fact Element'. Now I'm aware that this post does not go into any detail about how these things work and I'm hoping to do a follow up going into more depth about how all the script works. Oh and what would this post be if it didn't actually have a working example of this piece of script.</p>
+                <br />
+                <script>
+                    var facts = [
+                        'This is a Fact!',
+                        'Styling this tiny snippet was not easy',
+                        'HTML, CSS and JS are things'
+                    ]
+
+                    function newFact() {
+                        var factNumber = Math.floor(Math.random() * (facts.length));
+                        document.getElementById('factElement').innerHTML = facts[factNumber];
+                    }
+                </script>
+                <p id="factElement" class="snippet"></p>
+                <br />
+                <p>Those words above, were displayed out of a random selection when the page loaded. If you were to refresh the page you would hopefully be able to see a different phrase in that section above. If you want to download the source HTML and Javascript to look and experiment with the script yourself, just click the button below.</p>
+                <br />
+                <br />
+                <a style="text-decoration: none; color: white; padding: 14px 16px; background-color: blue; border-radius: 4px; width: 100%; text-align: center;" href="scripts/Random-Fact.zip" download>Download the Source Code</a>
+                <br />
+                <br />
+                <br />
+                <p>- Jordan</p>
             </div>
             <div class="post">
                 <div class="post-link clear" id="post1"></div>
@@ -62,7 +128,7 @@
         </nav>
 
         <a class="top-button" href="#top" title="Back to the Top" id="top-button">
-            <img src="images/arrow.png" width="20px">
+            <img src="../images/arrow.png" width="20px">
         </a>
 
     </body>
