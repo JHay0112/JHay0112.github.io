@@ -1,0 +1,14 @@
+Begins 2:36 PM on 11/3/2018
+
+- A website about pathways and tracks in South Canterbury
+
+- Target audience: Walkers, Runners and Cyclists in South Canterbury especially those who use a GPS
+
+- Service website provides: Information about tracks in South Canterbury and downloadable maps and tracks for GPS 
+
+Cont. 7:03 PM on 11/3/2018
+
+- Possible Specs?
+-- Full width ixed top Navbar
+-- 80% banner
+-- 80% Width content
