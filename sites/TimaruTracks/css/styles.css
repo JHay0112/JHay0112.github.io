@@ -70,6 +70,7 @@ body#index {
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
+    background-color: #66666666;
 }
 
 section#index-content {
@@ -124,6 +125,50 @@ section.track {
     border: 1px solid #666666;
 }
 
+#scenic-img {
+    display: inline-block;
+    width: 49.5%;
+    background-image: url(../images/head.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 480px;
+    margin: 0;
+    padding: 0;
+}
+
+#dashing-img {
+    display: inline-block;
+    width: 49.5%;
+    background-image: url(../images/dashing-rocks.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+#cbay-img {
+    display: inline-block;
+    width: 49.5%;
+    background-image: url(../images/boardwalk.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 370px;
+    margin: 0;
+    padding: 0;
+}
+
+#saltwater-img {
+    display: inline-block;
+    width: 49.5%;
+    background-image: url(../images/saltwater-creek.JPG);
+    background-size: cover;
+    background-position: center center;
+    height: 370px;
+    margin: 0;
+    padding: 0;
+}
+
 a.icon-example:hover {
     text-decoration: none;
 }
@@ -134,10 +179,11 @@ a.icon-example img {
 }
 
 section.track iframe {
-    width: 100%;
+    width: 49.5%;
     position: relative;
     padding-top: 5px;
     border: 0;
+    background-color: ghostwhite;
 }
 
 section.track h2 {
@@ -145,33 +191,32 @@ section.track h2 {
     padding-bottom: 5px;
 }
 
-.tooltip {
+.hoveralert {
     position: relative;
     display: inline-block;
 }
 
-.tooltip img {
+.hoveralert img {
     width: 40px;
     height: 40px;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
+.hoveralert .hoveralerttext {
+    display: none;
+    z-index: 999;
     width: 120px;
-    background-color: #424242;
+    background-color: #231F20;
     color: white;
     text-align: center;
     border-radius: 6px;
     padding: 5px;
     position: absolute;
-    z-index: 999;
     top: 100%;
-    left: 50%;
-    margin-left: -60px;
+    right: -125%;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
+.hoveralert:hover .hoveralerttext {
+    display: block;
     cursor: grab;
 }
 
@@ -181,6 +226,7 @@ section.gallery {
     float: left;
     width: 32%;
     margin-bottom: 40px;
+    transition: all 0.3s ease;
 }
 
 section.gallery:hover {
