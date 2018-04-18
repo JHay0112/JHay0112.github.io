@@ -54,6 +54,8 @@ input[type=text], input[type=email], textarea[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
     margin-left: 0;
+    min-height: 50px;
+    max-height: 400px;
 }
 
 input[type=submit] {
