@@ -1,16 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Programming and Photography">
-        <meta name="keywords" content="HTML, CSS, JS, Javascript, Programming, Photography, Jordan, Hay, Jordan Hay, JHay0112, jhay0112, JHay, jordanhay0112, JordanHay0112">
+        <meta charset="utf-8" />
+        <meta name="description" content="Website of Jordan Hay">
+        <meta name="keywords" content="HTML, CSS, JS, PHP, SQL, Databases, Jordan, Hay, Jordan Hay, Programming, Photography, Code, Coding, Blog, Web, Designer, Timaru, South Canterbury, Canterbury, NZ, New Zealand, Bootstrap, JHay, 0112, JHay0112, J">
         <meta name="author" content="Jordan Hay">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="images/logo.png" rel="icon" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
         <title>Jordan Hay - Home</title>
-		<link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/nav.css">
-        <link rel="icon" href="images/logo.png">
-        <script src="scripts/code.js"></script>
+        
+        <style>
+            body, html {
+                background-image: url(../images/background.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+                display: compact;
+                height: 100%;
+                background-color: #333;
+                justify-content: center;
+            }
+
+            body {
+                padding-top: 7.5rem;
+            }
+
+            .content {
+                padding: 3rem 1.5rem;
+                margin: 0 auto;
+                max-width: 620px !important;
+                text-align: center;
+                color: white;
+                background-color: RGBA(0, 0, 0, 0.7);
+            }
+
+            .btn {
+                font-size: 14pt;
+                margin-right: 5px;
+            }
+
+            .btn-2 {
+                background-color: white;
+                color: black;
+                transition: 0.3s ease;
+            }
+
+            .btn-2:hover {
+                color: black;
+                opacity: 0.8;
+                transition: 0.3s ease;
+            }
+
+            .fa {
+                color: white;
+                font-size: 30px;
+                transform: scale(1.2);
+            }
+
+            .fa:hover {
+                opacity: 0.8;
+                color: white;
+                transition: 0.3s ease;
+            }
+            
+            .fa-map-marker:hover {
+                opacity: 1;
+            }
+        </style>
+        
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109227996-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -19,65 +83,48 @@
 
             gtag('config', 'UA-109227996-1');
         </script>
-        <style>
-            body, html {
-                background-image: url(images/index-background.jpg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center; 
-                display: compact;
-                height: 100%;
-                background-color: #333;
-                justify-content: center;
-                color: white;
-            }
-
-            .index {
-                font-family: monospace;
-                padding-left: 1%;
-                padding-right: 1%;
-                margin-top: 170px;
-                margin-left: 5%;
-                margin-right: 5%;
-                border: 1px solid white;
-                padding-left: 10px;
-                padding-bottom: 20px;
-                float: left;
-                background: RGBA(0, 0, 0, 0.5);
-            }
-
-            .index a {
-                display: inline-block;
-                text-decoration: none;
-                color: white;
-                font-family: sans-serif;
-                padding: 14px 16px;
-                margin: 0;
-                margin-bottom: 5px;
-                border: 1px solid white;
-                border-radius: 5px;
-                background: RGBA(0, 0, 0, 0.5);
-            }
-
-            .index a:hover {
-                background: RGBA(128, 128, 128, 0.7);
-            }
-        </style>
     </head>
-    <body>
+    <body data-gr-c-s-loaded="true">
 
-        <div class="index">
-            <br>
-            <h1>Jordan Hay</h1>
-            <br>
-            <h2 style="margin: 0; padding: 0;">WEB DESIGN // PROGRAMMING // PHOTOGRAPHY</h2>
-            <br>
-            <br>
-            <a href="programming/home.html" style="margin-left: 0;">PROGRAMMING</a>
-            <a href="photo/page1.html" style="margin-left: 0;">PHOTOGRAPHY</a>
-            <a href="dev.html" style="margin-bottom: -10px;">DEV BLOG</a>
-            <br>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <a class="navbar-brand" href="">Jordan Hay</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bio.html">Bio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dev.html">Dev Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="container" role="main">
+            <div class="content">
+                <h1>Jordan Hay</h1>
+                <p class="lead">Web Designer/Developer<br /><i class="fa fa-map-marker" style="font-size: 12pt; margin-right: 8px; position: relative; top: -2px;"></i>South Canterbury, NZ</p>
+                <a href="bio.html" class="btn btn-2" role="button">Bio</a>
+                <a href="dev.html" class="btn btn-2" role="button">Dev Blog</a>
+                <a href="https://instagram.com/jordanhayphotos" class="btn fa fa-instagram" role="button" target="_blank" style="position: relative; right: 10px;"></a>
+            </div>
         </div>
+        
+        <footer>
+            <p>&copy; Jordan Hay 2018</p>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
     </body>
 </html>
