@@ -37,6 +37,14 @@ nav {
     margin-bottom: 50px;
 }
 
+a {
+    transition: 0.3s ease;
+}
+
+a:hover {
+    transition: 0.3s ease;
+}
+
 input[type=text], input[type=email], textarea[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -59,10 +67,12 @@ input[type=submit] {
     cursor: pointer;
     margin-left: 0;
     margin-bottom: 0;
+    transition: 0.3s ease;
 }
 
 input[type=submit]:hover {
     opacity: 0.8;
+    transition: 0.3s ease;
 }
 
 .post {
