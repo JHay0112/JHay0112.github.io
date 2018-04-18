@@ -45,6 +45,17 @@ a:hover {
     transition: 0.3s ease;
 }
 
+.fa {
+    color: black;
+    font-size: 30px;
+}
+
+.fa:hover {
+    opacity: 0.8;
+    color: black;
+    transition: 0.3s ease;
+}
+
 input[type=text], input[type=email], textarea[type=text], select {
     width: 100%;
     padding: 12px 20px;
