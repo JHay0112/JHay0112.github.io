@@ -158,9 +158,10 @@ input[type=submit]:hover {
     padding-top: 7px;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-    margin-bottom: 5px;
+    margin-bottom: 10px !important;
     width: 95%;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 .project div.row {
