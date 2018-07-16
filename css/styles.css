@@ -77,7 +77,7 @@ header h1#header-mobile {
 }
 
 .links a {
-  width: 30%;
+  width: 45%;
 }
 
 #right-index-col-u {
@@ -135,7 +135,7 @@ input[type=submit] {
   margin-left: 0;
   margin-bottom: 0;
   transition: 0.3s ease;
-  background-color:  #428bca;
+  background-color: #428bca;
 }
 
 input[type=submit]:hover {
