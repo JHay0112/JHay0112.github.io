@@ -1,219 +1,220 @@
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
+  margin: 0;
+  user-select: none;
+  padding-bottom: 40px;
 }
 
 nav {
-    background-color: RGBA(0, 0, 0, 0.8);
+  background-color: RGBA(0, 0, 0, 0.8);
 }
 
 .nav-link {
-    transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .nav-link:hover {
-    transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.jumbotron {
-    position: relative;
-    height: 250px;
-    top: -60px;
-    background-image: url(../images/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    display: compact;
-    color: white;
-    margin-bottom: 0 !important;
-    padding-bottom: 0;
+header.jumbotron {
+  background-image: url(../images/sky.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 36%;
+  display: compact;
+  height: 270px;
 }
 
-.jumbotron-heading {
-    position: relative;
-    top: 50px;
+header h1#header-desktop {
+  margin-top: 4.5%;
+  margin-left: 10%;
+  color: white;
+  font-size: 320%;
 }
 
-.container {
-    margin-bottom: 50px;
+header h1#header-mobile {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 35%;
+  color: white;
+  font-size: 200%;
 }
 
-a {
-    transition: 0.3s ease;
+#index-content {
+  margin-top: 20%;
+  margin-left: 10%;
 }
 
-a:hover {
-    transition: 0.3s ease;
+#index-content h1 {
+  color: white;
+  font-size: 50pt;
 }
 
-.fa {
-    color: black;
-    font-size: 30px;
+.nav-hr {
+  border-top: 1px solid #666666 !important; 
+  width: auto; 
+  margin-left: 5px; 
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
-.fa:hover {
-    opacity: 0.8;
-    color: black;
-    transition: 0.3s ease;
+#left-index-col-u {
+  border-right: 1px solid black;
 }
 
-input[type=text], input[type=email], textarea[type=text], select {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid lightgray;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-left: 0;
-    resize: none;
+.links-sec {
+  border-top: 2px solid black;
+  width: 110%;
+  position: relative;
+  padding-left: 5%;
+  right: 5%;
 }
 
-input[type=submit] {
-    width: 100%;
-    background-color: #7D8C17;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 0;
-    margin-bottom: 0;
-    transition: 0.3s ease;
+.links {
+  width: 100%;
+  padding-bottom: 20px;
 }
 
-input[type=submit]:hover {
-    opacity: 0.8;
-    transition: 0.3s ease;
+.links a {
+  width: 30%;
 }
 
-.checkbox-container {
-    display: inline-block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 13pt;
-    user-select: none;
-    margin-right: 13px;
+#right-index-col-u {
+  border-left: 1px solid black;
+  padding-bottom: 20px;
 }
 
-.checkbox-container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+@media only screen and (max-width: 767px) {
+  #left-index-col-u {
+    border-bottom: 1px solid black;  
+    border-right: 0px solid white;
+  }
+
+  #right-index-col-u {
+    padding-top: 20px;
+    border-top: 1px solid black;
+    border-left: 0px solid white;
+  }
 }
 
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border: 1px solid gray;
-    transition: 0.3s ease;
+.progress {
+  margin-bottom: 10px;
 }
 
-.checkbox-container:hover input ~ .checkmark {
-    background-color: lightgray;
-    transition: 0.3s ease;
-}
-
-.checkbox-container input:checked ~ .checkmark {
-    background-color: #7D8C17;
-}
-
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.checkbox-container input:checked ~ .checkmark:after {
-    display: inline-block;
-}
-
-.checkbox-container .checkmark:after {
-    left: 10px;
-    top: 3px;
-    width: 5px;
-    height: 15px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+#log-main, #contact-main {
+  padding-top: 4rem;
 }
 
 .post {
-    border-top: 1px solid #666666;
-    border-bottom: 1px solid #666666;
-    border-radius: 7px;
-    padding: 5px;
-    padding-top: 20px;
-    margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 2px #888888;
+  margin-bottom: 20px;
 }
 
-.project {
-    padding-bottom: 7px;
-    padding-top: 7px;
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    margin-bottom: 10px !important;
-    width: 95%;
-    border-radius: 5px;
-    margin: 0 auto;
+input[type=text], input[type=email], textarea[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 0;
+  resize: none;
 }
 
-.project div.row {
-    width: 100%;
-    margin: 0 auto;
+input[type=submit] {
+  width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0;
+  margin-bottom: 0;
+  transition: 0.3s ease;
+  background-color:  #428bca;
 }
 
-.project div.row  a.col-5 {
-    width: 100%;
-    margin: 0 auto;
-    background-size: cover; 
-    min-height: 0;
-    border-radius: 5px;
-    background-position: center center;
+input[type=submit]:hover {
+  opacity: 0.8;
+  transition: 0.3s ease;
 }
 
-.project div.row  h2.col-7 {
-    padding-left: 0 !important;
-    margin-left: 0 !important;
+.checkbox-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 13pt;
+  user-select: none;
+  margin-right: 13px;
 }
 
-.project hr {
-    border-top: 1px solid #666666 !important; 
-    width: auto; 
-    margin-left: 5px; 
-    margin-right: 5px;
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.project h6 {
-    margin-left: 5px;
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: 1px solid gray;
+  transition: 0.3s ease;
 }
 
-.project p {
-    margin-left: 5px; 
-    margin-right: 5px;
+.checkbox-container:hover input ~ .checkmark {
+  background-color: lightgray;
+  transition: 0.3s ease;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #428bca;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: inline-block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 10px;
+  top: 3px;
+  width: 5px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 footer {
-    text-align: center;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    color: white;
-    position: fixed;
-    padding-left: 10%;
-    padding-right: 10%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: RGBA(0, 0, 0, 0.8);
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  position: fixed;
+  padding-left: 10%;
+  padding-right: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: RGBA(0, 0, 0, 0.8);
 }
 
 footer p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
