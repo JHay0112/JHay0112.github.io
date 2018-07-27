@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colour Cycle</title>
+        <script>
+            var colour = [
+                '<div style="background-color: green;" class="colour"></div>',
+                '<div style="background-color: blue;" class="colour"></div>',
+                '<div style="background-color: purple;" class="colour"></div>',
+                '<div style="background-color: red;" class="colour"></div>',
+                '<div style="background-color: yellow;" class="colour"></div>',
+                '<div style="background-color: orange;" class="colour"></div>'
+            ]
+
+            function newColour() {
+                var colourNumber = Math.floor(Math.random() * (colour.length));
+                document.getElementById('colour').innerHTML = colour[colourNumber];
+            }
+            
+            var int = self.setInterval(function(newColour), 500);
+        </script>
+        <style>
+            #colour {
+                width: 500px;
+                height: 500px;
+            }
+            
+            .colour {
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1></h1>
+        <button onclick="window.setInterval(int)">New Colour</button>
+        <div id="colour"></div>
+        
+        
+    </body>
+</html>
