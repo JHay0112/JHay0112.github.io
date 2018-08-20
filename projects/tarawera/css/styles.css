@@ -88,6 +88,7 @@ ul.dashed > li {
 
 ul.dashed > li:before {
     content: "- ";
+    padding-right: 5px;
 }
 
 footer {
