@@ -1,220 +1,205 @@
-body {
-  overflow-x: hidden;
-  margin: 0;
-  user-select: none;
-  padding-bottom: 40px;
-}
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 
 nav {
-  background-color: RGBA(0, 0, 0, 0.8);
+    background-color: RGBA(204, 204, 255, 0.8);
 }
 
-.nav-link {
-  transition: 0.3s ease;
+nav#index-nav {
+    background-color: RGBA(0, 0, 0, 0);
+}
+  
+.nav-link, .nav-link:hover {
+    transition: 0.3s ease;
 }
 
-.nav-link:hover {
-  transition: 0.3s ease;
+html.index, body.index {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80%;
+    display: compact;
+    height: 100%;
+    background-color: ghostwhite;
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 0;
 }
 
-header.jumbotron {
-  background-image: url(../images/sky.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 36%;
-  display: compact;
-  height: 270px;
+main {
+    width: 100%;
+    height: 100%;
 }
 
-header h1#header-desktop {
-  margin-top: 4.5%;
-  margin-left: 10%;
-  color: white;
-  font-size: 320%;
+main.index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
 }
 
-header h1#header-mobile {
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 35%;
-  color: white;
-  font-size: 200%;
+main.about, main.photos {
+    padding-top: 70px;
 }
 
-#index-content {
-  margin-top: 20%;
-  margin-left: 10%;
+#about-side {
+    background-image: url(../images/profile-square.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 0;
 }
 
-#index-content h1 {
-  color: white;
-  font-size: 50pt;
+div.index {
+    width: 100%;
+    background-color: RGBA(204, 204, 255, 0.8);
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-right: 26px;
 }
 
-.nav-hr {
-  border-top: 1px solid #666666 !important; 
-  width: auto; 
-  margin-left: 5px; 
-  margin-right: 5px;
-  margin-bottom: 5px;
+@media only screen and (min-width: 768px) {
+    div.index {
+        border-radius: 18.5% / 50%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
 }
 
-#left-index-col-u {
-  border-right: 1px solid black;
+div.index div.col-md-4, div.index div.col-md-4 img {
+    padding: 0;
+    margin: 0;
 }
 
-.links-sec {
-  border-top: 2px solid black;
-  width: 110%;
-  position: relative;
-  padding-left: 5%;
-  right: 5%;
+h1#index-title {
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
 }
 
-.links {
-  width: 100%;
-  padding-bottom: 20px;
+@media only screen and (max-width: 768px) {
+    nav#index-nav {
+        text-align: center;
+    }
+
+    nav#index-nav a.btn {
+        margin: 0 auto;
+    }
 }
 
-.links a {
-  width: 45%;
+nav#index-nav a.btn {
+    font-size: 12pt;
 }
 
-#right-index-col-u {
-  border-left: 1px solid black;
-  padding-bottom: 20px;
+@media only screen and (min-width: 768px) {
+    h1#index-title {
+        font-size: 50pt;
+        text-align: left;
+    }
+
+    img#index-profile {
+        border-radius: 50% !important;
+    }
 }
 
-@media only screen and (max-width: 767px) {
-  #left-index-col-u {
-    border-bottom: 1px solid black;  
-    border-right: 0px solid white;
-  }
-
-  #right-index-col-u {
-    padding-top: 20px;
-    border-top: 1px solid black;
-    border-left: 0px solid white;
-  }
+img#index-profile {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.progress {
-  margin-bottom: 10px;
-}
-
-#log-main, #contact-main {
-  padding-top: 4rem;
-}
-
-.post {
-  padding: 10px;
-  box-shadow: 2px 2px 2px 2px #888888;
-  margin-bottom: 20px;
+div.caption {
+    padding-top: 10px;
+    text-align: center;
+    border: 1px solid grey;
 }
 
 input[type=text], input[type=email], textarea[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-left: 0;
-  resize: none;
-}
-
-input[type=submit] {
-  width: 100%;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 0;
-  margin-bottom: 0;
-  transition: 0.3s ease;
-  background-color: #428bca;
-}
-
-input[type=submit]:hover {
-  opacity: 0.8;
-  transition: 0.3s ease;
-}
-
-.checkbox-container {
-  display: inline-block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 13pt;
-  user-select: none;
-  margin-right: 13px;
-}
-
-.checkbox-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border: 1px solid gray;
-  transition: 0.3s ease;
-}
-
-.checkbox-container:hover input ~ .checkmark {
-  background-color: lightgray;
-  transition: 0.3s ease;
-}
-
-.checkbox-container input:checked ~ .checkmark {
-  background-color: #428bca;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.checkbox-container input:checked ~ .checkmark:after {
-  display: inline-block;
-}
-
-.checkbox-container .checkmark:after {
-  left: 10px;
-  top: 3px;
-  width: 5px;
-  height: 15px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-footer {
-  text-align: center;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  color: white;
-  position: fixed;
-  padding-left: 10%;
-  padding-right: 10%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: RGBA(0, 0, 0, 0.8);
-}
-
-footer p {
-  margin: 0;
-  padding: 0;
-}
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 0;
+    resize: none;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0;
+    margin-bottom: 0;
+    transition: 0.3s ease;
+    background-color: #601BF0;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+    transition: 0.3s ease;
+  }
+  
+  .checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 13pt;
+    user-select: none;
+    margin-right: 13px;
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 1px solid gray;
+    transition: 0.3s ease;
+  }
+  
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: lightgray;
+    transition: 0.3s ease;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #601BF0;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: inline-block;
+  }
+  
+  .checkbox-container .checkmark:after {
+    left: 10px;
+    top: 3px;
+    width: 5px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }

@@ -8,7 +8,7 @@
     <meta name="author" content="Jordan Hay">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>About</title>
+    <title>Photos</title>
     <link href="images/profile-circle.png" rel="icon" />
 
     <link rel="stylesheet" href="css/styles.css">
@@ -38,38 +38,49 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link" href="photos">Photos</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-    <main class="about container">
-        <h1>Contact</h1>
-
-        <form action="https://formspree.io/jordanhay0112@gmail.com" method="POST" id="contact">
-            <input type="text" name="Name" placeholder="Name (e.g. Bill Gates)">
-            <input type="email" name="Reply to" placeholder="Email (e.g. example@domain.com)">
-            <textarea id="message" type="text" name="Message" placeholder="Message (e.g. Please marry me!)" rows="5"></textarea>
-            <h6 style="margin-bottom: 20px;">Choose a subject(s)</h6>
-            <label class="checkbox-container">Bug Report
-                <input type="checkbox" name="Bug Report" value="✔">
-                <span class="checkmark"></span>
-            </label>
-            <label class="checkbox-container">Websites
-                <input type="checkbox" name="Websites" value="✔">
-                <span class="checkmark"></span>
-            </label>
-            <label class="checkbox-container">Photography
-                <input type="checkbox" name="Photography" value="✔">
-                <span class="checkmark"></span>
-            </label>
-            <input type="submit">
-        </form>
+    <main class="photos container">
+        <div class="row">
+            <section class="col-md-12">
+                <h2>Photos</h2>
+                <hr />
+            </section>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="thumbnail">
+                    <img src="images/lambs.jpg" alt="Lambs at Elephant Rocks, Duntroon" style="width: 100%;">
+                    <div class="caption">
+                        <p>Lambs at Elephant Rocks, Duntroon</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="thumbnail">
+                    <img src="images/sky.jpg" alt="NZ Falcon near Moeraki" style="width: 100%;">
+                    <div class="caption">
+                        <p>NZ Falcon near Moeraki</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="thumbnail">
+                    <img src="images/cat.jpg" alt="Cat" style="width: 100%;">
+                    <div class="caption">
+                        <p>Cat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Scripts -->
