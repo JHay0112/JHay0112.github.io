@@ -289,15 +289,13 @@ div#main.index {
     height: 0px;
     opacity: 0;
     visibility: hidden;
-    transition: 0.2s all ease;
 }
 
 .uncollapsed {
     height: auto;
     opacity: 1;
     visibility: visible;
-    transition: 0.2s all ease;
-    transition-delay: 0.2s;
+    transition: 0.4s ease;
 }
 
 /* Skill */
@@ -347,9 +345,10 @@ div#main.index {
     background-image: url(../img/bio-pic.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 430px;
-    background-position-y: -80px;
-    border-left: 15px solid white;
+    background-position: top center;
+    padding-bottom: 60%;
+    border-left: 15px solid RGBA(0, 0, 0, 0);
+    box-shadow: -2px 74px 51px -74px;
 }
 
 /* /About */
