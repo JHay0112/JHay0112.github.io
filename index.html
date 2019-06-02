@@ -1,88 +1,43 @@
 <!DOCTYPE html>
-<html>
+<!-- 
+    Title: Home - Jordan Hay
+    Author(s): Jordan Hay
+    File: index.html
+    Stylesheet: css/styles.css
+    Date: 13/04/2019
+ -->
+<html class="index">
     <head>
-        <meta charset="UTF-8">
-        <title>Jordan Hay - Home</title>
-		<link rel="stylesheet" href="styles/styles.css">
-        <link rel="stylesheet" href="styles/nav.css">
-        <link rel="icon" href="images/logo.png">
-        <script src="scripts/code.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109227996-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)};
-            gtag('js', new Date());
+        <!-- Meta Data -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-            gtag('config', 'UA-109227996-1');
-        </script>
-        <style>
-            body {
-                background-image: url("images/index-background.jpg");
-                background-size: 100%;
-                background-repeat: no-repeat;
-                background-repeat: repeat-y;
-                color: white;
-            }
+        <!-- Website Data -->
+        <title>Home - Jordan Hay</title>
+        <link rel="icon" href="img/fav.png" />
 
-            .index {
-                font-family: monospace;
-                padding-left: 1%;
-                padding-right: 1%;
-                margin-top: 70px;
-                margin-left: 5%;
-                margin-right: 5%;
-                margin-bottom: 50px;
-                border: 1px solid white;
-                border-radius: 5px;
-                padding-bottom: 20px;
-                float: left;
-                background: RGBA(0, 0, 0, 0.5);
-            }
-
-            .index a {
-                text-decoration: none;
-                color: white;
-                font-family: sans-serif;
-                padding: 14px 16px;
-                margin: 5px;
-                border: 1px solid white;
-                border-radius: 5px;
-                background: RGBA(0, 0, 0, 0.5);
-            }
-
-            .index i {
-                text-decoration: none;
-                color: white;
-                font-size: 30px;
-                padding: 10px;
-                position: relative;
-                top: 5px;
-                margin: 0;
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-
-            .index i:hover {
-                cursor: pointer;
-            }
-
-            .index a:hover {
-                background: RGBA(128, 128, 128, 0.7);
-            }
-        </style>
+        <!-- Stylesheet(s) -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" /> <!-- General Styles -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> <!-- Font Awesome -->
     </head>
-    <body>
+    <body class="index">
 
-        <div class="index">
-            <br>
-            <h1>Jordan Hay</h1>
-            <br>
-            <h2>WEB DESIGN // PROGRAMMING // PHOTOGRAPHY</h2>
-            <br>
-            <br>
-            <a href="dev.html" style="margin-left: 0;">DEV BLOG</a>
-            <br>
+        <div id="main" class="index" role="main">
+            <div class="col-8" id="index-content">
+                <section class="col-8">
+                    <h1 id="index-title">Jordan Hay</h1>
+                    <hr />
+                    <div id="index-nav">
+                        <a href="/about" class="active">About</a>
+                        <a href="/project">Projects</a>
+                        <a href="/contact">Contact</a>
+                    </div>
+                </section>
+                <img id="index-img" class="col-4" src="img/index-img.jpg" />
+            </div>
         </div>
+
+        <script src="js/main.js"></script>
 
     </body>
 </html>
