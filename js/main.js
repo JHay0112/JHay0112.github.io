@@ -17,7 +17,8 @@ var skills = [
   ["code-branch fas", "Git", "Jordan Hay is experienced in Git, a version control system that is commonly used by programmers to manage their source code. Jordan Hay has been suing Git since late 2017."],
   ["camera-retro fas", "Photography", "Jordan Hay has been taking photos since ~2015. Originally using an Olympus TG-630 point and shoot before upgrading to a Canon EOS 350D in mid 2018. You can find a portfolio of his images <a href='https://www.instagram.com/jordanhayphotos/' target='_blank'>here</a>."],
   ["microchip fas", "Arduino/Robotics", "Jordan Hay has had experience with the Arduino microcontroller and language since late 2018. Arduinos are small microcontrollers used for hobby electronics. Arduinos use a programming language also called Arduino which is based off of C/C++ syntax that is compiled to Assembly language that is run on the Arduino microprocessor."],
-  ["cube fas", "CAD", "Jordan has experience in CAD/3D modelling for 3D printing, predominantly in FreeCAD. Jordan Hay has had experience in CAD and 3D modelling since late 2018."]
+  ["cube fas", "CAD", "Jordan has experience in CAD/3D modelling for 3D printing, predominantly in FreeCAD. Jordan Hay has had experience in CAD and 3D modelling since late 2018."],
+  ["node-js", "Node.js", "Jordan has basic experience in Node.js. Node.js is a Javascript runtime for network applications. Jordan Hay has had experience in Node.js since mid 2019."]
 ]
 
 // Functions
