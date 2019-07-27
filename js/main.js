@@ -10,7 +10,7 @@
 var skills = [
   ["html5", "HTML5", "Jordan Hay is proficient in HTML5. HTML is a markdown language commonly used to build webpages. It is one of the internet's core three languages along with CSS and JavaScript. Jordan Hay has been using HTML since mid-2017."],
   ["css3", "CSS3", "Jordan Hay has advanced experience in CSS3, including the use of media queries and animations. CSS is used to describe how a markdown language such as HTML should be displayed. CSS is one of the internet's core three languages along with HTML and JavaScript. Jordan Hay has been using CSS since mid-2017."],
-  ["js", "JavaScript", "Jordan Hay has an intermediate knowledge of JavaScript. JavaScript is one of the internet's core three languages along with HTML can CSS. Jordan Hay has been using JavaScript since early 2019."],
+  ["js", "JavaScript", "Jordan Hay has an intermediate knowledge of JavaScript. JavaScript is one of the internet's core three languages along with HTML and CSS. Jordan Hay has been using JavaScript since early 2019."],
   ["php", "PHP", "Jordan Hay has an intermediate knowledge of PHP. PHP is a general purpose programming language commonly used an originally designed for web development. Jordan Hay has been using PHP since mid-2018."],
   ["database fas", "SQL", "Jordan Hay is proficient in SQL. SQL is a language designed and used managing and developing databases. Jordan Hay has been using SQL since mid-2018."],
   ["python", "Python 3", "Jordan Hay has a solid foundation in Python 3. Python is a general purpose programming language that is notable for its extensive use of whitespace and readability. Jordan Hay has been using Python since mid-2018."],
