@@ -104,7 +104,7 @@ body, html {
 
 /* Horizontal Line */
 hr {
-    opacity: 0.2;
+    color: #252525;
 }
 
 /* Loading */
@@ -157,17 +157,16 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 
 #banner img {
     vertical-align: middle;
-    width: 20vw;
+    width: 250px;
 }
 
 #banner h1 {
-    position: relative;
+    margin-top: 0;
     vertical-align: middle;
 }
 
@@ -176,7 +175,6 @@ main {
 }
 
 #banner h1.mobile-only {
-    top: -70px;
     font-size: 40pt;
     text-align: center;
 }
