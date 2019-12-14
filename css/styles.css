@@ -109,9 +109,9 @@ hr {
 
 #loading-screen {
     background: white;
-    background: linear-gradient(180deg, RGBA(0, 0, 0, 0) 0%, RGBA(255, 255, 255, 1) 20%, RGBA(255, 255, 255, 1) 100%);
+    background: linear-gradient(180deg, RGBA(0, 0, 0, 0) 0%, RGBA(255, 255, 255, 1) 10%, RGBA(255, 255, 255, 1) 100%);
     position: fixed;
-    top: -20vh;
+    top: -10vh;
     left: 0;
     width: 100vw;
     height: 120vh;
@@ -121,7 +121,7 @@ hr {
 #loading-logo {
     position: relative;
     left: 50vw;
-    top: 60vh;
+    top: 55vh;
     width: 180px;
     height: 180px;
     padding: 0;
@@ -133,7 +133,7 @@ hr {
     animation: spin 1s infinite linear;
     position: relative;
     left: 50vw;
-    top: 65vh;
+    top: 60vh;
     width: 30px;
     height: 30px;
     padding: 0;
