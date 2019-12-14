@@ -23,7 +23,7 @@ body, html {
 }
 
 body {
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 /* Animations */
