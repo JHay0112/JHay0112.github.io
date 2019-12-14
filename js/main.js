@@ -3,13 +3,20 @@
     Author: Jordan Hay
 */
 
+// Sleep function
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // Exit loading screen once page has loaded
-function exitLoadingScreen() {
+async function exitLoadingScreen() {
     loadingScreen = document.getElementById("loading-screen"); // Get loading screen
     loadingSpinner = document.getElementById("loading-spinner"); // Get loading spinner
-    main = document.getElementById("main"); // Get main content
+    loadingLogo = document.getElementById("loading-logo"); // Get loading logo
 
-    loadingScreen.style.animation = "fade-out 1s 1s forwards ease"; // Fade out
+    loadingLogo.style.animation = "fade-out 1s 1s forwards ease"; // Fade out
     loadingSpinner.style.animation = "spin 1s infinite linear, fade-out 2s forwards"; // Fade out while still spinning
-    main.style.animation = "fade-in 1s 2s forwards ease";
+    loadingScreen.style.animation = "slide-out-bottom 1.5s 2s forwards ease";
+    await sleep(3000);
+    document.body.style.overflowY = "auto";
 }

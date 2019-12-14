@@ -22,6 +22,10 @@ body, html {
     padding: 0;
 }
 
+body {
+    overflow-y: hidden;
+}
+
 /* Animations */
 
 @keyframes fade-in {
@@ -49,21 +53,15 @@ body, html {
     }
 }
 
-@keyframes background-zoom {
+@keyframes slide-out-bottom {
     from {
-        transform: scale(1);
+        position: fixed;
+        top: -20vh;
+        left: 0;
     } to {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes slide-in-left {
-    from {
-        position: relative;
-        left: -100%;
-    } to {
-        position: relative;
-        left: 0%;
+        position: fixed;
+        top: 100vh;
+        left: 0;
     }
 }
 
@@ -110,19 +108,20 @@ hr {
 /* Loading */
 
 #loading-screen {
-    background-color: white;
-    position: absolute;
-    top: 0;
+    background: white;
+    background: linear-gradient(180deg, RGBA(0, 0, 0, 0) 0%, RGBA(255, 255, 255, 1) 20%, RGBA(255, 255, 255, 1) 100%);
+    position: fixed;
+    top: -20vh;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     z-index: 10;
 }
 
 #loading-logo {
     position: relative;
     left: 50vw;
-    top: 45vh;
+    top: 60vh;
     width: 180px;
     height: 180px;
     padding: 0;
@@ -134,7 +133,7 @@ hr {
     animation: spin 1s infinite linear;
     position: relative;
     left: 50vw;
-    top: 50vh;
+    top: 65vh;
     width: 30px;
     height: 30px;
     padding: 0;
@@ -148,10 +147,7 @@ main {
     padding: 20px;
 }
 
-/* This is different to the actual main */
-#main {
-    opacity: 0;
-}
+/* Banner */
 
 #banner {
     display: flex;
@@ -175,6 +171,6 @@ main {
 }
 
 #banner h1.mobile-only {
-    font-size: 40pt;
+    font-size: 37pt;
     text-align: center;
 }
