@@ -13,7 +13,7 @@ var skills = [
     ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
     ["fab fa-github", "Github", "Github is an online host for version control with Git. Jordan has been using Github since late 2017."],
     ["fas fa-microchip", "Arduino/Robotics", "Arduino is a microcontroller and language used for hobby electronics including robotics and automation. Jordan has had experience with Arduino since late 2018."],
-    ["fas fa-cube", "3D Printing and CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."]
+    ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."]
 ]
 
 // Sleep function
