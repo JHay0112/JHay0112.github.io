@@ -65,6 +65,15 @@ body {
     }
 }
 
+@keyframes skill-dialog {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 100px;
+    }
+}
+
 /* Responsive */
 
 /* Mobile */
@@ -114,7 +123,7 @@ hr {
     top: -10vh;
     left: 0;
     width: 100vw;
-    height: 120vh;
+    height: 110vh;
     z-index: 10;
 }
 
@@ -147,6 +156,10 @@ main {
     padding: 20px;
 }
 
+#main {
+    padding-bottom: 30vh;
+}
+
 /* Banner */
 
 #banner {
@@ -173,4 +186,87 @@ main {
 #banner h1.mobile-only {
     font-size: 37pt;
     text-align: center;
+}
+
+/* About */
+
+#about {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-pic {
+    background-image: url(../img/about-pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 60%;
+}
+
+.about-pic.mobile-only {
+    width: 100%;
+    height: 300px;
+}
+
+/* Skill */
+
+#skills {
+    text-align: center;
+}
+
+#skills h3, #skills p {
+    text-align: left;
+}
+
+.collapsed {
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.uncollapsed {
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.4s ease;
+}
+
+.skill {
+    width: 70px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.skill::before {
+    font-size: 35pt;
+}
+
+.skill:hover {
+    cursor: pointer;
+}
+
+#skill-dialog {
+    background-color: RGBA(0, 0, 0, 0.85);
+    padding: 10px;
+    color: white;
+    padding-bottom: 0px;
+}
+
+#skill-dialog a, #skill-dialog p, #skill-dialog h2 {
+    color: white;
+}
+
+#skill-icon, #skill-title {
+    display: inline-block;
+    margin: 0;
+}
+
+#skill-icon {
+    font-size: 30pt;
+}
+
+#skill-title {
+    position: relative;
+    top: -6px;
+    left: 10px;
 }

@@ -14,9 +14,8 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> <!-- Font Awesome Icon Library -->
     </head>
-    <body onload="exitLoadingScreen()">
+    <body onload="exitLoadingScreen(); loadSkills();">
         <div id="loading-screen">
             <img id="loading-logo" src="img/logo.png" alt="Loading Logo" />
             <img id="loading-spinner" src="img/spinner.png" alt="Loading Spinner" />
@@ -25,7 +24,8 @@
         <main>
             <div class="col-2"></div>
 
-            <section class="col-8" id="main">
+            <div class="col-8" id="main">
+
                 <header id="banner">
                     <img src="img/logo.png" alt="Logo" />
                     <h1 class="desktop-only">Jordan Hay</h1>
@@ -34,12 +34,49 @@
 
                 <hr />
 
-            </section>
+                <div id="about">
+                    <section class="col-8">
+                        <h2>About</h2>
+                        <p>Jordan Hay is a student with interests in programming, web development, computers, maths, engineering, and science.</p>
+                        <h3>Qualifications: </h3>
+                        <ul>
+                            <li>NCEA Level 1 Excellence Endorsment
+                                <ul>
+                                    <li>Level 1 Science Excellence Endorsement</li>
+                                    <li>Level 1 Digital Technology Excellence Endorsement</li>
+                                    <li>Level 1 Mathematics Merit Endorsement</li>
+                                    <li>Level 1 English Merit Endorsement</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3>Achievements: </h3>
+                        <ul>
+                            <li>Mountainview High School Head Boy 2020</li>
+                            <li>Mountainview High School Year 12 Top Scholar 2019</li>
+                        </ul>
+                    </section>
+                    
+                    <aside class="col-4 desktop-only about-pic"></aside>
+                    <aside class="col-12 mobile-only about-pic"></aside>
+                </div>
+
+                <article id="skills" class="col-12 uncollapsed">
+                    <h3>Skills</h3>
+                    <p>Click on icons to see more information.</p>
+                </article>
+                <article id="skill-dialog" class="col-12 collapsed">
+                    <p id="skill-icon"></p><h2 id="skill-title"></h2>
+                    <p>Click <a href="javascript:void(0)" onclick="closeSkill()">here</a> to return to the skills menu.</p>
+                    <p id="skill-desc"></p>
+                </article>
+
+            </div>
 
             <div class="col-2"></div>
         </main>
 
         <!-- Scripts -->
         <script src="js/main.js"></script>
+        <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
     </body>
 </html>
