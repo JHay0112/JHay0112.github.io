@@ -300,6 +300,25 @@ main {
     border-bottom: 0; /* Drop hr down to only 1 px thicks */
 }
 
+/* Links */
+
+#links {
+    text-align: center;
+}
+
+#links h2, #links p {
+    text-align: left;
+}
+
+#links a {
+    font-size: 35pt;
+    width: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
 /* Contact */
 
 input[type=text], input[type=email], textarea[type=text], select {
