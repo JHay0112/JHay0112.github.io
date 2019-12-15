@@ -56,7 +56,7 @@ body {
 @keyframes slide-out-bottom {
     from {
         position: fixed;
-        top: -20vh;
+        top: -10vh;
         left: 0;
     } to {
         position: fixed;
