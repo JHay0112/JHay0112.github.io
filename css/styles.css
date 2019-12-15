@@ -303,3 +303,9 @@ input[type=submit]:hover {
     opacity: 0.9;
     transition: 0.3s ease;
 }
+
+/* Footer */
+
+footer {
+    text-align: center;
+}
