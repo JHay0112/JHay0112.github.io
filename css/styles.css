@@ -111,7 +111,7 @@ body {
 
 /* Horizontal Line */
 hr {
-    color: #252525 !important;
+    color: #252525;
     width: 100%;
 }
 
@@ -247,7 +247,7 @@ main {
 }
 
 #skill-dialog {
-    background-color: RGBA(0, 0, 0, 0.85);
+    background-color: #252525;
     padding: 10px;
     color: white;
     padding-bottom: 0px;
@@ -270,6 +270,34 @@ main {
     position: relative;
     top: -6px;
     left: 10px;
+}
+
+/* Projects */
+
+.project-container {
+    padding: 5px;
+}
+
+.project {
+    border: 1px solid #252525;
+    border-radius: 5px;
+}
+
+.project-banner {
+    background-position: center bottom;
+    background-size: cover;
+    height: 200px;
+    border: 1px solid #252525;
+    border-radius: 5px;
+}
+
+.project-content {
+    padding: 10px;
+    margin-top: 190px;
+}
+
+.project-content hr {
+    border-bottom: 0; /* Drop hr down to only 1 px thicks */
 }
 
 /* Contact */
@@ -296,7 +324,7 @@ input[type=submit] {
     margin-left: 0;
     margin-bottom: 0;
     transition: 0.3s ease;
-    background-color: RGBA(0, 0, 0, 0.85);
+    background-color: #252525;
 }
 
 input[type=submit]:hover {
