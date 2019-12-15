@@ -1,43 +1,134 @@
 <!DOCTYPE html>
-<!-- 
-    Title: Home - Jordan Hay
-    Author(s): Jordan Hay
-    File: index.html
-    Stylesheet: css/styles.css
-    Date: 13/04/2019
- -->
-<html class="index">
+<html lang="en">
     <head>
         <!-- Meta Data -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="UTF-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Jordan Hay" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Website Data -->
+        <!-- Tab Data -->
         <title>Home - Jordan Hay</title>
-        <link rel="icon" href="img/fav.png" />
+        <link rel="icon" href="img/favicon.ico" />
 
-        <!-- Stylesheet(s) -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css" /> <!-- General Styles -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> <!-- Font Awesome -->
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
-    <body class="index">
-
-        <div id="main" class="index" role="main">
-            <div class="col-8" id="index-content">
-                <section class="col-8">
-                    <h1 id="index-title">Jordan Hay</h1>
-                    <hr />
-                    <div id="index-nav">
-                        <a href="/about" class="active">About</a>
-                        <a href="/project">Projects</a>
-                        <a href="/contact">Contact</a>
-                    </div>
-                </section>
-                <img id="index-img" class="col-4" src="img/index-img.jpg" />
-            </div>
+    <body onload="exitLoadingScreen(); loadSkills();">
+        <div id="loading-screen">
+            <img id="loading-logo" src="img/logo.png" alt="Loading Logo" />
+            <img id="loading-spinner" src="img/spinner.png" alt="Loading Spinner" />
         </div>
 
-        <script src="js/main.js"></script>
+        <main>
+            <div class="col-2"></div>
 
+            <div class="col-8" id="main">
+
+                <header id="banner">
+                    <img src="img/logo.png" alt="Logo" />
+                    <h1 class="desktop-only">Jordan Hay</h1>
+                    <h1 class="mobile-only">Jordan Hay</h1>
+                </header>
+
+                <div id="about" class="col-12">
+                    <hr />
+                    <section class="col-8">
+                        <h2>About</h2>
+                        <p>Jordan Hay is a student with interests in programming, web development, computers, maths, engineering, and science.</p>
+                        <h3>Qualifications: </h3>
+                        <ul>
+                            <li>NCEA Level 1 Excellence Endorsment
+                                <ul>
+                                    <li>Level 1 Science Excellence Endorsement</li>
+                                    <li>Level 1 Digital Technology Excellence Endorsement</li>
+                                    <li>Level 1 Mathematics Merit Endorsement</li>
+                                    <li>Level 1 English Merit Endorsement</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h3>Achievements: </h3>
+                        <ul>
+                            <li>Mountainview High School Head Boy 2020</li>
+                            <li>Mountainview High School Year 12 Top Scholar 2019</li>
+                        </ul>
+                    </section>
+                    
+                    <aside class="col-4 desktop-only about-pic"></aside>
+                    <aside class="col-12 mobile-only about-pic"></aside>
+                </div>
+
+                <article id="skills" class="col-12 uncollapsed">
+                    <h3>Skills</h3>
+                    <p>Click on icons to see more information.</p>
+                </article>
+                <article id="skill-dialog" class="col-12 collapsed">
+                    <p id="skill-icon"></p><h2 id="skill-title"></h2>
+                    <p>Click <a href="javascript:void(0)" onclick="closeSkill()">here</a> to return to the skills menu.</p>
+                    <p id="skill-desc"></p>
+                </article>
+
+                <section class="col-12" id="projects">
+                    <hr />
+                    <h2>Projects</h2>
+                    <div class="col-12 project-container">
+                        <article class="project">
+                            <div class="project-banner col-12" style="background-image: url('https://timarutrails.tk/img/index-background.jpg');"></div>
+                            <div class="project-content">
+                                <h3>Timaru Trails</h3>
+                                <hr />
+                                <p>Timaru Trails is project to map the tracks and trails in Timaru and South Canterbury and make them easily avaliable for anyone looking to go for a walk. You can find it <a href="https://timarutrails.tk/" target="_blank">here</a>.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-6 project-container">
+                        <article class="project">
+                            <div class="project-banner col-12" style="background-image: url('https://toptimalcoaching.tk/img/cover.jpg');"></div>
+                            <div class="project-content">
+                                <h3>tOpTIMAL Coaching</h3>
+                                <hr />
+                                <p>A website Jordan recently made for a client. You can find it <a href="https://toptimalcoaching.tk/" target="_blank">here</a>.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-6 project-container">
+                        <article class="project">
+                            <div class="project-banner col-12" style="background-image: url('https://cleavehay.tk/images/background.jpg');"></div>
+                            <div class="project-content">
+                                <h3>Cleave Hay</h3>
+                                <hr />
+                                <p>One of the first websites Jordan ever made for someone other than himself. It was never quite finished, as the client no longer required it. You can find it <a href="https://cleavehay.tk/" target="_blank">here</a>.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="contact" class="col-12">
+                    <hr />
+                    <h2>Contact</h2>
+                    <form action="https://formspree.io/jordanhay0112@gmail.com" method="POST" id="contact">
+                        <input type="text" name="Name" placeholder="Name" class="col-12" />
+                        <input type="email" name="Reply to" placeholder="Email (e.g. example@domain.com)" class="col-12" />
+                        <textarea id="message" type="text" name="Message" placeholder="Message" rows="5" class="col-12"></textarea>
+                        <input type="submit" value="Submit" class="col-12" />
+                    </form>
+                </section>
+
+                <footer class="col-12">
+                    <hr />
+                    <small>&copy; Jordan Hay 2019</small>
+                </footer>
+
+            </div>
+
+            <div class="col-2"></div>
+        </main>
+
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
     </body>
 </html>
