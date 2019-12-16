@@ -236,6 +236,7 @@ main {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 20px;
+    transition: 0.3s ease all;
 }
 
 .skill::before {
@@ -244,6 +245,7 @@ main {
 
 .skill:hover {
     cursor: pointer;
+    opacity: 0.9;
 }
 
 #skill-dialog {
@@ -317,6 +319,11 @@ main {
     margin: 0 auto;
     margin-bottom: 20px;
     text-decoration: none;
+    transition: 0.3s ease all;
+}
+
+#links a:hover {
+    opacity: 0.9;
 }
 
 /* Contact */
@@ -348,7 +355,6 @@ input[type=submit] {
 
 input[type=submit]:hover {
     opacity: 0.9;
-    transition: 0.3s ease;
 }
 
 /* Footer */
