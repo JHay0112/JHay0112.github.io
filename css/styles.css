@@ -189,6 +189,24 @@ main {
     text-align: center;
 }
 
+/* Lists */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding-left: 13px;
+}
+
+li:before {
+    content: "-";
+    display: inline-block;
+    margin-left: -13px; /* same as padding-left set on li */
+    width: 13px; /* same as padding-left set on li */
+}
+
 /* About */
 
 #about {
