@@ -76,7 +76,8 @@ function load404Image() {
         "you_will_try.jpg",
         "it_ought_to_be_here.jpg",
         "visible_confusion.jpg",
-        "you_are_lost.jpg"
+        "you_are_lost.jpg",
+        "incomplete_archives.jpg"
     ];
 
     imgElement = document.getElementById("404-img");
