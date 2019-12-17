@@ -74,7 +74,9 @@ function load404Image() {
     images = [
         "oh_i_dont_think_so.jpg",
         "you_will_try.jpg",
-        "it_ought_to_be_here.jpg"
+        "it_ought_to_be_here.jpg",
+        "visible_confusion.jpg",
+        "you_are_lost.jpg"
     ];
 
     imgElement = document.getElementById("404-img");
