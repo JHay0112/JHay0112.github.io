@@ -73,7 +73,8 @@ function closeSkill() {
 function load404Image() {
     images = [
         "oh_i_dont_think_so.jpg",
-        "you_will_try.jpg"
+        "you_will_try.jpg",
+        "it_ought_to_be_here.jpg"
     ];
 
     imgElement = document.getElementById("404-img");
