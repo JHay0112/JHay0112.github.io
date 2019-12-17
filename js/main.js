@@ -69,3 +69,13 @@ function closeSkill() {
     document.getElementById("skill-desc").innerHTML = "";
 }
   
+// Randomly load an image to be used for the 404 meme
+function load404Image() {
+    images = [
+        "oh_i_dont_think_so.jpg",
+        "you_will_try.jpg"
+    ];
+
+    imgElement = document.getElementById("404-img");
+    imgElement.src = "/img/404/" + images[Math.floor(Math.random() * images.length)];
+}
