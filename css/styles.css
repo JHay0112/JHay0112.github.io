@@ -379,6 +379,18 @@ input[type=submit]:hover {
     opacity: 0.9;
 }
 
+/* 404 */
+
+#meme404 {
+    background-color: #252525;
+}
+
+#meme404 p {
+    color: white;
+    padding-left: 10px;
+    font-size: 13pt;
+}
+
 /* Footer */
 
 footer {
