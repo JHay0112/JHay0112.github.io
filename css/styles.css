@@ -299,21 +299,25 @@ li:before {
 }
 
 .project {
-    border: 1px solid #252525;
-    border-radius: 5px;
+    background-color: #252525;
 }
 
 .project-banner {
     background-position: center bottom;
     background-size: cover;
     height: 200px;
-    border: 1px solid #252525;
-    border-radius: 5px;
 }
 
 .project-content {
+    position: relative;
+    top: 20px;
     padding: 10px;
-    margin-top: 190px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.project-content h3, .project-content p, .project-content hr, .project-content a {
+    color: white;
 }
 
 .project-content hr {
