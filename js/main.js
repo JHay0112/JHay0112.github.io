@@ -29,7 +29,9 @@ async function exitLoadingScreen() {
 
     loadingLogo.style.animation = "fade-out 1s 1s forwards ease"; // Fade out
     loadingSpinner.style.animation = "spin 1s infinite linear, fade-out 2s forwards"; // Fade out while still spinning
-    loadingScreen.style.animation = "slide-out-bottom 1.5s 2s forwards ease";
+    loadingScreen.style.animation = "slide-out-bottom 1.1s 2s forwards ease-out";
+    await sleep(2000);
+    document.body.style.overflowY = "auto";
 }
 
 // Load skills for About
