@@ -317,7 +317,7 @@ li:before {
 }
 
 .project-banner {
-    background-position: center bottom;
+    background-position: center;
     background-size: cover;
     height: 200px;
 }
