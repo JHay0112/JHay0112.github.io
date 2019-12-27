@@ -294,11 +294,25 @@ li:before {
 
 /* Projects */
 
+.project-row {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .project-row {
+        display: flex;
+        flex-flow: row;
+    }
+}
+
 .project-container {
     padding: 5px;
 }
 
 .project {
+    height: 100%;
     background-color: #252525;
 }
 
