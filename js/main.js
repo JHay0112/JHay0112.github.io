@@ -16,6 +16,7 @@ var skills = [
     ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."]
 ]
 
+
 // Sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -85,3 +86,22 @@ function load404Image() {
     imgElement = document.getElementById("404-img");
     imgElement.src = "/img/404/" + images[Math.floor(Math.random() * images.length)];
 }
+
+// Once the user has scrolled a certain distance, make the button visible
+function scrollFunction() {
+    var topButton = document.getElementById("top-button");
+
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        topButton.style.animation = "fade-in ease 0.3s";
+    } else {
+        topButton.style.animation = "fade-out ease 0.3s forwards";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function goToTop() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+
+window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
