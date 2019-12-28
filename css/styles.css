@@ -74,10 +74,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes skill-dialog {
-    0% {
+    from {
         height: 0px;
-    }
-    100% {
+    } to {
         height: 100px;
     }
 }
@@ -370,8 +369,7 @@ li:before {
 }
 
 #more-projects {
-    overflow: hidden;
-    max-height: 0;
+    display: none;
     transition: ease all 0.3s;
 }
 
