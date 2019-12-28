@@ -116,12 +116,13 @@ for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.previousElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-            this.innerHTML = "Read More";
-        } else {
-            content.style.display = "block";
+        if (content.style.maxHeight == "") {
+            console.log(content.scrollHeight);
+            content.style.maxHeight = content.scrollHeight + "px";
             this.innerHTML = "Read Less";
+        } else {
+            content.style.maxHeight = "";
+            this.innerHTML = "Read More";
         }
     });
 }

@@ -369,7 +369,11 @@ li:before {
 }
 
 #more-projects {
-    display: none;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-height: 0px;
     transition: ease all 0.3s;
 }
 
