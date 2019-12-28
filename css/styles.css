@@ -135,7 +135,6 @@ hr {
 
 #loading-screen {
     background: white;
-    /* background: linear-gradient(180deg, RGBA(0, 0, 0, 0) 0%, RGBA(255, 255, 255, 1) 10%, RGBA(255, 255, 255, 1) 100%); */
     position: fixed;
     top: 0;
     left: 0;
