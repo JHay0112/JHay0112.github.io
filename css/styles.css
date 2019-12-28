@@ -180,7 +180,10 @@ hr {
     font-size: 17pt;
     position: fixed;
     bottom: 30px;
-    right: 35px;
+    left: 50%;
+    margin: 0;
+    margin-left: -25px;
+    padding: 0;
     z-index: 3;
     animation: fade-out 0s forwards;
     transition: 0.3s ease all;
