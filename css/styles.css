@@ -6,12 +6,12 @@
 */
 
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css?family=Roboto'); 
+@import url('https://fonts.googleapis.com/css?family=Questrial'); 
 
 /* Every Element (Ones below will overide if need be) */
 * { 
     color: #252525;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Questrial', sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
