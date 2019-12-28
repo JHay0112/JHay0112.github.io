@@ -6,12 +6,12 @@
 */
 
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css?family=Questrial'); 
+@import url('https://fonts.googleapis.com/css?family=Questrial|Raleway&display=swap'); 
 
 /* Every Element (Ones below will overide if need be) */
 * { 
     color: #252525;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Raleway', sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -24,6 +24,10 @@ body, html {
 
 body {
     overflow-y: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Questrial', sans-serif;
 }
 
 /* Animations */
