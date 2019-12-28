@@ -1,6 +1,9 @@
 /*
     js/main.js
     Author: Jordan Hay
+
+    Notes:
+     Needs a bit of a clean up
 */
 
 var skills = [
@@ -105,3 +108,20 @@ function goToTop() {
 } 
 
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
+
+// Collapsible elements
+var coll = document.getElementsByClassName("collapsible");
+
+for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.previousElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            this.innerHTML = "Read more";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            this.innerHTML = "Read less";
+        }
+    });
+}
