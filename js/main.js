@@ -47,7 +47,7 @@ function loadSkills() {
 
     var skill = skills[i];
 
-    skillEl.innerHTML += "<div onclick='openSkill(" + i + ")' class='" + skill[0] + " skill'></div>";
+    skillEl.innerHTML += "<div onclick='openSkill(" + i + ")' class='" + skill[0] + " skill' title='" + skill[1] +"'></div>";
         console.log("Loaded " + skill[1] + " Icon");
     }
 }
@@ -61,13 +61,13 @@ function openSkill(skillIndex) {
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    document.getElementById("skill-dialog").className = "col-12 uncollapsed";
+    document.getElementById("skill-dialogue").className = "col-12 uncollapsed";
     document.getElementById("skills").className = "col-12 collapsed";
 }
 
 // Close further information on skill
 function closeSkill() {
-    document.getElementById("skill-dialog").className = "col-12 collapsed";
+    document.getElementById("skill-dialogue").className = "col-12 collapsed";
     document.getElementById("skills").className = "col-12 uncollapsed";
 
     document.getElementById("skill-icon").className = "";

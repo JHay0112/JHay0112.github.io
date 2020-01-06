@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-@keyframes skill-dialog {
+@keyframes skill-dialogue {
     from {
         height: 0px;
     } to {
@@ -309,14 +309,18 @@ li:before {
     opacity: 0.9;
 }
 
-#skill-dialog {
+#skill-dialogue {
     background-color: #252525;
     padding: 10px;
     color: white;
     padding-bottom: 0px;
 }
 
-#skill-dialog a, #skill-dialog p, #skill-dialog h2 {
+#skill-dialogue:hover {
+    cursor: pointer;
+}
+
+#skill-dialogue a, #skill-dialogue p, #skill-dialogue h2 {
     color: white;
 }
 
