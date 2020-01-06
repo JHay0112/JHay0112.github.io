@@ -110,7 +110,7 @@ function goToTop() {
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 
 // Collapsible elements
-var coll = document.getElementsByClassName("collapsible");
+var coll = document.getElementsByClassName("read-more-button");
 
 for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
@@ -119,10 +119,10 @@ for (var i = 0; i < coll.length; i++) {
         if (content.style.maxHeight == "") {
             console.log(content.scrollHeight);
             content.style.maxHeight = content.scrollHeight + "px";
-            this.innerHTML = "Read Less";
+            this.innerHTML = "Read Less&nbsp;&nbsp;<span class='fas fa-sort-up' style='position: relative; top: 4px;'></span>";
         } else {
             content.style.maxHeight = "";
-            this.innerHTML = "Read More";
+            this.innerHTML = "Read More&nbsp;&nbsp;<span class='fas fa-sort-down' style='position: relative; top: -2px;'></span>";
         }
     });
 }

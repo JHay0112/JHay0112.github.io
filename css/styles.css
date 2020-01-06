@@ -193,6 +193,17 @@ hr {
     opacity: 0.9;
 }
 
+/* Read More/Read Less */
+
+.read-more {
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-height: 0px;
+    transition: ease all 0.3s;
+}
+
 /* Main */
 
 main {
@@ -370,15 +381,6 @@ li:before {
 
 .project-content hr {
     border-bottom: 0; /* Drop hr down to only 1 px thicks */
-}
-
-#more-projects {
-    overflow: hidden;
-    display: block;
-    margin: 0;
-    padding: 0;
-    max-height: 0px;
-    transition: ease all 0.3s;
 }
 
 #more-projects-button {
