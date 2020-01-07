@@ -108,19 +108,20 @@ function goToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 
+async function newBee(e) {
+    if((e.keyCode || e.which) == 66) {
+        var bee = document.createElement("img");
+        bee.src = "img/bee.png";
+        bee.classList += "bee";
+        document.body.appendChild(bee);
+        await sleep(3000);
+        document.body.removeChild(bee);
+    }
+}
 
 // Event listeners
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
-document.body.onkeydown = async function(e) {
-
-    bee = document.getElementById("bee");
-
-    if((e.keyCode || e.which) == 66) {
-        bee.style.animation = "bee-flight 3s ease forwards";
-        await sleep(6000); // Bee cool down
-        bee.style.animation = "";
-    }
-};
+document.body.onkeydown = function(e) {newBee(e)};
 
 // Main
 // Collapsible elements

@@ -211,15 +211,16 @@ hr {
     opacity: 0.9;
 }
 
-/* Bee */
+/* Bees */
 
-#bee {
+.bee {
     position: fixed;
     top: 10vh;
     left: -10vw;
     transform: rotate(30deg);
     height: 30px;
     overflow: hidden;
+    animation: bee-flight 3s ease forwards;
 }
 
 /* Read More/Read Less */
