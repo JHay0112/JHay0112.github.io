@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
     } 50% {
         top: 50vh;
         left: 50vw;
-        transform: rotate(0deg) scale(2);
+        transform: rotate(0deg) scale(1.2);
     } 60% {
         top: 50vh;
         left: 50vw;
