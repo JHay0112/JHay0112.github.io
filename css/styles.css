@@ -85,13 +85,11 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes bee-flight {
     0% { 
         position: fixed;
-        top: -10vh;
         left: -10vw;
-        transform: rotate(120deg);
+        transform: rotate(90deg);
     } 30% {
         top: 50vh;
         left: 50vw;
-        transform: rotate(120deg);
     } 50% {
         top: 50vh;
         left: 50vw;
@@ -99,11 +97,10 @@ h1, h2, h3, h4, h5, h6 {
     } 70% {
         top: 50vh;
         left: 50vw;
-        transform: rotate(120deg);
+        transform: rotate(90deg);
     } 100% {
-        top: 110vh;
         left: 110vw;
-        transform: rotate(120deg);
+        transform: rotate(90deg);
     }
 }
 
@@ -224,12 +221,10 @@ hr {
 
 .bee {
     position: fixed;
-    top: -10vh;
     left: -10vw;
     padding: 0;
     margin: 0;
     margin-left: -15px;
-    transform: rotate(30deg);
     width: 30px;
     overflow: hidden;
     animation: bee-flight 4s ease forwards;

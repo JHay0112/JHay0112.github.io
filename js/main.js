@@ -113,6 +113,7 @@ async function newBee(e) {
         var bee = document.createElement("img");
         bee.src = "img/bee.png";
         bee.classList += "bee";
+        bee.style.top = (Math.random() * (111 - (-10)) + (-10)) + "vh";
         document.body.appendChild(bee);
         await sleep(4000);
         document.body.removeChild(bee);
