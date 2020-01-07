@@ -261,7 +261,7 @@ hr {
 
 ul.read-more-button li:before {
     content: "";
-    text-indent: 0;
+    margin-left: -26px;
 }
 
 /* Main */
