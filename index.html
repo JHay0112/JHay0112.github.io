@@ -35,8 +35,9 @@
                     <h1 class="mobile-only">Jordan Hay</h1>
                 </header>
 
-                <div id="about" class="col-12">
-                    <hr />
+                <hr />
+
+                <div class="row">
                     <section class="col-8">
                         <h2>About</h2>
                         <p>Jordan Hay is a student with interests in programming, web development, computers, maths, engineering, and science.</p>
@@ -62,18 +63,17 @@
                     <aside class="col-12 mobile-only about-pic"></aside>
                 </div>
 
-                <article id="skills" class="col-12 uncollapsed">
+                <article id="skills" class="row uncollapsed">
                     <h3>Skills</h3>
                     <p>Click on icons to see more information.</p>
                 </article>
-                <article id="skill-dialogue" class="col-12 collapsed" onclick="closeSkill();">
+                <article id="skill-dialogue" class="row collapsed" onclick="closeSkill();">
                     <p id="skill-icon"></p><h2 id="skill-title"></h2>
                     <p id="skill-desc"></p>
                     <p>Click anywhere on this dialogue to return to the skills menu.</p>
                 </article>
 
                 <section class="col-12" id="projects">
-                    <hr />
                     <h2>Projects</h2>
                     <div class="col-12 project-container">
                         <article class="project">
@@ -131,8 +131,8 @@
 
                 <section id="contact" class="col-12">
                     <hr />
-                    <h2>Contact</h2>
-                    <form action="https://formspree.io/jordanhay0112@gmail.com" method="POST" id="contact">
+                    <h2 class="col-12">Contact</h2>
+                    <form class="col-12" action="https://formspree.io/jordanhay0112@gmail.com" method="POST" id="contact">
                         <input type="text" name="Name" placeholder="Name" class="col-12" />
                         <input type="email" name="Reply to" placeholder="Email (e.g. example@domain.com)" class="col-12" />
                         <textarea id="message" type="text" name="Message" placeholder="Message" rows="5" class="col-12"></textarea>
