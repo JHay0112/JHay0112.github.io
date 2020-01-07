@@ -119,9 +119,14 @@ async function newBee(e) {
     }
 }
 
-// Event listeners
+// Event listeners (or similar)
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) {newBee(e)};
+document.addEventListener("copy", (event) => {
+    const pagelink = "\n\nRead more at: https://jordanhay.tk/";
+    event.clipboardData.setData('text', document.getSelection() + pagelink);
+    event.preventDefault();
+});
 
 // Main
 // Collapsible elements
