@@ -404,6 +404,10 @@ li:before {
     margin-bottom: 14px;
 }
 
+.project-content .read-more-button {
+    padding-bottom: 5px;
+}
+
 .project-content .read-more-button span {
     position: relative;
     left: 5px;
