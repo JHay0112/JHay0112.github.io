@@ -24,6 +24,7 @@ body, html {
 
 body {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,6 +79,23 @@ h1, h2, h3, h4, h5, h6 {
         height: 0px;
     } to {
         height: 100px;
+    }
+}
+
+@keyframes bee-flight {
+    0% { 
+        position: absolute;
+        top: 10vh;
+        left: -10vw;
+        transform: rotate(30deg);
+    } 50% {
+        top: 50vh;
+        left: 50vw;
+        transform: rotate(-360deg);
+    } 100% {
+        top: 110vh;
+        left: 110vw;
+        transform: rotate(30deg);
     }
 }
 
@@ -191,6 +209,17 @@ hr {
 #top-button:hover {
     cursor: pointer;
     opacity: 0.9;
+}
+
+/* Bee */
+
+#bee {
+    position: absolute;
+    top: 10vh;
+    left: -10vw;
+    transform: rotate(30deg);
+    height: 30px;
+    overflow: hidden;
 }
 
 /* Read More/Read Less */

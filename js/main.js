@@ -6,6 +6,7 @@
      Needs a bit of a clean up
 */
 
+// Global Variables
 var skills = [
     ["fab fa-html5", "HTML5", "HTML5 (Hyper Text Markup Language 5) is a markup language to write websites. Jordan is proficient in HTML5 and has been using it since mid 2017."],
     ["fab fa-css3", "CSS3", "CSS3 (Cascading Style Sheet 3) is a language used to style HTML pages. Jordan has been using CSS3 since mid-2017."],
@@ -19,7 +20,7 @@ var skills = [
     ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."]
 ]
 
-
+// Functions
 // Sleep function
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -107,8 +108,21 @@ function goToTop() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
 
-window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 
+// Event listeners
+window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
+document.body.onkeydown = async function(e) {
+
+    bee = document.getElementById("bee");
+
+    if((e.keyCode || e.which) == 66) {
+        bee.style.animation = "bee-flight 3s ease forwards";
+        await sleep(6000); // Bee cool down
+        bee.style.animation = "";
+    }
+};
+
+// Main
 // Collapsible elements
 var coll = document.getElementsByClassName("read-more-button");
 
