@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
         transform: rotate(30deg);
     } 50% {
         top: 50vh;
-        margin: 0 auto;
+        left: 50vw;
         transform: rotate(-360deg);
     } 100% {
         top: 110vh;
@@ -217,6 +217,9 @@ hr {
     position: fixed;
     top: -10vh;
     left: -10vw;
+    padding: 0;
+    margin: 0;
+    margin-left: -15px;
     transform: rotate(30deg);
     height: 30px;
     overflow: hidden;
