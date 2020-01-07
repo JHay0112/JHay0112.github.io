@@ -87,15 +87,23 @@ h1, h2, h3, h4, h5, h6 {
         position: fixed;
         top: -10vh;
         left: -10vw;
-        transform: rotate(30deg);
+        transform: rotate(120deg);
+    } 30% {
+        top: 50vh;
+        left: 50vw;
+        transform: rotate(120deg);
     } 50% {
         top: 50vh;
         left: 50vw;
-        transform: rotate(-360deg);
+        transform: rotate(0deg);
+    } 70% {
+        top: 50vh;
+        left: 50vw;
+        transform: rotate(120deg);
     } 100% {
         top: 110vh;
         left: 110vw;
-        transform: rotate(30deg);
+        transform: rotate(120deg);
     }
 }
 
@@ -224,7 +232,7 @@ hr {
     transform: rotate(30deg);
     width: 30px;
     overflow: hidden;
-    animation: bee-flight 3s ease forwards;
+    animation: bee-flight 4s ease forwards;
 }
 
 /* Read More/Read Less */

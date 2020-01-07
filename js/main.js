@@ -114,7 +114,7 @@ async function newBee(e) {
         bee.src = "img/bee.png";
         bee.classList += "bee";
         document.body.appendChild(bee);
-        await sleep(3000);
+        await sleep(4000);
         document.body.removeChild(bee);
     }
 }
