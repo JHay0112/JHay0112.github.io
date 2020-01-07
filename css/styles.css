@@ -221,7 +221,7 @@ hr {
     margin: 0;
     margin-left: -15px;
     transform: rotate(30deg);
-    height: 30px;
+    width: 30px;
     overflow: hidden;
     animation: bee-flight 3s ease forwards;
 }
