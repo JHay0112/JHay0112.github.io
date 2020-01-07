@@ -259,6 +259,11 @@ hr {
     top: -1pt;
 }
 
+ul.read-more-button li:before {
+    content: "";
+    text-indent: 0;
+}
+
 /* Main */
 
 main {
