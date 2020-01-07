@@ -85,12 +85,12 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes bee-flight {
     0% { 
         position: fixed;
-        top: 10vh;
+        top: -10vh;
         left: -10vw;
         transform: rotate(30deg);
     } 50% {
         top: 50vh;
-        left: 50vw;
+        margin: 0 auto;
         transform: rotate(-360deg);
     } 100% {
         top: 110vh;
@@ -215,7 +215,7 @@ hr {
 
 .bee {
     position: fixed;
-    top: 10vh;
+    top: -10vh;
     left: -10vw;
     transform: rotate(30deg);
     height: 30px;
