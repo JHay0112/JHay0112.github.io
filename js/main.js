@@ -119,10 +119,10 @@ for (var i = 0; i < coll.length; i++) {
         if (content.style.maxHeight == "") {
             console.log(content.scrollHeight);
             content.style.maxHeight = content.scrollHeight + "px";
-            this.innerHTML = "Read Less&nbsp;&nbsp;<span class='fas fa-sort-up' style='position: relative; top: 4px;'></span>";
+            this.innerHTML = "Read Less <span class='fas fa-sort-up'></span>";
         } else {
             content.style.maxHeight = "";
-            this.innerHTML = "Read More&nbsp;&nbsp;<span class='fas fa-sort-down' style='position: relative; top: -2px;'></span>";
+            this.innerHTML = "Read More <span class='fas fa-sort-down'></span>";
         }
     });
 }

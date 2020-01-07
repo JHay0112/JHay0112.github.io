@@ -197,11 +197,28 @@ hr {
 
 .read-more {
     overflow: hidden;
-    display: block;
     margin: 0;
     padding: 0;
     max-height: 0px;
     transition: ease all 0.3s;
+}
+
+.read-more-button:hover {
+    cursor: pointer;
+}
+
+.read-more-button span {
+    color: inherit;
+}
+
+.read-more-button span.fa-sort-up {
+    position: relative;
+    top: 4pt;
+}
+
+.read-more-button span.fa-sort-down {
+    position: relative;
+    top: -1pt;
 }
 
 /* Main */
@@ -381,6 +398,15 @@ li:before {
 
 .project-content hr {
     border-bottom: 0; /* Drop hr down to only 1 px thicks */
+}
+
+.project-content .read-more {
+    margin-bottom: 14px;
+}
+
+.project-content .read-more-button span {
+    position: relative;
+    left: 5px;
 }
 
 #more-projects-button {
