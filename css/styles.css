@@ -247,7 +247,10 @@ hr {
 
 .read-more-button span {
     color: inherit;
-    margin-left: 2px;
+    margin-left: 1px;
+    font-size: 7pt;
+    position: relative;
+    top: -1px;
 }
 
 ul.read-more-button li:before {
