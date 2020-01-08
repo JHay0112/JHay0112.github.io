@@ -140,10 +140,10 @@ for (var i = 0; i < coll.length; i++) {
         if (content.style.maxHeight == "") {
             console.log(content.scrollHeight);
             content.style.maxHeight = content.scrollHeight + "px";
-            this.innerHTML = "Read Less <span class='fas fa-sort-up'></span>";
+            this.innerHTML = "Read Less <span class='fas fa-chevron-up'></span>";
         } else {
             content.style.maxHeight = "";
-            this.innerHTML = "Read More <span class='fas fa-sort-down'></span>";
+            this.innerHTML = "Read More <span class='fas fa-chevron-down'></span>";
         }
     });
 }

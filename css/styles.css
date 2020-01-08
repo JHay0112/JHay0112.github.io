@@ -247,16 +247,7 @@ hr {
 
 .read-more-button span {
     color: inherit;
-}
-
-.read-more-button span.fa-sort-up {
-    position: relative;
-    top: 4pt;
-}
-
-.read-more-button span.fa-sort-down {
-    position: relative;
-    top: -1pt;
+    margin-left: 2px;
 }
 
 ul.read-more-button li:before {
