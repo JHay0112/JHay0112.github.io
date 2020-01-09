@@ -146,10 +146,10 @@ for (var i = 0; i < coll.length; i++) {
 
         if (content.style.maxHeight == "") {
             content.style.maxHeight = contentHeight + "px";
-            this.innerHTML = "Read Less <span class='fas fa-chevron-up'></span>";
+            this.innerHTML = "Read Less";
         } else {
             content.style.maxHeight = "";
-            this.innerHTML = "Read More <span class='fas fa-chevron-down'></span>";
+            this.innerHTML = "Read More";
         }
     });
 }
