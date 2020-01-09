@@ -238,7 +238,7 @@ hr {
     margin: 0;
     padding: 0;
     max-height: 0px;
-    transition: ease all 0.3s;
+    transition: ease all 0.5s;
 }
 
 .read-more-button:hover {
@@ -443,6 +443,7 @@ li:before {
 .project-content .read-more-button span {
     position: relative;
     left: 5px;
+    top: 7px;
 }
 
 #more-projects-button {

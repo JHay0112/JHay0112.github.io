@@ -137,9 +137,15 @@ for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var content = this.previousElementSibling;
+        var subContent = content.getElementsByClassName("read-more");
+        var contentHeight = content.scrollHeight;
+
+        for(var i = 0; i < subContent.length; i++) {
+            contentHeight += subContent[i].scrollHeight;
+        }
+
         if (content.style.maxHeight == "") {
-            console.log(content.scrollHeight);
-            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.maxHeight = contentHeight + "px";
             this.innerHTML = "Read Less <span class='fas fa-chevron-up'></span>";
         } else {
             content.style.maxHeight = "";
