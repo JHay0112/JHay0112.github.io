@@ -134,7 +134,7 @@ document.addEventListener("copy", (event) => {
 var coll = document.getElementsByClassName("read-more-button");
 
 for (var i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
+    coll[i].addEventListener("click", async function() {
         this.classList.toggle("active");
         var content = this.previousElementSibling;
         var subContent = content.getElementsByClassName("read-more");
@@ -146,9 +146,11 @@ for (var i = 0; i < coll.length; i++) {
 
         if (content.style.maxHeight == "") {
             content.style.maxHeight = contentHeight + "px";
+            await sleep(300);
             this.innerHTML = "Read Less";
         } else {
             content.style.maxHeight = "";
+            await sleep(300);
             this.innerHTML = "Read More";
         }
     });

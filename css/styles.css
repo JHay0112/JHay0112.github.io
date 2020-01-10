@@ -254,7 +254,7 @@ hr {
     margin-left: 3px;
     transform: scale(0.6);
     vertical-align: middle;
-    transition: 0.3s ease all;
+    transition: 0.3s 0.3s ease all;
 }
 
 .read-more-button.active:after {
