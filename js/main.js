@@ -48,30 +48,42 @@ function loadSkills() {
 
     var skill = skills[i];
 
-    skillEl.innerHTML += "<div onclick='openSkill(" + i + ")' class='" + skill[0] + " skill' title='" + skill[1] +"'></div>";
+    skillEl.innerHTML += "<div onclick='openSkill(" + i + ");' class='" + skill[0] + " skill' title='" + skill[1] +"'></div>";
         console.log("Loaded " + skill[1] + " Icon");
     }
+
+    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
 }
   
 // Open further information on the skill as chosen by param skill Index
 async function openSkill(skillIndex) {
 
     var skill = skills[skillIndex];
+    var skillDialogue = document.getElementById("skill-dialogue");
+    var skillEl = document.getElementById("skills");
 
     document.getElementById("skill-icon").className = skill[0] + " ";
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    document.getElementById("skill-dialogue").style.animation = "fade-out 0.3s forwards";
+    skillEl.style.maxHeight = "0px";
+    skillEl.style.animation = "fade-out 0.3s ease forwards";
     await sleep(300);
-    document.getElementById("skills").style.animation = "fade-in 0.3s forwards";
+    skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
+    skillDialogue.style.animation = "fade-in 0.3s ease forwards";
 }
 
 // Close further information on skill
 async function closeSkill() {
-    document.getElementById("skills").style.animation = "fade-out 0.3s forwards";
+
+    var skillDialogue = document.getElementById("skill-dialogue");
+    var skillEl = document.getElementById("skills");
+
+    skillDialogue.style.maxHeight = "";
+    skillDialogue.style.animation = "fade-out 0.3s ease forwards";
     await sleep(300);
-    document.getElementById("skill-dialogue").style.animation = "fade-in 0.3s forwards";
+    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
+    skillEl.style.animation = "fade-in 0.3s ease forwards";
 
     document.getElementById("skill-icon").className = "";
     document.getElementById("skill-title").textContent = "";

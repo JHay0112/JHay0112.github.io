@@ -239,7 +239,7 @@ hr {
     margin: 0;
     padding: 0;
     max-height: 0px;
-    transition: ease all 0.5s;
+    transition: ease all 0.3s;
 }
 
 .read-more-button:hover {
@@ -338,7 +338,10 @@ li:before {
 /* Skill */
 
 #skills {
+    overflow: hidden;
     text-align: center;
+    max-height: 0px;
+    transition: 0.3s ease all;
 }
 
 #skills h3, #skills p {
@@ -363,11 +366,14 @@ li:before {
 }
 
 #skill-dialogue {
-    background-color: #252525;
+    overflow: hidden;
     padding: 10px;
+    max-height: 0px;
+    transition: ease all 0.3s;
+    background-color: #252525;
     color: white;
-    padding-bottom: 0px;
     box-shadow: 0px 10px 10px -5px #252525;
+    animation: fade-out 0s forwards;
 }
 
 #skill-dialogue:hover {
