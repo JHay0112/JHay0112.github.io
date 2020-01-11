@@ -341,7 +341,7 @@ li:before {
     overflow: hidden;
     text-align: center;
     max-height: 0px;
-    transition: 0.15s ease all;
+    transition: 0.3s ease all;
 }
 
 #skills h3, #skills p {
@@ -369,7 +369,7 @@ li:before {
     overflow: hidden;
     padding: 10px;
     max-height: 0px;
-    transition: ease all 0.15s;
+    transition: ease all 0.3s;
     background-color: #252525;
     color: white;
     box-shadow: 0px 10px 10px -5px #252525;

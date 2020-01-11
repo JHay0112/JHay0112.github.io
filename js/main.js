@@ -56,7 +56,7 @@ function loadSkills() {
 }
   
 // Open further information on the skill as chosen by param skill Index
-async function openSkill(skillIndex) {
+function openSkill(skillIndex) {
 
     var skill = skills[skillIndex];
     var skillDialogue = document.getElementById("skill-dialogue");
@@ -67,10 +67,9 @@ async function openSkill(skillIndex) {
     document.getElementById("skill-desc").innerHTML = skill[2];
 
     skillEl.style.maxHeight = "0px";
-    skillEl.style.animation = "fade-out 0.15s ease forwards";
-    await sleep(150);
+    skillEl.style.animation = "fade-out 0.3s ease forwards";
     skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
-    skillDialogue.style.animation = "fade-in 0.15s ease forwards";
+    skillDialogue.style.animation = "fade-in 0.3s ease forwards";
 }
 
 // Close further information on skill
@@ -78,12 +77,12 @@ async function closeSkill() {
 
     var skillDialogue = document.getElementById("skill-dialogue");
     var skillEl = document.getElementById("skills");
-
-    skillDialogue.style.maxHeight = "";
-    skillDialogue.style.animation = "fade-out 0.15s ease forwards";
-    await sleep(150);
+    
     skillEl.style.maxHeight = skillEl.scrollHeight + "px";
-    skillEl.style.animation = "fade-in 0.15s ease forwards";
+    skillEl.style.animation = "fade-in 0.3s ease forwards";
+    skillDialogue.style.maxHeight = "";
+    skillDialogue.style.animation = "fade-out 0.3s ease forwards";
+    await sleep(300);
 
     document.getElementById("skill-icon").className = "";
     document.getElementById("skill-title").textContent = "";
