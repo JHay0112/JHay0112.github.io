@@ -54,7 +54,7 @@ function loadSkills() {
 }
   
 // Open further information on the skill as chosen by param skill Index
-function openSkill(skillIndex) {
+async function openSkill(skillIndex) {
 
     var skill = skills[skillIndex];
 
@@ -62,14 +62,16 @@ function openSkill(skillIndex) {
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    document.getElementById("skill-dialogue").className = "col-12 uncollapsed";
-    document.getElementById("skills").className = "col-12 collapsed";
+    document.getElementById("skill-dialogue").style.animation = "fade-out 0.3s forwards";
+    await sleep(300);
+    document.getElementById("skills").style.animation = "fade-in 0.3s forwards";
 }
 
 // Close further information on skill
-function closeSkill() {
-    document.getElementById("skill-dialogue").className = "col-12 collapsed";
-    document.getElementById("skills").className = "col-12 uncollapsed";
+async function closeSkill() {
+    document.getElementById("skills").style.animation = "fade-out 0.3s forwards";
+    await sleep(300);
+    document.getElementById("skill-dialogue").style.animation = "fade-in 0.3s forwards";
 
     document.getElementById("skill-icon").className = "";
     document.getElementById("skill-title").textContent = "";

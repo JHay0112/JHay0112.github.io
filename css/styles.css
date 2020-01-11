@@ -345,19 +345,6 @@ li:before {
     text-align: left;
 }
 
-.collapsed {
-    height: 0px;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.uncollapsed {
-    height: auto;
-    opacity: 1;
-    visibility: visible;
-    transition: 0.4s ease;
-}
-
 .skill {
     width: 70px;
     text-align: center;
