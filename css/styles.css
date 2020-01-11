@@ -364,7 +364,7 @@ li:before {
     transition: 0.3s ease all;
 }
 
-.skill::before {
+.skill:before {
     font-size: 35pt;
 }
 
