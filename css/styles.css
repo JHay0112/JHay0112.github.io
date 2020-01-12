@@ -15,7 +15,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    text-shadow: 0px 5px 5px RGBA(37, 37, 37, 0.3);
+    text-shadow: 0px 5px 5px RGBA(37, 37, 37, 0.2);
 }
 
 body, html {
@@ -289,7 +289,7 @@ main {
 #banner img {
     vertical-align: middle;
     width: 250px;
-    filter: drop-shadow(0px 5px 5px RGBA(37, 37, 37, 0.3));
+    filter: drop-shadow(0px 5px 5px RGBA(37, 37, 37, 0.2));
 }
 
 #banner h1 {
