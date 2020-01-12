@@ -377,6 +377,7 @@ li:before {
 #skill-dialogue {
     overflow: hidden;
     padding: 10px;
+    padding-bottom: 0px;
     max-height: 0px;
     transition: ease all 0.3s;
     background-color: #252525;
