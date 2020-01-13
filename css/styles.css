@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 [class*="col-"] {
     width: 100%;
     float: left;
-    padding: 5px;
+    padding: 10px;
 }
 
 .row {
