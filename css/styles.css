@@ -217,6 +217,7 @@ hr {
     z-index: 3;
     animation: fade-out 0s forwards;
     transition: 0.3s ease all;
+    box-shadow: 0px 5px 5px RGBA(37, 37, 37, 0.3);
 }
 
 #top-button:hover {
