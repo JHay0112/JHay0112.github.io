@@ -151,15 +151,17 @@ for (var i = 0; i < coll.length; i++) {
         this.classList.toggle("active");
         var content = this.previousElementSibling;
         var subContent = content.getElementsByClassName("read-more");
+        var subContentHeight = 0;
         var contentHeight = content.scrollHeight;
 
         for(var i = 0; i < subContent.length; i++) {
-            contentHeight += subContent[i].scrollHeight;
+            subContentHeight += subContent[i].scrollHeight;
         }
 
         if (content.style.maxHeight == "") {
             content.style.maxHeight = contentHeight + "px";
             await sleep(300);
+            content.style.maxHeight = (contentHeight + subContentHeight) + "px";
             this.innerHTML = "Read Less";
         } else {
             content.style.maxHeight = "";
