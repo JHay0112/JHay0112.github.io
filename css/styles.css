@@ -526,6 +526,7 @@ input[type=submit]:hover {
 
 #meme404 {
     background-color: #252525;
+    box-shadow: 0px 10px 10px -5px #252525;
 }
 
 #meme404 p {
