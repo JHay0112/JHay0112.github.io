@@ -20,6 +20,8 @@ var skills = [
     ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."]
 ]
 
+var darkMode = false;
+
 // Functions
 // Sleep function
 function sleep(ms) {
@@ -134,18 +136,31 @@ async function newBee(e) {
 }
 
 // Put the page into dark mode
-function darkMode() {
+function toggleDarkMode() {
 
     var all = document.querySelectorAll("*"); // All elements
     var logos = document.getElementsByClassName("logo"); // All logo elements
+    var textColour = ""; // By default these are light mode
+    var backgroundColour = "white";
+    var imageFilter = "";
 
+    if(darkMode == false) {
+        textColour = "white";
+        backgroundColour = "#252525";
+        imageFilter = "invert(100%)";
+        darkMode = true;
+    } else {
+        darkMode = false;
+    }
+    
     Object.keys(all).forEach((e)=>all[e].style.transition = "0.3s ease all"); // Set every element transition
-    Object.keys(all).forEach((e)=>all[e].style.color = "white"); // Set every element text colour to be white
-    document.body.style.backgroundColor = "#252525"; // Set background colour to be #252525
+    Object.keys(all).forEach((e)=>all[e].style.color = textColour); // Set every element text colour to be white
+    document.body.style.backgroundColor = backgroundColour; // Set background colour to be #252525
     for(var i = 0; i < logos.length; i++) {
         console.log(logos[i]);
-        logos[i].style.filter = "invert(100%)";
+        logos[i].style.filter = imageFilter;
     }
+    document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
 }
 
 // Event listeners (or similar)
