@@ -136,18 +136,21 @@ async function newBee(e) {
 }
 
 // Put the page into dark mode
-function toggleDarkMode() {
+async function toggleDarkMode() {
 
     var all = document.querySelectorAll("*"); // All elements
     var logos = document.getElementsByClassName("logo"); // All logo elements
     var textColour = ""; // By default these are light mode
     var backgroundColour = "white";
     var imageFilter = "";
+    var darkModeButton = document.getElementById("dark-mode-button");
+    var darkModeIcon = "fas fa-moon";
 
     if(darkMode == false) {
         textColour = "white";
         backgroundColour = "#252525";
         imageFilter = "invert(100%)";
+        darkModeIcon = "fas fa-sun"
         darkMode = true;
     } else {
         darkMode = false;
@@ -161,6 +164,10 @@ function toggleDarkMode() {
         logos[i].style.filter = imageFilter;
     }
     document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
+    darkModeButton.style.animation = "fade-out 0.15s ease forwards";
+    await sleep(150);
+    darkModeButton.className = darkModeIcon; 
+    darkModeButton.style.animation = "fade-in 0.15s ease forwards";
 }
 
 // Event listeners (or similar)

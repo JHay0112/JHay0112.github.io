@@ -467,17 +467,17 @@ li:before {
     cursor: pointer;
 }
 
-/* Links */
+/* Links/Experimental */
 
-#links {
+#links, #experimental {
     text-align: center;
 }
 
-#links h2, #links p {
+#links h2, #links p, #experimental h2, #experimental p {
     text-align: left;
 }
 
-#links a {
+#links a, #experimental a {
     font-size: 35pt;
     width: 60px;
     text-align: center;
@@ -487,8 +487,9 @@ li:before {
     transition: 0.3s ease all;
 }
 
-#links a:hover {
+#links a:hover, #experimental a:hover {
     opacity: 0.9;
+    cursor: pointer;
 }
 
 /* Contact */
