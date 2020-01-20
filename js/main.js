@@ -149,7 +149,7 @@ async function toggleDarkMode() {
     if(darkMode == false) {
         textColour = "white";
         backgroundColour = "#252525";
-        imageFilter = "invert(100%)";
+        imageFilter = "brightness(0) invert(1)";
         darkModeIcon = "fas fa-sun"
         darkMode = true;
     } else {
