@@ -133,6 +133,21 @@ async function newBee(e) {
     }
 }
 
+// Put the page into dark mode
+function darkMode() {
+
+    var all = document.querySelectorAll("*"); // All elements
+    var logos = document.getElementsByClassName("logo"); // All logo elements
+
+    Object.keys(all).forEach((e)=>all[e].style.transition = "0.3s ease all"); // Set every element transition
+    Object.keys(all).forEach((e)=>all[e].style.color = "white"); // Set every element text colour to be white
+    document.body.style.backgroundColor = "#252525"; // Set background colour to be #252525
+    for(var i = 0; i < logos.length; i++) {
+        console.log(logos[i]);
+        logos[i].style.filter = "invert(100%)";
+    }
+}
+
 // Event listeners (or similar)
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) {newBee(e)};
