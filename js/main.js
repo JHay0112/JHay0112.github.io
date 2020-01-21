@@ -110,7 +110,7 @@ function load404Image() {
 function scrollFunction() {
     var topButton = document.getElementById("top-button");
 
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
         topButton.style.animation = "fade-in ease 0.3s";
     } else {
         topButton.style.animation = "fade-out ease 0.3s forwards";
