@@ -48,10 +48,10 @@ function loadSkills() {
 
     for (var i = 0; i < skills.length; i++) {
 
-    var skill = skills[i];
+        var skill = skills[i];
 
-    skillEl.innerHTML += "<div onclick='openSkill(" + i + ");' class='" + skill[0] + " skill' title='" + skill[1] +"'></div>";
-        console.log("Loaded " + skill[1] + " Icon");
+        skillEl.innerHTML += "<div onclick='openSkill(" + i + ");' class='" + skill[0] + " skill' title='" + skill[1] +"'></div>";
+        // console.log("Loaded " + skill[1] + " Icon");
     }
 
     skillEl.style.maxHeight = skillEl.scrollHeight + "px";
