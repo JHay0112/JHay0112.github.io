@@ -159,10 +159,12 @@ async function toggleDarkMode() {
     Object.keys(all).forEach((e)=>all[e].style.transition = "0.3s ease all"); // Set every element transition
     Object.keys(all).forEach((e)=>all[e].style.color = textColour); // Set every element text colour to be white
     document.body.style.backgroundColor = backgroundColour; // Set background colour to be #252525
+    
     for(var i = 0; i < logos.length; i++) {
         console.log(logos[i]);
         logos[i].style.filter = imageFilter;
     }
+    
     document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
     darkModeButton.style.animation = "fade-out 0.15s ease forwards";
     await sleep(150);
