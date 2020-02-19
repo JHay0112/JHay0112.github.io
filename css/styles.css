@@ -362,6 +362,7 @@ li:before {
     margin: 0 auto;
     margin-bottom: 20px;
     transition: 0.3s ease all;
+    color: inherit;
 }
 
 .skill:before {
