@@ -363,6 +363,7 @@ li:before {
     margin-bottom: 20px;
     transition: 0.3s ease all;
     color: inherit;
+    width: 70px;
 }
 
 .skill:before {
