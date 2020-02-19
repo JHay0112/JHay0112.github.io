@@ -17,7 +17,9 @@ var skills = [
     ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
     ["fab fa-github", "Github", "Github is an online host for version control with Git. Jordan has been using Github since late 2017."],
     ["fas fa-microchip", "Arduino/Robotics", "Arduino is a microcontroller and language used for hobby electronics including robotics and automation. Jordan has had experience with Arduino since late 2018."],
-    ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."]
+    ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."],
+    ["fas fa-palette", "GIMP", "GIMP (GNU Image Manipulation Program) is used to manipulate images and is what Jordan uses to create graphics and edit photos. At best it is comparable to Adobe Photoshop, at worst to MS Paint. Jordan has been using GIMP since early 2018."],
+    ["fab fa-ubuntu", "Linux", "Jordan has been using Ubuntu and Ubuntu derivative operating systems for both personal and server use since early 2018.<br /><br />Please note: 'Server' above refers to an old personal computer Jordan installed Ubuntu Server 16.04 on and used to host various web projects and a Discord bot (written in Python)."]
 ]
 
 var darkMode = false;
@@ -214,9 +216,11 @@ for (var i = 0; i < coll.length; i++) {
         if (content.style.maxHeight == "") {
             content.style.maxHeight = contentHeight + "px";
             await sleep(300);
+            content.style.overflow = "visible";
             content.style.maxHeight = (contentHeight + subContentHeight) + "px";
             this.innerHTML = "Read Less";
         } else {
+            content.style.overflow = "hidden";
             content.style.maxHeight = "";
             await sleep(300);
             this.innerHTML = "Read More";
