@@ -214,9 +214,11 @@ for (var i = 0; i < coll.length; i++) {
         if (content.style.maxHeight == "") {
             content.style.maxHeight = contentHeight + "px";
             await sleep(300);
+            content.style.overflow = "visible";
             content.style.maxHeight = (contentHeight + subContentHeight) + "px";
             this.innerHTML = "Read Less";
         } else {
+            content.style.overflow = "hidden";
             content.style.maxHeight = "";
             await sleep(300);
             this.innerHTML = "Read More";

@@ -415,10 +415,6 @@ li:before {
     padding: 5px;
 }
 
-#projects .read-more .project-container:last-child {
-    padding-bottom: 15px;
-}
-
 .project {
     height: 100%;
     background-color: #252525;
