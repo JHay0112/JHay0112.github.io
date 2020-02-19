@@ -22,7 +22,7 @@ var skills = [
     ["fab fa-ubuntu", "Linux", "Jordan has been using Ubuntu and Ubuntu derivative operating systems for both personal and server use since early 2018.<br /><br />Please note: 'Server' above refers to an old personal computer Jordan installed Ubuntu Server 16.04 on and used to host various web projects and a Discord bot (written in Python)."],
     ["fas fa-camera-retro", "Photography", "Jordan has been using a DSLR camera (Canon EOS 350D) since mid 2018 and a compact camera (Olympus TG-630) before that. He was also the photographer for his school whanau/house for the years of 2018 and 2019."],
     ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
-    ["fas fa-network-wired", "Internet Networks", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
+    ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
 ]
 
 var darkMode = false;
@@ -47,7 +47,7 @@ async function exitLoadingScreen() {
 }
 
 // Load skills for About
-function loadSkills() {
+async function loadSkills() {
 
     var skillEl = document.getElementById("skills");
 
@@ -59,7 +59,7 @@ function loadSkills() {
         // console.log("Loaded " + skill[1] + " Icon");
     }
 
-    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
+    skillEl.style.maxHeight = skillEl.scrollHeight + 100 + "px"; // Scrollheight pluss buffer to try fix bug where bottom row cut off
 }
   
 // Open further information on the skill as chosen by param skill Index

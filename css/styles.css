@@ -348,7 +348,6 @@ li:before {
 #skills {
     overflow: hidden;
     text-align: center;
-    max-height: 0px;
     transition: 0.3s ease all;
 }
 
@@ -357,6 +356,7 @@ li:before {
 }
 
 .skill {
+    display: inline-block;
     width: 70px;
     text-align: center;
     margin: 0 auto;
