@@ -47,7 +47,7 @@ async function exitLoadingScreen() {
 }
 
 // Load skills for About
-async function loadSkills() {
+function loadSkills() {
 
     var skillEl = document.getElementById("skills");
 
