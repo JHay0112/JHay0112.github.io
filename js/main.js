@@ -39,6 +39,8 @@ async function exitLoadingScreen() {
     loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
     document.body.style.overflowY = "auto";
+    await sleep(300);
+    checkDarkMode();
 }
 
 // Load skills for About
@@ -170,6 +172,16 @@ async function toggleDarkMode() {
     await sleep(150);
     darkModeButton.className = darkModeIcon; 
     darkModeButton.style.animation = "fade-in 0.15s ease forwards";
+
+    window.localStorage.setItem("dark-mode", darkMode);
+}
+
+function checkDarkMode() {
+
+    if(window.localStorage.getItem("dark-mode") == "true") {
+        toggleDarkMode();
+    }
+
 }
 
 // Event listeners (or similar)
