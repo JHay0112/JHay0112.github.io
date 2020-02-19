@@ -34,13 +34,13 @@ async function exitLoadingScreen() {
     loadingSpinner = document.getElementById("loading-spinner"); // Get loading spinner
     loadingLogo = document.getElementById("loading-logo"); // Get loading logo
 
+    checkDarkMode();
+
     loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
     loadingSpinner.style.animation = "spin 1s infinite linear, fade-out 2s forwards"; // Fade out while still spinning
     loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
     document.body.style.overflowY = "auto";
-    await sleep(300);
-    checkDarkMode();
 }
 
 // Load skills for About
@@ -142,6 +142,9 @@ async function toggleDarkMode() {
 
     var all = document.querySelectorAll("*"); // All elements
     var logos = document.getElementsByClassName("logo"); // All logo elements
+    var loadingScreen = document.getElementById("loading-screen"); // Loading screen
+    var loadingSpinner = document.getElementById("loading-spinner"); // Loading spinner
+
     var textColour = ""; // By default these are light mode
     var backgroundColour = "white";
     var imageFilter = "";
@@ -161,6 +164,8 @@ async function toggleDarkMode() {
     Object.keys(all).forEach((e)=>all[e].style.transition = "0.3s ease all"); // Set every element transition
     Object.keys(all).forEach((e)=>all[e].style.color = textColour); // Set every element text colour to be white
     document.body.style.backgroundColor = backgroundColour; // Set background colour to be #252525
+    loadingScreen.style.backgroundColor = backgroundColour;
+    loadingSpinner.style.filter = imageFilter;
     
     for(var i = 0; i < logos.length; i++) {
         console.log(logos[i]);
