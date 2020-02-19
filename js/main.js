@@ -34,8 +34,6 @@ async function exitLoadingScreen() {
     loadingSpinner = document.getElementById("loading-spinner"); // Get loading spinner
     loadingLogo = document.getElementById("loading-logo"); // Get loading logo
 
-    checkDarkMode();
-
     loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
     loadingSpinner.style.animation = "spin 1s infinite linear, fade-out 2s forwards"; // Fade out while still spinning
     loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
@@ -189,6 +187,9 @@ function checkDarkMode() {
 
 }
 
+// Main variables
+var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
+
 // Event listeners (or similar)
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) {newBee(e)};
@@ -197,10 +198,6 @@ document.addEventListener("copy", (event) => {
     event.clipboardData.setData('text', document.getSelection() + pagelink);
     event.preventDefault();
 });
-
-// Main
-// Collapsible elements
-var coll = document.getElementsByClassName("read-more-button");
 
 for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", async function() {
@@ -226,3 +223,7 @@ for (var i = 0; i < coll.length; i++) {
         }
     });
 }
+
+// Main
+
+checkDarkMode();
