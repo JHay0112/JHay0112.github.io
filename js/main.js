@@ -176,6 +176,7 @@ async function toggleDarkMode() {
     }
     
     document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
+    document.getElementById("more-history-button").style.backgroundColor = backgroundColour;
     darkModeButton.style.animation = "fade-out 0.15s ease forwards";
     await sleep(150);
     darkModeButton.className = darkModeIcon; 

@@ -452,7 +452,7 @@ li:before {
     padding-bottom: 5px;
 }
 
-#more-projects-button {
+#more-projects-button, #more-history-button {
     border: 2px solid #252525;
     background-color: white;
     border-radius: 5px;
@@ -461,7 +461,7 @@ li:before {
     margin-top: 10px;
 }
 
-#more-projects-button:hover {
+#more-projects-button:hover, #more-history-button:hover {
     background-color: RGBA(37, 37, 37, 0.1);
     cursor: pointer;
 }
@@ -521,6 +521,29 @@ input[type=submit] {
 
 input[type=submit]:hover {
     opacity: 0.9;
+}
+
+/* History */
+
+.history-wrapper {
+    padding: 20px;
+    margin-bottom: -15px;
+}
+
+.history-img {
+    background-position: center;
+    background-size: cover;
+    min-height: 200px;
+}
+
+.history {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 10px 10px -5px #252525;
+}
+
+.history article {
+    padding: 20px;
 }
 
 /* 404 */
