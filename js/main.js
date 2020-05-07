@@ -7,6 +7,9 @@
 */
 
 // Global Variables
+
+"use strict";
+
 var skills = [
     ["fab fa-html5", "HTML5", "HTML5 (Hyper Text Markup Language 5) is a markup language to write websites. Jordan is proficient in HTML5 and has been using it since mid 2017."],
     ["fab fa-css3", "CSS3", "CSS3 (Cascading Style Sheet 3) is a language used to style HTML pages. Jordan has been using CSS3 since mid-2017."],
@@ -35,9 +38,9 @@ function sleep(ms) {
 
 // Exit loading screen once page has loaded
 async function exitLoadingScreen() {
-    loadingScreen = document.getElementById("loading-screen"); // Get loading screen
-    loadingSpinner = document.getElementById("loading-spinner"); // Get loading spinner
-    loadingLogo = document.getElementById("loading-logo"); // Get loading logo
+    var loadingScreen = document.getElementById("loading-screen"); // Get loading screen
+    var loadingSpinner = document.getElementById("loading-spinner"); // Get loading spinner
+    var loadingLogo = document.getElementById("loading-logo"); // Get loading logo
 
     loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
     loadingSpinner.style.animation = "spin 1s infinite linear, fade-out 2s forwards"; // Fade out while still spinning
@@ -55,13 +58,13 @@ function loadSkills() {
 
         var skill = skills[i];
 
-        skillEl.innerHTML += "<div onclick='openSkill(" + i + ");' class='" + skill[0] + " skill' title='" + skill[1] +"'></div>";
+        skillEl.innerHTML += "<div onclick='openSkill(" + i + ");' class='" + skill[0] + " skill' title='" + skill[1] + "'></div>";
         // console.log("Loaded " + skill[1] + " Icon");
     }
 
     skillEl.style.maxHeight = skillEl.scrollHeight + 100 + "px"; // Scrollheight pluss buffer to try fix bug where bottom row cut off
 }
-  
+
 // Open further information on the skill as chosen by param skill Index
 function openSkill(skillIndex) {
 
@@ -84,7 +87,7 @@ async function closeSkill() {
 
     var skillDialogue = document.getElementById("skill-dialogue");
     var skillEl = document.getElementById("skills");
-    
+
     skillEl.style.maxHeight = skillEl.scrollHeight + "px";
     skillEl.style.animation = "fade-in 0.3s ease forwards";
     skillDialogue.style.maxHeight = "";
@@ -95,7 +98,7 @@ async function closeSkill() {
     document.getElementById("skill-title").textContent = "";
     document.getElementById("skill-desc").innerHTML = "";
 }
-  
+
 // Randomly load an image to be used for the 404 meme
 function load404Image() {
     images = [
@@ -126,10 +129,10 @@ function scrollFunction() {
 function goToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+}
 
 async function newBee(e) {
-    if((e.keyCode || e.which) == 66) {
+    if ((e.keyCode || e.which) == 66) {
         var bee = document.createElement("img");
         bee.src = "img/bee.png";
         bee.classList += "bee";
@@ -154,7 +157,7 @@ async function toggleDarkMode() {
     var darkModeButton = document.getElementById("dark-mode-button");
     var darkModeIcon = "fas fa-moon";
 
-    if(darkMode == false) {
+    if (darkMode == false) {
         textColour = "white";
         backgroundColour = "#252525";
         imageFilter = "brightness(0) invert(1)";
@@ -163,23 +166,23 @@ async function toggleDarkMode() {
     } else {
         darkMode = false;
     }
-    
-    Object.keys(all).forEach((e)=>all[e].style.transition = "0.3s ease all"); // Set every element transition
-    Object.keys(all).forEach((e)=>all[e].style.color = textColour); // Set every element text colour to be white
+
+    Object.keys(all).forEach((e) => all[e].style.transition = "0.3s ease all"); // Set every element transition
+    Object.keys(all).forEach((e) => all[e].style.color = textColour); // Set every element text colour to be white
     document.body.style.backgroundColor = backgroundColour; // Set background colour to be #252525
     loadingScreen.style.backgroundColor = backgroundColour;
     loadingSpinner.style.filter = imageFilter;
-    
-    for(var i = 0; i < logos.length; i++) {
+
+    for (var i = 0; i < logos.length; i++) {
         console.log(logos[i]);
         logos[i].style.filter = imageFilter;
     }
-    
+
     document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
     document.getElementById("more-history-button").style.backgroundColor = backgroundColour;
     darkModeButton.style.animation = "fade-out 0.15s ease forwards";
     await sleep(150);
-    darkModeButton.className = darkModeIcon; 
+    darkModeButton.className = darkModeIcon;
     darkModeButton.style.animation = "fade-in 0.15s ease forwards";
 
     window.localStorage.setItem("dark-mode", darkMode);
@@ -187,7 +190,7 @@ async function toggleDarkMode() {
 
 function checkDarkMode() {
 
-    if(window.localStorage.getItem("dark-mode") == "true") {
+    if (window.localStorage.getItem("dark-mode") == "true") {
         toggleDarkMode();
     }
 
@@ -197,8 +200,8 @@ function checkDarkMode() {
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 
 // Event listeners (or similar)
-window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
-document.body.onkeydown = function(e) {newBee(e)};
+window.onscroll = function() { scrollFunction() }; // Run the scroll function anytime the user scrolls
+document.body.onkeydown = function(e) { newBee(e) };
 document.addEventListener("copy", (event) => {
     const pagelink = "\n\nRead more at: https://jordanhay.tk/";
     event.clipboardData.setData('text', document.getSelection() + pagelink);
@@ -213,7 +216,7 @@ for (var i = 0; i < coll.length; i++) {
         var subContentHeight = 0;
         var contentHeight = content.scrollHeight;
 
-        for(var i = 0; i < subContent.length; i++) {
+        for (var i = 0; i < subContent.length; i++) {
             subContentHeight += subContent[i].scrollHeight;
         }
 
