@@ -178,7 +178,7 @@ async function toggleDarkMode() {
         logos[i].style.filter = imageFilter;
     }
 
-    if (location.href == "https://jordanhay.tk/" || location.href.includes("index") || location.href.includes("jhay0112.github.io")) {
+    if (location.href == "https://jordanhay.tk/" || location.href.includes("index") || location.href.includes("jhay0112.github.io/index.html")) {
 
         document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
         document.getElementById("more-history-button").style.backgroundColor = backgroundColour;
