@@ -101,7 +101,7 @@ async function closeSkill() {
 
 // Randomly load an image to be used for the 404 meme
 function load404Image() {
-    images = [
+    var images = [
         "oh_i_dont_think_so.jpg",
         "you_will_try.jpg",
         "it_ought_to_be_here.jpg",
@@ -110,7 +110,7 @@ function load404Image() {
         "incomplete_archives.jpg"
     ];
 
-    imgElement = document.getElementById("404-img");
+    var imgElement = document.getElementById("404-img");
     imgElement.src = "/img/404/" + images[Math.floor(Math.random() * images.length)];
 }
 
