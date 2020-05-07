@@ -178,12 +178,17 @@ async function toggleDarkMode() {
         logos[i].style.filter = imageFilter;
     }
 
-    document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
-    document.getElementById("more-history-button").style.backgroundColor = backgroundColour;
-    darkModeButton.style.animation = "fade-out 0.15s ease forwards";
-    await sleep(150);
-    darkModeButton.className = darkModeIcon;
-    darkModeButton.style.animation = "fade-in 0.15s ease forwards";
+    if (location.href == "https://jordanhay.tk/" || location.href.includes("index") || location.href.includes("jhay0112.github.io")) {
+
+        document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
+        document.getElementById("more-history-button").style.backgroundColor = backgroundColour;
+        darkModeButton.style.animation = "fade-out 0.15s ease forwards";
+        await sleep(150);
+        darkModeButton.className = darkModeIcon;
+        darkModeButton.style.animation = "fade-in 0.15s ease forwards";
+    }
+    // We do this because you cannot easily check if you're on the 404 page but you can check if you're on index.html
+    // the third option is for if you're working on a local copy of the website
 
     window.localStorage.setItem("dark-mode", darkMode);
 }
