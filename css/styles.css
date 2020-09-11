@@ -300,8 +300,7 @@ main {
 }
 
 .content {
-    margin: 10px 0px;
-    padding: 5px;
+    padding: 10px;
     padding-bottom: 50vh;
     background-color: white;
 }
