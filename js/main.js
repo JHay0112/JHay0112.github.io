@@ -5,7 +5,7 @@
 
 // Globals
 var nav = document.getElementById("nav"); // Get the nav
-var sticky = nav.offsetTop; // Get the offset position of the nav
+var sticky = nav.offsetTop + 300; // Get the offset position of the nav
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 
 // Functions
