@@ -47,7 +47,7 @@ async function newBee(e) {
 // Slideshow
 async function runSlideShow() {
 
-    var imgNum = 3; // Amount of images in  
+    var imgNum = 7; // Amount of images in
 
     header = document.getElementById("header");
     pseudoHeader = document.getElementById("pseudo-header");
@@ -56,11 +56,11 @@ async function runSlideShow() {
 
     while(true) {
 
-        prevImg = img;
+        var prevImg = img;
 
         // Stops getting the same image twice in a row
         while(prevImg === img) {
-            img = Math.floor(Math.random() * (imgNum - 1) + 1);
+            img = Math.floor(Math.random() * (imgNum)) + 1;
         }
 
         pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
@@ -71,7 +71,7 @@ async function runSlideShow() {
         header.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
         pseudoHeader.style.animation = "";
         pseudoHeader.style.visibility = "hidden";
-        await sleep(7000);
+        await sleep(5000);
     }
 
 }
