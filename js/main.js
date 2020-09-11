@@ -6,6 +6,7 @@
 // Globals
 var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop; // Get the offset position of the nav
+var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 
 // Functions
 // Sleep function
@@ -120,6 +121,34 @@ document.addEventListener("copy", (event) => {
     event.clipboardData.setData('text', document.getSelection() + pagelink);
     event.preventDefault();
 });
+
+// Read more
+for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", async function() {
+        this.classList.toggle("active");
+        var content = this.previousElementSibling;
+        var subContent = content.getElementsByClassName("read-more");
+        var subContentHeight = 0;
+        var contentHeight = content.scrollHeight;
+
+        for (var i = 0; i < subContent.length; i++) {
+            subContentHeight += subContent[i].scrollHeight;
+        }
+
+        if (content.style.maxHeight == "") {
+            content.style.maxHeight = contentHeight + "px";
+            await sleep(300);
+            content.style.overflow = "visible";
+            content.style.maxHeight = (contentHeight + subContentHeight) + "px";
+            this.innerHTML = "Read Less";
+        } else {
+            content.style.overflow = "hidden";
+            content.style.maxHeight = "";
+            await sleep(300);
+            this.innerHTML = "Read More";
+        }
+    });
+}
 
 // MenuSpy
 var ms = new MenuSpy(document.querySelector("#nav-header"));
