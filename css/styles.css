@@ -10,7 +10,6 @@
 
 /* Every Element (Ones below will overide if need be) */
 * { 
-    color: #252525;
     font-family: 'Lato', sans-serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -102,6 +101,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@keyframes slideshow-new-slide {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
 /* Responsive */
 
 /* Mobile */
@@ -109,6 +116,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     float: left;
     padding: 10px;
+    background-color: RGBA(0, 0, 0, 0);
 }
 
 .row {
@@ -249,15 +257,142 @@ hr {
     text-shadow: 0px -5px 5px RGBA(37, 37, 37, 0.2);
 }
 
+/* Header */
+
+.header {
+    position: absolute;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+    background-position: bottom;
+    width: 100vw;
+}
+
+#pseudo-header {
+    z-index: 1;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 10px;
+    height: 260px;
+    filter: brightness(0) invert(1) drop-shadow(0px 0px 3px RGBA(0, 0, 0, 0.75));
+    z-index: 1;
+}
+
 /* Main */
 
 main {
     margin: 0;
     padding: 20px;
+    position: relative;
+    top: 285px;
 }
 
-#main {
-    padding-bottom: 30vh;
+.content {
+    background-color: white;
+}
+
+/* Nav */
+
+nav {
+    text-align: center;
+    background-color: RGBA(0, 0, 0, 0);
+    background-color: white !important;
+    height: 60px;
+    padding-top: 10px;
+    z-index: 5;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    transition: 0.3s ease all;
+    position: relative;
+    top: -40px;
+    padding: 20px;
+    color: #252525;
+}
+
+nav ul li:before {
+    content: "";
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul li:hover {
+    opacity: 0.8;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+nav ul li.active {
+    background-color: #252525;
+    color: white;
+    transition: 0.3s ease all;
+}
+
+nav ul li.active:hover {
+    opacity: 1;
+}
+
+nav ul li.active:hover a {
+    cursor: default;
+}
+
+nav.stick {
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+#nav-responsive-button {
+    display: none;
+}
+
+/* Mobile nav */
+@media screen and (max-width: 768px) {
+
+    #nav {
+        height: 60px;
+        margin: 0;
+        transition: 0.3s ease all;
+        overflow: hidden;
+    }
+
+    #nav ul {
+        position: relative;
+        top: 32px;
+        left: -10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #nav ul li {
+        margin: 0;
+        width: 100vw;
+    }
+
+    #nav ul li:last-child {
+        margin-bottom: -42px;
+    }
+
+    #nav-responsive-button {
+        display: block;
+    }
+
+    #nav.responsive ul li {
+        display: block;
+        height: 60px;
+    }
 }
 
 /* Lists */

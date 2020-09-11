@@ -16,17 +16,40 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
-    <body onload="exitLoadingScreen();">
+    <body onload="exitLoadingScreen(); runSlideShow();">
+
+        <div id="home"></div>
 
         <div id="loading-screen">
             <img id="loading-logo" class="logo" src="img/logo.png" alt="Loading Logo" />
             <p id="loading-text"><span></span><span></span><span></span></p>
         </div>
 
-        <main>
-            <div class="col-2"></div>
+        <header id="pseudo-header" class="header"></header>
 
-            <div class="col-8">
+        <header id="header" class="header">
+            <img id="header-logo" src="img/logo.png" />
+        </header>
+
+        <main>
+            <header id="nav-header" class="row">
+                <div class="col-2 desktop-only"></div>
+
+                <nav class="col-8" id="nav">
+                    <ul class="col-12">
+                        <li><a href="javascript:void(0);" id="nav-responsive-button" onclick="toggleResponsiveNav()"><span class="fa fa-bars"></span></a></li>
+
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </nav>
+
+                <div class="col-2 desktop-only"></div>
+            </header>
+
+            <div class="col-2 desktop-only"></div>
+
+            <div class="col-8 content" id="content">
 
                 <h1>Jordan Hay</h1>
 
@@ -37,10 +60,11 @@
 
             </div>
 
-            <div class="col-2"></div>
+            <div class="col-2 desktop-only"></div>
         </main>
 
         <!-- Scripts -->
+        <script src="js/menuspy.min.js"></script>
         <script src="js/main.js"></script>
         <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
     </body>
