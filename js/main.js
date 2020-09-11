@@ -44,7 +44,7 @@ async function newBee(e) {
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) { newBee(e) };
 document.addEventListener("copy", (event) => {
-    const pagelink = "\n\nRead more at: https://jordanhay.tk/";
+    const pagelink = "\n\nRead more at: https://jordanhay.com/";
     event.clipboardData.setData('text', document.getSelection() + pagelink);
     event.preventDefault();
 });
