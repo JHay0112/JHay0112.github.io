@@ -1,15 +1,12 @@
 /*
     js/main.js
     Author: Jordan Hay
-
-    Notes:
-     Needs a bit of a clean up
 */
 
-// Global Variables
-
-"use strict";
-
+// Globals
+var nav = document.getElementById("nav"); // Get the nav
+var sticky = nav.offsetTop + 300; // Get the offset position of the nav
+var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 var skills = [
     ["fab fa-html5", "HTML5", "HTML5 (Hyper Text Markup Language 5) is a markup language to write websites. Jordan is proficient in HTML5 and has been using it since mid 2017."],
     ["fab fa-css3", "CSS3", "CSS3 (Cascading Style Sheet 3) is a language used to style HTML pages. Jordan has been using CSS3 since mid-2017."],
@@ -28,8 +25,6 @@ var skills = [
     ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
 ]
 
-var darkMode = false;
-
 // Functions
 // Sleep function
 function sleep(ms) {
@@ -39,14 +34,19 @@ function sleep(ms) {
 // Exit loading screen once page has loaded
 async function exitLoadingScreen() {
     var loadingScreen = document.getElementById("loading-screen"); // Get loading screen
-    var loadingSpinner = document.getElementById("loading-spinner"); // Get loading spinner
+    var loadingText = document.getElementById("loading-text"); // Get loading spinner
     var loadingLogo = document.getElementById("loading-logo"); // Get loading logo
 
     loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
-    loadingSpinner.style.animation = "spin 1s infinite linear, fade-out 2s forwards"; // Fade out while still spinning
+    loadingText.style.animation = "fade-out 2s forwards"; // Fade out
     loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
     await sleep(1200);
     document.body.style.overflowY = "auto";
+}
+
+// Runs when the user scrolls, used in stickynavs etc
+function scrollFunction() {
+    stickyNav();
 }
 
 // Load skills for About
@@ -99,38 +99,7 @@ async function closeSkill() {
     document.getElementById("skill-desc").innerHTML = "";
 }
 
-// Randomly load an image to be used for the 404 meme
-function load404Image() {
-    var images = [
-        "oh_i_dont_think_so.jpg",
-        "you_will_try.jpg",
-        "it_ought_to_be_here.jpg",
-        "visible_confusion.jpg",
-        "you_are_lost.jpg",
-        "incomplete_archives.jpg"
-    ];
-
-    var imgElement = document.getElementById("404-img");
-    imgElement.src = "/img/404/" + images[Math.floor(Math.random() * images.length)];
-}
-
-// Once the user has scrolled a certain distance, make the button visible
-function scrollFunction() {
-    var topButton = document.getElementById("top-button");
-
-    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
-        topButton.style.animation = "fade-in ease 0.3s";
-    } else {
-        topButton.style.animation = "fade-out ease 0.3s forwards";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function goToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
+// Behold! Bees
 async function newBee(e) {
     if ((e.keyCode || e.which) == 66) {
         var bee = document.createElement("img");
@@ -142,77 +111,85 @@ async function newBee(e) {
         document.body.removeChild(bee);
     }
 }
+// Slideshow
+async function runSlideShow() {
 
-// Put the page into dark mode
-async function toggleDarkMode() {
+    var imgNum = 7; // Amount of images in
 
-    var all = document.querySelectorAll("*"); // All elements
-    var logos = document.getElementsByClassName("logo"); // All logo elements
-    var loadingScreen = document.getElementById("loading-screen"); // Loading screen
-    var loadingSpinner = document.getElementById("loading-spinner"); // Loading spinner
+    header = document.getElementById("header");
+    pseudoHeader = document.getElementById("pseudo-header");
 
-    var textColour = ""; // By default these are light mode
-    var backgroundColour = "white";
-    var imageFilter = "";
-    var darkModeButton = document.getElementById("dark-mode-button");
-    var darkModeIcon = "fas fa-moon";
+    var img = 0;
 
-    if (darkMode == false) {
-        textColour = "white";
-        backgroundColour = "#252525";
-        imageFilter = "brightness(0) invert(1)";
-        darkModeIcon = "fas fa-sun"
-        darkMode = true;
+    while(true) {
+
+        var prevImg = img;
+
+        // Stops getting the same image twice in a row
+        while(prevImg === img) {
+            img = Math.floor(Math.random() * (imgNum)) + 1;
+        }
+
+        pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
+        await sleep(500);
+        pseudoHeader.style.visibility = "visible";
+        pseudoHeader.style.animation = "slideshow-new-slide 1s ease";
+        await sleep(1000);
+        header.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
+        pseudoHeader.style.animation = "";
+        pseudoHeader.style.visibility = "hidden";
+        await sleep(5000);
+    }
+
+}
+
+// Add the sticky class to the nav when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyNav() {
+
+    content = document.getElementById("content");
+    content.style.position = "relative";
+
+    if (window.pageYOffset >= sticky) {
+        nav.classList.add("stick")
+        if(nav.classList.contains("responsive")) {
+            content.style.top = nav.scrollHeight + "px";
+        } else {
+            content.style.top = "60px";
+        }
     } else {
-        darkMode = false;
+        nav.classList.remove("stick");
+        content.style.top = "";
     }
-
-    Object.keys(all).forEach((e) => all[e].style.transition = "0.3s ease all"); // Set every element transition
-    Object.keys(all).forEach((e) => all[e].style.color = textColour); // Set every element text colour to be white
-    document.body.style.backgroundColor = backgroundColour; // Set background colour to be #252525
-    loadingScreen.style.backgroundColor = backgroundColour;
-    loadingSpinner.style.filter = imageFilter;
-
-    for (var i = 0; i < logos.length; i++) {
-        console.log(logos[i]);
-        logos[i].style.filter = imageFilter;
-    }
-
-    if (location.href == "https://jordanhay.tk/" || location.href.includes("index") || location.href.includes("jhay0112.github.io/index.html")) {
-
-        document.getElementById("more-projects-button").style.backgroundColor = backgroundColour;
-        document.getElementById("more-history-button").style.backgroundColor = backgroundColour;
-        darkModeButton.style.animation = "fade-out 0.15s ease forwards";
-        await sleep(150);
-        darkModeButton.className = darkModeIcon;
-        darkModeButton.style.animation = "fade-in 0.15s ease forwards";
-    }
-    // We do this because you cannot easily check if you're on the 404 page but you can check if you're on index.html
-    // the third option is for if you're working on a local copy of the website
-
-    window.localStorage.setItem("dark-mode", darkMode);
 }
 
-function checkDarkMode() {
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function toggleResponsiveNav() {
 
-    if (window.localStorage.getItem("dark-mode") == "true") {
-        toggleDarkMode();
+    navAnchors = document.querySelectorAll(".anchor");
+
+    if (!nav.classList.contains("responsive")) {
+        nav.classList.add("responsive");
+        nav.style.height = nav.scrollHeight + "px";
+        for(i = 0; i < navAnchors.length; i++) {navAnchors[i].style.top = -nav.scrollHeight - 10 + "px";}
+    } else {
+        nav.classList.remove("responsive");
+        nav.style.height = "60px";
+        for(i = 0; i < navAnchors.length; i++) {navAnchors[i].style.top = -60 - 10 + "px";}
     }
 
+    stickyNav();
 }
-
-// Main variables
-var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 
 // Event listeners (or similar)
-window.onscroll = function() { scrollFunction() }; // Run the scroll function anytime the user scrolls
+window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) { newBee(e) };
 document.addEventListener("copy", (event) => {
-    const pagelink = "\n\nRead more at: https://jordanhay.tk/";
+    const pagelink = "\n\nRead more at: https://jordanhay.com/";
     event.clipboardData.setData('text', document.getSelection() + pagelink);
     event.preventDefault();
 });
 
+// Read more
 for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", async function() {
         this.classList.toggle("active");
@@ -240,6 +217,5 @@ for (var i = 0; i < coll.length; i++) {
     });
 }
 
-// Main
-
-checkDarkMode();
+// MenuSpy
+var ms = new MenuSpy(document.querySelector("#nav-header"));
