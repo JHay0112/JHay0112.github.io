@@ -166,7 +166,7 @@ hr {
     height: 0;
     color: RGBA(0, 0, 0, 0);
     background-color: RGBA(0, 0, 0, 0);
-    border-bottom: 2px solid #252525;
+    border-bottom: 1px solid #252525;
 }
 
 /* Loading */
@@ -301,7 +301,7 @@ main {
 
 .content {
     padding: 10px;
-    padding-bottom: 50vh;
+    padding-bottom: 90vh;
     background-color: white;
 }
 
