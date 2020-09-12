@@ -406,6 +406,19 @@ nav.stick {
     }
 }
 
+/* Anchors for id links in nav */
+
+.anchor {
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    top: -70px;
+    left: 0;
+    visibility: hidden;
+}
+
 /* Lists */
 
 ul {
