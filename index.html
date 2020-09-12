@@ -16,7 +16,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
-    <body onload="exitLoadingScreen(); runSlideShow();">
+    <body onload="exitLoadingScreen(); runSlideShow(); loadSkills();">
 
         <div id="home" class="anchor"></div>
 
@@ -121,7 +121,15 @@
 
                         <h2>Skills</h2>
 
-                        <!-- Something about skills -->
+                        <article id="skills" class="col-12">
+                            <p>Click on icons to see more information.</p>
+                        </article>
+
+                        <div id="skill-dialogue" class="col-12" onclick="closeSkill();">
+                            <p id="skill-icon"></p><h2 id="skill-title"></h2>
+                            <p id="skill-desc"></p>
+                            <p>Click anywhere on this dialogue to dismiss it.</p>
+                        </div>
 
                     </section>
 

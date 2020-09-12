@@ -7,6 +7,23 @@
 var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop + 300; // Get the offset position of the nav
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
+var skills = [
+    ["fab fa-html5", "HTML5", "HTML5 (Hyper Text Markup Language 5) is a markup language to write websites. Jordan is proficient in HTML5 and has been using it since mid 2017."],
+    ["fab fa-css3", "CSS3", "CSS3 (Cascading Style Sheet 3) is a language used to style HTML pages. Jordan has been using CSS3 since mid-2017."],
+    ["fab fa-js", "JavaScript", "JavaScript is a programming language used to program the behaviour of websites. Jordan has been using JavaScript since early 2019."],
+    ["fab fa-php", "PHP", "PHP is a programming language used to program the server-side behaviour of websites and to query databases. Jordan has been using PHP since early 2018."],
+    ["fas fa-database", "MySQL", "MySQL is a language used to build and manage databases. Jordan has been using MySQL since early 2018."],
+    ["fab fa-python", "Python", "Python is a general purpose programming language. Jordan has been using Python since mid 2018."],
+    ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
+    ["fab fa-github", "Github", "Github is an online host for version control with Git. Jordan has been using Github since late 2017."],
+    ["fas fa-microchip", "Arduino/Robotics", "Arduino is a microcontroller and language used for hobby electronics including robotics and automation. Jordan has had experience with Arduino since late 2018."],
+    ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."],
+    ["fas fa-palette", "GIMP", "GIMP (GNU Image Manipulation Program) is used to manipulate images and is what Jordan uses to create graphics and edit photos. Jordan has been using GIMP since early 2018."],
+    ["fab fa-ubuntu", "Linux", "Jordan has been using Ubuntu and Ubuntu derivative operating systems for both personal and server use since early 2018.<br /><br />Please note: 'Server' above refers to an old personal computer Jordan installed Ubuntu Server 16.04 on and used to host various web projects and a Discord bot (written in Python)."],
+    ["fas fa-camera-retro", "Photography", "Jordan has been using a DSLR camera (Canon EOS 350D) since mid 2018 and a compact camera (Olympus TG-630) before that. He was also the photographer for his school whanau/house for the years of 2018 and 2019."],
+    ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
+    ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
+]
 
 // Functions
 // Sleep function
@@ -30,6 +47,56 @@ async function exitLoadingScreen() {
 // Runs when the user scrolls, used in stickynavs etc
 function scrollFunction() {
     stickyNav();
+}
+
+// Load skills for About
+function loadSkills() {
+
+    var skillEl = document.getElementById("skills");
+
+    for (var i = 0; i < skills.length; i++) {
+
+        var skill = skills[i];
+
+        skillEl.innerHTML += "<div onclick='openSkill(" + i + ");' class='" + skill[0] + " skill' title='" + skill[1] + "'></div>";
+        // console.log("Loaded " + skill[1] + " Icon");
+    }
+
+    skillEl.style.maxHeight = skillEl.scrollHeight + 100 + "px"; // Scrollheight pluss buffer to try fix bug where bottom row cut off
+}
+
+// Open further information on the skill as chosen by param skill Index
+function openSkill(skillIndex) {
+
+    var skill = skills[skillIndex];
+    var skillDialogue = document.getElementById("skill-dialogue");
+    var skillEl = document.getElementById("skills");
+
+    document.getElementById("skill-icon").className = skill[0] + " ";
+    document.getElementById("skill-title").textContent = skill[1];
+    document.getElementById("skill-desc").innerHTML = skill[2];
+
+    skillEl.style.maxHeight = "0px";
+    skillEl.style.animation = "fade-out 0.3s ease forwards";
+    skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
+    skillDialogue.style.animation = "fade-in 0.3s ease forwards";
+}
+
+// Close further information on skill
+async function closeSkill() {
+
+    var skillDialogue = document.getElementById("skill-dialogue");
+    var skillEl = document.getElementById("skills");
+
+    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
+    skillEl.style.animation = "fade-in 0.3s ease forwards";
+    skillDialogue.style.maxHeight = "";
+    skillDialogue.style.animation = "fade-out 0.3s ease forwards";
+    await sleep(300);
+
+    document.getElementById("skill-icon").className = "";
+    document.getElementById("skill-title").textContent = "";
+    document.getElementById("skill-desc").innerHTML = "";
 }
 
 // Behold! Bees

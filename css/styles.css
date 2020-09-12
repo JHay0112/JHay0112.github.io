@@ -477,6 +477,73 @@ li:before {
     background-position: center;
 }
 
+/* Skill */
+
+#skills {
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s ease all;
+}
+
+#skills h3, #skills p {
+    text-align: left;
+}
+
+.skill {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    transition: 0.3s ease all;
+    color: inherit;
+    width: 70px;
+}
+
+.skill:before {
+    font-size: 35pt;
+}
+
+.skill:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+#skill-dialogue {
+    overflow: hidden;
+    padding: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    max-height: 0px;
+    transition: ease all 0.3s;
+    background-color: #252525;
+    color: white;
+    animation: fade-out 0s forwards;
+}
+
+#skill-dialogue:hover {
+    cursor: pointer;
+}
+
+#skill-dialogue a, #skill-dialogue p, #skill-dialogue h2 {
+    color: white;
+}
+
+#skill-icon, #skill-title {
+    display: inline-block;
+    margin: 0;
+}
+
+#skill-icon {
+    font-size: 30pt;
+}
+
+#skill-title {
+    position: relative;
+    top: -6px;
+    left: 10px;
+}
+
 /* Contact */
 
 input[type=text], input[type=email], textarea[type=text], select {
