@@ -47,7 +47,7 @@ async function newBee(e) {
 // Slideshow
 async function runSlideShow() {
 
-    var imgNum = 7; // Amount of images in
+    var imgNum = 8; // Amount of images in
 
     header = document.getElementById("header");
     pseudoHeader = document.getElementById("pseudo-header");
