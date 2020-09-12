@@ -494,7 +494,7 @@ li:before {
     width: 70px;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 20px;
+    padding: 10px;
     transition: 0.3s ease all;
     color: inherit;
     width: 70px;
@@ -546,6 +546,10 @@ li:before {
 
 /* Contact */
 
+#contact {
+    margin-bottom: 20px;
+}
+
 input[type=text], input[type=email], textarea[type=text], select {
     padding: 12px 20px;
     margin: 8px 0;
@@ -574,6 +578,33 @@ input[type=submit] {
 
 input[type=submit]:hover {
     opacity: 0.9;
+}
+
+/* Links/Experimental */
+
+#links, #experimental {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#links h2, #links p, #experimental h2, #experimental p {
+    text-align: left;
+}
+
+#links a, #experimental a {
+    color: #252525;
+    font-size: 35pt;
+    width: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: 0.3s ease all;
+}
+
+#links a:hover, #experimental a:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }
 
 /* Footer */
