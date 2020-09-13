@@ -131,14 +131,14 @@ async function runSlideShow() {
         }
 
         pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
-        await sleep(500);
+        await sleep(1000);
         pseudoHeader.style.visibility = "visible";
         pseudoHeader.style.animation = "slideshow-new-slide 1s ease";
         await sleep(1000);
         header.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
         pseudoHeader.style.animation = "";
         pseudoHeader.style.visibility = "hidden";
-        await sleep(5000);
+        await sleep(8000);
     }
 
 }
