@@ -230,6 +230,7 @@ hr {
     margin-left: -18px;
     width: 30px;
     overflow: hidden;
+    z-index: 9999;
     animation: bee-flight 4s ease forwards;
 }
 
