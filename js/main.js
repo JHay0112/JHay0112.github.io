@@ -24,6 +24,7 @@ var skills = [
     ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
     ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
 ]
+feed = "https://jhay0112.blogspot.com/feeds/posts/default"; // Blog RSS feed to pull data from
 
 // Functions
 // Sleep function
@@ -178,6 +179,33 @@ function toggleResponsiveNav() {
     }
 
     stickyNav();
+}
+
+// Load posts from directory
+function loadPosts() {
+    // Get posts element
+    var post_el = document.getElementById("blogposts");
+    // Get url
+    var url = new URL(window.location.href);
+    // Check for page parameter
+    var page = parseInt(url.searchParams.get("page"), 10);
+    // Get posts from directory
+    var xhttp = new XMLHttpRequest(); // New request
+    // Setup on ready
+    xhttp.onreadystatechange = function() {
+        // If valid state
+        if (this.readyState == 4 && this.status == 200) {
+            response = this.responseText;
+            response = new window.DOMParser().parseFromString(response, "text/xml");
+            console.log(response);
+        } else {
+            // Invalid state
+            post_el.innerHTML = "An error occured!";
+        }
+    };
+    // Send request
+    xhttp.open("GET", feed, true);
+    xhttp.send();
 }
 
 // Event listeners (or similar)
