@@ -164,9 +164,12 @@ h1 {
 /* Horizontal Line */
 hr {
     height: 0;
-    color: RGBA(0, 0, 0, 0);
-    background-color: RGBA(0, 0, 0, 0);
+    color: RGBA(25, 25, 25, 0);
+    background-color: RGBA(25, 25, 25, 1);
     border-bottom: 1px solid #252525;
+    padding: 0;
+    box-shadow: 0;
+    text-shadow: 0;
 }
 
 /* Loading */
