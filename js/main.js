@@ -24,7 +24,7 @@ var skills = [
     ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
     ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
 ]
-feed = "https://jhay0112.blogspot.com/feeds/posts/default"; // Blog RSS feed to pull data from
+feed = "https://cors-anywhere.herokuapp.com/https://jhay0112.blogspot.com/feeds/posts/default"; // Blog RSS feed to pull data from
 
 // Functions
 // Sleep function
