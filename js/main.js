@@ -213,7 +213,7 @@ function loadPosts(feed) {
 
                 if(content.length > 100) {
                     content = content.substring(0, 100);
-                    content += "... <a href='post?id=" + post.id + "'>Read more</a>";
+                    content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
                 }
 
                 html += "<p>" + content + "</p>";
@@ -224,8 +224,7 @@ function loadPosts(feed) {
             // Insert generated HTML
             post_el.innerHTML = html;
         } else {
-            // Invalid state
-            post_el.innerHTML = "An error occured!";
+            post_el.innerHTML = '<p class="loading-text" style="position: relative; left: 50%"><span></span><span></span><span></span></p>';
         }
     };
     // Send request

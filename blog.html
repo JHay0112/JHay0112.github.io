@@ -27,7 +27,7 @@
             gtag('config', 'UA-109227996-4');
         </script>
     </head>
-    
+
     <body onload="exitLoadingScreen(); runSlideShow(); loadPosts(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts?key=${BLOGKEY}`);">
 
         <div id="home" class="anchor"></div>
@@ -62,6 +62,10 @@
             <div class="col-2 desktop-only"></div>
 
             <div class="col-8 content" id="content">
+
+                <aside class="row">
+                    <input type="text" placeholder="Search..." class="col-12" onkeyup="loadPosts(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts/search?q=${this.value}&key=${BLOGKEY}`)" />
+                </aside>
 
                 <section class="col-12" id="blogposts">
 

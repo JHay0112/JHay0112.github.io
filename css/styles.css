@@ -202,7 +202,7 @@ hr {
     margin-left: -10px;
 }
 
-#loading-text span {
+#loading-text span, .loading-text span {
     display: inline-block;
     vertical-align: middle;
     width: 5px;
@@ -215,11 +215,11 @@ hr {
     animation: loading-dot 1s infinite alternate;
 }
 
-#loading-text span:nth-of-type(2) {
+#loading-text span:nth-of-type(2), .loading-text span:nth-of-type(2) {
     animation-delay: 0.333s;
 }
 
-#loading-text span:nth-of-type(3) {
+#loading-text span:nth-of-type(3), .loading-text span:nth-of-type(2) {
     animation-delay: 0.666s;
 }
 
