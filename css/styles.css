@@ -479,6 +479,7 @@ li:before {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #252525;
 }
 
 /* Skill */

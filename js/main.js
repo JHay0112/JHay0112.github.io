@@ -206,23 +206,30 @@ function loadPosts(feed) {
 
                     html += "<div class='post row'>";
 
-                    html += "<article class='col-10'>";
+                    html += "<article class='col-8'>";
 
                     html += "<h2>" + post.title + "</h2>";
                     html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
 
-                    // Trim post content if needed
                     var content = post.content;
 
+                    // Find if image is included in post
+                    try {
+                        var post_img = new DOMParser().parseFromString(content, "text/html").getElementsByTagName("img")[0].src;
+                    } catch(error) {
+                        console.log(error);
+                    }
+
+                    // Trim content
                     if(content.length > 100) {
                         content = content.substring(0, 100);
-                         // Strip HTML
+                        // Strip HTML
                         var temp_div = document.createElement("div");
                         temp_div.innerHTML = content;
                         content = temp_div.textContent || temp_div.innerText || "";
                         content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
                     } else {
-                         // Strip HTML
+                        // Strip HTML
                         var temp_div = document.createElement("div");
                         temp_div.innerHTML = content;
                         content = temp_div.textContent || temp_div.innerText || " ";
@@ -232,12 +239,13 @@ function loadPosts(feed) {
 
                     html += "</article>";
 
-                    html += "<aside class='col-2 dynamic-img' style='background-image: " + "' />";
+                    html += "<aside class='col-4 dynamic-img' style='background-image: url(" + post_img + ");'></aside>";
 
                     html += "</div>";
                 }); 
             } catch(error) {
                 html = "No Results";
+                console.log(error);
             }
 
             // Insert generated HTML
