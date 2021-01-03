@@ -261,6 +261,43 @@ function loadPosts(feed) {
     xhttp.send();
 }
 
+// Get a single post
+function loadPost(feed) {
+    // Get post element
+    var post_el = document.getElementById("post");
+    post_el.innerHTML = "";
+    // Make request
+    var xhttp = new XMLHttpRequest(); // New request
+    // Setup on ready
+    xhttp.onreadystatechange = function() {
+        // If valid state
+        if (this.readyState == 4 && this.status == 200) {
+            // Get post data
+            var post = JSON.parse(String(this.responseText));
+            // Store generated html
+            var html = "";    
+
+            try {
+                    html += "<h2>" + post.title + "</h2>";
+                    html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
+
+                    html += "<p>" + post.content + "</p>";
+            } catch(error) {
+                html = "Invalid post.";
+                console.log(error);
+            }
+
+            // Insert generated HTML
+            post_el.innerHTML = html;
+        } else {
+            post_el.innerHTML = '<p class="loading-text" style="position: relative; left: 50%"><span></span><span></span><span></span></p>';
+        }
+    };
+    // Send request
+    xhttp.open("GET", feed, true);
+    xhttp.send();
+}
+
 // Event listeners (or similar)
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) { newBee(e) };
