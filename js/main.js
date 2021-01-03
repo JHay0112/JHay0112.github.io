@@ -187,6 +187,7 @@ function toggleResponsiveNav() {
 
 // Load posts from feed
 function loadPosts(feed) {
+    console.log(feed);
     // Get posts element
     var post_el = document.getElementById("blogposts");
     post_el.innerHTML = "";
@@ -201,25 +202,29 @@ function loadPosts(feed) {
             // Store generated html
             var html = "";    
             // Iterate through each post
-            posts.forEach(function(post) {
+            try {
+                posts.forEach(function(post) {
 
-                html += "<article class='post'>";
+                    html += "<article class='post'>";
 
-                html += "<h2>" + post.title + "</h2>";
-                html += "Published " + new Date(post.published).toLocaleString() + " by " + post.author.displayName + "</h4>";
+                    html += "<h2>" + post.title + "</h2>";
+                    html += "Published " + new Date(post.published).toLocaleString() + " by " + post.author.displayName + "</h4>";
 
-                // Trim post content if needed
-                var content = post.content;
+                    // Trim post content if needed
+                    var content = post.content;
 
-                if(content.length > 100) {
-                    content = content.substring(0, 100);
-                    content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
-                }
+                    if(content.length > 100) {
+                        content = content.substring(0, 100);
+                        content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
+                    }
 
-                html += "<p>" + content + "</p>";
+                    html += "<p>" + content + "</p>";
 
-                html += "</article>";
-            }); 
+                    html += "</article>";
+                }); 
+            } catch(error) {
+                html = "No Results";
+            }
 
             // Insert generated HTML
             post_el.innerHTML = html;
