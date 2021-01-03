@@ -187,7 +187,6 @@ function toggleResponsiveNav() {
 
 // Load posts from feed
 function loadPosts(feed) {
-    console.log(feed);
     // Get posts element
     var post_el = document.getElementById("blogposts");
     post_el.innerHTML = "";
@@ -205,7 +204,9 @@ function loadPosts(feed) {
             try {
                 posts.forEach(function(post) {
 
-                    html += "<article class='post'>";
+                    html += "<div class='post row'>";
+
+                    html += "<article class='col-10'>";
 
                     html += "<h2>" + post.title + "</h2>";
                     html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
@@ -215,12 +216,25 @@ function loadPosts(feed) {
 
                     if(content.length > 100) {
                         content = content.substring(0, 100);
+                         // Strip HTML
+                        var temp_div = document.createElement("div");
+                        temp_div.innerHTML = content;
+                        content = temp_div.textContent || temp_div.innerText || "";
                         content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
+                    } else {
+                         // Strip HTML
+                        var temp_div = document.createElement("div");
+                        temp_div.innerHTML = content;
+                        content = temp_div.textContent || temp_div.innerText || " ";
                     }
 
                     html += "<p>" + content + "</p>";
 
                     html += "</article>";
+
+                    html += "<aside class='col-2 dynamic-img' style='background-image: " + "' />";
+
+                    html += "</div>";
                 }); 
             } catch(error) {
                 html = "No Results";
