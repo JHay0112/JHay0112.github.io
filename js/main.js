@@ -185,21 +185,12 @@ function toggleResponsiveNav() {
     stickyNav();
 }
 
-// Load posts from directory
-function loadPosts() {
-    // Posts to load
-    var posts_to_load = 5;
+// Load posts from feed
+function loadPosts(feed) {
     // Get posts element
     var post_el = document.getElementById("blogposts");
-    // Get url
-    var url = new URL(window.location.href);
-    // Check for page parameter
-    var page = parseInt(url.searchParams.get("page"), 10);
-    // Check if page is a number
-    if(typeof(page) != "int") {
-        page = 0;
-    }
-    // Get posts from directory
+    post_el.innerHTML = "";
+    // Make request
     var xhttp = new XMLHttpRequest(); // New request
     // Setup on ready
     xhttp.onreadystatechange = function() {
@@ -209,28 +200,26 @@ function loadPosts() {
             var posts = JSON.parse(String(this.responseText)).items;
             // Store generated html
             var html = "";    
-
-            // Calculate max/min post index based on page
-            var min_post_index = page * posts_to_load;
-            var max_post_index = posts_to_load + (page * posts_to_load);
-            // Check max post index is less that post length
-            if(max_post_index > (posts.length - 1)) {
-                max_post_index = (posts.length - 1);
-            }
-        
             // Iterate through each post
-            for(var i = min_post_index; i <= max_post_index; i++) {
-
-                post = posts[i];
+            posts.forEach(function(post) {
 
                 html += "<article class='post'>";
 
                 html += "<h2>" + post.title + "</h2>";
-                html += "<h4>By " + post.author.displayName + " (Published: " + post.published + ")</h4>";
-                html += "<p>" + post.content + "</p>";
+                html += "Published " + new Date(post.published).toLocaleString() + " by " + post.author.displayName + "</h4>";
+
+                // Trim post content if needed
+                var content = post.content;
+
+                if(content.length > 100) {
+                    content = content.substring(0, 100);
+                    content += "... <a href='post?id=" + post.id + "'>Read more</a>";
+                }
+
+                html += "<p>" + content + "</p>";
 
                 html += "</article>";
-            } 
+            }); 
 
             // Insert generated HTML
             post_el.innerHTML = html;
@@ -240,7 +229,7 @@ function loadPosts() {
         }
     };
     // Send request
-    xhttp.open("GET", "https://www.googleapis.com/blogger/v3/blogs/" + BLOGID + "/posts?key=" + BLOGKEY, true);
+    xhttp.open("GET", feed, true);
     xhttp.send();
 }
 

@@ -27,7 +27,8 @@
             gtag('config', 'UA-109227996-4');
         </script>
     </head>
-    <body onload="exitLoadingScreen(); runSlideShow(); loadPosts();">
+    
+    <body onload="exitLoadingScreen(); runSlideShow(); loadPosts(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts?key=${BLOGKEY}`);">
 
         <div id="home" class="anchor"></div>
 
