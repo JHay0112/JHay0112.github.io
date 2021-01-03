@@ -208,7 +208,7 @@ function loadPosts(feed) {
                     html += "<article class='post'>";
 
                     html += "<h2>" + post.title + "</h2>";
-                    html += "Published " + new Date(post.published).toLocaleString() + " by " + post.author.displayName + "</h4>";
+                    html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
 
                     // Trim post content if needed
                     var content = post.content;
