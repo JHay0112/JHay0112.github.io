@@ -24,7 +24,10 @@ var skills = [
     ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
     ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
 ]
-feed = "https://cors-anywhere.herokuapp.com/https://jhay0112.blogspot.com/feeds/posts/default"; // Blog RSS feed to pull data from
+
+// Blog credentials
+const BLOGKEY = "AIzaSyCmRuFXPVAX0vj6nsGngoDZS2B1YC8ipso"; // NOTE: Limited to requests from https://jordanhay.com/
+const BLOGID = "1327285918509002434";
 
 // Functions
 // Sleep function
@@ -112,6 +115,7 @@ async function newBee(e) {
         document.body.removeChild(bee);
     }
 }
+
 // Slideshow
 async function runSlideShow() {
 
@@ -183,28 +187,60 @@ function toggleResponsiveNav() {
 
 // Load posts from directory
 function loadPosts() {
+    // Posts to load
+    var posts_to_load = 5;
     // Get posts element
     var post_el = document.getElementById("blogposts");
     // Get url
     var url = new URL(window.location.href);
     // Check for page parameter
     var page = parseInt(url.searchParams.get("page"), 10);
+    // Check if page is a number
+    if(typeof(page) != "int") {
+        page = 0;
+    }
     // Get posts from directory
     var xhttp = new XMLHttpRequest(); // New request
     // Setup on ready
     xhttp.onreadystatechange = function() {
         // If valid state
         if (this.readyState == 4 && this.status == 200) {
-            response = this.responseText;
-            response = new window.DOMParser().parseFromString(response, "text/xml");
-            console.log(response);
+            // Get posts data
+            var posts = JSON.parse(String(this.responseText)).items;
+            // Store generated html
+            var html = "";    
+
+            // Calculate max/min post index based on page
+            var min_post_index = page * posts_to_load;
+            var max_post_index = posts_to_load + (page * posts_to_load);
+            // Check max post index is less that post length
+            if(max_post_index > (posts.length - 1)) {
+                max_post_index = (posts.length - 1);
+            }
+        
+            // Iterate through each post
+            for(var i = min_post_index; i <= max_post_index; i++) {
+
+                post = posts[i];
+
+                html += "<article class='post'>";
+
+                html += "<h2>" + post.title + "</h2>";
+                html += "<h4>By " + post.author.displayName + " (Published: " + post.published + ")</h4>";
+                html += "<p>" + post.content + "</p>";
+
+                html += "</article>";
+            } 
+
+            // Insert generated HTML
+            post_el.innerHTML = html;
         } else {
             // Invalid state
             post_el.innerHTML = "An error occured!";
         }
     };
     // Send request
-    xhttp.open("GET", feed, true);
+    xhttp.open("GET", "https://www.googleapis.com/blogger/v3/blogs/" + BLOGID + "/posts?key=" + BLOGKEY, true);
     xhttp.send();
 }
 
