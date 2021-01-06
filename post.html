@@ -28,7 +28,7 @@
         </script>
     </head>
 
-    <body onload="exitLoadingScreen(); runSlideShow(); loadPost(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts/${parseInt(new URL(window.location).searchParams.get('id'))}?key=${BLOGKEY}`);">
+    <body onload="exitLoadingScreen(); runSlideShow(); loadPost(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts/${new URL(window.location).searchParams.get('id')}?key=${BLOGKEY}`);">
 
         <div id="home" class="anchor"></div>
 
