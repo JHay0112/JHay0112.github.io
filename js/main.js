@@ -222,7 +222,7 @@ function loadPosts(feed) {
 
                     // Trim content
                     if(content.length > 100) {
-                        content = content.substring(0, 100);
+                        content = content.substring(0, 300);
                         // Strip HTML
                         content = content.replace("</p>", "&nbsp;");
                         var temp_div = document.createElement("div");
