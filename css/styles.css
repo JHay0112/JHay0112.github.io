@@ -39,6 +39,10 @@ h1 {
     font-size: 30pt;
 }
 
+a {
+    color: inherit;
+}
+
 /* Animations */
 
 @keyframes fade-in {

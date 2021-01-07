@@ -8,20 +8,18 @@ var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop + 300; // Get the offset position of the nav
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 var skills = [
+    ["fas fa-microchip", "Arduino/Robotics", "Arduino is a microcontroller and language used for hobby electronics including robotics and automation. Jordan has had experience with Arduino since late 2018."],
+    ["fas fa-broadcast-tower", "Radio Communications", "Jordan has some experience with radio communications, some of this learnt while working for Ashley Communications as a Trainee Radio Technician and the rest learnt by using a software defined radio and dipole antenna he was gifted (Thanks Kay!)."],
+    ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."],
+    ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
+    ["fab fa-python", "Python", "Python is a general purpose programming language. Jordan has been using Python since mid 2018."],
+    ["fab fa-php", "PHP", "PHP is a programming language used to program the server-side behaviour of websites and to query databases. Jordan has been using PHP since early 2018."],
+    ["fas fa-database", "MySQL", "MySQL is a language used to build and manage databases. Jordan has been using MySQL since early 2018."],
+    ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
+    ["fab fa-github", "Github", "Github is an online host for version control with Git. Jordan has been using Github since late 2017."],
     ["fab fa-html5", "HTML5", "HTML5 (Hyper Text Markup Language 5) is a markup language to write websites. Jordan is proficient in HTML5 and has been using it since mid 2017."],
     ["fab fa-css3", "CSS3", "CSS3 (Cascading Style Sheet 3) is a language used to style HTML pages. Jordan has been using CSS3 since mid-2017."],
     ["fab fa-js", "JavaScript", "JavaScript is a programming language used to program the behaviour of websites. Jordan has been using JavaScript since early 2019."],
-    ["fab fa-php", "PHP", "PHP is a programming language used to program the server-side behaviour of websites and to query databases. Jordan has been using PHP since early 2018."],
-    ["fas fa-database", "MySQL", "MySQL is a language used to build and manage databases. Jordan has been using MySQL since early 2018."],
-    ["fab fa-python", "Python", "Python is a general purpose programming language. Jordan has been using Python since mid 2018."],
-    ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
-    ["fab fa-github", "Github", "Github is an online host for version control with Git. Jordan has been using Github since late 2017."],
-    ["fas fa-microchip", "Arduino/Robotics", "Arduino is a microcontroller and language used for hobby electronics including robotics and automation. Jordan has had experience with Arduino since late 2018."],
-    ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."],
-    ["fas fa-palette", "GIMP", "GIMP (GNU Image Manipulation Program) is used to manipulate images and is what Jordan uses to create graphics and edit photos. Jordan has been using GIMP since early 2018."],
-    ["fab fa-ubuntu", "Linux", "Jordan has been using Ubuntu and Ubuntu derivative operating systems for both personal and server use since early 2018.<br /><br />Please note: 'Server' above refers to an old personal computer Jordan installed Ubuntu Server 16.04 on and used to host various web projects and a Discord bot (written in Python)."],
-    ["fas fa-camera-retro", "Photography", "Jordan has been using a DSLR camera (Canon EOS 350D) since mid 2018 and a compact camera (Olympus TG-630) before that. He was also the photographer for his school whanau/house for the years of 2018 and 2019."],
-    ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
     ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
 ]
 
