@@ -204,13 +204,6 @@ function loadPosts(feed) {
             try {
                 posts.forEach(function(post) {
 
-                    html += "<div class='post row'>";
-
-                    html += "<article class='col-8'>";
-
-                    html += "<h2>" + post.title + "</h2>";
-                    html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
-
                     var content = post.content;
 
                     // Find if image is included in post
@@ -219,6 +212,15 @@ function loadPosts(feed) {
                     } catch(error) {
                         console.log(error);
                     }
+
+                    html += "<div class='post row'>";
+
+                    html += "<article class='col-8'>";
+
+                    html += "<h2>" + post.title + "</h2>";
+                    html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
+
+                    html += "<aside class='col-12 dynamic-img mobile-only' style='background-image: url(" + post_img + ");'></aside>";
 
                     // Trim content
                     if(content.length > 100) {
@@ -241,7 +243,7 @@ function loadPosts(feed) {
 
                     html += "</article>";
 
-                    html += "<aside class='col-4 dynamic-img' style='background-image: url(" + post_img + ");'></aside>";
+                    html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
 
                     html += "</div>";
                 }); 
