@@ -220,7 +220,7 @@ function loadPosts(feed) {
                     html += "<h2>" + post.title + "</h2>";
                     html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
 
-                    html += "<aside class='col-12 dynamic-img mobile-only' style='background-image: url(" + post_img + ");'></aside>";
+                    html += "<aside class='col-12 dynamic-img mobile-only' style='background-image: url(" + post_img + "); min-height: 300px;'></aside>";
 
                     // Trim content
                     if(content.length > 100) {
