@@ -48,7 +48,7 @@ async function exitLoadingScreen() {
     }
 
     // Check if not from internal refferer
-    if(refferer == "jordanhay.com") {
+    if(refferer != "jordanhay.com") {
         loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
         loadingText.style.animation = "fade-out 2s forwards"; // Fade out
         loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
