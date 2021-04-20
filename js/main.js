@@ -11,7 +11,7 @@ var skills = [
     ["fas fa-microchip", "Arduino/Robotics", "Hobby experience with electronics. Have been using Arduino for microcontrol, automation, and robotics since late 2018."],
     ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications as well as a gift software-defined radio."],
     ["fas fa-cube", "3D Printing/CAD", "Hobby experience with CAD, 3D Printing, and 3D Printing maintainance since 2018."],
-    ["fab fa-python", "Python", "Both hobby and university first-level experience with Python for function, object-oriented, and GUI programming."],
+    ["fab fa-python", "Python", "Both hobby and university first-year experience with Python for function, object-oriented, and GUI programming."],
     ["fab fa-php", "PHP", "PHP for server-side behaviour of websites and databases since early 2018."],
     ["fas fa-database", "SQL", "Hobby and high-school experience with MySQL and SQLite databases since early 2018."],
     ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
