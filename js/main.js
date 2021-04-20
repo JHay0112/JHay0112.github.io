@@ -59,6 +59,7 @@ async function exitLoadingScreen() {
         loadingLogo.remove()
         loadingText.remove()
         loadingScreen.remove()
+        document.body.style.overflowY = "auto";
     }
 }
 
