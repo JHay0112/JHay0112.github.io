@@ -8,19 +8,17 @@ var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop + 300; // Get the offset position of the nav
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 var skills = [
-    ["fas fa-microchip", "Arduino/Robotics", "Arduino is a microcontroller and language used for hobby electronics including robotics and automation. Jordan has had experience with Arduino since late 2018."],
-    ["fas fa-broadcast-tower", "Radio Communications", "Jordan has some experience with radio communications, some of this learnt while working for Ashley Communications as a Trainee Radio Technician and the rest learnt by using a software defined radio and dipole antenna he was gifted (Thanks Kay!)."],
-    ["fas fa-cube", "3D Printing/CAD", "3D Printing is the use of 3D printers to create 3D objects. Computer Aided Design is a method for developing designs and models with computers. Jordan has been using CAD for developing objects to 3D print and has learnt how to maintain a 3D printer since late 2018."],
-    ["fas fa-plug", "Hobby Electronics", "Jordan has experience in hobby electronics including soldering, circuit design/analysis, PCB design, using a multimeter, and oscilliscope."],
-    ["fab fa-python", "Python", "Python is a general purpose programming language. Jordan has been using Python since mid 2018."],
-    ["fab fa-php", "PHP", "PHP is a programming language used to program the server-side behaviour of websites and to query databases. Jordan has been using PHP since early 2018."],
-    ["fas fa-database", "MySQL", "MySQL is a language used to build and manage databases. Jordan has been using MySQL since early 2018."],
+    ["fas fa-microchip", "Arduino/Robotics", "Hobby experience with electronics. Have been using Arduino for microcontrol, automation, and robotics since late 2018."],
+    ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications as well as a gift software-defined radio."],
+    ["fas fa-cube", "3D Printing/CAD", "Hobby experience with CAD, 3D Printing, and 3D Printing maintainance since 2018."],
+    ["fab fa-python", "Python", "Both hobby and university first-level experience with Python for function, object-oriented, and GUI programming."],
+    ["fab fa-php", "PHP", "PHP for server-side behaviour of websites and databases since early 2018."],
+    ["fas fa-database", "SQL", "Hobby and high-school experience with MySQL and SQLite databases since early 2018."],
     ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
-    ["fab fa-github", "Github", "Github is an online host for version control with Git. Jordan has been using Github since late 2017."],
-    ["fab fa-html5", "HTML5", "HTML5 (Hyper Text Markup Language 5) is a markup language to write websites. Jordan is proficient in HTML5 and has been using it since mid 2017."],
-    ["fab fa-css3", "CSS3", "CSS3 (Cascading Style Sheet 3) is a language used to style HTML pages. Jordan has been using CSS3 since mid-2017."],
-    ["fab fa-js", "JavaScript", "JavaScript is a programming language used to program the behaviour of websites. Jordan has been using JavaScript since early 2019."],
-    ["fas fa-network-wired", "Networking", "Jordan has experience with setting up and managing networks, most of this learnt while putting together a home-wide ethernet LAN, and while experimenting with an old computer he used as a server for various web projects."]
+    ["fab fa-html5", "HTML5", "Proficient in HTML5 for website structure."],
+    ["fab fa-css3", "CSS3", "CSS3 for mobile-friendly website design."],
+    ["fab fa-js", "JavaScript", "Hobby experience with JS for website browser programming."],
+    ["fas fa-brain", "Machine Learning", "Basic hobby experience with Tensorflow Machine Learning."]
 ]
 
 // Blog credentials
@@ -35,15 +33,33 @@ function sleep(ms) {
 
 // Exit loading screen once page has loaded
 async function exitLoadingScreen() {
+    
     var loadingScreen = document.getElementById("loading-screen"); // Get loading screen
     var loadingText = document.getElementById("loading-text"); // Get loading spinner
     var loadingLogo = document.getElementById("loading-logo"); // Get loading logo
 
-    loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
-    loadingText.style.animation = "fade-out 2s forwards"; // Fade out
-    loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
-    await sleep(1200);
-    document.body.style.overflowY = "auto";
+    var refferer = "";
+
+    // Try to get the hostname of the refferer
+    try {
+        refferer = (new URL(document.referrer)).hostname
+    } catch {
+        refferer = ""
+    }
+
+    // Check if not from internal refferer
+    if(refferer != "jordanhay.com") {
+        loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
+        loadingText.style.animation = "fade-out 2s forwards"; // Fade out
+        loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
+        await sleep(1200);
+        document.body.style.overflowY = "auto";
+    } else {
+        // If from self, delete all of these instantly
+        loadingLogo.remove()
+        loadingText.remove()
+        loadingScreen.remove()
+    }
 }
 
 // Runs when the user scrolls, used in stickynavs etc
