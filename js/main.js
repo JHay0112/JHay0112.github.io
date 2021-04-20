@@ -56,10 +56,11 @@ async function exitLoadingScreen() {
         document.body.style.overflowY = "auto";
     } else {
         // If from self, delete all of these instantly
-        loadingLogo.remove()
-        loadingText.remove()
-        loadingScreen.remove()
+        loadingLogo.remove();
+        loadingText.remove();
+        loadingScreen.remove();
         document.body.style.overflowY = "auto";
+        scrollFunction();
     }
 }
 
