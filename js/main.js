@@ -164,7 +164,7 @@ async function runSlideShow() {
         header.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
         pseudoHeader.style.animation = "";
         pseudoHeader.style.visibility = "hidden";
-        await sleep(8000);
+        await sleep(7000);
     }
 
 }
