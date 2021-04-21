@@ -305,8 +305,11 @@ function loadPost(feed) {
                     html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
 
                     html += "<p>" + post.content + "</p>";
+
+                    document.title = post.title + " - Jordan Hay";
             } catch(error) {
                 html = "Invalid post.";
+                document.title = "Invalid Post - Jordan Hay"
                 console.log(error);
             }
 
