@@ -245,12 +245,12 @@ function loadPosts(feed) {
 
                     // Trim content
                     if(content.length > 100) {
-                        content = content.substring(0, 300);
                         // Strip HTML
                         content = content.replace("</p>", "&nbsp;");
                         var temp_div = document.createElement("div");
                         temp_div.innerHTML = content;
                         content = temp_div.textContent || temp_div.innerText || "";
+                        content = content.substring(0, 300);
                         content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
                     } else {
                         // Strip HTML
