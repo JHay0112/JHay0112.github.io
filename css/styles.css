@@ -168,9 +168,9 @@ a {
 /* Horizontal Line */
 hr {
     height: 0;
-    color: RGBA(25, 25, 25, 0);
-    background-color: RGBA(25, 25, 25, 1);
-    border-bottom: 1px solid #252525;
+    color: RGBA(37, 37, 37, 1);
+    background-color: RGBA(25, 25, 25, 1) !important;
+    border-bottom: 1px solid #252525 !important;
     padding: 0;
     box-shadow: 0;
     text-shadow: 0;

@@ -27,7 +27,7 @@
             gtag('config', 'UA-109227996-4');
         </script>
     </head>
-    <body onload="exitLoadingScreen(); runSlideShow(); loadSkills();">
+    <body onload="exitLoadingScreen(); runSlideShow(); loadSkills(); loadPosts(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts?maxResults=1&key=${BLOGKEY}`);">
 
         <div id="home" class="anchor"></div>
 
@@ -157,9 +157,18 @@
 
                     </section>
 
-                </section>
+                    <h2>Most Recent Blog Post</h2>
 
-                <hr />
+                    <p>Click <a href="blog">here</a> to see more posts.</p>
+
+                    <!-- Most recent blog posts -->
+                    <article id="blogposts">
+
+                    </article>
+
+                    <hr class="col-12" />
+
+                </section>
 
                 <!-- Contact -->
                 <section id="contact">
