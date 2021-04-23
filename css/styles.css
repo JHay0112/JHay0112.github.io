@@ -161,6 +161,9 @@ a {
         display: flex;
         flex-flow: row;
     }
+    .row [class*="col-"] {
+        padding: 10px;
+    }
     .mobile-only {display: none;}
     .desktop-only {display: inline-block;}
 }
