@@ -594,16 +594,16 @@ input[type=submit]:hover {
 
 /* Links/Experimental */
 
-#links, #experimental {
+#links-section, #experimental {
     margin-top: 20px;
     text-align: center;
 }
 
-#links h2, #links p, #experimental h2, #experimental p {
+#links-section h2, #links-section p, #experimental h2, #experimental p {
     text-align: left;
 }
 
-#links a, #experimental a {
+#links-section a, #experimental a {
     color: #252525;
     font-size: 35pt;
     width: 60px;
@@ -614,7 +614,7 @@ input[type=submit]:hover {
     transition: 0.3s ease all;
 }
 
-#links a:hover, #experimental a:hover {
+#links-section a:hover, #experimental a:hover {
     opacity: 0.9;
     cursor: pointer;
 }
