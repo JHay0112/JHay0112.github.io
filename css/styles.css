@@ -122,9 +122,12 @@ a {
     0% {
         position: relative;
         top: 0;
-    } 5% {
+    } 2.5% {
         position: relative;
         top: 2px;
+    } 7.5% {
+        position: relative;
+        top: -2px;
     } 10% {
         position: relative;
         top: 0;
@@ -523,7 +526,6 @@ li:before {
     transition: 0.15s ease all;
     color: inherit;
     width: 70px;
-    transform: scale(1);
 }
 
 .skill:before {
@@ -532,7 +534,6 @@ li:before {
 
 .skill:hover {
     cursor: pointer;
-    transform: scale(1.05);
 }
 
 #skill-dialogue {

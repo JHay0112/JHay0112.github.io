@@ -83,8 +83,8 @@ function loadSkills() {
         skillIco.className = skill[0] + " skill";
         skillIco.id = "skill-ico-" + i;
         skillIco.title = skill[1];
-        skillIco.style.animation = "skill-bounce 8s ease infinite";
-        skillIco.style.animationDelay = 0.1*i + "s";
+        skillIco.style.animation = "skill-bounce 10s ease infinite";
+        skillIco.style.animationDelay = 0.05*i + "s";
 
         // Append new skill icon
         skillEl.appendChild(skillIco)
