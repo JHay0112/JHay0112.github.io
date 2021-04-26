@@ -77,16 +77,27 @@ function loadSkills() {
     for (var i = 0; i < skills.length; i++) {
 
         var skill = skills[i];
+        var skillIco = document.createElement("div");
 
-        skillEl.innerHTML += "<div onclick='openSkill(" + i + ");' class='" + skill[0] + " skill' title='" + skill[1] + "'></div>";
-        // console.log("Loaded " + skill[1] + " Icon");
+        // Skill icon things
+        skillIco.className = skill[0] + " skill";
+        skillIco.id = "skill-ico-" + i;
+        skillIco.title = skill[1];
+        skillIco.style.animation = "skill-bounce 8s ease infinite";
+        skillIco.style.animationDelay = 0.1*i + "s";
+
+        // Append new skill icon
+        skillEl.appendChild(skillIco)
+
+        // Add on click
+        document.getElementById("skill-ico-" + i).setAttribute("onclick", "openSkill(" + i + ")")
     }
 
-    skillEl.style.maxHeight = skillEl.scrollHeight + 100 + "px"; // Scrollheight pluss buffer to try fix bug where bottom row cut off
+    skillEl.style.maxHeight = "99999px";
 }
 
 // Open further information on the skill as chosen by param skill Index
-function openSkill(skillIndex) {
+async function openSkill(skillIndex) {
 
     var skill = skills[skillIndex];
     var skillDialogue = document.getElementById("skill-dialogue");
@@ -96,8 +107,9 @@ function openSkill(skillIndex) {
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    skillEl.style.maxHeight = "0px";
     skillEl.style.animation = "fade-out 0.3s ease forwards";
+    await sleep(300);
+    skillEl.style.maxHeight = "0px";
     skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
     skillDialogue.style.animation = "fade-in 0.3s ease forwards";
 }
@@ -107,12 +119,12 @@ async function closeSkill() {
 
     var skillDialogue = document.getElementById("skill-dialogue");
     var skillEl = document.getElementById("skills");
-
-    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
-    skillEl.style.animation = "fade-in 0.3s ease forwards";
-    skillDialogue.style.maxHeight = "";
+    
     skillDialogue.style.animation = "fade-out 0.3s ease forwards";
     await sleep(300);
+    skillDialogue.style.maxHeight = "0px";
+    skillEl.style.maxHeight = "99999px";
+    skillEl.style.animation = "fade-in 0.3s ease forwards";
 
     document.getElementById("skill-icon").className = "";
     document.getElementById("skill-title").textContent = "";
