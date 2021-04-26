@@ -107,11 +107,11 @@ async function openSkill(skillIndex) {
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    skillEl.style.animation = "fade-out 0.3s ease forwards";
+    skillEl.style.animation = "fade-out 0.2s ease forwards";
     await sleep(300);
     skillEl.style.maxHeight = "0px";
     skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
-    skillDialogue.style.animation = "fade-in 0.3s ease forwards";
+    skillDialogue.style.animation = "fade-in 0.2s ease forwards";
 }
 
 // Close further information on skill
@@ -120,11 +120,11 @@ async function closeSkill() {
     var skillDialogue = document.getElementById("skill-dialogue");
     var skillEl = document.getElementById("skills");
     
-    skillDialogue.style.animation = "fade-out 0.3s ease forwards";
+    skillDialogue.style.animation = "fade-out 0.2s ease forwards";
     await sleep(300);
     skillDialogue.style.maxHeight = "0px";
     skillEl.style.maxHeight = "99999px";
-    skillEl.style.animation = "fade-in 0.3s ease forwards";
+    skillEl.style.animation = "fade-in 0.2s ease forwards";
 
     document.getElementById("skill-icon").className = "";
     document.getElementById("skill-title").textContent = "";
