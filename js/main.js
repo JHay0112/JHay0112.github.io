@@ -250,10 +250,10 @@ function loadPosts(feed) {
 
                     html += "<article class='col-8'>";
 
-                    html += "<h2>" + post.title + "</h2>";
-                    html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
+                    html += "<h2 class='post-title'>" + post.title + "</h2>";
+                    html += "<p>Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</p>";
 
-                    html += "<aside class='col-12 dynamic-img mobile-only' style='background-image: url(" + post_img + "); min-height: 300px;'></aside>";
+                    html += "<aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url(" + post_img + ")'></aside>";
 
                     // Trim content
                     if(content.length > 100) {
@@ -272,11 +272,13 @@ function loadPosts(feed) {
                         content = temp_div.textContent || temp_div.innerText || " ";
                     }
 
-                    html += "<p>" + content + "</p>";
+                    html += "<p class='post-content'>" + content + "</p>";
 
                     html += "</article>";
 
                     html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
+
+                    html += "<hr class='mobile-only col-12' />"
 
                     html += "</div>";
                 }); 

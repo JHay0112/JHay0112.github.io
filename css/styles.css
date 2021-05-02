@@ -343,14 +343,19 @@ nav {
     padding: 20px;
 }
 
+nav ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -20px;
+}
+
 nav ul li {
+    user-select: all;
     list-style-type: none;
     display: inline-block;
     transition: 0.3s ease all;
-    position: relative;
-    top: -37px;
     padding: 20px;
-    padding-bottom: 20px;
     color: #252525;
     text-align: center;
 }
@@ -402,16 +407,9 @@ nav.stick {
     #nav {
         height: 60px;
         margin: 0;
+        padding: 0;
         transition: 0.3s ease all;
         overflow: hidden;
-    }
-
-    #nav ul {
-        position: relative;
-        top: 0px;
-        left: -20px;
-        padding: 0;
-        margin: 0;
     }
 
     #nav ul li {
@@ -420,7 +418,7 @@ nav.stick {
     }
 
     #nav ul li:last-child {
-        margin-bottom: -58px;
+        margin-bottom: -20px;
     }
 
     #nav-responsive-button {
@@ -632,6 +630,22 @@ input[type=submit]:hover {
 #links-section a:hover, #experimental a:hover {
     opacity: 0.9;
     cursor: pointer;
+}
+
+/* Blog */
+
+#blogposts .post .post-title, #blogposts .post .post-subtitle {
+    margin-bottom: 3px;
+}
+
+#blogposts .post .post-image {
+    margin-bottom: 10px;
+    min-height: 300px;
+}
+
+#blogposts .post:last-of-type hr {
+    /* Stop the last divider showing up */
+    display: none; 
 }
 
 /* Footer */
