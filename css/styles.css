@@ -648,6 +648,10 @@ input[type=submit]:hover {
     display: none; 
 }
 
+#post img {
+    max-width: 100%;
+}
+
 /* Footer */
 
 footer {
