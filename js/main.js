@@ -321,6 +321,14 @@ function loadPost(feed) {
                     html += "<p>" + post.content + "</p>";
 
                     document.title = post.title + " - Jordan Hay";
+
+                    // For label in labels
+                    var lab_string = "";
+                    for(var i = 0; i < post.labels.length; i++) {
+                        lab_string += ", " + post.labels[i];
+                    }
+
+                    document.getElementsByTagName('meta')["keywords"].content += lab_string;
             } catch(error) {
                 html = "Invalid post.";
                 document.title = "Invalid Post - Jordan Hay"
