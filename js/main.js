@@ -7,7 +7,6 @@
 var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop + 300; // Get the offset position of the nav
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
-var prevSkillElScrollHeight; // Previous scroll height of the skill el
 var skills = [
     ["fas fa-microchip", "Arduino/Robotics", "Hobby experience with electronics. Have been using Arduino for microcontrol, automation, and robotics since late 2018."],
     ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications as well as a gift software-defined radio."],
@@ -54,15 +53,15 @@ async function exitLoadingScreen() {
         loadingText.style.animation = "fade-out 2s forwards"; // Fade out
         loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
         await sleep(1200);
-        document.body.style.overflowY = "auto";
     } else {
         // If from self, delete all of these instantly
         loadingLogo.remove();
         loadingText.remove();
         loadingScreen.remove();
-        document.body.style.overflowY = "auto";
-        scrollFunction();
     }
+    
+    document.body.style.overflowY = "auto";
+    scrollFunction();
 }
 
 // Runs when the user scrolls, used in stickynavs etc
@@ -96,37 +95,52 @@ function loadSkills() {
 }
 
 // Open further information on the skill as chosen by param skill Index
-async function openSkill(skillIndex) {
+function openSkill(skillIndex) {
 
     var skill = skills[skillIndex];
     var skillDialogue = document.getElementById("skill-dialogue");
-    var skillEl = document.getElementById("skills");
 
     // Add new things to skillDialogue
     document.getElementById("skill-icon").className = skill[0] + " ";
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    // Collapse skillEl
-    skillEl.style.maxHeight = "0px";
-    await sleep(200);
     // Expand skill dialogue
-    skillDialogue.style.animation = "fade-in 0.2s ease forwards";
+    skillDialogue.style.animation = "fade-in 0.3s ease forwards";
     skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
+
+    // For each skill icon
+    for (var i = 0; i < skills.length; i++) {
+        var skillIcon = document.getElementById("skill-ico-" + i);
+        // Except for the active one
+        if(i != skillIndex) {
+            // Make small and grey
+            skillIcon.style.scale = "0.9";
+            skillIcon.style.opacity = "0.4";
+        } else {
+            // Make sure active one is big and bold
+            skillIcon.style.scale = "1";
+            skillIcon.style.opacity = "1";
+        }
+    }
 }
 
 // Close further information on skill
-async function closeSkill() {
+function closeSkill() {
 
     var skillDialogue = document.getElementById("skill-dialogue");
-    var skillEl = document.getElementById("skills");
     
     // Collapse skillDialogue
     skillDialogue.style.maxHeight = "0px";
-    skillDialogue.style.animation = "fade-out 0.1s ease forwards";
-    await sleep(200);
-    // Expand skill El
-    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
+    skillDialogue.style.animation = "fade-out 0.2s ease forwards";
+
+    // For each skill icon
+    for (var i = skills.length - 1; i >= 0; i--) {
+        var skillIcon = document.getElementById("skill-ico-" + i);
+        // Make big and bold
+        skillIcon.style.scale = "1";
+        skillIcon.style.opacity = "1";
+    }
 }
 
 // Behold! Bees
