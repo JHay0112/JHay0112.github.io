@@ -510,6 +510,7 @@ li:before {
     text-align: center;
     transition: 0.2s ease all;
     margin-bottom: 10px;
+    max-height: 0px;
 }
 
 #skills h3, #skills p {
@@ -536,14 +537,14 @@ li:before {
 }
 
 #skill-dialogue {
+    display: block;
     overflow: hidden;
     padding: 10px;
     margin: 0;
-    margin-bottom: 10px;
     max-height: 0px;
     background-color: #252525;
     color: white;
-    animation: fade-out 0s forwards;
+    animation: fade-out 0s ease forwards;
     transition: 0.2s ease all;
 }
 

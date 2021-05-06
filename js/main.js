@@ -84,8 +84,6 @@ function loadSkills() {
         skillIco.className = skill[0] + " skill";
         skillIco.id = "skill-ico-" + i;
         skillIco.title = skill[1];
-        skillIco.style.animation = "skill-bounce 8s ease forwards";
-        skillIco.style.animationDelay = 0.05*i - 0.1 + "s";
 
         // Append new skill icon
         skillEl.appendChild(skillIco)
@@ -94,7 +92,7 @@ function loadSkills() {
         document.getElementById("skill-ico-" + i).setAttribute("onclick", "openSkill(" + i + ")")
     }
 
-    skillEl.style.maxHeight = "99999px";
+    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
 }
 
 // Open further information on the skill as chosen by param skill Index
@@ -104,16 +102,15 @@ async function openSkill(skillIndex) {
     var skillDialogue = document.getElementById("skill-dialogue");
     var skillEl = document.getElementById("skills");
 
+    // Add new things to skillDialogue
     document.getElementById("skill-icon").className = skill[0] + " ";
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    prevSkillElScrollHeight = skillEl.scrollHeight;
-    skillEl.style.animation = "fade-out 0.2s ease forwards";
-    skillDialogue.height = prevSkillElScrollHeight + "px";
-    await sleep(210);
-    skillEl.style.display = "none";
-    skillDialogue.style.display = "block";
+    // Collapse skillEl
+    skillEl.style.maxHeight = "0px";
+    await sleep(200);
+    // Expand skill dialogue
     skillDialogue.style.animation = "fade-in 0.2s ease forwards";
     skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
 }
@@ -124,16 +121,12 @@ async function closeSkill() {
     var skillDialogue = document.getElementById("skill-dialogue");
     var skillEl = document.getElementById("skills");
     
-    skillDialogue.style.animation = "fade-out 0.2s ease forwards";
-    skillDialogue.style.maxHeight = prevSkillElScrollHeight + "px";
+    // Collapse skillDialogue
+    skillDialogue.style.maxHeight = "0px";
+    skillDialogue.style.animation = "fade-out 0.1s ease forwards";
     await sleep(200);
-    skillDialogue.style.display = "none";
-    skillEl.style.animation = "fade-in 0.2s ease forwards";
-    skillEl.style.display = "block";
-
-    document.getElementById("skill-icon").className = "";
-    document.getElementById("skill-title").textContent = "";
-    document.getElementById("skill-desc").innerHTML = "";
+    // Expand skill El
+    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
 }
 
 // Behold! Bees
