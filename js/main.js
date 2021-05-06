@@ -90,8 +90,6 @@ function loadSkills() {
         // Add on click
         document.getElementById("skill-ico-" + i).setAttribute("onclick", "openSkill(" + i + ")")
     }
-
-    skillEl.style.maxHeight = skillEl.scrollHeight + "px";
 }
 
 // Open further information on the skill as chosen by param skill Index
