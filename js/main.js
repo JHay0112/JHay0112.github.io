@@ -7,6 +7,7 @@
 var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop + 300; // Get the offset position of the nav
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
+var prevSkillElScrollHeight; // Previous scroll height of the skill el
 var skills = [
     ["fas fa-microchip", "Arduino/Robotics", "Hobby experience with electronics. Have been using Arduino for microcontrol, automation, and robotics since late 2018."],
     ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications as well as a gift software-defined radio."],
@@ -83,8 +84,8 @@ function loadSkills() {
         skillIco.className = skill[0] + " skill";
         skillIco.id = "skill-ico-" + i;
         skillIco.title = skill[1];
-        skillIco.style.animation = "skill-bounce 10s ease infinite";
-        skillIco.style.animationDelay = 0.05*i + "s";
+        skillIco.style.animation = "skill-bounce 8s ease forwards";
+        skillIco.style.animationDelay = 0.05*i - 0.1 + "s";
 
         // Append new skill icon
         skillEl.appendChild(skillIco)
@@ -107,11 +108,14 @@ async function openSkill(skillIndex) {
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
+    prevSkillElScrollHeight = skillEl.scrollHeight;
     skillEl.style.animation = "fade-out 0.2s ease forwards";
-    await sleep(300);
-    skillEl.style.maxHeight = "0px";
-    skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
+    skillDialogue.height = prevSkillElScrollHeight + "px";
+    await sleep(210);
+    skillEl.style.display = "none";
+    skillDialogue.style.display = "block";
     skillDialogue.style.animation = "fade-in 0.2s ease forwards";
+    skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
 }
 
 // Close further information on skill
@@ -121,10 +125,11 @@ async function closeSkill() {
     var skillEl = document.getElementById("skills");
     
     skillDialogue.style.animation = "fade-out 0.2s ease forwards";
-    await sleep(300);
-    skillDialogue.style.maxHeight = "0px";
-    skillEl.style.maxHeight = "99999px";
+    skillDialogue.style.maxHeight = prevSkillElScrollHeight + "px";
+    await sleep(200);
+    skillDialogue.style.display = "none";
     skillEl.style.animation = "fade-in 0.2s ease forwards";
+    skillEl.style.display = "block";
 
     document.getElementById("skill-icon").className = "";
     document.getElementById("skill-title").textContent = "";
