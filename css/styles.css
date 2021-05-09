@@ -698,6 +698,10 @@ input[type=submit]:hover {
     height: 38.4px;
 }
 
+.hcb-icon {
+    display: none;
+}
+
 /* Footer */
 
 footer {
