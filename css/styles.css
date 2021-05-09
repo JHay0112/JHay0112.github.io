@@ -665,6 +665,27 @@ input[type=submit]:hover {
     max-width: 100%;
 }
 
+.home-desc {
+    display: none;
+}
+
+#hcb_form_content {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: 0;
+    resize: none;
+    font-size: 11.5pt;
+    background-color: RGBA(0, 0, 0, 0);
+}
+
+#comments_list + a {
+    display: none;
+}
+
 /* Footer */
 
 footer {
