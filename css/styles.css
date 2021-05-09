@@ -686,6 +686,18 @@ input[type=submit]:hover {
     display: none;
 }
 
+#hcb_form_name {
+    width: 100%;
+}
+
+#hcb_submit {
+    margin: 0;
+}
+
+.hcb-door-out {
+    height: 38.4px;
+}
+
 /* Footer */
 
 footer {
