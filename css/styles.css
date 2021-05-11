@@ -692,19 +692,16 @@ input[type=submit]:hover {
 
 #hcb_submit {
     position: relative;
-    top: 20px;
     width: 100%;
-}
-
-#hcb_subscribe {
-    position: relative;
-    top: -60px;
 }
 
 .hcb-icon, #hcb_settings {
     display: none;
 }
 
+#HCB_comment_box .comment {
+    margin-bottom: 10px !important;
+}
 
 /* Footer */
 
