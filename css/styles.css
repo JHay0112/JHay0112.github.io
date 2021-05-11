@@ -713,6 +713,10 @@ input[type=submit]:hover {
     margin-bottom: 2px !important;
 }
 
+#HCB_comment_box .comment:last-of-type {
+    margin-bottom: 10px !important;
+}
+
 .hcb-like, .hcb-reply, .hcb-flag {
     color: #252525 !important;
 }
