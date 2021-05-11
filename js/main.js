@@ -356,6 +356,11 @@ function loadPost(feed) {
     xhttp.send();
 }
 
+function menuSpy() {
+    // Initiliase a menu spy instance
+    new MenuSpy(document.querySelector("#nav-header"));
+}
+
 // Event listeners (or similar)
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) { newBee(e) };
@@ -392,6 +397,3 @@ for (var i = 0; i < coll.length; i++) {
         }
     });
 }
-
-// MenuSpy
-var ms = new MenuSpy(document.querySelector("#nav-header"));
