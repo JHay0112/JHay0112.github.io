@@ -700,7 +700,12 @@ input[type=submit]:hover {
 }
 
 #HCB_comment_box .comment {
-    margin-bottom: 10px !important;
+    margin-top: -10px !important;
+    margin-bottom: 2px !important;
+}
+
+.likes {
+    top: 25px !important;
 }
 
 /* Footer */
