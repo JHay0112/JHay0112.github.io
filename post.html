@@ -16,16 +16,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
-        <!-- Google Analytics -->
-        <!-- I'm sorry Justin -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109227996-4"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-109227996-4');
-        </script>
+        
     </head>
 
     <body onload="exitLoadingScreen(); runSlideShow(); loadPost(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts/${new URL(window.location).searchParams.get('id')}?key=${BLOGKEY}`);">
