@@ -690,9 +690,18 @@ input[type=submit]:hover {
     height: 38.4px;
 }
 
+#hcb_form {
+    margin-bottom: -40px;
+}
+
 #hcb_submit {
     position: relative;
+    top: -10px;
     width: 100%;
+}
+
+#hcb_subscribe {
+    display: none !important;
 }
 
 .hcb-icon, #hcb_settings {
@@ -702,6 +711,10 @@ input[type=submit]:hover {
 #HCB_comment_box .comment {
     margin-top: -10px !important;
     margin-bottom: 2px !important;
+}
+
+.hcb-like, .hcb-reply, .hcb-flag {
+    color: #252525 !important;
 }
 
 .likes {
