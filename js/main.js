@@ -330,9 +330,6 @@ function loadPost(feed) {
 
                     html += "<p>" + post.content + "</p>";
 
-                    // KATEX loading script
-                    html += "<script defer src='https://cdn.jsdelivr.net/npm/katex@0.13.10/dist/contrib/auto-render.min.js' integrity='sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl' crossorigin='anonymous' onload='renderMathInElement(document.body);'></script>";
-
                     document.title = post.title + " - Jordan Hay";
 
                     // For label in labels
@@ -350,6 +347,8 @@ function loadPost(feed) {
 
             // Insert generated HTML
             post_el.innerHTML = html;
+
+            document.dispatchEvent(new Event("postLoaded"));
         } else {
             post_el.innerHTML = '<p class="loading-text" style="position: relative; left: 50%"><span></span><span></span><span></span></p>';
         }
