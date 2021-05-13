@@ -709,7 +709,6 @@ input[type=submit]:hover {
 }
 
 #HCB_comment_box .comment {
-    margin-top: -10px !important;
     margin-bottom: 2px !important;
 }
 
