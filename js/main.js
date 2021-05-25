@@ -157,7 +157,7 @@ async function newBee(e) {
 // Slideshow
 async function runSlideShow() {
 
-    var imgNum = 9; // Amount of images in
+    var imgNum = 11; // Amount of images in
 
     header = document.getElementById("header");
     pseudoHeader = document.getElementById("pseudo-header");
@@ -177,6 +177,8 @@ async function runSlideShow() {
         while(prevImg === img) {
             img = Math.floor(Math.random() * (imgNum)) + 1;
         }
+
+        // img = imgNum; // For testing newest image
 
         pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
         await sleep(1000);
