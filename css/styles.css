@@ -255,8 +255,9 @@ hr {
 
 #error-404 {
     text-align: center;
-    position: relative;
-    top: 300px;
+    position: absolute;
+    top: 55vh;
+    width: 100vw;
 }
 
 /* Bees */
