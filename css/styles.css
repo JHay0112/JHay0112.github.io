@@ -663,6 +663,7 @@ input[type=submit]:hover {
 
 #post img {
     max-width: 100%;
+    max-height: auto;
 }
 
 .home-desc {
