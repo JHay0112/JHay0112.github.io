@@ -513,7 +513,7 @@ li:before {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #252525;
+    background-color: RGBA(0, 0, 0, 0);
 }
 
 /* Skill */
@@ -662,8 +662,7 @@ input[type=submit]:hover {
 }
 
 #post img {
-    max-width: 100%;
-    max-height: auto;
+    max-width: 100% !important;
 }
 
 .home-desc {
