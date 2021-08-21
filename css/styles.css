@@ -48,6 +48,12 @@ a {
     color: inherit;
 }
 
+span.macron {
+    font-size: 96%;
+    position: relative;
+    top: 5%;
+}
+
 /* Animations */
 
 @keyframes fade-in {
