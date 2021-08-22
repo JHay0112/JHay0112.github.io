@@ -6,7 +6,7 @@
 */
 
 /* Import Fonts */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato&display=swap'); 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Lato&display=swap');
 
 /* Every Element (Ones below will overide if need be) */
 * { 
@@ -46,6 +46,10 @@ h1 {
 
 a {
     color: inherit;
+}
+
+span.macron {
+    font-size: 90%;
 }
 
 /* Animations */
@@ -514,6 +518,16 @@ li:before {
     background-repeat: no-repeat;
     background-position: center;
     background-color: RGBA(0, 0, 0, 0);
+}
+
+/* Pepeha */
+
+#pepeha {
+    padding: 10px 0px;
+}
+
+#pepeha tr td {
+    padding: 10px 0px;
 }
 
 /* Skill */
