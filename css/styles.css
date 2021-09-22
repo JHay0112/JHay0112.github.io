@@ -523,11 +523,11 @@ li:before {
 /* Pepeha */
 
 #pepeha {
-    padding: 10px 0px;
+    padding: 20px 0px;
 }
 
-#pepeha tr td {
-    padding: 10px 0px;
+#pepeha p {
+    text-align: center;
 }
 
 /* Skill */
