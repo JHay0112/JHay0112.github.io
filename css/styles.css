@@ -677,6 +677,7 @@ input[type=submit]:hover {
 
 #post img {
     max-width: 100% !important;
+    height: 100%;
 }
 
 .home-desc {
