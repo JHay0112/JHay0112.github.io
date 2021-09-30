@@ -201,14 +201,13 @@ function stickyNav() {
 
     if (window.pageYOffset >= sticky) {
         nav.classList.add("stick")
+        content.style.top = "60px";
         if(nav.classList.contains("responsive")) {
-            content.style.top = nav.scrollHeight + "px";
-        } else {
-            content.style.top = "60px";
+            content.style.height = (content.scrollHeight + nav.scrollHeight + 60) + "px";
         }
     } else {
         nav.classList.remove("stick");
-        content.style.top = "";
+        content.style.top = "0px";
     }
 }
 
