@@ -520,6 +520,16 @@ li:before {
     background-color: RGBA(0, 0, 0, 0);
 }
 
+/* Katex */
+
+p span .katex {
+    font-size: inherit;
+}
+
+p span .katex-display {
+    font-size: 1.21em;
+}
+
 /* Pepeha */
 
 #pepeha {
