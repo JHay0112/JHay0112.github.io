@@ -246,6 +246,8 @@ function loadPosts(feed) {
             var html = "";    
             // Iterate through each post
             try {
+                // Counter for alternating which side of the post the image is on.
+                var i = 0;
                 posts.forEach(function(post) {
 
                     var content = post.content;
@@ -257,7 +259,30 @@ function loadPosts(feed) {
                         console.log(error);
                     }
 
+                    // Strip HTML
+                    content = content.replace("</p>", "&nbsp;");
+                    var temp_div = document.createElement("div");
+                    temp_div.innerHTML = content;
+                    content = temp_div.textContent || temp_div.innerText || " ";
+
+                    // Trim content
+                    if(content.length > 400) {
+                        // Strip HTML
+                        content = content.replace("</p>", "&nbsp;");
+                        var temp_div = document.createElement("div");
+                        temp_div.innerHTML = content;
+                        content = temp_div.textContent || temp_div.innerText || "";
+                        content = content.substring(0, 400);
+                        content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
+                    }
+
                     html += "<div class='post row'>";
+
+                    // Switch order of image and post
+                    if(i % 2 == 1) {
+                        // Image first
+                        html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
+                    }
 
                     html += "<article class='col-8'>";
 
@@ -266,32 +291,20 @@ function loadPosts(feed) {
 
                     html += "<aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url(" + post_img + ")'></aside>";
 
-                    // Trim content
-                    if(content.length > 100) {
-                        // Strip HTML
-                        content = content.replace("</p>", "&nbsp;");
-                        var temp_div = document.createElement("div");
-                        temp_div.innerHTML = content;
-                        content = temp_div.textContent || temp_div.innerText || "";
-                        content = content.substring(0, 300);
-                        content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
-                    } else {
-                        // Strip HTML
-                        content = content.replace("</p>", "&nbsp;");
-                        var temp_div = document.createElement("div");
-                        temp_div.innerHTML = content;
-                        content = temp_div.textContent || temp_div.innerText || " ";
-                    }
-
                     html += "<p class='post-content'>" + content + "</p>";
 
                     html += "</article>";
 
-                    html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
-
-                    html += "<hr class='mobile-only col-12' />"
+                    if(i % 2 == 0) {
+                        // Image second
+                        html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
+                    }
 
                     html += "</div>";
+
+                    html += "<hr class='col-12' />"
+
+                    i += 1;
                 }); 
             } catch(error) {
                 html = "No Results";
