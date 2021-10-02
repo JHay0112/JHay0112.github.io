@@ -302,7 +302,10 @@ function loadPosts(feed) {
 
                     html += "</div>";
 
-                    html += "<hr class='col-12' />"
+                    if(i + 1 != posts.length) {
+                        // Do not show for last post
+                        html += "<hr class='col-12' />"
+                    }
 
                     i += 1;
                 }); 
