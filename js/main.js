@@ -157,7 +157,7 @@ async function newBee(e) {
 // Slideshow
 async function runSlideShow() {
 
-    var imgNum = 11; // Amount of images in
+    var imgNum = 10; // Amount of images in
 
     header = document.getElementById("header");
     pseudoHeader = document.getElementById("pseudo-header");
@@ -251,12 +251,14 @@ function loadPosts(feed) {
                 posts.forEach(function(post) {
 
                     var content = post.content;
+                    var image = true;
 
                     // Find if image is included in post
                     try {
                         var post_img = new DOMParser().parseFromString(content, "text/html").getElementsByTagName("img")[0].src;
                     } catch(error) {
                         console.log(error);
+                        image = false;
                     }
 
                     // Strip HTML
@@ -274,17 +276,23 @@ function loadPosts(feed) {
                         content = temp_div.textContent || temp_div.innerText || "";
                         content = content.substring(0, 400);
                         content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
+                    } else {
+                        content += " <a href='/post?id=" + post.id + "'>Read</a>"
                     }
 
                     html += "<div class='post row'>";
 
                     // Switch order of image and post
-                    if(i % 2 == 1) {
+                    if(image && i % 2 == 1) {
                         // Image first
                         html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
                     }
 
-                    html += "<article class='col-8'>";
+                    if (image) {
+                        html += "<article class='col-8'>";
+                    } else {
+                        html += "<article class='col-12'>";
+                    }
 
                     html += "<h2 class='post-title'>" + post.title + "</h2>";
                     html += "<p>Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</p>";
@@ -295,7 +303,7 @@ function loadPosts(feed) {
 
                     html += "</article>";
 
-                    if(i % 2 == 0) {
+                    if(image && i % 2 == 0) {
                         // Image second
                         html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
                     }
