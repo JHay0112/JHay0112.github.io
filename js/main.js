@@ -276,6 +276,8 @@ function loadPosts(feed) {
                         content = temp_div.textContent || temp_div.innerText || "";
                         content = content.substring(0, 400);
                         content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
+                    } else {
+                        content += " <a href='/post?id=" + post.id + "'>Read</a>"
                     }
 
                     html += "<div class='post row'>";
