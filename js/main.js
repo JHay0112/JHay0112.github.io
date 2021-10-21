@@ -248,6 +248,8 @@ function loadPosts(feed) {
             try {
                 // Counter for alternating which side of the post the image is on.
                 var i = 0;
+                // Counter that allows imageless posts to still count
+                var no_images;
                 posts.forEach(function(post) {
 
                     var content = post.content;
@@ -310,13 +312,15 @@ function loadPosts(feed) {
 
                     html += "</div>";
 
-                    if(i + 1 != posts.length) {
+                    if(i + 1 + no_images != posts.length) {
                         // Do not show for last post
                         html += "<hr class='col-12' />"
                     }
 
                     if (image) {
                         i += 1;
+                    } else {
+                        no_images += 1;
                     }
                 }); 
             } catch(error) {
