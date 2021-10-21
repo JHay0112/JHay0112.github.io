@@ -315,7 +315,9 @@ function loadPosts(feed) {
                         html += "<hr class='col-12' />"
                     }
 
-                    i += 1;
+                    if (image) {
+                        i += 1;
+                    }
                 }); 
             } catch(error) {
                 html = "No Results";
