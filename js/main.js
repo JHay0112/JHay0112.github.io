@@ -249,7 +249,7 @@ function loadPosts(feed) {
                 // Counter for alternating which side of the post the image is on.
                 var i = 0;
                 // Counter that allows imageless posts to still count
-                var no_images;
+                var no_images = 0;
                 posts.forEach(function(post) {
 
                     var content = post.content;
