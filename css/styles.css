@@ -674,6 +674,10 @@ input[type=submit]:hover {
     margin-bottom: 3px;
 }
 
+#blogposts .post article:hover, #blogposts .post aside:hover {
+    cursor: pointer;
+}
+
 #blogposts .post .post-image {
     margin-bottom: 10px;
     min-height: 300px;
