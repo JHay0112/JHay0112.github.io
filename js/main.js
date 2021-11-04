@@ -272,17 +272,13 @@ function loadPosts(feed) {
                     // Trim content
                     if(content.length > 400) {
                         // Strip HTML
-                        content = content.replace("</p>", "&nbsp;");
-                        var temp_div = document.createElement("div");
-                        temp_div.innerHTML = content;
-                        content = temp_div.textContent || temp_div.innerText || "";
                         content = content.substring(0, 400);
                         content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
                     } else {
                         content += " <a href='/post?id=" + post.id + "'>Read</a>"
                     }
 
-                    html += "<div class='post row'>";
+                    html += "<div class='post row' onclick=\"window.location='/post?id=" + post.id + "'\">";
 
                     // Switch order of image and post
                     if(image && i % 2 == 1) {
@@ -298,8 +294,10 @@ function loadPosts(feed) {
 
                     html += "<h2 class='post-title'>" + post.title + "</h2>";
                     html += "<p>Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</p>";
-
-                    html += "<aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url(" + post_img + ")'></aside>";
+                    
+                    if (image) {
+                        html += "<aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url(" + post_img + ")'></aside>";
+                    }
 
                     html += "<p class='post-content'>" + content + "</p>";
 
