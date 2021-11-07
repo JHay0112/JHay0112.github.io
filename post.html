@@ -116,6 +116,11 @@
         </script>
         <!-- Highlight JS -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-        <script>hljs.highlightAll();</script>
+        <script>
+            document.addEventListener("postLoaded", function() {
+                // Load only once post is loaded 
+                hljs.highlightAll();
+            })
+        </script>
     </body>
 </html>
