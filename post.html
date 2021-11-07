@@ -15,7 +15,10 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <!-- KATEX -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.css" integrity="sha384-cRxb1HsKSl8bTfU9fBcGsjktUfQa6w+fwvkYnU8XjFH4Qg8To1+/9OXv5iRzrKX4" crossorigin="anonymous">
+        <!-- Highlight JS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
     </head>
 
     <body onload="exitLoadingScreen(); runSlideShow(); loadPost(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts/${new URL(window.location).searchParams.get('id')}?key=${BLOGKEY}`);">
@@ -73,7 +76,9 @@
 
         <!-- Scripts -->
         <script src="js/main.js"></script>
+        <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
+        <!-- HCB Comments -->
         <script>
             hcb_user = {
                 content_label: 'Enter your comment here',
@@ -90,6 +95,7 @@
             };
         </script>
         <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%249gIAGZR7onbrd5lJhipcA%2F"+"&opts=16862&num=10&ts=1620524709179");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+        <!-- KATEX -->
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
         <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
         <script>
@@ -108,5 +114,7 @@
                 });
             });
         </script>
+        <!-- Highlight JS -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     </body>
 </html>
