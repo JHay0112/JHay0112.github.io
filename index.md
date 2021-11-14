@@ -1,0 +1,147 @@
+---
+title: Home
+author: Jordan Hay
+date: 2021-11-14
+description: The Home of Jordan Hay.
+
+layout: default
+---
+
+<div id="about" class="anchor"></div>
+
+<!-- About -->
+<section>
+
+    <!-- Top About Section -->
+    <div class="row">
+
+        <article class="col-8">
+            
+            <h1>About</h1>
+
+            <br />
+
+            <hr class="row" style="height: 1px !important;" />
+
+            <!-- Pepeha -->
+            <article class="col-12" id="pepeha">
+                <p>Ko Tarahao te maunga</p>
+                
+                <p>Ko Waitaki te awa</p>
+
+                <p>N<span class="macron">&omacr;</span> te Tihi-O-Maru ahau</p>
+
+                <p>N<span class="macron">&omacr;</span> <span class="macron">&Omacr;</span>tautahi ahau e noho ana in<span class="macron">&amacr;</span>ianei</p>
+
+                <p>Ko Hay te wh<span class="macron">&amacr;</span>nau</p>
+
+                <p>Ko Waitaha te Whare W<span class="macron">&amacr;</span>nanga</p>
+
+                <p>Ko Jordan te ingoa</p>
+
+                <p>T<span class="macron">&emacr;</span>n<span class="macron">&amacr;</span> koutou, t<span class="macron">&emacr;</span>n<span class="macron">&amacr;</span> koutou, t<span class="macron">&emacr;</span>n<span class="macron">&amacr;</span> koutou katoa</p>
+            </article>
+
+            <hr class="row" style="height: 1px !important;" />
+
+            <aside class="dynamic-img col-12 mobile-only" style="background-image: url('img/about-pic.jpg'); min-height: 400px; background-position: 80% center; margin: 20px 0px;"></aside>
+
+            <p><br />Jordan Hay is a student with interests in engineering, electronics, maths, radio communications, computing, physics,  and web development.</p>
+
+            <p>He is studying Electrical Engineering at the University of Canterbury.</p>
+
+            <p>He also works as a Technology Student at <a href="https://alpineenergy.co.nz" target="_blank">Alpine Energy</a>.</p>
+
+        </article>
+
+        <aside class="dynamic-img col-4 desktop-only" style="background-image: url('img/about-pic.jpg'); min-height: 300px; background-position: center center;"></aside>
+    </div>
+
+    <!-- Achievements and Qualification -->
+    <div class="row">
+        <!-- Qualifications -->
+        <section class="col-6">
+            <h2>Qualifications</h2>
+            <ul>
+                <li><b>In Progress</b> Bachelor of Engineering (with Honours)</li>
+                <li>NCEA Levels 1, 2, & 3 endorsed with Excellence</li>
+            </ul>
+        </section>
+        <!-- Achievements -->
+        <section class="col-6">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Arihuko - <a href ="https://www.peetnz.org/" target="_blank">Power Engineering Excellence Trust</a> Undergraduate Scholarship Recipient 2022</li>
+                <li><a href="https://www.linetrustsc.org.nz/" target="_blank">LineTrust South Canterbury</a> Scholarship Recipient 2021, 2022</li>
+                <li>Mountainview High School Dux 2020</li>
+                <li>Mountainview High School Head Boy 2020</li>
+                <li>Mountainview High School Top Scholar 2016-2019</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Skill section -->
+    <section>
+
+        <h2>Skills</h2>
+
+        <p>Click an icon to read more.</p>
+
+        <article id="skills" class="col-12"></article>
+
+        <div id="skill-dialogue" class="col-12" onclick="closeSkill();">
+            <p id="skill-icon"></p><h2 id="skill-title"></h2>
+            <p id="skill-desc"></p>
+            <p>Click anywhere on this dialogue to dismiss it.</p>
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Most Recent Project Blog Post</h2>
+
+        <p>Click <a href="blog">here</a> to see more posts.</p>
+
+        <!-- Most recent blog posts -->
+        <article id="blogposts">
+
+        </article>
+
+    </section>
+
+</section>
+
+<!-- Contact -->
+<section id="contact-section">
+
+    <div class="anchor" id="contact"></div>
+
+    <h1>Contact</h1>
+
+    <!-- Formspree contact form -->
+    <form class="col-12" action="https://formspree.io/jordanhay0112@gmail.com" method="POST" id="contact-form">
+        <input type="text" name="Name" placeholder="Name" class="col-12" />
+        <input type="email" name="Reply to" placeholder="Email (e.g. example@domain.com)" class="col-12" />
+        <textarea id="message" type="text" name="Message" placeholder="Message" rows="5" class="col-12"></textarea>
+        <input type="submit" value="Submit" class="col-12" />
+    </form>
+
+</section>
+
+<!-- Links -->
+
+<div class="anchor" id="links"></div>
+
+<hr />
+
+<section id="links-section">
+
+    <a class="fab fa-github" href="https://github.com/JHay0112/" title="Github Profile" target="_blank"></a>
+    <a class="fab fa-instagram" href="https://instagram.com/jordanhayphotos/" title="Instagram Profile" target="_blank"></a>
+    <a class="fab fa-youtube" href="https://www.youtube.com/channel/UCGUPz4yMrsQyk95Z8ZwtMog" title="YouTube Channel" target="_blank"></a>
+    <a class="fab fa-linkedin" href="https://www.linkedin.com/in/JHay0112/" title="LinkedIn Profile" target="_blank"></a>
+    <a class="fas fa-map-marked-alt" href="https://www.openstreetmap.org/user/JHay0112" title="OpenStreetMap Profile" target="_blank"></a>
+
+</section>
