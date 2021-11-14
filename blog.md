@@ -10,11 +10,11 @@ layout: default
 {% for post in site.posts %}
 {% assign image_position = forloop.index | modulo: 2 %}
 <div class="post row" onclick="window.location='{{site.baseurl}}{{post.url}}'">
-    {% if image_position == 1 and post.img != nil %}
+    {% if image_position == 1 and post.thumbnail != nil %}
     <!-- Image Before -->
-    <aside class='col-4 dynamic-img desktop-only' style='background-image: url("{{site.baseurl}}{{post.img}}");'></aside>
+    <aside class='col-4 dynamic-img desktop-only' style='background-image: url("{{site.baseurl}}{{post.thumbnail}}");'></aside>
     {% endif %}
-    {% if post.img != nil %}
+    {% if post.thumbnail != nil %}
     <article class="col-8">
     {% else %}
     <article class="col-12">
@@ -24,13 +24,13 @@ layout: default
         <p>Published {{post.date}} by {{post.author}}</p>
         <p class="post-content">{{post.excerpt}}<a href="{{post.url}}">Read more</a></p>
     </article>
-    {% if post.img != nil %}
+    {% if post.thumbnail != nil %}
     <!-- Mobile Image -->
-    <aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url("{{site.baseurl}}{{post.img}}")'></aside>
+    <aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url("{{site.baseurl}}{{post.thumbnail}}")'></aside>
     {% endif %}
-    {% if image_position == 0 and post.img != nil%}
+    {% if image_position == 0 and post.thumbnail != nil%}
     <!-- Image After -->
-    <aside class='col-4 dynamic-img desktop-only' style='background-image: url("{{site.baseurl}}{{post.img}}");'></aside>
+    <aside class='col-4 dynamic-img desktop-only' style='background-image: url("{{site.baseurl}}{{post.thumbnail}}");'></aside>
     {% endif %}
     {% if forloop.last == false %}
     <!-- End HR -->
