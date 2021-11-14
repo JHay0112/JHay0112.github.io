@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- 
+    {{page.title}}
+    Author: {{page.author}}
+    Built: {{page.date}}
+
+    {{page.description}}
+ -->
+<html lang="en">
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="{{page.description}}" />
+        <meta name="keywords" content="jordan hay, jordan, hay, luke, timaru, south canterbury, canterbury, maths, engineering, science, physics, bees, mountainview high school, mountainview, mvhs, high school, bees, head boy, top scholar, scholar, student, robotics, github, arduino, 3d printing, computers, jordanhayphotos, jhay0112, jordanhay0112, timaru trails, contact, projects, programming, jordanhay.tk, jordanhay, jordanhay.com, jordanhay.net, nz, new zealand, uc, university, university of canterbury, christchurch, computer science, science, blog, projects" />
+        <meta name="author" content="{{page.author}}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Tab Data -->
+        <title>{{page.title}} - Jordan Hay</title>
+        <link rel="icon" href="img/favicon.ico" />
+        <link rel="icon" href="img/favicon.png" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    </head>
+    <body onload="menuSpy(); exitLoadingScreen(); runSlideShow()">
+
+        <!-- Loading Screen -->
+        <div id="loading-screen">
+            <img id="loading-logo" class="logo" src="img/logo.png" alt="Loading Logo" />
+            <p id="loading-text"><span></span><span></span><span></span></p>
+        </div>
+
+        <!-- IMG Header -->
+        <header id="pseudo-header" class="header"></header>
+        <header id="header" class="header">
+            <!-- Current Header IMG -->
+            <img id="header-logo" src="img/logo.png" />
+        </header>
+
+        <!-- Main Section -->
+        <main>
+            <!-- Nav Header -->
+            <header id="nav-header" class="row">
+                <!-- Nav -->
+                <nav class="col-12" id="nav">
+                    <ul class="col-12">
+                        <!-- Responsive Button -->
+                        <li><a href="javascript:void(0);" id="nav-responsive-button" onclick="toggleResponsiveNav()"><span class="fa fa-bars"></span></a></li>
+                        <!-- Items -->
+                        <li><a href="/#home">Home</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/blog">Project Blog</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Left Side Column -->
+            <div class="col-2 desktop-only"></div>
+
+            <!-- Main Content -->
+            <div class="col-8 content" id="content">
+                {{content}}
+
+                <!-- Footer & Copyright Statement -->
+                <footer class="col-12">
+                    <hr />
+                    <small><a href="https://github.com/JHay0112/JHay0112.github.io" target="_blank">Source code</a> MIT License &copy; 2021 Jordan Hay | Website Content &copy; 2017-2021 Jordan Hay</small>
+                </footer>
+            </div>
+
+            <!-- Right Side Column -->
+            <div class="col-2 desktop-only"></div>
+
+            <!-- Scripts -->
+            <!-- Loading/Skills/Nav -->
+            <script src="js/main.js"></script>
+            <!-- Menu Spy -->
+            <script src="js/menuspy.min.js"></script>
+            <!-- FontAwesome -->
+            <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
+    </body>
+</html>
