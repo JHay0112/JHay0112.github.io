@@ -1,8 +1,8 @@
 ---
-title: Blog
+title: Project Blog
 author: Jordan Hay
 date: 2021-11-14
-description: Jordan Hay's Blog.
+description: Jordan Hay's Project Blog.
 
 layout: default
 ---
@@ -12,8 +12,10 @@ layout: default
     <article class="col-12">
         <h2 class="post-title">{{post.title}}</h2>
         <p>Published {{post.date}} by {{post.author}}</p>
-        <p class="post-content">{{post.description}}</p>
+        <p class="post-content">{{post.excerpt}}</p>
+        {% if forloop.last == false %}
         <hr />
+        {% endif %}
     </article>
 </div>
 {% endfor %}
