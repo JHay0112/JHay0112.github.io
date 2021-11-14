@@ -21,10 +21,6 @@ var skills = [
     ["fas fa-brain", "Machine Learning", "Basic hobby experience with Tensorflow Machine Learning."]
 ]
 
-// Blog credentials
-const BLOGKEY = "AIzaSyCmRuFXPVAX0vj6nsGngoDZS2B1YC8ipso"; // NOTE: Limited to requests from https://jordanhay.com/
-const BLOGID = "1327285918509002434";
-
 // Functions
 // Sleep function
 function sleep(ms) {
