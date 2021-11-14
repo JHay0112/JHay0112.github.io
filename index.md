@@ -98,19 +98,6 @@ layout: default
 
     </section>
 
-    <section>
-
-        <h2>Most Recent Project Blog Post</h2>
-
-        <p>Click <a href="blog">here</a> to see more posts.</p>
-
-        <!-- Most recent blog posts -->
-        <article id="blogposts">
-
-        </article>
-
-    </section>
-
 </section>
 
 <!-- Contact -->
