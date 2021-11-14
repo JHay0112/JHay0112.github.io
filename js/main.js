@@ -165,7 +165,7 @@ async function runSlideShow() {
     var img = Math.floor(Math.random() * (imgNum)) + 1;
     var prevImg;
 
-    header.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
+    header.style.backgroundImage = "url(\"/img/header/".concat(img, ".jpg\")");
     pseudoHeader.style.animation = "";
     pseudoHeader.style.visibility = "hidden";
 
@@ -180,12 +180,12 @@ async function runSlideShow() {
 
         // img = imgNum; // For testing newest image
 
-        pseudoHeader.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
+        pseudoHeader.style.backgroundImage = "url(\"/img/header/".concat(img, ".jpg\")");
         await sleep(1000);
         pseudoHeader.style.visibility = "visible";
         pseudoHeader.style.animation = "slideshow-new-slide 1s ease";
         await sleep(1000);
-        header.style.backgroundImage = "url(\"img/header/".concat(img, ".jpg\")");
+        header.style.backgroundImage = "url(\"/img/header/".concat(img, ".jpg\")");
         pseudoHeader.style.animation = "";
         pseudoHeader.style.visibility = "hidden";
         await sleep(7000);
@@ -227,164 +227,6 @@ function toggleResponsiveNav() {
     }
 
     stickyNav();
-}
-
-// Load posts from feed
-function loadPosts(feed) {
-    // Get posts element
-    var post_el = document.getElementById("blogposts");
-    post_el.innerHTML = "";
-    // Make request
-    var xhttp = new XMLHttpRequest(); // New request
-    // Setup on ready
-    xhttp.onreadystatechange = function() {
-        // If valid state
-        if (this.readyState == 4 && this.status == 200) {
-            // Get posts data
-            var posts = JSON.parse(String(this.responseText)).items;
-            // Store generated html
-            var html = "";    
-            // Iterate through each post
-            try {
-                // Counter for alternating which side of the post the image is on.
-                var i = 0;
-                // Counter that allows imageless posts to still count
-                var no_images = 0;
-                posts.forEach(function(post) {
-
-                    var content = post.content;
-                    var image = true;
-
-                    // Find if image is included in post
-                    try {
-                        var post_img = new DOMParser().parseFromString(content, "text/html").getElementsByTagName("img")[0].src;
-                    } catch(error) {
-                        console.log(error);
-                        image = false;
-                    }
-
-                    // Strip HTML
-                    content = content.replace("</p>", "&nbsp;");
-                    var temp_div = document.createElement("div");
-                    temp_div.innerHTML = content;
-                    content = temp_div.textContent || temp_div.innerText || " ";
-
-                    // Trim content
-                    if(content.length > 400) {
-                        // Strip HTML
-                        content = content.substring(0, 400);
-                        content += "... <a href='/post?id=" + post.id + "'>Read more</a>";
-                    } else {
-                        content += " <a href='/post?id=" + post.id + "'>Read</a>"
-                    }
-
-                    html += "<div class='post row' onclick=\"window.location='/post?id=" + post.id + "'\">";
-
-                    // Switch order of image and post
-                    if(image && i % 2 == 1) {
-                        // Image first
-                        html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
-                    }
-
-                    if (image) {
-                        html += "<article class='col-8'>";
-                    } else {
-                        html += "<article class='col-12'>";
-                    }
-
-                    html += "<h2 class='post-title'>" + post.title + "</h2>";
-                    html += "<p>Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</p>";
-                    
-                    if (image) {
-                        html += "<aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url(" + post_img + ")'></aside>";
-                    }
-
-                    html += "<p class='post-content'>" + content + "</p>";
-
-                    html += "</article>";
-
-                    if(image && i % 2 == 0) {
-                        // Image second
-                        html += "<aside class='col-4 dynamic-img desktop-only' style='background-image: url(" + post_img + ");'></aside>";
-                    }
-
-                    html += "</div>";
-
-                    if(i + 1 + no_images != posts.length) {
-                        // Do not show for last post
-                        html += "<hr class='col-12' />"
-                    }
-
-                    if (image) {
-                        i += 1;
-                    } else {
-                        no_images += 1;
-                    }
-                }); 
-            } catch(error) {
-                html = "No Results";
-                console.log(error);
-            }
-
-            // Insert generated HTML
-            post_el.innerHTML = html;
-        } else {
-            post_el.innerHTML = '<p class="loading-text" style="position: relative; left: 50%"><span></span><span></span><span></span></p>';
-        }
-    };
-    // Send request
-    xhttp.open("GET", feed, true);
-    xhttp.send();
-}
-
-// Get a single post
-function loadPost(feed) {
-    // Get post element
-    var post_el = document.getElementById("post");
-    post_el.innerHTML = "";
-    // Make request
-    var xhttp = new XMLHttpRequest(); // New request
-    // Setup on ready
-    xhttp.onreadystatechange = function() {
-        // If valid state
-        if (this.readyState == 4 && this.status == 200) {
-            // Get post data
-            var post = JSON.parse(String(this.responseText));
-            // Store generated html
-            var html = "";    
-
-            try {
-                    html += "<h2>" + post.title + "</h2>";
-                    html += "Published " + new Date(post.published).toLocaleString("en-NZ") + " by " + post.author.displayName + "</h4>";
-
-                    html += "<p>" + post.content + "</p>";
-
-                    document.title = post.title + " - Jordan Hay";
-
-                    // For label in labels
-                    var lab_string = "";
-                    for(var i = 0; i < post.labels.length; i++) {
-                        lab_string += ", " + post.labels[i];
-                    }
-
-                    document.getElementsByTagName('meta')["keywords"].content += lab_string;
-            } catch(error) {
-                html = "Invalid post.";
-                document.title = "Invalid Post - Jordan Hay"
-                console.log(error);
-            }
-
-            // Insert generated HTML
-            post_el.innerHTML = html;
-
-            document.dispatchEvent(new Event("postLoaded"));
-        } else {
-            post_el.innerHTML = '<p class="loading-text" style="position: relative; left: 50%"><span></span><span></span><span></span></p>';
-        }
-    };
-    // Send request
-    xhttp.open("GET", feed, true);
-    xhttp.send();
 }
 
 function menuSpy() {
