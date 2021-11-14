@@ -22,7 +22,7 @@ layout: default
         <!-- Post: {{post.title}} -->
         <h2 class="post-title">{{post.title}}</h2>
         <p>Published {{post.date}} by {{post.author}}</p>
-        <p class="post-content">{{post.excerpt | strip_html}}<a href="{{post.url}}">Read more</a></p>
+        <p class="post-content">{{post.content | strip_html | truncate: 300}} <a href="{{post.url}}">Read more</a></p>
     </article>
     {% if post.thumbnail != nil %}
     <!-- Mobile Image -->
