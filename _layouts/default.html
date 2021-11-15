@@ -23,7 +23,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/styles.css" />
     </head>
-    <body onload="menuSpy(); exitLoadingScreen(); runSlideShow()">
+    <body onload="{{ site.onload | append: ' ' | append: page.onload }}">
 
         <!-- Loading Screen -->
         <div id="loading-screen">

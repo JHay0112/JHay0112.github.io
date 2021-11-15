@@ -4,6 +4,8 @@ author: Jordan Hay
 date: 2021-11-14
 description: The Home of Jordan Hay.
 
+onload: menuSpy(); loadSkills();
+
 layout: default
 ---
 
