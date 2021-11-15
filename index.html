@@ -9,6 +9,7 @@ onload: menuSpy(); loadSkills();
 layout: default
 ---
 
+<div id="home" class="anchor"></div>
 <div id="about" class="anchor"></div>
 
 <!-- About -->
@@ -100,6 +101,32 @@ layout: default
 
     </section>
 
+</section>
+
+<!-- Featured Post -->
+<section id="featured-post">
+    <h2>Featured Blog Post</h2>
+    <p>Click <a href="/blog/">here</a> to see more posts.</p>
+    {% for post in site.posts limit:1 %}
+    <div class="post row" onclick="window.location='{{site.baseurl}}{{post.url}}'">
+        {% if post.thumbnail != nil %}
+        <article class="col-8">
+        {% else %}
+        <article class="col-12">
+        {% endif %}
+            <!-- Post: {{post.title}} -->
+            <h2 class="post-title">{{post.title}}</h2>
+            <p>Published {{post.date}} by {{post.author}}</p>
+            <p class="post-content">{{post.content | strip_html | truncate: 300}} <a href="{{post.url}}">Read more</a></p>
+        </article>
+        {% if post.thumbnail != nil %}
+        <!-- Mobile Image -->
+        <aside class='col-12 dynamic-img mobile-only post-image' style='background-image: url("{{site.baseurl}}{{post.thumbnail}}")'></aside>
+        <!-- Image After -->
+        <aside class='col-4 dynamic-img desktop-only' style='background-image: url("{{site.baseurl}}{{post.thumbnail}}");'></aside>
+        {% endif %}
+    </div>
+    {% endfor %}
 </section>
 
 <!-- Contact -->

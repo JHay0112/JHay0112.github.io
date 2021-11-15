@@ -1,2 +1,3 @@
 title: Jordan Hay
 onload: exitLoadingScreen(); runSlideShow();
+permalink: /blog/:categories/:year/:month/:title/
