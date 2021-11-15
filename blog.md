@@ -32,9 +32,9 @@ layout: default
     <!-- Image After -->
     <aside class='col-4 dynamic-img desktop-only' style='background-image: url("{{site.baseurl}}{{post.thumbnail}}");'></aside>
     {% endif %}
-    {% if forloop.last == false %}
-    <!-- End HR -->
-    <hr />
-    {% endif %}
 </div>
+{% if forloop.last == false %}
+<!-- End HR -->
+<hr class="col-12" />
+{% endif %}
 {% endfor %}
