@@ -49,10 +49,10 @@
                         <!-- Responsive Button -->
                         <li><a href="javascript:void(0);" id="nav-responsive-button" onclick="toggleResponsiveNav()"><span class="fa fa-bars"></span></a></li>
                         <!-- Items -->
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li {% if page.layout == "Post" or page.title == "Project Blog"%}class="active"{% endif %}><a href="{{site.baseurl}}/blog">Project Blog</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{% if page.title != "Home" %}/{% endif %}#about">About</a></li>
+                        <li {% if page.layout == "post" or page.title == "Project Blog"%}class="active"{% endif %}><a href="{{site.baseurl}}/blog">Project Blog</a></li>
+                        <li><a href="{% if page.title != "Home" %}/{% endif %}#contact">Contact</a></li>
                     </ul>
                 </nav>
             </header>
