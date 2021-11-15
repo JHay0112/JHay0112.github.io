@@ -5,9 +5,10 @@ thumbnail: nil
 layout: default
 ---
 
-<h2>{{page.title}}</h2>
-
-{{content}}
+<article class="row" id="post">
+    <h2>{{page.title}}</h2>
+    {{content}}
+</article>
 
 <!-- Additional Stylesheets -->
 <!-- KATEX -->
@@ -35,5 +36,4 @@ layout: default
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMath()"></script>
 
 <!-- Highlight JS -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-<script>hljs.highlightAll()</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" onload="hljs.highlightAll()"></script>
