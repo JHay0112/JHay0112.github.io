@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="The blog of Jordan Hay." />
+        <meta name="keywords" content="jordan hay, jordan, hay, luke, timaru, south canterbury, canterbury, maths, engineering, science, physics, bees, mountainview high school, mountainview, mvhs, high school, bees, head boy, top scholar, scholar, student, robotics, github, arduino, 3d printing, computers, jordanhayphotos, jhay0112, jordanhay0112, timaru trails, contact, projects, programming, jordanhay.tk, jordanhay, jordanhay.com, jordanhay.net, nz, new zealand, uc, university, university of canterbury, christchurch, computer science, science, blog, projects" />
+        <meta name="author" content="Jordan Hay" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Tab Data -->
+        <title>View Post - Jordan Hay</title>
+        <link rel="icon" href="img/favicon.ico" />
+        <link rel="icon" href="img/favicon.png" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <!-- KATEX -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.css" integrity="sha384-cRxb1HsKSl8bTfU9fBcGsjktUfQa6w+fwvkYnU8XjFH4Qg8To1+/9OXv5iRzrKX4" crossorigin="anonymous">
+        <!-- Highlight JS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    </head>
+
+    <body onload="exitLoadingScreen(); runSlideShow(); loadPost(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts/${new URL(window.location).searchParams.get('id')}?key=${BLOGKEY}`);">
+
+        <div id="home" class="anchor"></div>
+
+        <div id="loading-screen">
+            <img id="loading-logo" class="logo" src="img/logo.png" alt="Loading Logo" />
+            <p id="loading-text"><span></span><span></span><span></span></p>
+        </div>
+
+        <header id="pseudo-header" class="header"></header>
+
+        <header id="header" class="header">
+            <img id="header-logo" src="img/logo.png" />
+        </header>
+
+        <main>
+
+            <header id="nav-header" class="row">
+
+                <nav class="col-12" id="nav">
+                    <ul class="col-12">
+                        <li><a href="javascript:void(0);" id="nav-responsive-button" onclick="toggleResponsiveNav()"><span class="fa fa-bars"></span></a></li>
+
+                        <li><a href="/#home" class="active">Home</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li class="active"><a href="/blog">Project Blog</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="col-2 desktop-only"></div>
+
+            <div class="col-8 content" id="content">
+
+                <section class="col-12" id="post">
+
+                </section>
+
+                <!-- begin wwww.htmlcommentbox.com -->
+                <div id="HCB_comment_box" class="col-12"></div>
+                <!-- end www.htmlcommentbox.com -->
+
+                <footer class="col-12">
+                    <hr />
+                    <small><a href="https://github.com/JHay0112/JHay0112.github.io" target="_blank">Source code</a> MIT License &copy; 2021 Jordan Hay | Website Content &copy; 2017-2021 Jordan Hay</small>
+                </footer>
+
+            </div>
+
+            <div class="col-2 desktop-only"></div>
+        </main>
+
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
+        <!-- HCB Comments -->
+        <script>
+            hcb_user = {
+                content_label: 'Enter your comment here',
+                submit : 'Submit',
+                no_comments_msg: 'No comments.',
+                add: 'Add your comment',
+                rss:'<img src="https://www.htmlcommentbox.com/static/images/feed.svg" class="hcb-icon" alt="rss"/> ',
+                prev_page:'Previous Page',
+                next_page:'Next Page',
+                anonymous:'Anonymous',
+                mod_label:'(Admin)',
+                ON_COMMENT: function() {hcb.make_comment_form()},
+                RELATIVE_DATES: false
+            };
+        </script>
+        <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%249gIAGZR7onbrd5lJhipcA%2F"+"&opts=16862&num=10&ts=1620524709179");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+        <!-- KATEX -->
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.js" integrity="sha384-ov99pRO2tAc0JuxTVzf63RHHeQTJ0CIawbDZFiFTzB07aqFZwEu2pz4uzqL+5OPG" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+        <script>
+            document.addEventListener("postLoaded", function() {
+                renderMathInElement(document.body, {
+                // customised options
+                // • auto-render specific keys, e.g.:
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\[', right: '\\]', display: true}
+                ],
+                // • rendering keys, e.g.:
+                throwOnError : false
+                });
+            });
+        </script>
+        <!-- Highlight JS -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script>
+            document.addEventListener("postLoaded", function() {
+                // Load only once post is loaded 
+                hljs.highlightAll();
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta Data -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="The blog of Jordan Hay." />
+        <meta name="keywords" content="jordan hay, jordan, hay, luke, timaru, south canterbury, canterbury, maths, engineering, science, physics, bees, mountainview high school, mountainview, mvhs, high school, bees, head boy, top scholar, scholar, student, robotics, github, arduino, 3d printing, computers, jordanhayphotos, jhay0112, jordanhay0112, timaru trails, contact, projects, programming, jordanhay.tk, jordanhay, jordanhay.com, jordanhay.net, nz, new zealand, uc, university, university of canterbury, christchurch, computer science, science, blog, projects" />
+        <meta name="author" content="Jordan Hay" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Tab Data -->
+        <title>Project Blog - Jordan Hay</title>
+        <link rel="icon" href="img/favicon.ico" />
+        <link rel="icon" href="img/favicon.png" />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    </head>
+
+    <body onload="exitLoadingScreen(); runSlideShow(); loadPosts(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts?key=${BLOGKEY}`);">
+
+        <div id="home" class="anchor"></div>
+
+        <div id="loading-screen">
+            <img id="loading-logo" class="logo" src="img/logo.png" alt="Loading Logo" />
+            <p id="loading-text"><span></span><span></span><span></span></p>
+        </div>
+
+        <header id="pseudo-header" class="header"></header>
+
+        <header id="header" class="header">
+            <img id="header-logo" src="img/logo.png" />
+        </header>
+
+        <main>
+
+            <header id="nav-header" class="row">
+
+                <nav class="col-12" id="nav">
+                    <ul class="col-12">
+                        <li><a href="javascript:void(0);" id="nav-responsive-button" onclick="toggleResponsiveNav()"><span class="fa fa-bars"></span></a></li>
+
+                        <li><a href="/#home" class="active">Home</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li class="active"><a href="/blog">Project Blog</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="col-2 desktop-only"></div>
+
+            <div class="col-8 content" id="content">
+
+                <aside class="row">
+                    <input type="text" id="search-bar" placeholder="Search..." class="col-10" />
+                    <input type="submit" class="col-2" style="height: 40px;" value="Search" onclick="loadPosts(`https://www.googleapis.com/blogger/v3/blogs/${BLOGID}/posts/search?q=${document.getElementById('search-bar').value}&key=${BLOGKEY}`)" />
+                </aside>
+
+                <section class="col-12" id="blogposts">
+
+                </section>
+
+                <footer class="col-12">
+                    <hr />
+                    <small><a href="https://github.com/JHay0112/JHay0112.github.io" target="_blank">Source code</a> MIT License &copy; 2021 Jordan Hay | Website Content &copy; 2017-2021 Jordan Hay</small>
+                </footer>
+
+            </div>
+
+            <div class="col-2 desktop-only"></div>
+        </main>
+
+        <!-- Scripts -->
+        <script src="js/main.js"></script>
+        <script src="https://kit.fontawesome.com/91769ccd18.js" crossorigin="anonymous"></script>
+    </body>
+</html>
