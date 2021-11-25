@@ -513,10 +513,9 @@ li:before {
 /* Dynamic Images */
 
 .dynamic-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: RGBA(0, 0, 0, 0);
+    object-fit: cover;
+    height: 100%;
+    min-height: 300px;
 }
 
 /* Katex */
