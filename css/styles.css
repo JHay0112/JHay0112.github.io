@@ -513,6 +513,7 @@ li:before {
 /* Dynamic Images */
 
 .dynamic-img {
+    object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -674,7 +675,7 @@ input[type=submit]:hover {
     margin-bottom: 3px;
 }
 
-#blogposts .post article:hover, #blogposts .post aside:hover {
+#blogposts .post article:hover, #blogposts .post img:hover {
     cursor: pointer;
 }
 
