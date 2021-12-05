@@ -675,6 +675,10 @@ input[type=submit]:hover {
     margin-bottom: 3px;
 }
 
+.post-subtitle {
+    opacity: 0.7;
+}
+
 #blogposts .post article:hover, #blogposts .post aside:hover {
     cursor: pointer;
 }

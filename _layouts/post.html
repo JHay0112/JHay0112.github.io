@@ -7,6 +7,9 @@ layout: default
 
 <article id="post">
     <h2>{{page.title}}</h2>
+    {% if page.subtitle != nil %}
+    <h4 class="post-subtitle">{{page.subtitle}}</h4>
+    {% endif %}
     <p>Published {{page.date | date: "%Y/%m/%d"}} by {{page.author}}</p>
     {{content}}
 </article>

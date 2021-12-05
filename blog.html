@@ -22,6 +22,9 @@ layout: default
         {% endif %}
             <!-- Post: {{post.title}} -->
             <h2 class="post-title">{{post.title}}</h2>
+            {% if post.subtitle != nil %}
+            <h4 class="post-subtitle">{{post.subtitle}}</h4>
+            {% endif %}
             <p>Published {{post.date | date: "%Y/%m/%d"}} by {{post.author}}</p>
             <p class="post-content">{{post.content | strip_html | truncate: 300}} <a href="{{post.url}}">Read more</a></p>
         </article>
