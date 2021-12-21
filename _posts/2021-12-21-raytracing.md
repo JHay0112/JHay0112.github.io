@@ -169,5 +169,4 @@ I'm not sure where the future of this project is headed, but I do have a list of
     <li>Light emmiting objects.</li>
     <li>Positionable cameras.</li>
     <li>Threading.</li>
-    <li></li>
 </ul>
