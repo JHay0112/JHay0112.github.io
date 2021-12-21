@@ -170,3 +170,10 @@ I'm not sure where the future of this project is headed, but I do have a list of
     <li>Positionable cameras.</li>
     <li>Threading.</li>
 </ul>
+
+As an added bonus for making it to the very end of the post, a final raytraced image (Figure 4), this one from my Rust raytracer.
+
+<figure>
+    <img src="{{site.baseurl}}/img/posts/2021/12/raytracing-rust-first.png" />
+    <figcaption>Figure 4 - Rust Raytraced Balls.</figcaption>
+</figure>
