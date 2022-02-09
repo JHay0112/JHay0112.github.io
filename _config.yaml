@@ -1,4 +1,7 @@
 title: Jordan Hay
+url: https://jordanhay.com
 onload: exitLoadingScreen(); runSlideShow();
 permalink: /blog/:categories/:year/:month/:title
 timezone: Pacific/Auckland
+plugins:
+  - jekyll-feed
