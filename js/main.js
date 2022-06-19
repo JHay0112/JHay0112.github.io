@@ -8,17 +8,14 @@ var nav = document.getElementById("nav"); // Get the nav
 var sticky = nav.offsetTop + 300; // Get the offset position of the nav
 var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
 var skills = [
-    ["fas fa-microchip", "Arduino/Robotics", "Hobby experience with electronics. Have been using Arduino for microcontrol, automation, and robotics since late 2018."],
-    ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications as well as a gift software-defined radio."],
-    ["fas fa-cube", "3D Printing/CAD", "Hobby experience with CAD, 3D Printing, and 3D Printing maintainance since 2018."],
+    ["fas fa-microchip", "Arduino/Robotics", "Hobby and University experience with electronics. Primarily Arduino for microcontrol, automation, and robotics since late 2018."],
+    ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications and hobby software-defined radio."],
+    ["fas fa-cube", "3D Printing/CAD", "Hobby and University experience with CAD, 3D Printing, and 3D Printing maintenance since 2018."],
     ["fab fa-python", "Python", "Both hobby and university first-year experience with Python for function, object-oriented, and GUI programming."],
-    ["fab fa-php", "PHP", "PHP for server-side behaviour of websites and databases since early 2018."],
-    ["fas fa-database", "SQL", "Hobby and high-school experience with MySQL and SQLite databases since early 2018."],
-    ["fab fa-git-alt", "Git", "Git is a version control system used to manage code. Jordan has been using Git since late 2017."],
+    ["fab fa-git-alt", "Git", "Proficient in Git for version control and project management."],
     ["fab fa-html5", "HTML5", "Proficient in HTML5 for website structure."],
     ["fab fa-css3", "CSS3", "CSS3 for mobile-friendly website design."],
-    ["fab fa-js", "JavaScript", "Hobby experience with JS for website browser programming."],
-    ["fas fa-brain", "Machine Learning", "Basic hobby experience with Tensorflow Machine Learning."]
+    ["fab fa-js", "JavaScript", "Hobby experience with JS for website browser programming."]
 ]
 
 // Functions
