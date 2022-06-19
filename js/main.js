@@ -1,13 +1,16 @@
 /*
-    js/main.js
-    Author: Jordan Hay
+    Javascript for https://jordanhay.com/
+
+    Runs interactive portions and triggers event-based animations.
 */
 
 // Globals
-var nav = document.getElementById("nav"); // Get the nav
-var sticky = nav.offsetTop + 300; // Get the offset position of the nav
-var coll = document.getElementsByClassName("read-more-button"); // Collapsible elements
-var skills = [
+
+/**
+ * Skills with icon, short description, and long description.
+ * Global as 
+ */
+const skills = [
     ["fas fa-microchip", "Arduino/Robotics", "Hobby and University experience with electronics. Primarily Arduino for microcontrol, automation, and robotics since late 2018."],
     ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications and hobby software-defined radio."],
     ["fas fa-cube", "3D Printing/CAD", "Hobby and University experience with CAD, 3D Printing, and 3D Printing maintenance since 2018."],
@@ -19,35 +22,45 @@ var skills = [
 ]
 
 // Functions
-// Sleep function
+
+/**
+ * Produces a delay for the specified number of milliseconds.
+ * Intended to aid timing JS-based animations.
+ * 
+ * @param {int} ms The amount of milliseconds to delay for.
+ * @returns {Promise} 
+ */
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Exit loading screen once page has loaded
+/**
+ * Handles the exit of the loading screen once page has fully loaded.
+ * This implementation is (currently) NOT non-JS browser friendly.
+ */
 async function exitLoadingScreen() {
     
-    var loadingScreen = document.getElementById("loading-screen"); // Get loading screen
-    var loadingText = document.getElementById("loading-text"); // Get loading spinner
-    var loadingLogo = document.getElementById("loading-logo"); // Get loading logo
+    const loadingScreen = document.getElementById("loading-screen");
+    const loadingText = document.getElementById("loading-text");
+    const loadingLogo = document.getElementById("loading-logo");
 
     var refferer = "";
 
-    // Try to get the hostname of the refferer
+    // Checking the refferer
+    // This is so the animation can be sped up/removed for 
+
     try {
         refferer = (new URL(document.referrer)).hostname
     } catch {
         refferer = ""
     }
 
-    // Check if not from internal refferer
     if(refferer != "jordanhay.com") {
-        loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease"; // Fade out
-        loadingText.style.animation = "fade-out 2s forwards"; // Fade out
+        loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease";
+        loadingText.style.animation = "fade-out 2s forwards";
         loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
         await sleep(1200);
     } else {
-        // If from self, delete all of these instantly
         loadingLogo.remove();
         loadingText.remove();
         loadingScreen.remove();
@@ -57,53 +70,56 @@ async function exitLoadingScreen() {
     scrollFunction();
 }
 
-// Runs when the user scrolls, used in stickynavs etc
+/**
+ * Set of actions to be run whenever a user scrolls down the page.
+ * Currently only handles the nav, however this implementation ensures extensibility.
+ */
 function scrollFunction() {
     stickyNav();
 }
 
-// Load skills for About
+/**
+ * Loads in skills from skills array in skill section.
+ */
 function loadSkills() {
 
-    var skillEl = document.getElementById("skills");
+    const skillEl = document.getElementById("skills");
 
     for (var i = 0; i < skills.length; i++) {
 
-        var skill = skills[i];
-        var skillIco = document.createElement("div");
+        const skill = skills[i];
+        const skillIco = document.createElement("div");
 
-        // Skill icon things
         skillIco.className = skill[0] + " skill";
         skillIco.id = "skill-ico-" + i;
         skillIco.title = skill[1];
 
-        // Append new skill icon
         skillEl.appendChild(skillIco)
 
-        // Add on click
+        // Add an on click so that skills can be expanded, see openSkill()
         document.getElementById("skill-ico-" + i).setAttribute("onclick", "openSkill(" + i + ")")
     }
 }
 
-// Open further information on the skill as chosen by param skill Index
+/**
+ * Runs when a skill is clicked, loads the long description of the skill.
+ * 
+ * @param {int} skillIndex Index of the skill to load.
+ */
 function openSkill(skillIndex) {
 
-    var skill = skills[skillIndex];
-    var skillDialogue = document.getElementById("skill-dialogue");
+    const skill = skills[skillIndex];
+    const skillDialogue = document.getElementById("skill-dialogue");
 
-    // Add new things to skillDialogue
     document.getElementById("skill-icon").className = skill[0] + " ";
     document.getElementById("skill-title").textContent = skill[1];
     document.getElementById("skill-desc").innerHTML = skill[2];
 
-    // Expand skill dialogue
     skillDialogue.style.animation = "fade-in 0.3s ease forwards";
     skillDialogue.style.maxHeight = skillDialogue.scrollHeight + "px";
 
-    // For each skill icon
     for (var i = 0; i < skills.length; i++) {
         var skillIcon = document.getElementById("skill-ico-" + i);
-        // Except for the active one
         if(i != skillIndex) {
             // Make small and grey
             skillIcon.style.scale = "0.9";
@@ -116,25 +132,30 @@ function openSkill(skillIndex) {
     }
 }
 
-// Close further information on skill
+/**
+ * Runs when a skill is closed, resets back to the normal dialogue.
+ */
 function closeSkill() {
 
-    var skillDialogue = document.getElementById("skill-dialogue");
+    const skillDialogue = document.getElementById("skill-dialogue");
     
-    // Collapse skillDialogue
     skillDialogue.style.maxHeight = "0px";
     skillDialogue.style.animation = "fade-out 0.2s ease forwards";
 
-    // For each skill icon
     for (var i = skills.length - 1; i >= 0; i--) {
-        var skillIcon = document.getElementById("skill-ico-" + i);
+        const skillIcon = document.getElementById("skill-ico-" + i);
         // Make big and bold
         skillIcon.style.scale = "1";
         skillIcon.style.opacity = "1";
     }
 }
 
-// Behold! Bees
+/**
+ * Produces a bee that flies across the screen.
+ * Runs on any keypress, although only does anything when 'B' is pressed.
+ * 
+ * @param {Event} e Information about the event that called it.
+ */
 async function newBee(e) {
     if ((e.keyCode || e.which) == 66) {
         var bee = document.createElement("img");
@@ -147,13 +168,15 @@ async function newBee(e) {
     }
 }
 
-// Slideshow
+/**
+ * Sets up and runs the slideshow at the top of the page.
+ */
 async function runSlideShow() {
 
-    var imgNum = 11; // Amount of images in
+    const imgNum = 11;
 
-    header = document.getElementById("header");
-    pseudoHeader = document.getElementById("pseudo-header");
+    const header = document.getElementById("header");
+    const pseudoHeader = document.getElementById("pseudo-header");
 
     var img = Math.floor(Math.random() * (imgNum)) + 1;
     var prevImg;
@@ -186,10 +209,15 @@ async function runSlideShow() {
 
 }
 
-// Add the sticky class to the nav when you reach its scroll position. Remove "sticky" when you leave the scroll position
+/**
+ * Sticks/unsticks that nav from the ceiling as page scrolls.
+ * Called on scroll by scrollFunction.
+ */
 function stickyNav() {
 
-    content = document.getElementById("content");
+    const nav = document.getElementById("nav");
+    const sticky = nav.offsetTop + 300;
+    const content = document.getElementById("content");
     content.style.position = "relative";
 
     if (window.pageYOffset >= sticky) {
@@ -204,10 +232,14 @@ function stickyNav() {
     }
 }
 
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+/**
+ * Controls responsive nav for mobile phones.
+ * Adds or removes the responsive tag as needed.
+ */
 function toggleResponsiveNav() {
 
-    navAnchors = document.querySelectorAll(".anchor");
+    const nav = document.getElementById("nav");
+    const navAnchors = document.querySelectorAll(".anchor");
 
     if (!nav.classList.contains("responsive")) {
         nav.classList.add("responsive");
@@ -222,12 +254,17 @@ function toggleResponsiveNav() {
     stickyNav();
 }
 
+/**
+ * Sets up menu spy.
+ * Menu Spy handles changing active nav link based on scroll position.
+ */
 function menuSpy() {
-    // Initiliase a menu spy instance
     new MenuSpy(document.querySelector("#nav-header"));
 }
 
-// Event listeners (or similar)
+// Main
+
+// Setup event listeners
 window.onscroll = function() {scrollFunction()}; // Run the scroll function anytime the user scrolls
 document.body.onkeydown = function(e) { newBee(e) };
 document.addEventListener("copy", (event) => {
@@ -236,14 +273,15 @@ document.addEventListener("copy", (event) => {
     event.preventDefault();
 });
 
-// Read more
+// Setup read more sections
+const coll = document.getElementsByClassName("read-more-button");
 for (var i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", async function() {
         this.classList.toggle("active");
-        var content = this.previousElementSibling;
-        var subContent = content.getElementsByClassName("read-more");
-        var subContentHeight = 0;
-        var contentHeight = content.scrollHeight;
+        const content = this.previousElementSibling;
+        const subContent = content.getElementsByClassName("read-more");
+        const subContentHeight = 0;
+        const contentHeight = content.scrollHeight;
 
         for (var i = 0; i < subContent.length; i++) {
             subContentHeight += subContent[i].scrollHeight;
