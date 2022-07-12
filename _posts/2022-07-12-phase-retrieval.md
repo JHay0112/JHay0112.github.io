@@ -11,7 +11,7 @@ recommend: true
 thumbnail: /img/posts/2022/07/phase_retrieval.jpg
 ---
 
-When light is bent by an object it produces a pattern that can be determined by the discrete Fourier transform of the scattering density of the object (in the direction the light approached from)[^2]. Simply put, how bright an object appears determines can be used to predict how light will be bent around the object --- diffracted by the object. The 'brightness' of the diffraction pattern (Figure 1) that we can observe behind the object is determined wholly by the Fourier modulus (the magnitude of the Fourier transform of the object). Diffraction also impacts the phase of the resultant wave. However, measuring the phase of the diffracted wave is a far trickier process than measuring the magnitude.
+When light is bent by an object it produces a pattern that can be determined by the discrete Fourier transform of the scattering density of the object (in the direction the light approached from)[^2]. Simply put, how bright an object appears can be used to predict how light will be bent around the object --- diffracted by the object. The 'brightness' of the diffraction pattern (Figure 1) that we can observe behind the object is determined wholly by the Fourier modulus (the magnitude of the Fourier transform of the object). Diffraction also impacts the phase of the resultant wave. However, measuring the phase of the diffracted wave is a far trickier process than measuring the magnitude.
 
 <figure>
     <img src="/img/posts/2022/07/phase_retrieval.jpg" />
@@ -50,7 +50,7 @@ In Python[^3]
             The image with minimal modification, 
             passing it to fourier_modulus should match the target modulus.
     '''
-    fimage = fftn(image.copy())
+    fimage = fftn(image)
     fimage_modulus = np.abs(fimage)
     fimage = (fimage/fimage_modulus) * target_modulus
     return ifftn(fimage)</code></pre>
@@ -78,12 +78,13 @@ With two minimal modification projections defined we can begin constructing an i
 The difference map $D(x)$ is defined
 
 <p>$$\begin{align*}
-D(x) &= x + \beta\left[P_F\circ f_S(x) - P_S\circ f_P(x)\right]\\
-f_F(x) &= P_F(x) - \frac{P_F(x) - x}{\beta}\\
-f_S(x) &= P_S(x) + \frac{P_S(x) - x}{\beta}
+D(x) &= x + \beta\left[P_F\circ f_S(x) - P_S\circ f_F(x)\right]\\
+f_F(x) &= (1 + \gamma_F)P_F(x) - \gamma_F x\\
+f_S(x) &= (1 + \gamma_S)P_S(x) - \gamma_S x
 \end{align*}$$</p>
 
 Where $\beta$ is a constant that interpolates between the two projections and $\circ$ indicates function composition.
+$\gamma_F$ and $\gamma_S$ are further constants typically set to $\gamma_F = 1/\beta, \gamma_S = -1/\beta$.
 
 Implementing this in Python[^3]
 
@@ -120,7 +121,7 @@ Being able to estimate the original image with only the diffraction magnitude is
 
 ### Acknowledgements
 
-I am indebted to Joe Chen for introducing me to and teaching me about these topics. Without his guidance and direction I could never have learnt to produce something like this.
+I am indebted to Joe Chen for introducing me to and teaching me about these topics. Without his guidance on the subject I doubt I would have ever learnt anything about it. Thank you Joe for teaching me something new :)
 
 ### Footnotes
 
