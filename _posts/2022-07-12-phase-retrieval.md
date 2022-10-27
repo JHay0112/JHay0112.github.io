@@ -129,4 +129,4 @@ I am indebted to Joe Chen for introducing me to and teaching me about these topi
 
 [^2]: V. Elser, "The Mermin Fixed Point," Foundations of Physics, vol. 33, (11), pp. 1691, 2003.
 
-[^3]: <a href="https://github.com/JHay0112/phase_retrieval" target="_blank">https://github.com/JHay0112/phase_retrieval</a>
+[^3]: <a href="https://github.com/JHay0112/phase-retrieval" target="_blank">https://github.com/JHay0112/phase-retrieval</a>
