@@ -8,15 +8,14 @@
  * Skills with icon, short description, and long description.
  * Global as 
  */
- const skills = [
-    ["fas fa-microchip", "Arduino/Robotics", "Hobby and University experience with electronics. Primarily Arduino for microcontrol, automation, and robotics since late 2018."],
-    ["fas fa-broadcast-tower", "Radio Communications", "Basic experience in radio communications with Ashley Communications and hobby software-defined radio."],
-    ["fas fa-cube", "3D Printing/CAD", "Hobby and University experience with CAD, 3D Printing, and 3D Printing maintenance since 2018."],
+const skills = [
+    ["fas fa-microchip", "Electronics", "Hobby and university experience with electronics. Familiar with analogue and embedded systems with specific experience in C for AVR devices. Experience with simpler electronic and Arduino-based systems since 2018."],
+    ["fas fa-broadcast-tower", "Communications", "Basic experience in radio communications with Ashley Communications and hobby software-defined radio. University experience with principles of data transmission in physical mediums (i.e. TDMA/FDMA, carrier sensing, and collision resolution)."],
+    ["fas fa-ethernet", "Computer Networking", "University experience with computer networking (i.e. routing algorithms, error correction, and reliable data transfer)."],
+    ["fas fa-cube", "3D Printing/CAD", "Hobby and university experience with CAD, 3D Printing, and 3D Printer maintenance since 2018."],
     ["fab fa-python", "Python", "Both hobby and university first-year experience with Python for function, object-oriented, and GUI programming."],
     ["fab fa-git-alt", "Git", "Proficient in Git for version control and project management."],
-    ["fab fa-html5", "HTML5", "Proficient in HTML5 for website structure."],
-    ["fab fa-css3", "CSS3", "CSS3 for mobile-friendly website design."],
-    ["fab fa-js", "JavaScript", "Hobby experience with JS for website browser programming."]
+    ["fab fa-html5", "Web Design", "Proficient in HTML5 for website structure, CSS3 for mobile-friendly design, and JS for interactivity."]
 ]
 
 // Functions
