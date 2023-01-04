@@ -1,6 +1,6 @@
 title: Jordan Hay
 url: https://jordanhay.com
-onload: exitLoadingScreen(); runSlideShow();
+onload: runSlideShow();
 permalink: /blog/:categories/:year/:month/:title
 timezone: Pacific/Auckland
 plugins:

@@ -18,42 +18,6 @@ function sleep(ms) {
 }
 
 /**
- * Handles the exit of the loading screen once page has fully loaded.
- * This implementation is (currently) NOT non-JS browser friendly.
- */
-async function exitLoadingScreen() {
-    
-    const loadingScreen = document.getElementById("loading-screen");
-    const loadingText = document.getElementById("loading-text");
-    const loadingLogo = document.getElementById("loading-logo");
-
-    var refferer = "";
-
-    // Checking the refferer
-    // This is so the animation can be sped up/removed for 
-
-    try {
-        refferer = (new URL(document.referrer)).hostname
-    } catch {
-        refferer = ""
-    }
-
-    if(refferer != "jordanhay.com") {
-        loadingLogo.style.animation = "fade-out 0.5s 1s forwards ease";
-        loadingText.style.animation = "fade-out 2s forwards";
-        loadingScreen.style.animation = "slide-out-bottom 1.3s 1.5s forwards ease-out";
-        await sleep(1200);
-    } else {
-        loadingLogo.remove();
-        loadingText.remove();
-        loadingScreen.remove();
-    }
-    
-    document.body.style.overflowY = "auto";
-    scrollFunction();
-}
-
-/**
  * Set of actions to be run whenever a user scrolls down the page.
  * Currently only handles the nav, however this implementation ensures extensibility.
  */
