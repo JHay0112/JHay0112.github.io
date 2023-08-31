@@ -1,7 +1,0 @@
-title: Jordan Hay
-url: https://jordanhay.com
-onload: runSlideShow();
-permalink: /blog/:categories/:year/:month/:title
-timezone: Pacific/Auckland
-plugins:
-  - jekyll-feed
