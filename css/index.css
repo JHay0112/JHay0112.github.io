@@ -1,6 +1,49 @@
-#introduction img {
+#inline-profile {
+    display: block;
+
     width: 100%;
+
+    max-height: 500px;
 
     margin-top: 10px;
     margin-bottom: 10px;
+
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+#aside-profile {
+    display: none;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    main {
+        display: flexbox;
+    }
+
+    #inline-profile {
+        display: none;
+    }
+
+    #aside-profile {
+        display: block;
+        
+        float: right;
+
+        width: 30%;
+
+        padding-left: 10px;
+
+        object-fit: cover;
+    }
+
+
+    #pepeha, #introduction {
+        float: left;
+
+        width: 70%;
+    }
+
 }

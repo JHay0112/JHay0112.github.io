@@ -26,14 +26,44 @@ main:last-child {
 }
 
 
+header {
+    margin-top: 20px;
+}
+
 header img {
     width: 100%;
     height: auto;
+    
+    max-height: 300px;
 
     margin-bottom: 15px;
+
+    object-fit: cover;
 }
 
 
 footer {
+    display: block;
+
+    width: 100%;
+
     text-align: center;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    main {
+        max-width: 600px;
+
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    main {
+        max-width: 1000px;
+    }
 }
