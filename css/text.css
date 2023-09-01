@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 3px;
+
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 18pt;
+}
+
+h2 {
+    font-size: 15pt;
+}
+
+h3 {
+    font-size: 14pt;
+}
+
+h4 {
+    font-size: 13pt;
+}
+
+h5 {
+    font-size: 12pt;
+}
+
+h6 {
+    font-size: 11pt;
+}

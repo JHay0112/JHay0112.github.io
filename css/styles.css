@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+@import "text.css";
+
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+main {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+main > * {
+    margin-bottom: 20px;
+}
+
+main:last-child {
+    margin-bottom: 0px;
+}
+
+
+header {
+
+}
+
+header img {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: 15px;
+}
+
+
+#pepeha {
+}
+
+
+footer {
+    text-align: center;
+}
