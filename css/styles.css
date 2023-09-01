@@ -30,15 +30,25 @@ header {
     margin-top: 20px;
 }
 
-header img {
+header img#banner {
     width: 100%;
     height: auto;
     
     max-height: 300px;
 
-    margin-bottom: 15px;
-
     object-fit: cover;
+}
+
+header img#logo {
+    position: relative; 
+    top: -125px;
+    left: 5px;
+
+    height: 100px;
+
+    margin-bottom: -100px;
+    
+    filter: invert(1);
 }
 
 
