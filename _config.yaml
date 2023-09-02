@@ -7,5 +7,7 @@ timezone: Pacific/Auckland
 collections:
   articles:
     output: true
+    permalink: /:collection/:year/:month/:title
   projects:
     output: true
+    permalink: /:collection/:name
