@@ -51,6 +51,18 @@ header img#logo {
     filter: invert(1);
 }
 
+header nav a {
+    display: inline-block;
+
+    padding-right: 10px;
+
+    text-decoration: none;
+}
+
+header nav a.active {
+    text-decoration: underline;
+}
+
 
 footer {
     display: block;
