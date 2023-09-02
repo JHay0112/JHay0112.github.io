@@ -2,9 +2,11 @@
 title: Projects
 ---
 
+<link rel="stylesheet" type="text/css" href="/css/projects.css" />
+
+{% for project in site.projects %}
 <article class="project">
-    <p>
-        Apricity is a personal project developing an internet-enabled sunrise lamp.
-    </p>
-    <a href="/projects/apricity">Read</a>
+    {{project.content | strip_html | truncate: 300}}
+    <a href="{{project.url}}">Read</a>
 </article>
+{% endfor %}

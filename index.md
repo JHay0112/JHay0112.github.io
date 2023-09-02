@@ -2,6 +2,9 @@
 title: Haere mai!
 ---
 
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/bee.css" />
+
 <section id="pepeha">
     <p>I tipu ake ahau ki te tāwharau o Tarahaoa</p>
     <p>Ko Waitaki te awa</p>
@@ -41,3 +44,5 @@ title: Haere mai!
         things on my <a href="https://github.com/JHay0112">Github</a>.
     </p>
 </section>
+
+<script src="js/bee.js"></script>
