@@ -1,0 +1,11 @@
+
+title: Jordan Hay
+url: https://jordanhay.com
+
+timezone: Pacific/Auckland
+
+collections:
+  articles:
+    output: true
+  projects:
+    output: true

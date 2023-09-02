@@ -6,12 +6,13 @@
         <meta name="author" content="J. L. Hay" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Home - Jordan Hay</title>
-        <link rel="icon" href="/img/favicon.ico" />
-        <link rel="icon" href="/img/favicon.png" />
+        <title>{{page.title}} - {{site.title}}</title>
+        <link rel="icon" href="img/favicon.ico" />
+        <link rel="icon" href="img/favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="/css/projects.css"
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/bee.css" />
     </head>
     <body>
 
@@ -21,26 +22,23 @@
                 <img id="banner" src="img/header.jpg" />
                 <img id="logo" src="img/logo.png" />
 
-                <h1>Projects</h1>
+                <h1>{{page.title}}</h1>
 
                 <nav>
                     <a href="/">Home</a>
-                    <a href="/projects" class="active">Projects</a>
+                    <a href="/projects">Projects</a>
                     <a href="/articles">Articles</a>
                 </nav>
             </header>
 
-            <article class="project">
-                <p>
-                    Apricity is a personal project developing an internet-enabled sunrise lamp.
-                </p>
-                <a href="/projects/apricity">Read</a>
-            </article>
+            {{content}}
 
             <footer>
                 <p>Content: &copy; J. L. Hay 2023</p>
                 <p>Source Code: MIT License</p>
             </footer>
         </main>
+
+        <script src="js/bee.js"></script>
     </body>
 </html>
