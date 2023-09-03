@@ -68,6 +68,7 @@ header nav a.active {
 
 footer {
     display: block;
+    clear: both;
 
     width: 100%;
 
