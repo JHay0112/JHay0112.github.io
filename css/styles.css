@@ -53,16 +53,12 @@ header img#logo {
     height: 100px;
 
     margin-bottom: -100px;
-    
-    filter: invert(1);
 }
 
 header nav a {
     display: inline-block;
 
     padding-right: 10px;
-
-    text-decoration: none;
 }
 
 header nav a.active {
