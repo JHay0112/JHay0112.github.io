@@ -8,6 +8,22 @@ collections:
   articles:
     output: true
     permalink: /:collection/:year/:month/:title
+    sort_by: date
   projects:
     output: true
     permalink: /:collection/:name
+    sort_by: date
+
+defaults:
+  -
+    scope:
+      path: "articles"
+      type: "articles"
+    values:
+      layout: "article" 
+  - 
+    scope:
+      path: "projects"
+      type: "projects"
+    values:
+      layout: "project"
