@@ -10,7 +10,7 @@ figure {
     overflow-x: scroll;
 }
 
-figure img {
+figure > :not(figcaption) {
     display: block;
 
     max-width: 500px;
