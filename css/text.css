@@ -4,6 +4,10 @@
     color: #252525;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 p {
     margin-top: 5px;
     margin-bottom: 5px;
