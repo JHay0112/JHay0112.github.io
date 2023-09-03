@@ -1,16 +1,5 @@
 ---
-layout: post
 title: How I made a pyramid (and some balls) with C++
-subtitle: "And why I'm doing it again in Rust"
-author: Jordan Hay
-tags:
-- Github
-- C++
-- Raytracing
-- Programming
-- Graphics
-- Rust
-recommend: true
 thumbnail: /img/posts/2021/12/raytracing-pyramid.png
 ---
 
