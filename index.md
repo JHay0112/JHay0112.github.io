@@ -38,10 +38,9 @@ title: Haere mai!
         practical electronics and information technologies through my experience in these roles.
     </p>
     <p>
-        I have a list of <a href="/projects">my projects</a>. I also occasionally write 
-        <a href="/articles">articles</a>. If you're keen to learn a bit more about what I have done 
-        professionally, you may view a simplified version of my <a href="/cv">CV</a>. I also put most 
-        things on my <a href="https://github.com/JHay0112">Github</a>.
+        I have a list of <a href="/projects">my projects</a> and I also occasionally write 
+        <a href="/articles">articles</a>. I also put most things on my 
+        <a href="https://github.com/JHay0112">Github</a>.
     </p>
 </section>
 
