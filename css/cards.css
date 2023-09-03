@@ -26,13 +26,13 @@
         width: 50%;
     }
 
-    .card:nth-child(even) {
+    .card:nth-child(odd) {
         float: right;
 
         border-left: 10px solid white;
     }
 
-    .card:nth-child(odd) {
+    .card:nth-child(even) {
         float: left;
 
         border-right: 10px solid white;
