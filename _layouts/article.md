@@ -2,9 +2,13 @@
 layout: default
 ---
 
+<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/articles.css" />
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.css" integrity="sha384-cRxb1HsKSl8bTfU9fBcGsjktUfQa6w+fwvkYnU8XjFH4Qg8To1+/9OXv5iRzrKX4" crossorigin="anonymous">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+
+<h5>Published {{page.date | date: "%Y/%m/%d"}}</h5>
 
 {{content}}
 
