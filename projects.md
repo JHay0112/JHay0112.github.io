@@ -2,11 +2,9 @@
 title: Projects
 ---
 
-<link rel="stylesheet" type="text/css" href="/css/projects.css" />
-
 {% for project in site.projects %}
-<article class="project" onclick="location.href='{{project.url}}'">
-    <h3>{{project.title}}</h3>
-    <p>{{project.content | strip_html | truncate: 300}}</p>
+<article class="card" onclick="location.href='{{project.url}}'" style="background-image: url('{{project.thumbnail}}')">
+    <h2>{{project.title}}</h2>
+    <p>{{project.content | strip_html | truncate: 300}} <a href="{{project.url}}">read more</a></p>
 </article>
 {% endfor %}

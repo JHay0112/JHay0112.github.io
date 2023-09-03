@@ -1,0 +1,40 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 250px;
+
+    padding: 10px;
+
+    background-color: #454545;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card * {
+    color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .card {
+        width: 50%;
+    }
+
+    .card:nth-child(even) {
+        float: right;
+
+        border-left: 10px solid white;
+    }
+
+    .card:nth-child(odd) {
+        float: left;
+
+        border-right: 10px solid white;
+    }
+}
