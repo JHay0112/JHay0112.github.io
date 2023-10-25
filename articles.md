@@ -1,0 +1,9 @@
+---
+title: Articles
+---
+
+{% for article in site.articles reversed %}
+<article class="card" onclick="location.href='{{article.url}}'" style="background-image: url('{{article.thumbnail}}')">
+    <h2>{{article.title}}</h2>
+</article>
+{% endfor %}

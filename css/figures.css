@@ -1,0 +1,28 @@
+figure {
+    width: 100%;
+
+    margin-left: 0px;
+    margin-right: 0px;
+
+    padding-left: 0px;
+    padding-right: 0px;
+
+    overflow-x: scroll;
+}
+
+figure > :not(figcaption) {
+    display: block;
+
+    max-width: 500px;
+    max-height: 400px;
+
+    margin: 0 auto;
+}
+
+figure figcaption {
+    width: 100%;
+
+    margin-top: 10px;
+
+    text-align: center;
+}

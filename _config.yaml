@@ -1,7 +1,29 @@
+
 title: Jordan Hay
 url: https://jordanhay.com
-onload: runSlideShow();
-permalink: /blog/:categories/:year/:month/:title
+
 timezone: Pacific/Auckland
-plugins:
-  - jekyll-feed
+
+collections:
+  articles:
+    output: true
+    permalink: /:collection/:year/:month/:title
+    sort_by: date
+  projects:
+    output: true
+    permalink: /:collection/:name
+    sort_by: date
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "article" 
+  - 
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
