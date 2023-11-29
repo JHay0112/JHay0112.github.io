@@ -5,10 +5,9 @@
 
     height: 250px;
 
-    padding: 10px;
-
-    background-color: #909090;
+    background-color: #c0c0c0;
     background-size: cover;
+    background-position: center center;
     background-blend-mode: multiply;
 }
 
@@ -16,25 +15,34 @@
     cursor: pointer;
 }
 
-.card * {
-    color: white;
+.card h2 {
+    margin-top: auto;
+    margin-bottom: 0;
+
+    padding: 10px;
+
+    color: #252525;
+
+    background-color: white;
+
+    border-bottom: 1px solid #252525;
 }
 
 @media only screen and (min-width: 1200px) {
 
-    .card {
-        width: 50%;
-    }
-
     .card:nth-child(odd) {
         float: right;
 
-        border-left: 10px solid white;
+        width: 49%;
+
+        /*margin-left: 10px solid white;*/
     }
 
     .card:nth-child(even) {
         float: left;
 
-        border-right: 10px solid white;
+        width: 49%;
+
+        /*margin-right: 10px solid white;*/
     }
 }
