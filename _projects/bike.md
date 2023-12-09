@@ -1,5 +1,5 @@
 ---
-title: Bike
+title: Bike Lights
 date: 2023-12-10
 thumbnail: /img/projects/bike/bike.jpg
 ---
