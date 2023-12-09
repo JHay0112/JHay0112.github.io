@@ -10,7 +10,6 @@ on this version of the website come from the Project Blog.
 
 With this version of the website I decided to make a distinction between documentation of on-going 
 projects and articles that show off the result of a project or a smaller project in its entirety. As
-my spare time is relatively limited, completing this transition is slow going and the projects are 
-being slowly written up now that I have transitioned my website to the new layout. I hope to have 
-this done by early 2024. In the meantime I recommend looking through the articles section of my 
-website. Thank you for your patience. - Jordan
+my spare time is relatively limited, completing this transition is slow going. I hope to have the
+project section completed by early 2024. In the meantime I recommend looking through the articles 
+section of my website. Thank you for your patience. - Jordan
