@@ -1,10 +1,15 @@
 ---
-title: Work in Progress
-date: 2023-10-25
+title: Where are all the projects?
+date: 2023-12-10
 thumbnail:
 ---
 
-The projects section is a work in progress. In the past I wrote articles that detailed my projects
-as I worked upon them. The majority of these articles are still available in the articles section.
-In the future I intend to produce more formal write-ups of my projects and transition the articles
-section into a more free form format.
+In the near past I updated my website from a design I had produced around 2020. That version of my
+website contained a section I eventually settled on calling my "Project Blog". All of the articles
+on this version of the website come from the Project Blog. 
+
+With this version of the website I decided to make a distinction between documentation of on-going 
+projects and articles that show off the result of a project or a smaller project in its entirety. As
+my spare time is relatively limited, completing this transition is slow going. I hope to have the
+project section completed by early 2024. In the meantime I recommend looking through the articles 
+section of my website. Thank you for your patience. - Jordan
