@@ -4,6 +4,11 @@ date: 2023-12-10
 thumbnail: /img/projects/bike/bike.jpg
 ---
 
+<figure>
+    <img src="/img/projects/bike/bike.jpg" />
+    <figcaption>Figure 1 - My bike.</figcaption>
+</figure>
+
 I am currently in the process of progressively upgrading my bicycle. My intentions are to develop an 
 integrated lighting system before expanding upon the architecture of the system to support further 
 electronic systems. This requires carefully planning the lighting system to ensure that its 
