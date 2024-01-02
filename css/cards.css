@@ -28,6 +28,13 @@
     border-bottom: 1px solid #252525;
 }
 
+.card h2 a {
+    color: inherit;
+    font: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
 @media only screen and (min-width: 1200px) {
 
     .card:nth-child(odd) {
