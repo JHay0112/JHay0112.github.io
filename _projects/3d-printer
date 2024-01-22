@@ -1,0 +1,15 @@
+---
+title: 3D Printer Upgrades
+date: 2023-01-22
+thumbnail: 
+---
+
+Before I began documenting my projects as "working documents" on my website, I would post articles
+as major stages of development occured. My 3D printer has featured in two such articles:
+
+* <a href="https://jordanhay.com/articles/2021/01/building-custom-rear-case-for-ender-3" target="_blank">Building a custom rear case for the Ender 3</a>
+* <a href="https://jordanhay.com/articles/2021/06/building-another-custom-rear-case-for" target="_blank">Replacing my custom rear case for the Ender 3</a>
+
+These articles documented my process of replacing the original case I inherited for the printer 
+mainboard with a new rear case that better supported the layout of the mainboard and attached 
+Raspberry Pi that hosted Octoprint. 
