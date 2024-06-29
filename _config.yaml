@@ -9,10 +9,6 @@ collections:
     output: true
     permalink: /:collection/:year/:month/:title
     sort_by: date
-  projects:
-    output: true
-    permalink: /:collection/:name
-    sort_by: date
   archive:
     output: true
     permalink: /:collection/:year/:month/:title
@@ -25,12 +21,6 @@ defaults:
       type: "articles"
     values:
       layout: "article" 
-  - 
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
   - 
     scope:
       path: ""
