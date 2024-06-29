@@ -38,10 +38,9 @@ title: Haere mai!
         in practical electronics and information technologies through my experience in these roles.
     </p>
     <p>
-        I have a list of <a href="/projects">my projects</a> and I also occasionally write 
-        <a href="/articles">articles</a>. I put most things on my 
-        <a href="https://github.com/JHay0112" target="_blank">Github</a>. Sometimes things also 
-        appear on my 
+        I occasionally write <a href="/articles">articles</a> about my projects and I put most 
+        things on my <a href="https://github.com/JHay0112" target="_blank">Github</a>. Sometimes 
+        things also appear on my 
         <a href="https://www.instagram.com/jordanhayphotos/" target="_blank">Instagram</a>,
         <a href="https://www.youtube.com/channel/UCGUPz4yMrsQyk95Z8ZwtMog" target="_blank">YouTube</a>,
         or <a href="https://www.linkedin.com/in/JHay0112/" target="_blank">LinkedIn</a>.
