@@ -33,7 +33,11 @@
             {{content}}
 
             <footer>
-                <p>Content: &copy; 2023 J. L. Hay</p>
+                {% if page.date != nil %}
+                <p>Content: &copy; {{page.date | date: "%Y"}} J. L. Hay</p>
+                {% else %}
+                <p>Content: &copy; {{"now" | date: "%Y"}} J. L. Hay</p>
+                {% endif %}
                 <p>Source Code: MIT License</p>
             </footer>
         </main>
