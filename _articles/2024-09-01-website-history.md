@@ -5,7 +5,8 @@ thumbnail: /img/posts/2024/09/website-v1.png
 
 The website you're looking at (at least at the time of publishing) is the ninth version of my 
 website[^versioning]. If you're willing to permit me the indulgence, I'd like to reflect on how this
-website has got here since it's first appearance in 2017.
+website has got here since it's first appearance in 2017. ([Click here if you don't wish to
+permit me the indulgence.](/))
 
 <figure>
     <img src="/img/posts/2024/09/website-v1.png" />
