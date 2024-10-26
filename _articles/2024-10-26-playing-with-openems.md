@@ -26,7 +26,7 @@ lack of a well defined origin in my exportation method. The results below were r
 OpenEMS does require additional configuration to export electric field data over-time with the use 
 of an electric field "dump" (just in case anyone wishes to replicate this kind of experiment). I 
 should note that the location of the antenna I have drawn on in the figure below is only 
-approximate. (See my comment about a lack of common origin, this is be the greatest limitation in my
+approximate. (See my comment about a lack of common origin, this is the greatest limitation in my
 current approach to simulation.)
 
 
