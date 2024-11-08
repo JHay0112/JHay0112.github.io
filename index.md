@@ -28,14 +28,16 @@ title: Haere mai!
     <p>
         I recently completed my fourth year of study towards a Bachelor of Engineering (with 
         honours) specialising in Computer Engineering with a minor of Communications and Network 
-        Engineering. 
+        Engineering. I have had the oppurtunity throughout my degree to tutor courses I previously
+        studied including COSC131, COSC122, ENEL220, and ENEL320, as well as act as the client for
+        an ENEL300 project.
     </p>
     <img src="img/jordan.jpg" id="inline-profile" alt="Jordan stood in front of ECE at UC." />
     <p>
         Professionaly, I have a solid foundation in electronics and information technologies. 
         Recently, I've worked both as an Electronics Engineering Intern at Dawn Aerospace and as a 
         Digital Services Assistant at Alpine Energy. Both roles gave me the oppurtunity to develop
-        hardware and software that continue to play an important part to this day. 
+        hardware and software that continue to play an important part to this day.
     </p>
     <p>
         I occasionally write <a href="/articles">articles</a> about my projects and I put most 
