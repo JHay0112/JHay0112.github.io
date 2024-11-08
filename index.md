@@ -20,26 +20,26 @@ title: Haere mai!
 
 <section id="introduction">
     <p>
-        Hi, my name is Jordan Hay. I grew up in Timaru and now study at the University of Canterbury
-        (UC) in Christchurch. I am interested in electronics, radio communications, operating 
-        systems, cycling, Geocaching, and photography.
+        Hi, my name is Jordan Hay. I grew up in Timaru and now study at the University of 
+        Canterbury. My interests include in electronics, radio communications, operating systems, 
+        programming, and photography. This is my personal website, where I have a little information
+        about myself and write the occasional <a href="/articles">article</a>.
     </p>
     <p>
-        I am in my third year of study towards a Bachelor of Engineering (with honours) specialising 
-        in Computer Engineering and aim to complete a minor of Communications and Network 
-        Engineering. I also tutor COSC122: Introduction to Computer Science. This involves weekly 
-        computer lab sessions where I help students learn foundational computer science skills 
-        alongside Python programming.
+        I recently completed my fourth year of study towards a Bachelor of Engineering (with 
+        honours) specialising in Computer Engineering with a minor of Communications and Network 
+        Engineering. 
     </p>
     <img src="img/jordan.jpg" id="inline-profile" alt="Jordan stood in front of ECE at UC." />
     <p>
-        Professionally I have worked as a Digital Services Assistant and a Trainee Radio Technician
-        at Alpine Energy Ltd. and Ashley Communications Ltd. respectively. I have a solid foundation
-        in practical electronics and information technologies through my experience in these roles.
+        Professionaly, I have a solid foundation in electronics and information technologies. 
+        Recently, I've worked both as an Electronics Engineering Intern at Dawn Aerospace and as a 
+        Digital Services Assistant at Alpine Energy. Both roles gave me the oppurtunity to develop
+        hardware and software that continue to play an important part to this day. 
     </p>
     <p>
         I occasionally write <a href="/articles">articles</a> about my projects and I put most 
-        things on my <a href="https://github.com/JHay0112" target="_blank">Github</a>. Sometimes 
+        things on my <a href="https://github.com/JHay0112" target="_blank">GitHub</a>. Sometimes 
         things also appear on my 
         <a href="https://www.instagram.com/jordanhayphotos/" target="_blank">Instagram</a>,
         <a href="https://www.youtube.com/channel/UCGUPz4yMrsQyk95Z8ZwtMog" target="_blank">YouTube</a>,
