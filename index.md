@@ -36,8 +36,8 @@ title: Haere mai!
     <p>
         Professionaly, I have a solid foundation in electronics and information technologies. 
         Recently, I've worked both as an Electronics Engineering Intern at Dawn Aerospace and as a 
-        Digital Services Assistant at Alpine Energy. Both roles gave me the oppurtunity to develop
-        hardware and software that continue to play an important part to this day.
+        Digital Services Assistant at Alpine Energy. Both roles gave me the opportunity to develop
+        hardware and software systems that continue to play an important part to this day.
     </p>
     <p>
         I occasionally write <a href="/articles">articles</a> about my projects and I put most 
