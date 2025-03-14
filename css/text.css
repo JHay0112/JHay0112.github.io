@@ -1,18 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville");
 
 * {
     color: #252525;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 p {
     margin-top: 5px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 12pt;
     font-weight: normal;
 
@@ -20,9 +21,9 @@ p {
 }
 
 a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12pt;
-    font-weight: normal;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
     
     text-decoration: underline;
 }
@@ -31,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0px;
     margin-bottom: 3px;
 
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Libre Baskerville", serif;
     font-weight: normal;
 }
 

@@ -34,11 +34,12 @@
 
             <footer>
                 {% if page.date != nil %}
-                <p>Content: &copy; {{page.date | date: "%Y"}} J. L. Hay</p>
+                <small>Content: &copy; {{page.date | date: "%Y"}} J. L. Hay</small>
                 {% else %}
-                <p>Content: &copy; 2017-{{"now" | date: "%Y"}} J. L. Hay</p>
+                <small>Content: &copy; 2017-{{"now" | date: "%Y"}} J. L. Hay</small>
                 {% endif %}
-                <p>Source Code: MIT License</p>
+                <br />
+                <small>Source Code: MIT License</small>
             </footer>
         </main>
     </body>
