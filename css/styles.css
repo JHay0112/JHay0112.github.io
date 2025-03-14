@@ -33,6 +33,12 @@ main:last-child {
 
 
 header {
+
+    border-bottom: 1px solid black;
+
+    padding-top: 10px;
+    padding-bottom: 20px;
+
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -56,9 +62,17 @@ header img#logo {
     margin-bottom: -100px;
 }
 
+header h1, header nav {
+    position: relative;
+    top: -3px;
+
+    margin-left: 7px;
+}
+
 header nav a {
     display: inline-block;
 
+    margin-top: 7px;
     padding-right: 10px;
 }
 
