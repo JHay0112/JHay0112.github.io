@@ -16,7 +16,9 @@ title: Haere mai!
     <p>No reira, tēnā koutou, tēnā koutou, tēnā koutou katoa</p>
 </section> -->
 
-<img src="img/jordan.jpg" id="aside-profile" alt="Jordan stood in front of ECE wing at UC." />
+<aside>
+    <img src="img/jordan.jpg" id="aside-profile" alt="Jordan stood in front of ECE wing at UC." />
+</aside>
 
 <section id="introduction">
     <p>

@@ -14,34 +14,33 @@
     </head>
     <body>
 
+        <header id="header">
+            {% if page.name == "index.md" %}
+            <img id="banner" />
+            <img id="logo" src="{{site.baseurl}}/img/logo_white.png" />
+            {% endif %}
+
+            <h1>{{page.title}}</h1>
+
+            <nav>
+                <a href="/">Home</a>
+                <a href="{{site.baseurl}}/articles">Articles</a>
+            </nav>
+        </header>
+
         <main>
-
-            <header id="header">
-                {% if page.name == "index.md" %}
-                <img id="banner" />
-                <img id="logo" src="{{site.baseurl}}/img/logo_white.png" />
-                {% endif %}
-
-                <h1>{{page.title}}</h1>
-
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="{{site.baseurl}}/articles">Articles</a>
-                </nav>
-            </header>
-
             {{content}}
-
-            <footer>
-                {% if page.date != nil %}
-                <small>Content: &copy; {{page.date | date: "%Y"}} J. L. Hay</small>
-                {% else %}
-                <small>Content: &copy; 2017-{{"now" | date: "%Y"}} J. L. Hay</small>
-                {% endif %}
-                <br />
-                <small>Source Code: MIT License</small>
-            </footer>
         </main>
+
+        <footer>
+            {% if page.date != nil %}
+            <small>Content: &copy; {{page.date | date: "%Y"}} J. L. Hay</small>
+            {% else %}
+            <small>Content: &copy; 2017-{{"now" | date: "%Y"}} J. L. Hay</small>
+            {% endif %}
+            <br />
+            <small>Source Code: MIT License</small>
+        </footer>
     </body>
 
     <script src="{{site.baseurl}}/js/header.js"></script>
