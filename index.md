@@ -5,7 +5,7 @@ title: Haere mai!
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <link rel="stylesheet" type="text/css" href="css/bee.css" />
 
-<section id="pepeha">
+<!-- <section id="pepeha">
     <p>I tipu ake ahau ki te tāwharau o Tarahaoa</p>
     <p>Ko Waitaki te awa</p>
     <p>Nō Te Tihi-o-Maru ahau</p>
@@ -14,25 +14,21 @@ title: Haere mai!
     <p>Ko Hay te whanau</p>
     <p>Ko Jordan tōku ingoa</p>
     <p>No reira, tēnā koutou, tēnā koutou, tēnā koutou katoa</p>
-</section>
+</section> -->
 
-<img src="img/jordan.jpg" id="aside-profile" alt="Jordan stood in front of ECE at UC." />
+<img src="img/jordan.jpg" id="aside-profile" alt="Jordan stood in front of ECE wing at UC." />
 
 <section id="introduction">
     <p>
-        Hi, my name is Jordan Hay. I grew up in Timaru and now study at the University of 
-        Canterbury. My interests include in electronics, radio communications, operating systems, 
-        programming, and photography. This is my personal website, where I have a little information
-        about myself and write the occasional <a href="/articles">article</a>.
+        Kia ora, my name is Jordan Hay. I am a PhD student at the University of Canterbury. My 
+        interests include electronics, radio communications, programming, and photography.
     </p>
     <p>
-        I recently completed my fourth year of study towards a Bachelor of Engineering (with 
-        honours) specialising in Computer Engineering with a minor of Communications and Network 
-        Engineering. I have had the oppurtunity throughout my degree to tutor courses I previously
-        studied including COSC131, COSC122, ENEL220, and ENEL320, as well as act as the client for
-        an ENEL300 project.
+        I recently graduated with a BE(Hons.) specialising in Computer Engineering with a minor of 
+        Communications and Network Engineering with First Class Honours. Throughout my degree I had
+        the oppurtunity to develop electronics and software 
     </p>
-    <img src="img/jordan.jpg" id="inline-profile" alt="Jordan stood in front of ECE at UC." />
+    <img src="img/jordan.jpg" id="inline-profile" alt="Jordan stood in front of ECE wing at UC." />
     <p>
         Professionaly, I have a solid foundation in electronics and information technologies. 
         Recently, I've worked both as an Electronics Engineering Intern at Dawn Aerospace and as a 
