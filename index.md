@@ -24,23 +24,28 @@ title: Haere mai!
     <p>
         Kia ora, my name is Jordan Hay. I am a PhD student at the University of Canterbury. My 
         interests include electronics, radio communications, programming, and photography.
+        I graduated at the end of 2024 with a BE(Hons.) specialising in Computer Engineering with a 
+        minor in Communications and Network Engineering with First Class Honours. 
     </p>
     <p>
-        I recently graduated with a BE(Hons.) specialising in Computer Engineering with a minor of 
-        Communications and Network Engineering with First Class Honours. Throughout my degree I had
-        the oppurtunity to develop electronics and software 
+        I believe that good engineering is only done when the needs of the project clients are well
+        understood, and appropriate technologies are used to solve the problem. I have been
+        described as a competent and passionate engineer who solves problems with well thought-out
+        solutions.
+    </p>
+    <p>
+        I have applied my engineering skills across multiple industries&mdash;aerospace, power, and 
+        telecommunications. I bring a multi-disciplinary approach with my understanding of analogue
+        electronics, embedded systems, and application programming. I like projects that have an
+        emphasis on the end-user experience and that deliver reliable results. My role has often 
+        involved developing custom hardware and software solutions, and I know that my work
+        continues to give value to the companies I have worked for to this day.
     </p>
     <img src="img/jordan.jpg" id="inline-profile" alt="Jordan stood in front of ECE wing at UC." />
     <p>
-        Professionaly, I have a solid foundation in electronics and information technologies. 
-        Recently, I've worked both as an Electronics Engineering Intern at Dawn Aerospace and as a 
-        Digital Services Assistant at Alpine Energy. Both roles gave me the opportunity to develop
-        hardware and software systems that continue to play an important part to this day.
-    </p>
-    <p>
-        I occasionally write <a href="/articles">articles</a> about my projects and I put most 
-        things on my <a href="https://github.com/JHay0112" target="_blank">GitHub</a>. Sometimes 
-        things also appear on my 
+        My website plays hosts to <a href="/articles">articles</a> about my projects and I put even
+        more of what I build onto <a href="https://github.com/JHay0112" target="_blank">GitHub</a>. 
+        You may also find me on
         <a href="https://www.instagram.com/jordanhayphotos/" target="_blank">Instagram</a>,
         <a href="https://www.youtube.com/channel/UCGUPz4yMrsQyk95Z8ZwtMog" target="_blank">YouTube</a>,
         or <a href="https://www.linkedin.com/in/JHay0112/" target="_blank">LinkedIn</a>.
