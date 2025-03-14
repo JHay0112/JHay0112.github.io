@@ -14,27 +14,25 @@
 
 html, body {
     overflow-x: hidden;
+
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
 
 main {
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-main > * {
-    margin-bottom: 20px;
-}
-
-main:last-child {
-    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 
 header {
-    margin-top: 20px;
-    margin-bottom: 30px;
+
+    border-bottom: 1px solid black;
+
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 header img#banner {
@@ -56,9 +54,17 @@ header img#logo {
     margin-bottom: -100px;
 }
 
+header h1, header nav {
+    position: relative;
+    top: -3px;
+
+    margin-left: 7px;
+}
+
 header nav a {
     display: inline-block;
 
+    margin-top: 7px;
     padding-right: 10px;
 }
 
@@ -79,7 +85,7 @@ footer {
 
 @media only screen and (min-width: 600px) {
 
-    main {
+    main, footer, header {
         max-width: 600px;
 
         margin: 0 auto;
@@ -89,7 +95,7 @@ footer {
 
 @media only screen and (min-width: 1200px) {
 
-    main {
+    main, footer, header {
         max-width: 1000px;
     }
 }
