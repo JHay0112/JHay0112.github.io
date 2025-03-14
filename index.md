@@ -37,21 +37,24 @@ title: Haere mai!
         I have applied my engineering skills across multiple industries&mdash;aerospace, power, and 
         telecommunications. I bring a multi-disciplinary approach with my understanding of analogue
         electronics, embedded systems, and application programming. I like projects that have an
-        emphasis on the end-user experience and that deliver reliable results. My role has often 
+        emphasis on the end-user experience and delivering reliable results. My role has often 
         involved developing custom hardware and software solutions, and I know that my work
         continues to give value to the companies I have worked for to this day.
     </p>
     <img src="img/jordan.jpg" id="inline-profile" alt="Jordan stood in front of ECE wing at UC." />
     <p>
         My website plays hosts to <a href="/articles">articles</a> about my projects and I put even
-        more of what I build onto <a href="https://github.com/JHay0112" target="_blank">GitHub</a>. 
+        more of what I build onto <a href="https://github.com/JHay0112">GitHub</a>. 
         You may also find me on
-        <a href="https://www.instagram.com/jordanhayphotos/" target="_blank">Instagram</a>,
-        <a href="https://www.youtube.com/channel/UCGUPz4yMrsQyk95Z8ZwtMog" target="_blank">YouTube</a>,
-        or <a href="https://www.linkedin.com/in/JHay0112/" target="_blank">LinkedIn</a>.
+        <a href="https://www.instagram.com/jordanhayphotos/">Instagram</a>,
+        <a href="https://www.youtube.com/channel/UCGUPz4yMrsQyk95Z8ZwtMog">YouTube</a>,
+        or <a href="https://www.linkedin.com/in/JHay0112/">LinkedIn</a>.
+        You may contact me via the email <a href="mailto:mail@jordanhay.com">mail@jordanhay.com</a>.
+        I am always keen to chat and learn about new project opportunities.
     </p>
     <p>
-        You may contact me via the email <a href="mailto:mail@jordanhay.com">mail@jordanhay.com</a>
+        I am currently working on starting an open-source hardware group called CanSource. You can
+        find out more about it <a href="https://cansource.org/">here</a>.
     </p>
 </section>
 
