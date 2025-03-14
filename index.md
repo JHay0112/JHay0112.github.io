@@ -28,8 +28,8 @@ title: Haere mai!
         minor in Communications and Network Engineering with First Class Honours. 
     </p>
     <p>
-        I believe that good engineering is only done when the needs of the project clients are well
-        understood, and appropriate technologies are used to solve the problem. I have been
+        I believe that good engineering is only done when the needs of the project stakeholders are 
+        well understood, and appropriate technologies are used to solve the problem. I have been
         described as a competent and passionate engineer who solves problems with well thought-out
         solutions.
     </p>
