@@ -43,6 +43,9 @@ title: Haere mai!
         <a href="https://www.youtube.com/channel/UCGUPz4yMrsQyk95Z8ZwtMog" target="_blank">YouTube</a>,
         or <a href="https://www.linkedin.com/in/JHay0112/" target="_blank">LinkedIn</a>.
     </p>
+    <p>
+        You may contact me via the email <a href="mailto:mail@jordanhay.com">mail@jordanhay.com</a>
+    </p>
 </section>
 
 <script src="js/bee.js"></script>
