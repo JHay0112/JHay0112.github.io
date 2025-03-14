@@ -29,7 +29,7 @@ title: Haere mai!
     </p>
     <p>
         I believe that good engineering is only done when the needs of the project stakeholders are 
-        well understood, and appropriate technologies are used to solve the problem. I have been
+        well understood and appropriate technologies are used to solve the problem. I have been
         described as a competent and passionate engineer who solves problems with well thought-out
         solutions.
     </p>
