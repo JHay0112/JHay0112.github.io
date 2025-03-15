@@ -10,7 +10,13 @@
         <link rel="icon" href="{{site.baseurl}}/img/favicon.ico" />
         <link rel="icon" href="{{site.baseurl}}/img/favicon.png" />
 
-        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/styles.css" />
+        <style>
+            /* Inserted from css/text.css */
+            {% include css/text.css %}
+
+            /* Inserted from css/styles.css */
+            {% include css/styles.css %}
+        </style>
     </head>
     <body>
 
@@ -43,5 +49,8 @@
         </footer>
     </body>
 
-    <script src="{{site.baseurl}}/js/header.js"></script>
+    <script>
+        /* Inserted from js/header.js */
+        {% include js/header.js %}
+    </script>
 </html>

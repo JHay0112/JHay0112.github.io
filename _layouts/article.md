@@ -2,7 +2,16 @@
 layout: default
 ---
 
-<link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/articles.css" />
+<style>
+    /* Inserted from css/figures.css */
+    {% include css/figures.css %}
+
+    /* Inserted from css/code.css */
+    {% include css/code.css %}
+
+    /* Inserted from css/articles.css */
+    {% include css/articles.css %}
+</style>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.20/dist/katex.min.css" integrity="sha384-cRxb1HsKSl8bTfU9fBcGsjktUfQa6w+fwvkYnU8XjFH4Qg8To1+/9OXv5iRzrKX4" crossorigin="anonymous">
 

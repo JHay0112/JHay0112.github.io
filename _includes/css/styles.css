@@ -1,10 +1,6 @@
 @charset "UTF-8";
 
 
-@import "text.css";
-@import "cards.css";
-
-
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;

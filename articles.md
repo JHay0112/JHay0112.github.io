@@ -2,6 +2,11 @@
 title: Articles
 ---
 
+<style>
+    /* Inserted from css/cards.css */
+    {% include css/cards.css %}
+</style>
+
 These are articles I have written. Most of them focus on my projects, but are very much based on
 what I feel interested in writing about. I consider these articles some of my more interesting ones,
 but I also maintain a larger <a href="{{site.baseurl}}/archive">archive of articles</a> that I have 

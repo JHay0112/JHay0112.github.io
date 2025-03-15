@@ -2,8 +2,13 @@
 title: Haere mai!
 ---
 
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<link rel="stylesheet" type="text/css" href="css/bee.css" />
+<style>
+    /* Inserted from css/index.css */
+    {% include css/index.css %}
+
+    /* Inserted from css/bee.css */
+    {% include css/bee.css %}
+</style>
 
 <!-- <section id="pepeha">
     <p>I tipu ake ahau ki te tāwharau o Tarahaoa</p>
@@ -58,4 +63,7 @@ title: Haere mai!
     </p>
 </section>
 
-<script src="js/bee.js"></script>
+<script>
+    /* Inserted from js/bee.js */
+    {% include js/bee.js %}
+</script>
