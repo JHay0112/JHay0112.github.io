@@ -22,7 +22,8 @@ const HEADERS = [
     "moon.jpg",
     "yagi.jpg",
     "dandelion.jpg",
-    "power_poles.jpg"
+    "power_poles.jpg",
+    "leaves_on_wood.jpg"
 ];
 
 
