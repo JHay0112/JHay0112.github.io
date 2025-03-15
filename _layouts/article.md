@@ -8,7 +8,7 @@ layout: default
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
 
-<h5>Published {{page.date | date: "%Y/%m/%d"}}</h5>
+<h5 id="publish-date">Published {{page.date | date: "%Y/%m/%d"}}</h5>
 
 {{content}}
 

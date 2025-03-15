@@ -1,6 +1,12 @@
 @import "figures.css";
 @import "code.css";
 
+
+#publish-date {
+    margin-top: 20px;
+}
+
+
 a.footnote {
     font-size: 8pt;
 }

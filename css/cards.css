@@ -5,6 +5,8 @@
 
     height: 250px;
 
+    margin-bottom: 20px;
+
     background-color: #f0f0f0;
     background-size: cover;
     background-position: center center;
@@ -38,7 +40,7 @@
 @media only screen and (min-width: 1200px) {
 
     .card:nth-child(odd) {
-        float: left;
+        float: right;
 
         width: 49%;
 
@@ -46,7 +48,7 @@
     }
 
     .card:nth-child(even) {
-        float: right;
+        float: left;
 
         width: 49%;
 
