@@ -40,7 +40,7 @@
 @media only screen and (min-width: 1200px) {
 
     .card:nth-child(odd) {
-        float: right;
+        float: left;
 
         width: 49%;
 
@@ -48,7 +48,7 @@
     }
 
     .card:nth-child(even) {
-        float: left;
+        float: right;
 
         width: 49%;
 
