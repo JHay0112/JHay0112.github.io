@@ -20,7 +20,9 @@ const HEADERS = [
     "enel300_pcb.jpg",
     "aurora.jpg",
     "moon.jpg",
-    "yagi.jpg"
+    "yagi.jpg",
+    "dandelion.jpg",
+    "power_poles.jpg"
 ];
 
 
