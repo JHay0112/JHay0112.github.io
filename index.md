@@ -41,7 +41,7 @@ title: Haere mai!
         involved developing custom hardware and software solutions, and I know that my work
         continues to give value to the companies I have worked for to this day.
     </p>
-    <img src="img/jordan.jpg" id="inline-profile" alt="Jordan stood in front of ECE wing at UC." />
+    <img src="img/jordan-profile.jpg" id="inline-profile" alt="Jordan stood in front of ECE wing at UC." />
     <p>
         My website plays hosts to <a href="/articles">articles</a> about my projects and I put even
         more of what I build onto <a href="https://github.com/JHay0112">GitHub</a>. 
