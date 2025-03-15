@@ -13,7 +13,11 @@ const HEADERS = [
     "garden_fern.jpg",
     "bird_in_sky.jpg",
     "puaka_james_hight.jpg",
-    "christchurch_airport.jpg"
+    "christchurch_airport.jpg",
+    "aoraki.jpg",
+    "aurora_in_flight.jpg",
+    "c17_at_chch_airport.jpg",
+    "enel300_pcb.jpg"
 ];
 
 
