@@ -1,5 +1,5 @@
 ---
-title: Website HTTP request reduction
+title: Website HTTP request optimisation
 thumbnail: /img/posts/2025/05/website_preoptimisation_network_load.png
 ---
 
