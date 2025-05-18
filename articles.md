@@ -14,6 +14,9 @@ written over the years.
 
 {% for article in site.articles reversed %}
 <article class="card" onclick="location.href='{{article.url}}'" style="background-image: url('{{article.thumbnail}}')">
-    <h2><a href="{{article.url}}">{{article.title}}</a></h2>
+    <section class="text">
+        <h2><a href="{{article.url}}">{{article.title}}</a></h2>
+        <p>Published {{article.date | date: "%Y/%m/%d"}}</p>
+    </section>
 </article>
 {% endfor %}
