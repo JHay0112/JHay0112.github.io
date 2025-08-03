@@ -27,7 +27,7 @@ title: Haere mai!
 
 <section id="introduction">
     <p>
-        Kia ora, my name is Jordan Hay. I am a PhD student at the University of Canterbury. My 
+        Kia ora, my name is Jordan Hay. I am an electronics engineer from Canterbury, NZ. My 
         interests include electronics, radio communications, programming, and photography.
         I graduated at the end of 2024 with a BE(Hons.) specialising in Computer Engineering with a 
         minor in Communications and Network Engineering with First Class Honours. 
