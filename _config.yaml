@@ -1,8 +1,12 @@
 
 title: Jordan Hay
 url: https://jordanhay.com
+author: Jordan Hay
 
 timezone: Pacific/Auckland
+
+plugins:
+ - jekyll-feed
 
 collections:
   articles:
@@ -27,3 +31,9 @@ defaults:
       type: "archive"
     values:
       layout: "article"
+
+feed:
+  icon: /img/logo.png
+  posts_limit: 20
+  collections:
+   - articles
