@@ -7,3 +7,14 @@
 a.footnote {
     font-size: 8pt;
 }
+
+
+div.footnotes ol li {
+    transition: ease-in all 300ms;
+    background-color: inherit;
+}
+
+
+div.footnotes ol li:target {
+    background-color: rgb(255, 252, 179);
+}
