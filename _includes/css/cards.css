@@ -7,10 +7,9 @@
 
     margin-bottom: 20px;
 
-    background-color: #f0f0f0;
+    background-color: var(--secondary-bg-colour);
     background-size: cover;
     background-position: center center;
-    background-blend-mode: multiply;
 }
 
 .card:hover {
@@ -23,11 +22,11 @@
 
     padding: 10px;
 
-    color: #252525;
+    color: var(--text-colour);
 
-    background-color: white;
+    background-color: var(--bg-colour);
 
-    border-bottom: 1px solid #252525;
+    border-bottom: 1px solid var(--text-colour);
 }
 
 .card h2 a {

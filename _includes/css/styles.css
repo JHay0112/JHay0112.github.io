@@ -13,6 +13,8 @@ html, body {
 
     padding-left: 7px;
     padding-right: 7px;
+
+    background-color: var(--bg-colour);
 }
 
 
@@ -24,7 +26,7 @@ main {
 
 
 header {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--text-colour);
 
     padding-top: 30px;
     padding-bottom: 20px;

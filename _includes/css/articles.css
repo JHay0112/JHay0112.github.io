@@ -16,5 +16,11 @@ div.footnotes ol li {
 
 
 div.footnotes ol li:target {
-    background-color: rgb(255, 252, 179);
+    background-color: var(--highlight-colour);
+}
+
+
+code, code * {
+    color: var(--text-colour) !important;
+    background-color: var(--secondary-bg-colour) !important;
 }

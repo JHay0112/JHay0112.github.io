@@ -1,5 +1,5 @@
 * {
-    color: #252525;
+    color: var(--text-colour);
 }
 
 body {
