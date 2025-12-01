@@ -21,7 +21,7 @@ significant concern.
 
 Despite the convenience of manufacturer provided libraries, it has been on my
 list of projects to program a microcontroller without the convenience of a HAL
-or IDE for some time. This is often known as "bare metal" programming, as their
+or IDE for some time. This is often known as "bare metal" programming, as there
 is no intermediate library responsible for setting up memory or manipulating
 device registers. Theoretically, what I learnt about microcontrollers at
 university should be more than sufficient to undertake such a project. However,
@@ -31,7 +31,11 @@ This blog post covers the necessary code to bootstrap an STM32F070RB into a
 basic C program. The source code and development history for this project can be
 found in the git repository[^0] up to the tag `minimal-c-project`. I plan to
 cover some of the later developments present in the repository including the use
-of Renode[^2] and microcontroller peripherals in a later post.
+of Renode[^2] and microcontroller peripherals in a later post. In many respects,
+this post is reminiscent of the notes I took whilst pursuing this project, 
+rather than a coherent presentation of the subject for beginners. I defer to
+the sources I drew upon for this experiment for a better presentation of the
+basics.
 
 ### Acknowledgement
 My primary point of reference for setting up a bare metal project is the
@@ -48,7 +52,8 @@ Their blog posts go into more depth and breadth than I cover here.
 The natural first step to a bare metal project is to understand what is
 necessary to get the target computer to the start of the main function. The
 target computer in this instance is the STM32F070RB chosen simply because I
-happen to have a NUCLEO development board on hand.
+happen to have a NUCLEO development board with that particular microcontroller
+on hand.
 
 ### Start-up
 We can use the target's documentation[^3] to get an idea of how the target
@@ -66,8 +71,8 @@ part, but I found it to be more relevant as a starting point than the datasheet
 
 Section 2.1.3 of the programming manual describes the core registers in the
 target. Notably, this section tells us that register 15 is the program counter
-and is set to the value `0x00000004` on startup. This is address is also known
-as the "reset vector" and is apart of a larger section of memory known as the
+and is set to the value `0x00000004` on startup. This address is also known
+as the "reset vector" and is a part of a larger section of memory known as the
 "vector table".
 
 The vector table (discussed in section 2.3.4 of the programmer's manual)
@@ -136,8 +141,7 @@ the pointer to the start of the program. For our purposes it suffices to point
 the remaining routines to a default handler that we can overwrite in the
 application code as we please.
 
-Because this also isn't very interesting code, it is available online[^8] for
-those interested rather than presented in the text.
+Because this also isn't very interesting code, it is available elsewhere[^8].
 
 ### Reset Handler
 On startup it is necessary to manually initialise the portions of RAM that the
@@ -146,11 +150,27 @@ pointed to by the vector table. On completion the reset handler branches to the
 traditional "main" function that marks the beginning of the traditional C
 program.
 
-The reset handler code is available online[^9] for those interested rather than
-presented in the text.
+The reset handler code is available elsewhere[^9] for those interested.
 
-### Application Code
-Only now is the microcontroller ready to be programmed in the typical sense. 
+## Application Code
+Only now is the microcontroller ready to run the application code. After the 
+reset handler has run, the application code is invoked via the "main" function.
+In the provided code I've set this up (in an echo of Vivonomicon's own choices)
+to count upwards indefinitely. The code can be verified via a debugger such as
+gdb. 
+
+## Extensions and Next Steps
+I've since extended this code to manipulate the GPIO of the STM32 F070RB. In
+particular, the user LED built into the devlopment board I'm using. Since I am a
+firm believer in simulation as a means of verification, I've also used 
+Renode[^2] to simulate the board output. For the purposes of getting this post 
+published, I've decided to defer that discussion to a later date. 
+
+Some of the more recent developments I've worked on in the context of this
+project includes pre-emptive scheduling (via ARM's Systick and PendSV 
+interrupts). However, a good few months has already gone by since I wrote that
+code. More writing on that may come if I find a suitable project to incorporate
+it into.
 
 
 ## Footnotes
