@@ -13,10 +13,6 @@ collections:
     output: true
     permalink: /:collection/:year/:month/:title
     sort_by: date
-  archive:
-    output: true
-    permalink: /:collection/:year/:month/:title
-    sort_by: date
 
 defaults:
   -
@@ -34,6 +30,6 @@ defaults:
 
 feed:
   icon: /img/logo.png
-  posts_limit: 20
+  posts_limit: 50
   collections:
    - articles

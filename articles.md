@@ -7,10 +7,11 @@ title: Articles
     {% include css/cards.css %}
 </style>
 
-These are articles I have written. Most of them focus on my projects, but are very much based on
-what I feel interested in writing about. I consider these articles some of my more interesting ones,
-but I also maintain a larger <a href="{{site.baseurl}}/archive">archive of articles</a> that I have 
-written over the years.
+The following are a selection of articles that I have written and hosted on this
+website since early 2021. The earliest of these articles was written before I
+started my university education. Naturally, the stylistic choices and writing
+style I employ has changed considerably since then. However, I have done my best
+to maintain the articles in as close to their original state as possible.
 
 {% for article in site.articles reversed %}
 <article class="card" onclick="location.href='{{article.url}}'" style="background-image: url('{{article.thumbnail}}')">
