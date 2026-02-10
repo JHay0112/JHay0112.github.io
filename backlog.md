@@ -1,0 +1,27 @@
+---
+title: Backlog
+---
+
+The following is an unordered list of ideas that I have had for articles for 
+this website. They are included on this website as a public record of what I 
+wish to discuss. I hope that by publishing them, I will give myself some reason
+to attempt to write articles for them, or remove them from this list. Where 
+relevant, links are included for additional context.
+
+ * Battery management circuit design
+ * Bayesian optimisation
+ * Cheap Yellow Display (as coined in 
+    [this repository](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display))
+ * Design and implementation of a static site generator
+ * Design of Everyday Things and Living with Complexity
+ * Direct sequence spread spectrum at home
+ * Enterprise-scale Voltage Divider
+ * My website's design principles (follow up to
+    [this article](http://localhost:4000/articles/2024/09/website-history))
+ * Principles of GNSS
+ * Randomly generating images (particularly for 
+    [this project](https://github.com/JHay0112/JHay0112.github.io/issues/44))
+ * Randomly generating circuits and simplifying them
+ * REST design principles (per 
+    [Roy Fielding's thesis](https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf))
+ * When to current limit GPIO

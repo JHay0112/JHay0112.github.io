@@ -13,6 +13,9 @@ started my university education. Naturally, the stylistic choices and writing
 style I employ has changed considerably since then. However, I have done my best
 to maintain the articles in as close to their original state as possible.
 
+A backlog of article topics that I intend to write on are published
+[here](/backlog).
+
 {% for article in site.articles reversed %}
 <article class="card" onclick="location.href='{{article.url}}'" style="background-image: url('{{article.thumbnail}}')">
     <section class="text">
