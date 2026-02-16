@@ -19,8 +19,6 @@ The exact form of a microtheme varies, with suggested lengths in the range of
 10 sentences[^3] to name a few. Various structures have been suggested in the 
 literature[^5], with different educational goals.
 
-TODO: include more content on potential Microtheme structures
-
 ## Why do I care?
 The context I care about isn't marking student's papers. (Though perhaps I may
 one day, let's file that in the back of the memory.) I do however, care about
@@ -28,7 +26,7 @@ making sure that I retain the information that I have learnt. In my immediate
 -- organic -- memory for short term use, and in written storage (e.g. this
 website), for long term use.
 
-The principles of writing a microtheme are remarkbly similar to a method that I
+The principles of writing a microtheme are remarkably similar to a method that I
 "invented" in the first year of my undergraduate degree. I called my method
 "toolboxing" and it consistened of writing brief articles of what I learnt in
 each course with the rationale that they could serve as a "toolbox" of skills
@@ -41,14 +39,11 @@ maintain the same level of commitment to it that I showed early in my degree due
 to the breadth and depth of content covered in a semester. Despite this, some
 form of toolboxing has always stuck in my revision habits.
 
-My concerns now as an early-career engineer, are quite different to those I had
-in university.
-
-TODO: elaborate on changed concerns, but why I still care about something like
-toolboxing, alongside having content that is publish-worthy
-
-## So what will I do?
-...
+## So what?
+It's my intent to write some more microthemes, in the form of articles on my
+website. sirlilpanda would quite like it if I keep up a cadence of one a week,
+but I think that isn't realistic. Especially if I wish to write up some larger
+projects as well. We shall see!
 
 ## Appendix: A note on the sources
 The primary source on microthemes should be the text[^2]. Unfortunately, this
