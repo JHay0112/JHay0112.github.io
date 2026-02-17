@@ -15,7 +15,7 @@ writing skills[^1]. Their short form reduces burden on both student and marker,
 and may be used as pathway to writing longer form essays[^1].
 
 The exact form of a microtheme varies, with suggested lengths in the range of 
-100-500 words[^1], short enough to be typed on a 5 by 8 inch card [^2], and 5 to
+100-500 words[^1], short enough to be typed on a 5 by 8 inch card[^2], and 5 to
 10 sentences[^3] to name a few. Various structures have been suggested in the 
 literature[^5], with different educational goals.
 
