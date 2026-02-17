@@ -20,7 +20,8 @@ relevant, links are included for additional context.
     [this article](http://localhost:4000/articles/2024/09/website-history))
  * Principles of GNSS
  * Randomly generating images (particularly for 
-    [this project](https://github.com/JHay0112/JHay0112.github.io/issues/44))
+    [this project](https://github.com/JHay0112/JHay0112.github.io/issues/44),
+    potential starting point [here](https://proceedings.mlr.press/v48/reed16.pdf))
  * Randomly generating circuits and simplifying them
  * REST design principles (per 
     [Roy Fielding's thesis](https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf))
