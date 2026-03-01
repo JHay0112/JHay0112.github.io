@@ -47,7 +47,7 @@ To build and host the website locally use
 ```bash
 bundle exec jekyll serve
 ```
-The website shall be made available on `localhost:4321` if all succeeds.
+The website shall be made available on `localhost:4000` if all succeeds.
 
 ## Footnotes
 
