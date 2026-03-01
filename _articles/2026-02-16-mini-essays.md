@@ -1,6 +1,6 @@
 ---
 title: "A Microtheme on Microthemes"
-thumbnail: null
+thumbnail: /img/posts/2026/02/microthemes.jpg
 ---
 
 Microthemes are prose that serve as a short essay on a topic. My friend, 
