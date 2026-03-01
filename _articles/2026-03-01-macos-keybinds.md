@@ -14,7 +14,7 @@ most part the experience is quite comparable. Both take a UNIX-like approach to
 their operating system after all. However, a small niggle with how MacOS
 approaches keyboard shortcuts has brought me some pain.
 
-My personal computer runs Sway[^1] as it's window manager, and recently I have\
+My personal computer runs Sway[^1] as it's window manager, and recently I have
 been using Vim[^2] more-and-more as my text editor. Both Sway and Vim share a 
 similar ethos when it comes to the interface they provided to users. They are 
 designed to be controlled primarily by the keyboard via keyboard shortcuts.
