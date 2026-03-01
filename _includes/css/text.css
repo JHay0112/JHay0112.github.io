@@ -16,6 +16,12 @@ p {
     line-height: 20pt;
 }
 
+sup {
+    vertical-align: top;
+    position: relative;
+    top: -0.3em;
+}
+
 a {
     font-family: inherit;
     font-size: inherit;
