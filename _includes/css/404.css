@@ -1,0 +1,14 @@
+
+main {
+    height: 100%;
+    text-align: center;
+    padding-top: 35%;
+}
+
+main * {
+    position: relative;
+}
+
+main h1 {
+    margin-bottom: 40px;
+}
