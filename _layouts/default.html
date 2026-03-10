@@ -33,7 +33,7 @@
         </style>
     </head>
     <body>
-
+        {% if page.show_header or page.show_header == nil %}
         <header id="header">
             {% if page.name == "index.md" %}
             <img id="banner" />
@@ -52,11 +52,13 @@
                 <a href="{{site.baseurl}}/articles">Articles</a>
             </nav>
         </header>
+        {% endif %}
 
         <main>
             {{content}}
         </main>
 
+        {% if page.show_footer or page.show_footer == nil %}
         <footer>
             {% if page.date != nil %}
             <small>Content: &copy; {{page.date | date: "%Y"}} J. L. Hay</small>
@@ -66,5 +68,6 @@
             <br />
             <small>Source Code: MIT License</small>
         </footer>
+        {% endif %}
     </body>
 </html>
