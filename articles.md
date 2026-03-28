@@ -3,8 +3,8 @@ title: Articles
 ---
 
 <style>
-    /* Inserted from css/cards.css */
-    {% include css/cards.css %}
+    /* Inserted from css/bookshelf.css */
+    {% include css/bookshelf.css %}
 </style>
 
 The following are a selection of articles that I have written and hosted on this
@@ -16,11 +16,14 @@ to maintain the articles in as close to their original state as possible.
 A backlog of article topics that I intend to write on are published
 [here](/backlog).
 
-{% for article in site.articles reversed %}
-<article class="card" onclick="location.href='{{article.url}}'" style="background-image: url('{{article.thumbnail}}')">
-    <section class="text">
-        <h2><a href="{{article.url}}">{{article.title}}</a></h2>
-        <p>Published {{article.date | date: "%Y/%m/%d"}}</p>
-    </section>
-</article>
-{% endfor %}
+
+<table class="bookshelf">
+    <tr>
+        <td style="height: 90%; width: 10%; background-color: blue; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Test Title</a></td>
+        <td style="height: 80%; width: 20%; background-color: green; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Book 2 has a long title</a></td>
+    </tr>
+    <tr>
+        <td style="height: 60%; width: 10%; background-color: blue; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Test Title</a></td>
+        <td style="height: 80%; width: 20%; background-color: firebrick; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Book 2</a></td>
+    </tr>
+</table>
