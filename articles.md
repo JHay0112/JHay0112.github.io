@@ -3,14 +3,14 @@ title: Articles
 
 book_colours:
  - midnightblue
- - green
- - maroon
- - navy
+ - indianred
+ - steelblue
  - darkgreen
- - darkred
- - indigo
- - darkslateblue
- - gold
+ - firebrick
+ - slateblue
+ - goldenrod
+ - saddlebrown
+ - darkslategrey
 
 text_colours:
  - f2f2f2
@@ -19,9 +19,14 @@ text_colours:
  - f2f2f2
  - f2f2f2
  - f2f2f2
- - f2f2f2
- - f2f2f2
  - 252525
+ - f2f2f2
+ - f2f2f2
+
+book_heights:
+ - 75
+ - 80
+ - 85
 ---
 
 <style>
@@ -45,8 +50,8 @@ A backlog of article topics that I intend to write on are published
 {% for article in recent_articles %}
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
-{% assign h = r | modulo: 15 | plus: 75 %}
-        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
+{% assign h = r | modulo: page.book_heights.size %}
+        <td class="book" style="height: {{page.book_heights[h]}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">{{article.title}}</a>
         </td>
 {% endfor %}
@@ -61,8 +66,8 @@ A backlog of article topics that I intend to write on are published
 {% endif %}
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
-{% assign h = r | modulo: 15 | plus: 75 %}
-        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
+{% assign h = r | modulo: page.book_heights.size %}
+        <td class="book" style="height: {{page.book_heights[h]}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">{{article.title}}</a>
         </td>
 {% assign i = i | plus: 1%}
