@@ -2,7 +2,6 @@
 table.bookshelf {
     width: 100%;
 
-    border: 1px solid #e0e0e0;
     background-color: #fefefe;
 }
 
@@ -13,8 +12,6 @@ table.bookshelf tr {
     overflow: hidden;
 
     height: 400px;
-
-    margin: 4px;
     
     background-color: #e8e8e8;
     border: 1px solid black;
@@ -51,7 +48,7 @@ table.bookshelf tr td {
     top: -10px;
     left: 20px;
 
-    margin-left: 5%;
+    margin-left: 3%;
 
     border: 2px solid black;
     box-shadow: -3px -1px 10px -5px black;
@@ -68,6 +65,13 @@ table.bookshelf tr td::before {
     left: 38px;
 
     background-color: white;
+    background: repeating-linear-gradient(
+        90deg,
+        black,
+        black 1px,
+        #afafaf 3px,
+        #afafaf 8px
+    );
 
     border-top: 2px solid black;
     border-left: 4px solid black;
@@ -104,9 +108,11 @@ table.bookshelf tr td a {
     height: 100%;
 
     padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 8px;
+    padding-right: 8px;
 
-    font-size: 20pt;
+    font-size: 14pt;
 
     color: inherit;
     text-align: right;
@@ -123,16 +129,14 @@ table.bookshelf tr td a:hover {
     table.bookshelf tr:nth-of-type(odd) {
         float: left;
 
-        width: 49%;
+        width: 50%;
 
-        /*margin-left: 10px solid white;*/
+        margin-right: 0px;
     }
 
     table.bookshelf tr:nth-of-type(even) {
         float: right;
 
-        width: 49%;
-
-        /*margin-right: 10px solid white;*/
+        width: 50%;
     }
 }

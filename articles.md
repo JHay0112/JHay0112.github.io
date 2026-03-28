@@ -9,6 +9,19 @@ book_colours:
  - darkgreen
  - darkred
  - indigo
+ - darkslateblue
+ - gold
+
+text_colours:
+ - white
+ - white
+ - white
+ - white
+ - white
+ - white
+ - white
+ - white
+ - black
 ---
 
 <style>
@@ -25,9 +38,9 @@ to maintain the articles in as close to their original state as possible.
 A backlog of article topics that I intend to write on are published
 [here](/backlog).
 
-<table class="bookshelf">
-{% assign books_per_shelf = 4 %}
+{% assign books_per_shelf = 5 %}
 {% assign i = 0 %}
+<table class="bookshelf">
 {% for article in site.articles reversed %}
 {% if i == 0 %}
     <tr>
@@ -35,13 +48,16 @@ A backlog of article topics that I intend to write on are published
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
 {% assign h = r | modulo: 15 | plus: 75 %}
-        <td style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;">
+        <td style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: {{page.text_colours[c]}}; font-family: 'Libre Baskerville', serif; font-weight: bold;">
             <a>{{article.title}}</a>
         </td>
+
 {% assign i = i | plus: 1%}
 {% if i == books_per_shelf %}
     </tr>
-{% assign i = 0%}
+{% assign i = 0 %}
 {% endif %}
 {% endfor %}
-</table>
+{% if i != 0 %}
+    </tr>
+{% endif %}
