@@ -25,13 +25,13 @@ table.bookshelf tr::before {
     content: '';
     position: absolute;
     
-    width: 75px;
+    width: 95px;
     height: 100%;
 
     left: 0;
     bottom: 0;
 
-    top: -22px;
+    top: -28px;
 
     background-color: #7f7f7f;
 
