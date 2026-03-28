@@ -39,9 +39,23 @@ A backlog of article topics that I intend to write on are published
 [here](/backlog).
 
 {% assign books_per_shelf = 5 %}
-{% assign i = 0 %}
+{% assign recent_articles = site.articles | reverse | slice: 0, books_per_shelf %}
 <table class="bookshelf">
-{% for article in site.articles reversed %}
+    <tr class="shelf">
+{% for article in recent_articles %}
+{% assign r = article.date | date: "%Y%m%d" %}
+{% assign c = r | modulo: page.book_colours.size %}
+{% assign h = r | modulo: 15 | plus: 75 %}
+        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: {{page.text_colours[c]}}; font-family: 'Libre Baskerville', serif; font-weight: bold;">
+            <a href="{{article.url}}">{{article.title}}</a>
+        </td>
+{% endfor %}
+        <td class="label">Most Recent Articles</td>
+    </tr>
+
+{% assign i = 0 %}
+{% assign remaining_articles = site.articles | reverse | slice: books_per_shelf, site.articles.size %}
+{% for article in remaining_articles %}
 {% if i == 0 %}
     <tr class="shelf">
 {% endif %}
@@ -53,7 +67,6 @@ A backlog of article topics that I intend to write on are published
         </td>
 {% assign i = i | plus: 1%}
 {% if i == books_per_shelf %}
-        <td class="label">Recent Articles</td>
     </tr>
 {% assign i = 0 %}
 {% endif %}
@@ -68,3 +81,5 @@ A backlog of article topics that I intend to write on are published
     <tr class="shelf empty">
     </tr>
 {% endif %}
+
+</table>

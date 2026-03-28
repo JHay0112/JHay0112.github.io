@@ -2,7 +2,7 @@
 table.bookshelf {
     width: 100%;
 
-    background-color: #fefefe;
+    background-color: inherit;
 }
 
 table.bookshelf tr.shelf-label td {
@@ -135,7 +135,7 @@ table.bookshelf tr.shelf td.label {
     width: auto;
 
     top: 0;
-    right: 5%;
+    left: 5%;
 
     padding: 3px 16px;
 
