@@ -58,6 +58,13 @@ A backlog of article topics that I intend to write on are published
 {% assign i = 0 %}
 {% endif %}
 {% endfor %}
+
 {% if i != 0 %}
+    </tr>
+{% endif %}
+
+{% assign remainder = i | modulo: 2 %}
+{% if remainder != 0 %}
+    <tr class="empty">
     </tr>
 {% endif %}
