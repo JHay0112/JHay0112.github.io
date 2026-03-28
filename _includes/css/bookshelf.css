@@ -13,8 +13,10 @@ table.bookshelf tr.shelf {
 
     height: 400px;
     
-    background-color: #e8e8e8;
+    background-color: #c0c0c0;
     border: 1px solid #252525;
+
+    margin-bottom: 10px;
 
     box-shadow: 
         inset 50px -54px 2px 1px #dfdfdf,
@@ -69,8 +71,8 @@ table.bookshelf tr.shelf td.book::before {
         90deg,
         #252525,
         #252525 1px,
-        #afafaf 3px,
-        #afafaf 8px
+        #bfbfaf 3px,
+        #bfbfaf 8px
     );
 
     border-top: 2px solid #252525;
