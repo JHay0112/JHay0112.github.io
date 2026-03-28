@@ -43,17 +43,17 @@ A backlog of article topics that I intend to write on are published
 <table class="bookshelf">
 {% for article in site.articles reversed %}
 {% if i == 0 %}
-    <tr>
+    <tr class="shelf">
 {% endif %}
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
 {% assign h = r | modulo: 15 | plus: 75 %}
-        <td style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: {{page.text_colours[c]}}; font-family: 'Libre Baskerville', serif; font-weight: bold;">
-            <a>{{article.title}}</a>
+        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: {{page.text_colours[c]}}; font-family: 'Libre Baskerville', serif; font-weight: bold;">
+            <a href="{{article.url}}">{{article.title}}</a>
         </td>
-
 {% assign i = i | plus: 1%}
 {% if i == books_per_shelf %}
+        <td class="label">Recent Articles</td>
     </tr>
 {% assign i = 0 %}
 {% endif %}
@@ -65,6 +65,6 @@ A backlog of article topics that I intend to write on are published
 
 {% assign remainder = i | modulo: 2 %}
 {% if remainder != 0 %}
-    <tr class="empty">
+    <tr class="shelf empty">
     </tr>
 {% endif %}
