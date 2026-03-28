@@ -1,10 +1,32 @@
 ---
 title: Articles
+
+book_colours:
+ - midnightblue
+ - green
+ - maroon
+ - navy
+ - darkgreen
+ - darkred
+ - indigo
+ - darkslateblue
+ - gold
+
+text_colours:
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - 252525
 ---
 
 <style>
-    /* Inserted from css/cards.css */
-    {% include css/cards.css %}
+    /* Inserted from css/bookshelf.css */
+    {% include css/bookshelf.css %}
 </style>
 
 The following are a selection of articles that I have written and hosted on this
@@ -16,11 +38,48 @@ to maintain the articles in as close to their original state as possible.
 A backlog of article topics that I intend to write on are published
 [here](/backlog).
 
-{% for article in site.articles reversed %}
-<article class="card" onclick="location.href='{{article.url}}'" style="background-image: url('{{article.thumbnail}}')">
-    <section class="text">
-        <h2><a href="{{article.url}}">{{article.title}}</a></h2>
-        <p>Published {{article.date | date: "%Y/%m/%d"}}</p>
-    </section>
-</article>
+{% assign books_per_shelf = 5 %}
+{% assign recent_articles = site.articles | reverse | slice: 0, books_per_shelf %}
+<table class="bookshelf">
+    <tr class="shelf">
+{% for article in recent_articles %}
+{% assign r = article.date | date: "%Y%m%d" %}
+{% assign c = r | modulo: page.book_colours.size %}
+{% assign h = r | modulo: 15 | plus: 75 %}
+        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
+            <a href="{{article.url}}">{{article.title}}</a>
+        </td>
 {% endfor %}
+        <td class="label">Most Recent Articles</td>
+    </tr>
+
+{% assign i = 0 %}
+{% assign remaining_articles = site.articles | reverse | slice: books_per_shelf, site.articles.size %}
+{% for article in remaining_articles %}
+{% if i == 0 %}
+    <tr class="shelf">
+{% endif %}
+{% assign r = article.date | date: "%Y%m%d" %}
+{% assign c = r | modulo: page.book_colours.size %}
+{% assign h = r | modulo: 15 | plus: 75 %}
+        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
+            <a href="{{article.url}}">{{article.title}}</a>
+        </td>
+{% assign i = i | plus: 1%}
+{% if i == books_per_shelf %}
+    </tr>
+{% assign i = 0 %}
+{% endif %}
+{% endfor %}
+
+{% if i != 0 %}
+    </tr>
+{% endif %}
+
+{% assign remainder = i | modulo: 2 %}
+{% if remainder != 0 %}
+    <tr class="shelf empty">
+    </tr>
+{% endif %}
+
+</table>
