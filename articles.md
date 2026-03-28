@@ -13,15 +13,15 @@ book_colours:
  - gold
 
 text_colours:
- - white
- - white
- - white
- - white
- - white
- - white
- - white
- - white
- - black
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - f2f2f2
+ - 252525
 ---
 
 <style>
@@ -46,7 +46,7 @@ A backlog of article topics that I intend to write on are published
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
 {% assign h = r | modulo: 15 | plus: 75 %}
-        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: {{page.text_colours[c]}}; font-family: 'Libre Baskerville', serif; font-weight: bold;">
+        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">{{article.title}}</a>
         </td>
 {% endfor %}
@@ -62,7 +62,7 @@ A backlog of article topics that I intend to write on are published
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
 {% assign h = r | modulo: 15 | plus: 75 %}
-        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: {{page.text_colours[c]}}; font-family: 'Libre Baskerville', serif; font-weight: bold;">
+        <td class="book" style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">{{article.title}}</a>
         </td>
 {% assign i = i | plus: 1%}
