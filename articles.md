@@ -1,5 +1,14 @@
 ---
 title: Articles
+
+book_colours:
+ - midnightblue
+ - green
+ - maroon
+ - navy
+ - darkgreen
+ - darkred
+ - indigo
 ---
 
 <style>
@@ -16,14 +25,23 @@ to maintain the articles in as close to their original state as possible.
 A backlog of article topics that I intend to write on are published
 [here](/backlog).
 
-
 <table class="bookshelf">
+{% assign books_per_shelf = 4 %}
+{% assign i = 0 %}
+{% for article in site.articles reversed %}
+{% if i == 0 %}
     <tr>
-        <td style="height: 90%; width: 10%; background-color: blue; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Test Title</a></td>
-        <td style="height: 80%; width: 20%; background-color: green; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Book 2 has a long title</a></td>
+{% endif %}
+{% assign r = article.date | date: "%Y%m%d" %}
+{% assign c = r | modulo: page.book_colours.size %}
+{% assign h = r | modulo: 15 | plus: 75 %}
+        <td style="height: {{h}}%; width: 15%; background-color: {{page.book_colours[c]}}; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;">
+            <a>{{article.title}}</a>
+        </td>
+{% assign i = i | plus: 1%}
+{% if i == books_per_shelf %}
     </tr>
-    <tr>
-        <td style="height: 60%; width: 10%; background-color: blue; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Test Title</a></td>
-        <td style="height: 80%; width: 20%; background-color: firebrick; color: white; font-family: 'Libre Baskerville', serif; font-weight: bold;"><a>Book 2</a></td>
-    </tr>
+{% assign i = 0%}
+{% endif %}
+{% endfor %}
 </table>
