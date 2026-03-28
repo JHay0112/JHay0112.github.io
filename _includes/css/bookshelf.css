@@ -139,12 +139,12 @@ table.bookshelf tr.shelf td.label {
 
     padding: 3px 16px;
 
-    background-color: #f0f0f0;
+    background-color: #252525;
     font-family: "Courier Prime", monospace;
     font-size: 12pt;
-    color: #252525;
+    color: #f0f0f0;
 
-    border: 1px solid #252525;
+    border: 1px solid #f0f0f0;
     border-top: 0;
     box-shadow: 0px 8px 20px -4px #252525;
 }
