@@ -43,6 +43,9 @@ to maintain the articles in as close to their original state as possible.
 A backlog of article topics that I intend to write on are published
 [here](/backlog).
 
+An Atom feed of articles is available at
+[https://jordanhay.com/feed/articles.xml](https://jordanhay.com/feed/articles.xml)
+
 <table class="bookshelf">
 {% assign shelves_per_row = 3 %}
 {% assign books_per_shelf = 4 %}
