@@ -62,7 +62,7 @@ table.bookshelf tr.shelf::after {
     width: 100%;
     height: 40px;
 
-    background-color: var(--bg-colour);
+    background-color: #ffffff;
     border-top: 1px solid #252525;
 }
 
