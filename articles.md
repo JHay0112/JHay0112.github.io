@@ -44,7 +44,7 @@ A backlog of article topics that I intend to write on are published
 [here](/backlog).
 
 <table class="bookshelf">
-{% assign shelfs_per_row = 3 %}
+{% assign shelves_per_row = 3 %}
 {% assign books_per_shelf = 4 %}
 {% assign first_shelf = true %}
 {% assign i = 0 %}
@@ -74,15 +74,15 @@ A backlog of article topics that I intend to write on are published
 {% assign i = 0 %}
 {% endif %}
 
-{% assign s = s | plus: 1 | modulo: shelfs_per_row %}
+{% assign s = s | plus: 1 | modulo: shelves_per_row %}
 {% endfor %}
 
 {% if i != 0 %}
     </tr>
 {% endif %}
 
-{% assign empty_shelfs = shelfs_per_row | minus: s | modulo: shelfs_per_row %}
-{% for j in (1..empty_shelfs) %}
+{% assign empty_shelves = shelves_per_row | minus: s | modulo: shelves_per_row %}
+{% for j in (1..empty_shelves) %}
     <tr class="shelf empty"></tr>
 {% endfor %}
 
