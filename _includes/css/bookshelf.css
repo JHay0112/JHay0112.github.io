@@ -2,7 +2,15 @@
 table.bookshelf {
     width: 100%;
 
-    background-color: inherit;
+    padding: 10px;
+    background-color: #ffffff;
+
+    border: 1px solid #252525;
+}
+
+table.bookshelf tbody {
+    padding: 0;
+    margin: 0;
 }
 
 table.bookshelf tr.shelf {
@@ -16,6 +24,8 @@ table.bookshelf tr.shelf {
     background-color: #c0c0c0;
 
     padding-bottom: 40px;
+
+    border: 1px solid #252525;
 
     box-shadow: 
         inset 50px -94px 2px 1px #dfdfdf,
@@ -53,6 +63,7 @@ table.bookshelf tr.shelf::after {
     height: 40px;
 
     background-color: var(--bg-colour);
+    border-top: 1px solid #252525;
 }
 
 table.bookshelf tr.shelf td.book {
@@ -174,6 +185,10 @@ table.bookshelf tr.empty {
 }
 
 @media only screen and (min-width: 1200px) {
+
+    table.bookshelf {
+        padding-right: 0;
+    }
 
     table.bookshelf tr {
         float: left;
