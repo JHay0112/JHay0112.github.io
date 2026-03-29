@@ -1,5 +1,5 @@
 ---
-title: Programming an STM32 "bare metal"
+title: STM32 Bare Metal
 thumbnail: /img/posts/2025/08/stm32-closeup.jpg
 ---
 

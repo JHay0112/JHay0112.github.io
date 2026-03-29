@@ -1,5 +1,5 @@
 ---
-title: Setting up an STM32 without CubeMX
+title: STM32 without CubeMX
 ---
 
 STMicroelectronics (STM) provides a tool called CubeMX for setting up software for the STM32. CubeMX

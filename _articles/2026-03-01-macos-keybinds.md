@@ -1,5 +1,6 @@
 ---
 title: The problem with MacOS keyboard shortcuts
+short_title: Critique of MacOS Shortcuts
 thumbnail: /img/posts/2026/03/macos-keybinds.jpg
 ---
 

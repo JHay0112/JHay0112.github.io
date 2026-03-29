@@ -1,5 +1,6 @@
 ---
 title: "A Microtheme on Microthemes"
+short_title: Microthemes
 thumbnail: /img/posts/2026/02/microthemes.jpg
 ---
 

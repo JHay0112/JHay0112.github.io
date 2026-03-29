@@ -1,5 +1,6 @@
 ---
 title: How I made a pyramid (and some balls) with C++
+short_title: C++ Raytracer
 thumbnail: /img/posts/2021/12/raytracing-pyramid.png
 ---
 

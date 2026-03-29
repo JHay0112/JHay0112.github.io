@@ -1,5 +1,6 @@
 ---
 title: Playing with OpenEMS
+short_title: OpenEMS
 thumbnail: /img/posts/2024/10/openems_results.gif
 ---
 

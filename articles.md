@@ -59,7 +59,9 @@ A backlog of article topics that I intend to write on are published
 {% assign c = r | modulo: page.book_colours.size %}
 {% assign h = r | modulo: page.book_heights.size %}
         <td class="book" style="height: {{page.book_heights[h]}}%; width: 20%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
-            <a href="{{article.url}}">{{article.title}}</a>
+            <a href="{{article.url}}">
+                {{article.short_title | default: article.title}}
+            </a>
         </td>
 
 {% assign i = i | plus: 1 %}
