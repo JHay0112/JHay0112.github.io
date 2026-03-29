@@ -67,7 +67,7 @@ A backlog of article topics that I intend to write on are published
 {% assign i = i | plus: 1 %}
 {% if i == books_per_shelf %}
 {% if first_shelf %}
-        <td class="label">Most Recent Articles</td>
+        <td class="label">^ Most Recent Articles</td>
 {% assign first_shelf = false %}
 {% endif %}
     </tr>
