@@ -60,7 +60,8 @@ A backlog of article topics that I intend to write on are published
 {% assign h = r | modulo: page.book_heights.size %}
         <td class="book" style="height: {{page.book_heights[h]}}%; width: 20%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">
-                {{article.short_title | default: article.title}}
+                <span class="title">{{article.short_title | default: article.title}}</span>
+                <span class="date">{{article.date | date: "%Y"}}</span>
             </a>
         </td>
 
