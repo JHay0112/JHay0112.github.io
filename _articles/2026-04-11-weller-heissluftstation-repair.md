@@ -69,7 +69,7 @@ the right. Hopefully, the circuit context will tell.
     [https://www.electronics-lab.com/forums/threads/weller-ag-700-hot-air-station-questions.61717/](https://www.electronics-lab.com/forums/threads/weller-ag-700-hot-air-station-questions.61717/)
 
 [^3]: ElectronDepot, "Question about Weller AG700 soldering station," November 2005, 
-    [https://www.electronics-lab.com/forums/threads/weller-ag-700-hot-air-station-questions.61717/](https://www.electronics-lab.com/forums/threads/weller-ag-700-hot-air-station-questions.61717/)
+    [https://www.electrondepot.com/repair/question-about-weller-ag700-soldering-station-58975-.htm](https://www.electrondepot.com/repair/question-about-weller-ag700-soldering-station-58975-.htm)
 
 [^4]: Circuits Online, "Weller AG-700 too cold," October 2009,
     [https://www.circuitsonline.net/forum/view/78358](https://www.circuitsonline.net/forum/view/78358)
