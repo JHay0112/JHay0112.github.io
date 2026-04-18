@@ -89,10 +89,10 @@ table.bookshelf tr.shelf td.book::before {
     content: '';
     position: absolute;
 
-    width: 40px;
+    width: 80px;
     height: 100%;
 
-    top: -12px;
+    top: -24px;
     left: 100%;
 
     background-color: #ffffff;
