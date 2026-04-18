@@ -22,11 +22,6 @@ text_colours:
  - 252525
  - f2f2f2
  - f2f2f2
-
-book_heights:
- - 75
- - 80
- - 85
 ---
 
 <style>
@@ -60,8 +55,7 @@ An Atom feed of articles is available at
 
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
-{% assign h = r | modulo: page.book_heights.size %}
-        <td class="book" style="height: {{page.book_heights[h]}}%; width: 20%; background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
+        <td class="book" style="background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">
                 <span class="title">{{article.short_title | default: article.title}}</span>
                 <span class="date">{{article.date | date: "%Y"}}</span>

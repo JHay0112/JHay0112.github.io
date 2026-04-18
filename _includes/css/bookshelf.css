@@ -15,11 +15,11 @@ table.bookshelf tbody {
 
 table.bookshelf tr.shelf {
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
 
-    height: 400px;
+    height: 380px;
     
     background-color: #c0c0c0;
 
@@ -69,8 +69,11 @@ table.bookshelf tr.shelf::after {
 table.bookshelf tr.shelf td.book {
     position: relative;
 
-    top: -5px;
+    bottom: 3px;
     left: 20px;
+
+    height: 75px;
+    width: 80%;
 
     margin-left: 2%;
 
@@ -78,19 +81,22 @@ table.bookshelf tr.shelf td.book {
     box-shadow: -3px -1px 10px -5px #252525;
 }
 
+table.bookshelf tr.shelf td.book:first-child {
+    margin-top: auto;
+}
+
 table.bookshelf tr.shelf td.book::before {
     content: '';
     position: absolute;
 
-    width: 100%;
-    height: 40px;
+    width: 40px;
+    height: 100%;
 
-    top: -2px;
-    left: 38px;
+    top: -12px;
+    left: 100%;
 
     background-color: #ffffff;
     background: repeating-linear-gradient(
-        90deg,
         #252525,
         #252525 1px,
         #bfbfaf 3px,
@@ -101,38 +107,37 @@ table.bookshelf tr.shelf td.book::before {
     border-left: 4px solid #252525;
     box-shadow: inset -4px -2px 10px 0px #252525;
 
-    transform: translateY(-100%) skewX(-60deg);
+    transform: skewY(-30deg);
 }
 
-table.bookshelf tr.shelf td.book::after {
+table.bookshelf tr.shelf td.book:first-child::after {
     content: '';
     position: absolute;
-    
-    width: 75px;
-    height: 100%;
 
-    top: -24.2px;
-    left: 100%;
-    bottom: 0;
+    width: 100%;
+    height: 60px;
+
+    top: 0px;
+    left: 52px;
 
     background-color: inherit;
 
     border: 2px solid #252525;
 
-    transform: skewY(-30deg);
+    transform: translateY(-100%) skewX(-60deg);
 }
 
 table.bookshelf tr.shelf td.book a {
     position: absolute;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     top: 0;
     left: 0;
 
     width: 100%;
     height: 100%;
 
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 8px;
     padding-right: 8px;
@@ -146,8 +151,6 @@ table.bookshelf tr.shelf td.book a span.title {
     align-items: center;
     flex-grow: 1;
     justify-content: left;
-
-    width: 100%;
     
     font-family: 'Libre Baskerville', serif;
     font-weight: bold;
@@ -155,25 +158,25 @@ table.bookshelf tr.shelf td.book a span.title {
 
     color: inherit;
     text-align: left;
-    writing-mode: sideways-lr;
 }
 
 table.bookshelf tr.shelf td.book a span.date {
     display: block;
-    width: 100%;
+    width: 18px;
 
-    margin-top: 10px;
-    padding-top: 3px;
+    margin-left: 10px;
+    padding-left: 3px;
 
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 10pt;
 
-    border-top: 1px solid #5f5f5f;
+    border-left: 1px solid #5f5f5f;
 
     color: #5f5f5f;
     mix-blend-mode: screen;
     text-align: center;
+    writing-mode: sideways-lr;
 }
 
 table.bookshelf tr.shelf td.book a:hover {

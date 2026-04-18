@@ -1,4 +1,5 @@
 ---
+short_title: Heißluftstation Repair
 title: Weller AG 700 Heißluftstation Repair
 ---
 
