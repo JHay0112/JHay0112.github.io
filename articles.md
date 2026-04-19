@@ -58,7 +58,7 @@ An Atom feed of articles is available at
         <td class="book" style="background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">
                 <span class="title">{{article.short_title | default: article.title}}</span>
-                <span class="date">{{article.date | date: "%Y"}}</span>
+                <span class="date">{{article.date | date: "%Y-%m"}}</span>
             </a>
         </td>
 
