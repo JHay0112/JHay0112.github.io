@@ -16,6 +16,10 @@ p {
     line-height: 20pt;
 }
 
+blockquote {
+    font-style: italic;
+}
+
 sup {
     vertical-align: top;
     position: relative;
