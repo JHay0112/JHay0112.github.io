@@ -70,18 +70,20 @@ An Atom feed of articles is available at
 {% endif %}
     </tr>
 {% assign i = 0 %}
-{% endif %}
-
 {% assign s = s | plus: 1 | modulo: shelves_per_row %}
+{% endif %}
 {% endfor %}
 
 {% if i != 0 %}
     </tr>
+{% assign s = s | plus: 1 | modulo: shelves_per_row %}
 {% endif %}
 
-{% assign empty_shelves = shelves_per_row | minus: s | modulo: shelves_per_row %}
-{% for j in (1..empty_shelves) %}
+{% if s != 0 %}
+{% assign empty_shelves = shelves_per_row | minus: s %}
+{% for j in (0..empty_shelves) %}
     <tr class="shelf empty"></tr>
 {% endfor %}
+{% endif %}
 
 </table>
