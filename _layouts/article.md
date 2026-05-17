@@ -17,7 +17,10 @@ layout: default
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
 
-<h5 id="publish-date">Published {{page.date | date: "%Y-%m-%d"}}</h5>
+<aside class="article-info">
+    <h6 class="publish-date">Published {{page.date | date: "%Y-%m-%d"}}</h6>
+    <h6 class="word-count">{{ page.content | strip_html | number_of_words }} words</h6>
+</aside>
 
 {{content}}
 

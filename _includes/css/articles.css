@@ -1,6 +1,20 @@
-#publish-date {
-    margin-top: 20px;
-    margin-bottom: 30px;
+
+.article-info {
+    display: block;
+    width: 100%;
+    
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    font-style: italic;
+}
+
+.article-info .publish-date {
+    float: left;
+}
+
+.article-info .word-count {
+    float: right;
 }
 
 
