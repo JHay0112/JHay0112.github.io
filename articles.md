@@ -81,7 +81,7 @@ An Atom feed of articles is available at
 
 {% if s != 0 %}
 {% assign empty_shelves = shelves_per_row | minus: s %}
-{% for j in (0..empty_shelves) %}
+{% for j in (1..empty_shelves) %}
     <tr class="shelf empty"></tr>
 {% endfor %}
 {% endif %}
