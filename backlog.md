@@ -17,6 +17,7 @@ relevant, links are included for additional context.
     <li>Battery management circuit design</li>
     <li>Bayesian optimisation</li>
     <li>Brewer's (CAP) theorem (as proven by <a href="https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf">Gilbert and Lynch</a>, critiqued by <a href="https://martin.kleppmann.com/2015/09/17/critique-of-the-cap-theorem.html">Kleppmann</a> and others, and alternatives like <a href="https://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf">Abadi's PACELC</a>)</li>
+    <li>Cortex-M Context Switch, a follow up to <a href="https://jordanhay.com/articles/2025/12/stm32-bare-metal">my STM32 Bare Metal article</a></li>
     <li>Cheap Yellow Display (as coined in <a href="https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display">this repository</a>)</li>
     <li>Design and implementation of a static site generator</li>
     <li>Direct sequence spread spectrum at home</li>
