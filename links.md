@@ -9,7 +9,13 @@ valuable or interesting. The topics and links are listed in alphabetical order.
 
 [Introduction to the Controller Area Network (CAN) - Steve Corrigan](https://www.ti.com/lit/an/sloa101b/sloa101b.pdf)
 
+## Optimisation
+
+[Engineering Design Optimisation - Joaquim R. R. A. Martins and Andrew Ning](https://mdobook.github.io/)
+
 ## Radio
+
+[Fraction/Integer-N PLL Basics - Curtis Barrett](https://www.ti.com/lit/an/swra029/swra029.pdf)
 
 [High Frequency VCO Design and Schematics](https://www.qsl.net/va3iul/High_Frequency_VCO_Design_and_Schematics/High_Frequency_VCO_design_and_schematics.pdf)
 
