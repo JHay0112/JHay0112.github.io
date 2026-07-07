@@ -1,5 +1,6 @@
 ---
 title: Some Websites Are Places
+category: internet
 ---
 
 ## Introduction

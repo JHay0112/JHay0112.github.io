@@ -1,6 +1,12 @@
 ---
 title: Articles
 
+book_colours_by_category:
+  internet: firebrick
+
+text_colours_by_category:
+  internet: f2f2f2
+
 book_colours:
  - midnightblue
  - indianred
@@ -53,9 +59,13 @@ An Atom feed of articles is available at
     <tr class="shelf">
 {% endif %}
 
+{% if article.category %}
+        <td class="book" style="background-color: {{page.book_colours_by_category[article.category]}}; color: #{{page.text_colours_by_category[article.category]}};">
+{% else %}
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
         <td class="book" style="background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
+{% endif %}
             <a href="{{article.url}}">
                 <span class="title">{{article.short_title | default: article.title}}</span>
                 <span class="date">{{article.date | date: "%Y-%m"}}</span>
