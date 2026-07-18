@@ -21,9 +21,7 @@ valuable or interesting. The topics and links are listed in alphabetical order.
 
 [PLL Performance, Simulation, and Design - Dean Banerjee](https://www.ti.com/lit/ml/snaa106c/snaa106c.pdf)
 
-## Software
-
-### Abstraction
+## Software Abstraction
 
 [Architectural Styles and the Design of Network-based Software Architectures - Roy Fielding](https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf)
 
@@ -31,7 +29,7 @@ valuable or interesting. The topics and links are listed in alphabetical order.
 
 [The one ring problem: abstraction and our quest for power](https://www.tedinski.com/2018/01/30/the-one-ring-problem-abstraction-and-power.html)
 
-### Testing
+## Software Testing
 
 [Fuzzing vs property testing - Ted Kaminski](https://www.tedinski.com/2018/12/11/fuzzing-and-property-testing.html)
 
