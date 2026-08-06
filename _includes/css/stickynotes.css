@@ -6,7 +6,7 @@
     padding: 20px 50px;
 
     background-color: var(--highlight-colour);
-    border: 1px solid gray;
+    border: 1px solid var(--text-colour);
 }
 
 .stickynote::before {
@@ -39,6 +39,6 @@
 
     border-top: solid 46px transparent;
     border-right: solid 46px transparent;
-    border-left: solid 2px gray;
-    border-bottom: solid 2px gray;
+    border-left: solid 2px var(--text-colour);
+    border-bottom: solid 2px var(--text-colour);
 }

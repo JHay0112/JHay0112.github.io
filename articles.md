@@ -2,23 +2,13 @@
 title: Articles
 
 book_colours:
- - midnightblue
- - indianred
- - steelblue
- - darkgreen
- - firebrick
- - slateblue
- - goldenrod
- - saddlebrown
- - darkslategrey
+ - f5f5f5
+ - 30e3ca
+ - 2f89ac
+ - 252525
 
 text_colours:
- - f2f2f2
- - f2f2f2
- - f2f2f2
- - f2f2f2
- - f2f2f2
- - f2f2f2
+ - 252525
  - 252525
  - f2f2f2
  - f2f2f2
@@ -44,7 +34,6 @@ An Atom feed of articles is available at
 <table class="bookshelf">
 {% assign shelves_per_row = 3 %}
 {% assign books_per_shelf = 4 %}
-{% assign first_shelf = true %}
 {% assign i = 0 %}
 {% assign s = 0 %}
 {% for article in site.articles reversed %}
@@ -55,7 +44,7 @@ An Atom feed of articles is available at
 
 {% assign r = article.date | date: "%Y%m%d" %}
 {% assign c = r | modulo: page.book_colours.size %}
-        <td class="book" style="background-color: {{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
+        <td class="book" style="background-color: #{{page.book_colours[c]}}; color: #{{page.text_colours[c]}};">
             <a href="{{article.url}}">
                 <span class="title">{{article.short_title | default: article.title}}</span>
                 <span class="date">{{article.date | date: "%Y-%m"}}</span>
@@ -64,10 +53,6 @@ An Atom feed of articles is available at
 
 {% assign i = i | plus: 1 %}
 {% if i == books_per_shelf %}
-{% if first_shelf %}
-        <td class="label">^ Most Recent Articles</td>
-{% assign first_shelf = false %}
-{% endif %}
     </tr>
 {% assign i = 0 %}
 {% assign s = s | plus: 1 | modulo: shelves_per_row %}

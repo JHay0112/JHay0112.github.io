@@ -32,6 +32,8 @@ a {
     font-weight: inherit;
     
     text-decoration: underline;
+
+    color: var(--link-colour);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,6 +42,8 @@ h1, h2, h3, h4, h5, h6 {
 
     font-family: "Libre Baskerville", serif;
     font-weight: normal;
+
+    color: var(--heading-colour);
 }
 
 h1 {

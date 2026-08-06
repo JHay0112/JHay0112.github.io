@@ -16,7 +16,6 @@ const HEADERS = [
     "christchurch_airport.jpg",
     "aoraki.jpg",
     "aurora_in_flight.jpg",
-    "c17_at_chch_airport.jpg",
     "enel300_pcb.jpg",
     "aurora.jpg",
     "moon.jpg",

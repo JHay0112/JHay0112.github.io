@@ -1,21 +1,10 @@
 /* Provides theme variables to all CSS */
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --text-colour: #252525;
-        --bg-colour: #ffffff;
-        --secondary-bg-colour: #f0f0f0;
-        --highlight-colour: #fffcb3;
-
-    }
-}
-
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-colour: #f2f2f2;
-        --bg-colour: #252525;
-        --secondary-bg-colour: #404040;
-        --highlight-colour: #276200;
-    }
+:root {
+    --text-colour: #f2f2f2;
+    --bg-colour: #000000;
+    --secondary-bg-colour: #404040;
+    --highlight-colour: #1f5970;
+    --link-colour: #30e3ca;
+    --heading-colour: #2f89ac;
 }
