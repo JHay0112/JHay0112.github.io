@@ -27,10 +27,22 @@ valuable or interesting. The topics and links are listed in alphabetical order.
 
 [Designing abstractions with properties in mind - Ted Kaminski](https://www.tedinski.com/2018/04/24/design-and-property-tests.html)
 
-[The one ring problem: abstraction and our quest for power](https://www.tedinski.com/2018/01/30/the-one-ring-problem-abstraction-and-power.html)
+[Game Design Patterns - Robert Nystrom](https://gameprogrammingpatterns.com/contents.html)
+
+[The one ring problem: abstraction and our quest for power - Ted Kaminski](https://www.tedinski.com/2018/01/30/the-one-ring-problem-abstraction-and-power.html)
+
+[The Unreasonable Effectiveness of Constructive Data Modelling - Alexis King](https://www.youtube.com/watch?v=0BXuYlNrUmE)
+
+## Software Languages
+
+[Crafting Interpreters - Robert Nystrom](https://craftinginterpreters.com/contents.html)
+
+[Keyword overloading: the static keyword - Jens Gustedt](https://gustedt.wordpress.com/2010/07/18/keyword-overloading-the-static-keyword/)
 
 ## Software Testing
 
 [Fuzzing vs property testing - Ted Kaminski](https://www.tedinski.com/2018/12/11/fuzzing-and-property-testing.html)
+
+[Reliability Lessons from SQLite - Richard Hipp](https://www.youtube.com/watch?v=V_qzqY1bb7I)
 
 [Static Analysis Fatigue - John Rehegr](https://blog.regehr.org/archives/259)
