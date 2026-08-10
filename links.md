@@ -4,6 +4,8 @@ title: Links
 
 The following are a set of links to websites and resources that I think are
 valuable or interesting. The topics and links are listed in alphabetical order.
+Critically, every link I include here is to a resource that is freely and
+legally available.
 
 ## Communication Systems
 
