@@ -23,6 +23,12 @@ legally available.
 
 [PLL Performance, Simulation, and Design - Dean Banerjee](https://www.ti.com/lit/ml/snaa106c/snaa106c.pdf)
 
+## Security
+
+[Hacking washing machines - Hajo Noerenberg and Severin von Wnuck-Lipinski](https://www.youtube.com/watch?v=Q1S-PVo3GlA)
+
+[Watch Your Kids: Inside a Children's Smartwatch - Nils Rollshausen](https://www.youtube.com/watch?v=VRQz9EX2Tl0)
+
 ## Software Abstraction
 
 [Architectural Styles and the Design of Network-based Software Architectures - Roy Fielding](https://roy.gbiv.com/pubs/dissertation/fielding_dissertation.pdf)
