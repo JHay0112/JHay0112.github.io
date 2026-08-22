@@ -17,6 +17,8 @@ legally available.
 
 ## Radio
 
+[A homemade receiever for GPS & GLONASS satellites - Matjaz Vidmar](https://lea.hamradio.si/~s53mv/navsats/theory.html)
+
 [Fraction/Integer-N PLL Basics - Curtis Barrett](https://www.ti.com/lit/an/swra029/swra029.pdf)
 
 [High Frequency VCO Design and Schematics](https://www.qsl.net/va3iul/High_Frequency_VCO_Design_and_Schematics/High_Frequency_VCO_design_and_schematics.pdf)
